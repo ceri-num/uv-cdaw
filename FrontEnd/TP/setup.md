@@ -15,43 +15,45 @@ Go to [Gvipers](https://gvipers.imt-lille-douai.fr/) and login.
 Create your team for the project (if it does not already exists or has been created by your teachers), then create a new repository associated to your team for the front-end project.
 For the rest of this section, this repository is called `repo`.
 
-## Initialize your Angular project
+⚠️ Do not use special caracters, nor space or upper case letter in the name of your repository! Vue.js will not authorize such a project.
+
+## Initialize your Vue.js project
 ⚠️ This step should be made by only one person (preferably the manager of the project), then, once push to the remote, all the other collaborators should clone it.
 
-First, clone your repository.
-
+First, clone your repository, but do not yet enter it:
 ```bash
 cd your/Path
 git clone https://gvipers.imt/url/to/your/repo
-cd repo
 ```
 
-Then you will need to have both Node.js and Angular installed.
+Then you will need to have both Node.js and Vue.js installed.
 ```bash
 sudo apt install nodejs npm
 ```
-Afterwards, you want to install Angular CLI globally
+Afterwards, you want to install Vue.js CLI globally (more details about the [Vue.js CLI](https://cli.vuejs.org/))
 ```bash
-sudo npm install -g @angular/cli
+sudo npm install -g @vue/cli
 ```
-This installs the command `ng` on your system, which is the command you use to create new workspaces, new projects, serve your application during development, or produce builds to share or distribute.
+This installs the command `vue` globally on your system, which is the command you use to create new workspaces, new projects or produce builds to share or distribute. `npm`will be used to serve your application during development.
 
-We will populate your empty repository with a new empty pre-configured Angular project, acting as a backbone for the front-end for now. In your local repository, type:
+We will then populate your empty local repository with a new empty pre-configured Vue.js project, acting as a backbone for the front-end for now. One step above your local repository, type:
 
 ```bash
-ng new the-App-Name --directory ./
+vue create your_repo/
 ```
 
-Answer `yes` to the question `Would you like to add Angular routing?`, and select `CSS` to the prompt regarding stylesheet.
+Answer `Merge` to the question `Target directory already exists?`, and select `Default ([Vue 2] babel, eslint)` to the question `Please, pick a preset` (we will not use the beta version of Vue.js).
 
 After the installation of some additional packages, your local repository should looks like that:
 
-![After NG init](resources/ng_init.png)
+![After NG init](resources/vue_init.png)
 
 To check if your project works correctly, stay at the root of your project, then compile and serve it:
 ```bash
-ng serve
+cd your_repo
+npm run serve
 ```
+Then connect to `http://localhost:8080`: you should see Vue.js saying that everything works fine!
 
 Last step: add all these modifications as the starting point of your project by commiting the change, then pushing them to the remote.
 ```bash
@@ -88,7 +90,7 @@ After cloning the submodule in your local repository, printing the status of you
 Indicating that you have correctly added the repository (and now located in assests/img/majhong-tiles).
 You are all good to start working with Angular now for your front end!
 
-Don't forget to add/commit your modification! Then push them to the remote.
+Don't forget to **add/commit** your changes! Then push them to the remote.
 
 ### Correctly clone your project when it has submodule
 
