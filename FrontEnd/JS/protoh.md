@@ -1,0 +1,1 @@
+# Inheritance and prototype chain

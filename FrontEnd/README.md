@@ -1,10 +1,10 @@
 # Web Dev Client Side (JS)
-Lecture about Client Side, mostly:
+Lecture about Client/Front Side, mostly:
 
-* Javascript
-* Single Page Application
-* Websocket ?
-* REST API
+* [Javascript](JS/README.md)
+* [Single Page Application](SPA/README.md)
+* [Websocket](WS/README.md)
+* [REST API](rest/README.md)
 
 ## Prerequisites
 [IDAW](https://gvipers.imt-lille-douai.fr/luc.fabresse/idaw) module
