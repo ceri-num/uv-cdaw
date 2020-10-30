@@ -207,7 +207,7 @@ When called, generator functions do not initially execute their code. Instead, t
 
 The function can be called as many times as desired, and returns a new Generator each time.
 
-Generator functions are written using the function* syntax, as follow (taking the `Sequence` example above, droping the class aspect):
+Generator functions are written using the `function*` syntax, as follow (taking the `Sequence` example above, droping the class aspect):
 ```js
 function* Sequence(start = 0, end = Infinity, step = 1) {
     let iterationCount = 0;
@@ -225,7 +225,7 @@ for(let x in s)
 }
 ```
 
-Generators compute their yielded values on demand, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above). An advanced generator could be one for the fibonacci sequence:
+Generators compute their yielded values on demand, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above). An advanced generator could be, for the fibonacci sequence:
 ```js
 function* fibonacci() {
   let current = 0;
@@ -249,7 +249,7 @@ console.log(sequence.next().value);     // 3
 console.log(sequence.next().value);     // 5, etc
 ```
 
-To conclude, an object is **directly iterable** if it has an iteration behavior by implementing the `@@iterator` method. This simply means that the object needs to have a property `.[Symbol.iterator]`.
+To conclude, an object is **directly iterable** if it has an iteration behavior by implementing the `@@iterator` method. This simply means that the object needs to have a property `[Symbol.iterator]`.
 
 To make your own iterables:
 ```js
