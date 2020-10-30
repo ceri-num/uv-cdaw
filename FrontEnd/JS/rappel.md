@@ -137,10 +137,167 @@ for (const i of myarray) {
 ❓ A hook is a special invokation function mecanism. More information below.
 
 ### Iterator and generator
+#### Iterator
+The notion of iterator comes from the fact that processing each item of a collection is a very common operation in computing. The important notions *behind* an iterator are that at a specific moment it points toward a specific item of the collection and that there is a well defined sequence in the collection (implied by the *specific moment*). Thus, an iterator must answer the following questions:
 
-### Anonymous functions
+![Iterator example](resources/it.png)
 
-### Arrow functions
+In JavaScript an iterator is an object which defines a sequence and potentially a return value upon its termination (simply stated, this is the iteration protocols):
+* Is there any element left in the collection ?
+* What is this very element if it exists ?
+
+In fact, you already have used an iterator by using loop such as `for...of` without knowing it.
+
+Technically speaking, any object is qualifiable as an iterator if it has a `next()` method and it returns an object with the two following properties:
+* `done`: a boolean value indicating whether or not there are any more items that could be iterated upon. If `true`, there is no more item.
+* `value`: the current element
+
+If you have a custom type and want to make it iterable so that you can use the `for...of` loop construct, you need to implement the iteration protocols.
+The following code creates a `Sequence` object that returns a list of numbers in the range of (`start`, `end`) with an interval between subsequent numbers.
+```js
+class Sequence {
+    constructor(start = 0, end = Infinity, interval = 1 ) {
+        this.start = start;
+        this.end = end;
+        this.interval = interval;
+    }
+    [Symbol.iterator]() {
+        let counter = 0;
+        let nextIndex = this.start;
+        return  {
+            next: () => {
+                if ( nextIndex <= this.end ) {
+                    let result = { value: nextIndex,  done: false } // done is important!
+                    nextIndex += this.interval;
+                    counter++;
+                    return result;
+                }
+                return { value: counter, done: true }; // IDEM, done is important
+            }
+        }
+    }
+};
+```
+To use the built-in iterator of `Sequence`, there is mainly two ways:
+```js
+let nbPair = new Sequence(2, 10, 2);
+
+for (const num of nbPair) {
+    console.log(num);
+} //cli: 2 4 6 8 10
+
+// OU
+let iterator = nbPair[Symbol.iterator]();//Retrieving the iterator through the well-known symbol
+
+let result = iterator.next();
+
+while( !result.done ) // while there is still something
+{
+    console.log(result.value);
+    result = iterator.next();
+}
+```
+❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
+
+#### Generator & Iterable
+One issue with custome iterators is that their creation requires careful programming since their internal state has to be explicitly maintained.
+To circumvent this issue, generator functions allow the definition of a single function whose execution **is not continuous**.
+
+When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a Generator. When a value is consumed by calling the generator's next method, the Generator function executes until it encounters the `yield` keyword. In other hand, the execution is suspended once a `yield` is encountered, and resumed after it at the next call.
+
+The function can be called as many times as desired, and returns a new Generator each time.
+
+Generator functions are written using the function* syntax, as follow (taking the `Sequence` example above, droping the class aspect):
+```js
+function* Sequence(start = 0, end = Infinity, step = 1) {
+    let iterationCount = 0;
+    for (let i = start; i < end; i += step) {
+        iterationCount++;
+        yield i;
+    }
+    return iterationCount;
+}
+
+const s = Sequence(1, 10, 2);
+for(let x in s)
+{
+    console.log(x); //CLI: 1 3 5 7 9
+}
+```
+
+Generators compute their yielded values on demand, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above). An advanced generator could be one for the fibonacci sequence:
+```js
+function* fibonacci() {
+  let current = 0;
+  let next = 1;
+  while (true) {
+    let reset = yield current;
+    [current, next] = [next, next + current];
+    if (reset) {
+        current = 0;
+        next = 1;
+    }
+  }
+}
+
+const sequence = fibonacci();
+console.log(sequence.next().value);     // 0
+console.log(sequence.next().value);     // 1
+console.log(sequence.next().value);     // 1
+console.log(sequence.next().value);     // 2
+console.log(sequence.next().value);     // 3
+console.log(sequence.next().value);     // 5, etc
+```
+
+To conclude, an object is **directly iterable** if it has an iteration behavior by implementing the `@@iterator` method. This simply means that the object needs to have a property `.[Symbol.iterator]`.
+
+To make your own iterables:
+```js
+const myIterable = {
+    *[Symbol.iterator]() {
+        yield 1;
+        yield 2;
+        yield 3;
+    }
+}
+```
+In the difference of generators where their iterator can be iterated only once, an iterable can be used several times.
+```js
+function* makeIterator() {
+    yield 1;
+    yield 2;
+}
+
+let it = makeIterator();
+
+for (const itItem of it) { // CLI: 1 2
+    console.log(itItem);
+}
+
+for (const itItem of it) { //this loop is not exectued, it.next() has done:true
+    console.log(itItem);
+}
+console.log(it[Symbol.iterator]() === it) // true;
+
+it[Symbol.iterator] = function* () {
+  yield 2;
+  yield 1;
+};
+
+for (const itItem of it) { // CLI: 2 1
+    console.log(itItem);
+}
+
+for (const itItem of it) { //this loop is executed again, CLI : 2 1
+    console.log(itItem);
+}
+console.log(it[Symbol.iterator]() === it) // false;
+```
+
+### Functions
+#### Anonymous functions
+
+#### Arrow functions
 
 ### In depth Variable's scope
 this, this=that, binding, etc... : https://stackoverflow.com/questions/28668759/what-does-this-statement-do-console-log-bindconsole
