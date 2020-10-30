@@ -15,6 +15,5 @@
 ## Projet
 
 * [Sujet 2020](Projet/sujetMahjong.md)
-* [Méthodologie et outils](Projet/outils.md)
-* [Rendu et Evaluation](Projet/Evaluation.md)
+* [Méthodologie et Evaluation](Projet/outils.md)
 * [FAQ](Projet/faq.md)
