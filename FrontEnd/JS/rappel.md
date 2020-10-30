@@ -9,6 +9,8 @@ This section serves as a quick reminder, mostly regarding the syntax, for severa
 
 ## Language core
 
+### Condition
+
 ### Loops
 In JavaScript, the 3 classic loop structures are available:
 * `for`
@@ -40,7 +42,23 @@ while (i < 65536) {
 }
 ```
 
-#### Specific iteration control keywords
+### Data types
+JavaScript is weakly typed, meaning that the variables do not have a specific on their declaration. Instead, we use a generic keyword declaration to declare a new variable.
+
+There is only **three** declaration keywords in JS. They are:
+
+* `let`: allows the declaration of a block scope **local variable** (it is destroyed while outside the block) ; it can optionally be initialized to a value ;
+* `var`: declares a variable, optionally initializing it to a value ;
+* `const`: declares a read-only named constant.
+
+```js
+var myVar = 7;
+```
+
+### Function
+
+## Advanced Reminders
+### Specific iteration control keywords
 There is two specific keywords used to control how the iteration goes:
 
 * `break`
@@ -73,7 +91,7 @@ while (i < 5) {
 //cli: 1,3,7,12
 ```
 
-#### Special loops
+### Special loops
 
 In addition to these three loops, there also exists three more loops mostly used to iterate over element of a collection:
 
@@ -92,7 +110,7 @@ list.forEach((item, index) => {
 })
 //index is option: list.forEach(item => console.log(item))
 ```
-⚠️ The `=>` element indicates a promise. We will talk about that in the [Errors & Promises](promisemeerror.md) section.
+⚠️ The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
 
 
 The `for...in` statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements. A `for...in` statement looks as follows:
@@ -114,36 +132,17 @@ for (const i of myarray) {
 }
 ```
 
-❓ A `for...in` loop would have display `0,1,2,"someText"` instead of the value of the array.
+❓ A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
 
-❓ A hook is special invokat function mecanism. More information below.
+❓ A hook is a special invokation function mecanism. More information below.
 
-#### Iterator and generator
-
-
-### Condition
-
-### Data types
-JavaScript is weakly typed, meaning that the variables do not have a specific on their declaration. Instead, we use a generic keyword declaration to declare a new variable.
-
-There is only **three** declaration keywords in JS. They are:
-
-* `let`: allows the declaration of a block scope **local variable** (it is destroyed while outside the block) ; it can optionally be initialized to a value ;
-* `var`: declares a variable, optionally initializing it to a value ;
-* `const`: declares a read-only named constant.
-
-```js
-var myVar = 7;
-```
-
-## Functions
-### Function
+### Iterator and generator
 
 ### Anonymous functions
 
 ### Arrow functions
 
-## In depth Variable's scope
+### In depth Variable's scope
 this, this=that, binding, etc... : https://stackoverflow.com/questions/28668759/what-does-this-statement-do-console-log-bindconsole
 
 hook : 
