@@ -116,7 +116,20 @@ var myVar = 7;
 ```
 
 ### Function
+Basically, a function is defined by its name, and its parameters. It **does not** have a return type: therefore you must be carreful about how the code is documented.
+A function declaration looks as follow:
+```js
+function foo(param1, param2)
+{
+  //instruction
+  return result; //optional
+}
+```
 
+To invoke a function:
+```js
+foo(7777, "hello")
+```
 ## Advanced Reminders
 ### Specific iteration control keywords
 There is two specific keywords used to control how the iteration goes:
@@ -356,10 +369,106 @@ console.log(it[Symbol.iterator]() === it) // false;
 
 ### Functions
 #### Anonymous functions
+There is a difference between a function delcaration and a function expression. A function The later can have its name omitted, defining an anonymous function.
+The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions. 
 
-#### Arrow functions
+```js
+function()
+{
+  console.log("Hi! I'm anon");
+}
+```
+
+> ⚠️ An anonymous function will do **nothing** on its own (except enclosed in a grouping operator -- see beelow). It need to be "manually" invoked.
+
+These kind of functions are commonly used along event handler or callback function.
+
+```js
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Hi! I'm anon once the DOM is loaded");
+});
+```
+
+However, anonymous functions are not condamned to be used only once. In fact, a function expression can be assign to a variable, making it invokable wherever needed.
+```js
+var maVar = function()
+{
+  console.log("Hi! I'm anon");
+}
+
+// then invoke it
+maVar();
+```
+
+> ❓ Stored anonymous function can be a good way to separate your functions -- which actually do things -- from your event handlers -- which triggers things. Example:
+> ```js
+> // Do stuff on scroll
+> var onScrollHandler = function (event) {
+>	 // Do something on scroll...
+> };
+>
+> // Listen for scroll events
+> window.addEventListener('scroll', onScrollHandler, false);
+> ```
+
+#### IIFE (Immediately Invoked Function Expression)
+A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
+In addition of being directly interpreted, an IIFE has its lexical scope enclosed within the `Grouping Operator ()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
+
+An IIFE cannot be stored in a variable. Assigning it to a variable stores its return value instead of its definition. An `IIFE` statement looks as foolow:
+```js
+(function(){console.log("IIFE1")})();
+
+var result =( function () 
+              {
+                var name = "IIFE2"; 
+                return name; 
+              } 
+            )(); 
+result; // Contains "IIFE2"
+console.log(name); // throws "Uncaught ReferenceError: name is not defined"
+```
+
+#### Arrow 
+
 
 ### In depth Variable's scope
+anon function define its local scope but this keyword
+
+```js
+var x = 10;
+
+function a()
+{
+	var x = 7;
+	console.log(this.x);
+  console.log(x);
+}
+
+var y = function()
+{
+	var x = 2;
+  console.log(this.x);
+  console.log(x);
+}
+
+a(); // CLI: 10, 7
+y(); // CLI: 10, 2
+```
+
+this redefined in each ctx
+```js
+window.age = 10; // <-- notice me?
+function Person() {
+  this.age = 42; // <-- notice me?
+  setTimeout(function () { // <-- Traditional function is executing on the window scope
+    console.log("this.age", this.age); // yields "10" because the function executes on the window scope
+  }, 100);
+}
+```
+#### Closure
+check closure example :http://www.javascriptkit.com/javatutors/closures2.shtml
+
 this, this=that, binding, etc... : https://stackoverflow.com/questions/28668759/what-does-this-statement-do-console-log-bindconsole
 
 hook : 
