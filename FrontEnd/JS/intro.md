@@ -48,6 +48,8 @@ arr[3] → "undefined" // 7 lines above, length was "0"...
 ```
 Oh, you also have an auto semi-colon adder, which means that `var a = 7;` is equal to `var a = 7`...
 
+For fun, go check this [video](https://www.destroyallsoftware.com/talks/wat) and start the video at `1:22`, or even this [one](https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript).
+
 ## How to insert your script in your page
 To insert some javascript to your page, there is only one way: by using the `<script>` element. Generally speaking, this element is placed in between the `<head>` element of your page. One `script` element is used for one javascript script, so if you have several of them, the same goes for the elements.
 
