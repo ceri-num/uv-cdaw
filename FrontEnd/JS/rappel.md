@@ -10,8 +10,67 @@ This section serves as a quick reminder, mostly regarding the syntax, for severa
 ## Language core
 
 ### Condition
+#### Statement
+JavaScript has **three** different conditionals, well known in other languages as well.
 
-speak === and ==
+The `if...else` conditional.
+```js
+if(condition)
+{
+  //code
+}
+else if(cond2)//optionnel
+{
+  //code
+}
+else
+{
+  //code
+}
+```
+
+The ternary statement.
+```js
+(condition) ? instruction;if;true; : instruction;if;false;
+```
+
+The `switch` statement.
+```js
+switch (expression) // NOT a condition
+{
+  case 1:
+    code;
+    break;
+  case 2:
+    code:
+    break;
+  default:// Don't forget me
+    code; //no break needed, we are at the end
+}
+```
+
+#### Strict egality vs. egality
+JavaScript has **three** different ways to perform an egality check, either with their own specificity.
+
+The first one is the simple equality made by the `==` operator. It **does** make a data type converstion before the comparison of the objects. You can have important side effects if not used correctly.
+```js
+console.log('1' ==  1);// CLI: true
+```
+
+The second equality operator is the strict operator `===` (3 `=`). The most notable difference between this operator and the simple equality operator is that if the operands are of different types, it **will not attempt** to convert them to the same type before comparing.
+```js
+console.log('1' ===  1);// CLI: false
+```
+
+The last equality operator is `Object.is()` operator. It determines whether two values are **the same value**. It is widely different to `==` since it does not perform coerce checks, and differ from `===` in regard that it treats the number values `-0` and `+0` as equal and treats `Number.NaN` as not equal to `NaN`.
+```js
+var foo = { a: 1 };
+var bar = { a: 1 };
+Object.is(foo, foo);         // CLI: true
+Object.is(foo, bar);         // CLI: false
+```
+![Egality table, courtesy of MDN](resources/egality.png)
+
 ### Loops
 In JavaScript, the 3 classic loop structures are available:
 * `for`
@@ -111,7 +170,7 @@ list.forEach((item, index) => {
 })
 //index is option: list.forEach(item => console.log(item))
 ```
-⚠️ The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
+> ⚠️ The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
 
 
 The `for...in` statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements. A `for...in` statement looks as follows:
@@ -122,7 +181,7 @@ for (let item in player) {
 }
 // résultats : Clive \n 25 \n Warrior
 ```
-⚠️ Use the `for...in` statement wisely! For example, it is not advise to use it for `Arrays` instead of `for`. The principal reason is that it will iterate also on the user-specified variable, not only on the numerical index.
+> ⚠️ Use the `for...in` statement wisely! For example, it is not advise to use it for `Arrays` instead of `for`. The principal reason is that it will iterate also on the user-specified variable, not only on the numerical index.
 
 The `for...of` statement creates a loop iterating over iterable objects (including `Array`, `Map`, arguments object and so on), invoking a custom iteration hook with statements to be executed for **the value** of each distinct property. A `for...of` statement looks as follows:
 ```js
@@ -133,9 +192,9 @@ for (const i of myarray) {
 }
 ```
 
-❓ A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
+> ❓ A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
 
-❓ A hook is a special invokation function mecanism. More information below.
+> ❓ A hook is a special invokation function mecanism. More information below.
 
 ### Iterator and generator
 #### Iterator
@@ -198,7 +257,7 @@ while( !result.done ) // while there is still something
     result = iterator.next();
 }
 ```
-❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
+> ❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
 
 #### Generator & Iterable
 One issue with custome iterators is that their creation requires careful programming since their internal state has to be explicitly maintained.
