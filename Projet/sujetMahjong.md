@@ -12,6 +12,8 @@ Un exemple d'affichage de mahjong:
 
 ![Aperçu d'un mahjong dans FF XIV](resources/mahjong_ex_1.png)
 
+![Aperçu d'un mahjong dans Yakuza Kiwami](resources/yakuza.png)
+
 ## Fonctionnalités à réaliser
 * Création de compte utilisateur (prendre en compte un rôle administrateur)
 * Connexion au site
