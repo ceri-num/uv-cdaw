@@ -432,7 +432,9 @@ console.log(name); // throws "Uncaught ReferenceError: name is not defined"
 #### Arrow function
 An arrow function expression is a compact alternative to a traditional function expression, but is limited and cannot be used in all situations. One of the major reason arrow functions were introduced was to alleviate scope complexities ( `this` ) thus making functions execution much more intuitive. There is several way of declaring an arrow function. The two most common are:
 ```js
-() => 5 * 2; //no parameter, return is implicit, one line
+var maVar = 10;
+
+() => 5 * maVar; //no parameter, return is implicit, one line
 
 (a,x) => { // multi line, multi param, return mandatory
   a += 5;
