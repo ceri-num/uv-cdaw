@@ -34,3 +34,15 @@ graph TD
     B-->D
     C-->D
 ```
+
+```mermaid
+sequenceDiagram
+    participant ClientSide
+    participant ServerSide
+    ClientSide->>ServerSide: Request content page
+    loop GenerateContent
+        ServerSide->>ServerSide: Produce HTML content
+    end
+    Note right of ServerSide: General HTML <br/> generation schema!
+    ServerSide-->>ClientSide: HTML Page
+```
