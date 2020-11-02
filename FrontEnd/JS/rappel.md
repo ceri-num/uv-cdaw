@@ -11,6 +11,7 @@ This section serves as a quick reminder, mostly regarding the syntax, for severa
 
 ### Condition
 
+speak === and ==
 ### Loops
 In JavaScript, the 3 classic loop structures are available:
 * `for`
