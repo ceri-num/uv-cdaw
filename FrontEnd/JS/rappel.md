@@ -429,8 +429,20 @@ result; // Contains "IIFE2"
 console.log(name); // throws "Uncaught ReferenceError: name is not defined"
 ```
 
-#### Arrow 
+#### Arrow function
+An arrow function expression is a compact alternative to a traditional function expression, but is limited and cannot be used in all situations. One of the major reason arrow functions were introduced was to alleviate scope complexities ( `this` ) thus making functions execution much more intuitive. There is several way of declaring an arrow function. The two most common are:
+```js
+() => 5 * 2; //no parameter, return is implicit, one line
 
+(a,x) => { // multi line, multi param, return mandatory
+  a += 5;
+  return a * x;
+}
+```
+
+Check [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for more in depth information about arrow functions.
+
+> ❓ Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`.
 
 ### In depth Variable's scope
 anon function define its local scope but this keyword
@@ -455,6 +467,8 @@ var y = function()
 a(); // CLI: 10, 7
 y(); // CLI: 10, 2
 ```
+
+Defining an object does not create a new scope.
 
 this redefined in each ctx
 ```js
