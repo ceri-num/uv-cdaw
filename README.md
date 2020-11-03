@@ -29,6 +29,6 @@ Si ce n'est pas votre cas, veuillez vous mettre à niveau avant le commencement 
 ## AUTHORS
 * Luc Fabresse
 * Isabelle Fabresse
-* [Alexis Lebis](https://gvipers.imt-lille-douai.fr/alexis.lebis)
+* Alexis Lebis
 * Rémy Pinot
-* [Mathieu Vermeulen](https://gvipers.imt-lille-douai.fr/Thieu)
+* Mathieu Vermeulen
