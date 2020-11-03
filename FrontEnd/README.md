@@ -6,8 +6,5 @@ Lecture about Client Side, mostly:
 * Websocket ?
 * REST API
 
-## Prerequisites
-[IDAW](https://gvipers.imt-lille-douai.fr/luc.fabresse/idaw) module
-
 ## Author
 * [Alexis Lebis](https://gvipers.imt-lille-douai.fr/alexis.lebis)
