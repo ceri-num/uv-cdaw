@@ -12,7 +12,7 @@ L'UV CDAW s'articule autour des matières suivantes :
 # Ressources du cours
 
 - MLS https://mylearningspace.imt-lille-douai.fr/course/view.php?id=434
-- Gitbook
+- Gitbook https://ceri-num.gitbook.io/uv-cdaw/
 - Discord
 - BBB
 
