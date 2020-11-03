@@ -430,7 +430,7 @@ console.log(name); // throws "Uncaught ReferenceError: name is not defined"
 ```
 
 #### Arrow function
-An arrow function expression is a compact alternative to a traditional function expression, but is limited and cannot be used in all situations. One of the major reason arrow functions were introduced was to alleviate scope complexities ( `this` ) thus making functions execution much more intuitive. There is several way of declaring an arrow function. The two most common are:
+An arrow function expression is a compact alternative to a traditional function expression, but is limited and cannot be used in all situations. One of the major reason arrow functions were introduced was to alleviate scope and context complexities ( `this` ) thus making functions execution much more intuitive. There is several way of declaring an arrow function. The two most commons are:
 ```js
 var maVar = 10;
 
@@ -444,63 +444,156 @@ var maVar = 10;
 
 Check [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for more in depth information about arrow functions.
 
-> ❓ Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`.
+> ❓ Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`. It can be a good candidate for promises.
 
-### In depth Variable's scope
-anon function define its local scope but this keyword
+### Scope and context
+#### Scope
+
+In JavaScript, there is two type of scopes:
+* **Local**: Variables declared inside a function is in the local scope of this very function. Therefore, each function creates a new scope when defined.
+* **Global**: Variables declared outisde of a function is in the global scope. Variables inside the Global scope can be **accessed** and **altered in any other scope**.
 
 ```js
-var x = 10;
+var name = 'Kazuma';
 
-function a()
-{
-	var x = 7;
-	console.log(this.x);
-  console.log(x);
+console.log(name); // CLI: 'Kazuma'
+
+function logName() {
+    // Local Scope # 1
+    console.log(name); // 'name' is accessible here and everywhere else
+    
+    function someOtherFunction() {
+        // Local Scope #2
+        console.log(name); // name still accessible
+    }
+    var name2 = "Majima";
 }
 
-var y = function()
-{
-	var x = 2;
-  console.log(this.x);
-  console.log(x);
-}
+// 'name2' inacessible here: destroyed at the end of logName()
 
-a(); // CLI: 10, 7
-y(); // CLI: 10, 2
+function foo(){
+  // Local Scope #3
+}
+logName(); // CLI: 'Kazuma'
 ```
 
-Defining an object does not create a new scope.
+> ⚠️ Conditionnal statements (e.g. `if`, `switch`) and loops, unlike functions, don't create a new scope. Variables defined inside of them remains in the scope they were already in while declared.
+> ⚠️ **HOWEVER!** `let` and `const` statement for variable declaration support the declaration of local scope in conditionnal and loop statements. This means that at the end of the statement, **all** the variables declared with either `let` or `const` is destroyed.
 
-this redefined in each ctx
+Global scope lives as long as your application lives. Local Scope lives as long as your functions are called and executed.
+
+#### Context
+Context refers to the value of `this` (the introspection operator) in some particular part of the scope of your code. In the global scope context is always the Window object (`this === Window`).
+
+> ⚠️ Programer tend to often confuse scope for context, and *vice et versa*. But they are not the same concept! Scope refers to the visibility of variables in a specific code location ; context, their values in a specific scope.
+
+When declaring a new object -- or using the `new` operator, the context changed. 
+
+```js
+console.log(this); // cli: Window{...}
+
+function logFunction() {
+    console.log(this);
+}
+logFunction(); // cli: Window{...} -> because logFunction() is not a property of an object
+
+class Tile {
+  logValue()
+  {
+    console.log(this)
+  }
+}
+(new Tile).logValue(); // cli: Tile{...}
+```
+
+Which mean that normal function and arrow function does not share the same behaviour.
+
 ```js
 window.age = 10; // <-- notice me?
 function Person() {
   this.age = 42; // <-- notice me?
   setTimeout(function () { // <-- Traditional function is executing on the window scope
-    console.log("this.age", this.age); // yields "10" because the function executes on the window scope
+    console.log("this.age", this.age); // yields "10" because the function executes on the window scope, not in p
   }, 100);
 }
+Person(); // cli: "this.age" 42
+var p = new Person(); // cli "this.age" 10
 ```
-#### Closure
-check closure example :http://www.javascriptkit.com/javatutors/closures2.shtml
-
-this, this=that, binding, etc... : https://stackoverflow.com/questions/28668759/what-does-this-statement-do-console-log-bindconsole
-
-hook : 
 ```js
-var hooks = {};
-
-function add_to_function(name, func) {
-  if(!hooks[name]) hooks[name] = [];
-  hooks[name].push(func);
+window.age = 10; // <-- notice me?
+function Person() {
+  this.age = 42; // <-- notice me?
+  setTimeout(() => { // <-- Arrow function executing in the "p" (an instance of Person) scope
+    console.log("this.age", this.age); // yields "42" because the function executes on the Person scope
+  }, 100);
 }
 
-function call_my_function(name, ...params){
-  if(hooks[name]) 
-     hooks[name].forEach(func => func(...params));
+var p = new Person();
+```
+
+#### Lexical Scope and Closure
+Lexical Scope means that in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. This means that the child functions are lexically bound to the execution context of their parents. Lexical scope is sometimes also referred to as Static Scope.
+
+However, the lexical scope only works forward. That means that a parent scope can not have access to a children's scope.
+
+```js
+function foo() {
+    var name = 'Levant';
+    // status is not accessible here
+    function bar() {
+        // name is accessible here
+        // status is not accessible here
+        function 2000() {
+            // Innermost level of the scope chain
+            // name is also accessible here
+            var status = 'Great';
+        }
+    }
 }
 ```
-Onward custom paradigm, such as Observer/Observator !
 
-var and hoisting : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
+Closure is an advanced technic of scopes managment and variables lifetime. A closure can not only access the variables defined in its outer function but also the arguments of the scope chain of its outer function (*i.e.* the variables outside of the immediate lexical scope). Closures contain their own scope chain, the scope chain of their parents and the global scope.
+
+To create a closure, the idea is to return a function from a function. By doing so, variables from the lexical scopre are not deallocated (check execution context for more information), and remain accessible from this function.
+
+```js
+function speak() {
+    name = 'Zagreus';
+    return function () {
+        console.log('Hello ' + name);
+    }
+}
+speak(); // nothing happens, no errors
+
+var speakVar = speak(); // the returned function from speak() gets saved in greetLetter
+
+ // calling speakVar calls the returned function from the speak() function
+speakVar(); // logs 'Hello Zagreus'
+```
+
+This is an interesting behaviour. More examples [here](http://www.javascriptkit.com/javatutors/closures2.shtml).
+
+#### Hoisting
+Variable hoisting is a mecanism in JavaScript implied by how the code is processed before its interpretation. This has for effect to allow post-variable declaration in the code, even if the variable is used beforehand.
+
+```js
+undeclaredVar = 7; //unpreviously declated variable. Totally fine and usable
+
+var underclaredVar; //ok.
+```
+
+> ⚠️ There is no function hoisting! Function must be declared before they can be used.
+
+Be careful however, since hoisting can lead to leaking variable. For example
+```js
+var x = 0;
+function f() {
+  var x = y = 1; // Declares x locally; declares y globally.
+}
+f();
+
+console.log(x, y); // 0 1
+// In non-strict mode:
+// x is the global one as expected;
+// y is leaked outside of the function, though!
+```
