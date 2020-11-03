@@ -6,7 +6,7 @@
 * Object instances can contain more instances which can be functions. That's what we call a `method` (since it has an automatic `this` variable).
 * Since you can't "call" every Object instance, not every object is a function.
 
-## Module Pattern: Emulating private and public keyword
+## Module Pattern: Emulating private and public keyword @towrite
 Use the `()` operator and IIFE concept
 
 The return statement of the Module contains our public functions. The private functions are just those that are not returned. Not returning functions makes them inaccessible outside of the Module namespace. But our public functions can access our private functions
