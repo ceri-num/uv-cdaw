@@ -436,7 +436,7 @@ speak(); // nothing happens, no errors
 var speakVar = speak(); // the returned function from speak() gets saved in greetLetter
 
  // calling speakVar calls the returned function from the speak() function
-speakVar(); // logs 'Hello Zagreus'
+speakVar(); // logs 'Hello Zagreus'. See how the anon. function accesses the name variable from speak
 ```
 
 This is an interesting behaviour. More examples [here](http://www.javascriptkit.com/javatutors/closures2.shtml).
