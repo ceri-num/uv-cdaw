@@ -1,7 +1,8 @@
 # Javascript - Table of contents
 
 * [Introduction](intro.md)
-* [Rappels](rappel.md)
+* [Reminders](rappel.md)
+* [Advanced Reminders](advanced.md)
 * [Events](event.md)
 * [Programmation Objet](poo.md)
 * [API Web côté clients](api.md)
