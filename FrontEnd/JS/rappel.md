@@ -128,5 +128,5 @@ function foo(param1, param2)
 
 To invoke a function:
 ```js
-foo(7777, "hello")
+foo(7777, "hello");
 ```

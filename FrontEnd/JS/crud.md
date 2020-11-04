@@ -3,4 +3,4 @@
 ## DOM Manipulation reminders
 append, select, remove...
 
-data attribute
+data attribute https://code-boxx.com/html-custom-data-attribute/#sec-js

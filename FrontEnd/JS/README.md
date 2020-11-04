@@ -4,6 +4,7 @@
 * [Reminders](rappel.md)
 * [Advanced Reminders](advanced.md)
 * [Events](event.md)
+* [Asynchronicity](asynchronous.md)
 * [Programmation Objet](poo.md)
 * [API Web côté clients](api.md)
 * [CRUD](crud.md)
