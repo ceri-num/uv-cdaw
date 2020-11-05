@@ -134,12 +134,132 @@ for (let key in quickdraw) {
 
 ## Towards object-oriented programming
 
-### Function constructor and new operator
+### Constructor function and new operator
+As we have seen, `{...}` operator allows us to create one new object. However, when several similar objects are required, this method is not practicable (*e.g* tiles of mahjong). Constructor functions and `new` operator are what we need to do that.
 
-> In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods). (Wikipedia)
+Constructor function are regular functions, with no difference to a simple function. However, they should respect these two conventions (they are not implemented in a language-level):
+* The function should start with a capital letter
+* The function should only be called using the `new` operator
+
+The syntax is as follow
+```js
+function Quickdraw(param1, param2){
+    this.weight = param1;
+    this.brand = param2;
+}
+
+var myQckd = new Quickdraw(50, "Ultra poney"); // create new object Quickdraw
+
+alert(myQckd.weight) // access , add, remove, as usual
+```
+
+When a function is executed with the `new` operator, it does the following steps:
+* A new empty object is created and assigned to this.
+* The function body executes. Usually it modifies this, adds new properties to it.
+* The value of this is returned.
+
+There much more to learn on constructor function and new. But we want to emphasize on OOP, thus we will lean toward a more appropriate syntax
 
 ### Class
-https://javascript.info/class
+> In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods). (Wikipedia)
+
+A `class` is the fondamental element of the object-oriented programming paradigm, and we want that to be convenient to use and powerful. While constructor function and `new` operator help us to create many similar objects, a `class` construct give us much more features.
+
+#### Basics
+The syntax of a class is:
+```js
+class MyClass {
+    prop1;// properties are optional but its good to indicate them anyway
+    prop2 = 0; //IDEM, with default value
+
+    constructor(){...}//several constructor can be defined, with various param.
+
+    method1(){...}
+    method2(){...}
+    //and so on, like Java, C++ objects
+}
+```
+
+So if you retake our quickdraw example, to define a class and instantiate an object of this class
+```js
+class Quickdraw{
+    // Class fields
+    weight;
+    brand;
+
+    constructor(weight, brand){
+        this.weight = weight;
+        this.brand = brand;
+    }
+
+    printMe(){
+        console.log("hey! it's me, "+this.brand+"!");
+    }
+}
+
+// And use it
+let myQckd = new Quickdraw(15, "Mario");
+myQckd.printMe(); // cli : Hey! it's me, Mario
+```
+
+Even if `alert(typeof Quickdraw)` says that a class is a function, **it is not** just a syntactic sugar. One of the important thing is that in the prototype of the object, the `enumerable` flag is set to `false` for all methods of the class. That means iterations instructions, like `for...in`, will only iterate over the properties of the object, not its methods.
+
+> ⚠️ Classes always use strict mode, even if you are in sloppy mode (the default)! All code inside the class construct is automatically in strict mode. This mean that the behavior of somes JavaScript feature can change! Be aware of that, such as `this` value and the execution scope. More information [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+
+> ❓ Class fields are defined for each instance of the class, not the class itself. For example `Quickdraw.prototype.weight` is undefined, whereas `myQckd.weight` is set.
+
+#### Getter and Setter
+JavaScript introduced getters and setters concept both for literal function and class. Easily enough, the syntax is:
+
+```js
+class Quickdraw{
+    // Class fields
+    weight;
+
+    constructor(weight){
+        this.weight = weight; // auto calling of the setter
+    }
+
+    get weight(){
+        return this._weight; //note the _
+    }
+
+    set weight(w){
+        if(w > 1000)
+        {
+            alert("error, qckd to heavy");
+            return;
+        }
+        this._weight = w; //note the _
+    }
+}
+```
+
+> ⚠️ Getters and setters are specific functions. When declaring a get/set over a property of your object, JavaScript actually replace this property with a specific function. That is why you need to change the name of the property and -- by convention -- we used the `_` to do that. Otherwise, you will have an infinite recursive loop. Thus, when we do myQckd.weight = 15, it is actually the setter that is called, not a value affection for the property! More information about getters and setters [here](https://medium.com/javascript-in-plain-english/javascript-classes-an-in-depth-look-part-2-88b666ed3546).
+
+#### Bounding your method with event
+The inconvenient with JavaScript is that `this` is dynamic. Therefore, we cannot "simply" give a method as a callback to a function.
+
+```js
+class Quickdraw{
+    constructor(w){ this.weight = w }
+    myClick(){alert(this.weight);}
+}
+let qck = new Quickdraw(150);
+setTimeout(qck.myClick, 1000); // undefined ! Oops!
+```
+
+This is called "losing `this`". There is several approach for fixing this issue, but an elegant solution is relying on class fields, since they are object based, and not prototype based. Thus the method `myClick` will be created on a per-object basis, with `this` always referencing the object.
+
+```js
+class Quickdraw{
+    constructor(w){ this.weight = w }
+    myClick = () => {alert(this.weight);} // this is now a class field (i.e. attribute)!
+}
+let qck = new Quickdraw(150);
+setTimeout(qck.myClick, 1000); // 150
+```
+
 
 ## Module Pattern: Emulating private and public keyword @towrite
 Use the `()` operator and IIFE concept
