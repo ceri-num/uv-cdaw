@@ -38,3 +38,6 @@ Module.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
 
 
 https://rapides6.herokuapp.com/
+
+## Reflect & Proxy API (ES6)
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
