@@ -59,7 +59,7 @@ Le joueur vent d’EST jouera le premier. Pendant son tour, un joueur peut effec
 ## Interface Web / UX attendue
 Les 4 joueurs jouent chacun sur leur propre navigateur Web. Lorsqu’un joueur jette une tuile, cela déclenche la fin de son tour. Vous pouvez envisager de jouer en synchrone via une bibliothèque JS telle que [socket-io](https://socket.io) mais ce n’est pas obligatoire.
 
-## Attentes des parties
+## Travail à faire pour le projet dans chacune des matières de l'UV CDAW
 
 ### UX
 * Dégager les User stories à partir du cahier des charges
@@ -74,11 +74,10 @@ Les 4 joueurs jouent chacun sur leur propre navigateur Web. Lorsqu’un joueur j
 * Ecrire les requêtes en lien avec le projet
 
 ### Back-end
-* Concevoir et développer une API Web REST/JSON
+* Concevoir une API Web REST qui retourne uniquement du JSON qui sera utilisé par le Front-end
 Exemple d'API : https://punkapi.com/documentation/v2
-* Utiliser une architecture MVC (PHP, Laravel ou Seaside ;-))
-* Utiliser la base de données et les requêtes SQL pour développer la couche Modèle
-* Retourner des réponses au format JSON qui seront utilisées par le Front-end
+* Implémenter cette API avec une architecture MVC+REST en PHP, Laravel ou Seaside
+* La persistence des données utilisera la base de données et les requêtes SQL créées dans le cours AGL
 
 ### Front-end
 * Conserver et exploiter la couche modèle applicatif du serveur

@@ -5,13 +5,41 @@
 Vous *devez* utiliser un dépôt git sur le serveur gvipers pour votre projet et travailler en équipe sur ce dépôt.
 L'URL de votre dépôt devra *obligatoirement* avoir la forme suivante :  https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.
 
-Ce dépôt doit contenir *TOUTES* les ressources du projet :
-- Maquetage
-- Documentation
-- Modèles de données / SQL
-- Scripts de déploiement
-- Codes source des Back et Front-end
-- Readme.md qui décrit le contenu du dépôt, l'organisation des fichiers, comment déployer le site.
+Ce dépôt doit contenir *TOUTES* les ressources du projet. Exemple d'organisation de votre dépôt git :
+
+```
+Readme.md         # décrit l'organisation de votre dépôt, où trouver les docs, les auteurs, ...
+doc/
+   sujet.md       # votre sujet de projet
+   REST_API/      # contient la doc de votre API WEB
+   Deploiement.md # décrit comment déployer et configurer votre Projet
+
+UX/
+   Maquettes/     # contient les maquettes de votre site
+   static/        # contient une maquette statique HTML/CSS de votre site
+   ...
+AGL/
+   Conception/
+      mcd
+      ...
+   BD/
+      createDatabase.sql   # fichier de création de votre BD (create table, ...)
+      insertSampleData.sql # fichier insérant des données de tests dans la base
+      ...
+BackEnd/
+   tpX/  # contient vos code pour les TPs
+   src/  # contient le code de la partie BackEnd du projet
+      config/        # contient la configuration du BackEnd (config BD, ...)
+      model/         # contient les modèles
+      controller/   # contient les contrôleurs
+      view/
+         templates_json/   # contient les templates JSON pour la construction des réponses HTTP
+      index.php
+FrontEnd/
+   src/  # contient le code source de la partie FrontEnd du projet
+Laravel/
+   ...
+```
 
 ## Rendre son projet
 
