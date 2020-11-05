@@ -1,6 +1,6 @@
 # Modalités pratiques pour le Projet
 
-## Versionning
+## Versionning avec git sur gvipers
 
 Pour le projet vous devez utiliser un dépôt git sur le serveur https://gvipers.imt-lille-douai.fr.
 Cela signifie qu'il doit y a avoir un dépôt git pour le projet et que chaque membre du groupe doit __committer__ dans ce dépôt.
@@ -11,6 +11,10 @@ Ce dépôt doit contenir *TOUTES* les ressources du projet :
 - Scripts de déploiement
 - Codes source des Back et Front-end
 - ...
+
+## Déployer sur le serveur eden
+
+
 
 ## Rendre son projet
 
