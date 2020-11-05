@@ -23,7 +23,7 @@ Asynchronicity allows us to initiate actions at a specific time, and finish them
 
 A callback function is a function (generally anonymous) passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. This is extremelly usefull to make versatile function by attaching it a specific behavior when it has finished to run.
 
-> ❓ We already see callback a lot in the [Events](event.md) section!
+> ❓ We have already seen callbacks a lot in the [Events](event.md) section!
 
 Callback are not always associated with events though. They can also be used with simple function (native or custom). For example with `Timeout`
 
@@ -228,7 +228,7 @@ fetch('https://api.github.com/repos/ceri-num/uv-cdaw/commits')
 ```
 > ❓ Do not forget that you can split your code into reusable function! For example, one for retrieving the GitHub username.
 
-Remember, anyway, that : **Promise handling is always asynchronous**
+Remember, anyway, that : **Promise handling is always asynchronous!** Even if a `.then` wait the previous `.then` to finish, all the rest of your code is still running!
 
 ## Micro-managing the synchronicity
 
@@ -308,4 +308,4 @@ function f() { //non async function, we can't use await here!
 }
 f();
 ```
-> ❓ Handling error for `async`/`await` function is rely on `try...catch` syntax, instead of the `.catch` handler.
+> ❓ Handling error for `async`/`await` function is relying on `try...catch` syntax, instead of the `.catch` handler.
