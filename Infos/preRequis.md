@@ -1,11 +1,9 @@
 
-# Se préparer pour l'UV CDAW
-
 - ordinateur + connexion internet
 - casque micro
 - inscrit à l'UV sur MLS https://mylearningspace.imt-lille-douai.fr/course/view.php?id=434
 - inscrit sur le discord de l'UV avec un pseudo "Prenom NOM" (cf. lien d'invitation sur MLS)
-- rattraper les pré-requis si nécessaire.
+- rattraper les pré-requis si nécessaire
 
 ## Pré-requis en développement Web
 

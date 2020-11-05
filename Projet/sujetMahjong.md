@@ -62,14 +62,23 @@ Les 4 joueurs jouent chacun sur leur propre navigateur Web. Lorsqu’un joueur j
 ## Attentes des parties
 
 ### UX
+* Dégager les User stories à partir du cahier des charges
+* Maqueter votre site Web
+* Générer les templates HTML/CSS/JS pour la partie Front-end
+
 ### Couche Données
+* Faire un modèle de données
+* Faire un schéma de la base de données (BD)
+* Créer la BD sur eden
+* Importer des données dans la BD
+* Ecrire les requêtes en lien avec le projet
 
 ### Back-end
-Exemple pour Backend:
-* utiliser la base de données construite et les requêtes SQL pour développer la couche Modèle
-* développer une API Web REST/JSON avec une architecture MVC (PHP, Laravel ou Seaside ;-))
-* documenter cette API qui sera ensuite utilisée par le Front-end
+* Concevoir et développer une API Web REST/JSON
 Exemple d'API : https://punkapi.com/documentation/v2
+* Utiliser une architecture MVC (PHP, Laravel ou Seaside ;-))
+* Utiliser la base de données et les requêtes SQL pour développer la couche Modèle
+* Retourner des réponses au format JSON qui seront utilisées par le Front-end
 
 ### Front-end
 * Conserver et exploiter la couche modèle applicatif du serveur
