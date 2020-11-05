@@ -1,6 +1,10 @@
 # UV CDAW
 
-[Pré-requis](admin/preRequis.md)
+## Infos
+
+* [Pré-requis](Infos/preRequis.md)
+* [Outils](Infos/outils.md)
+* [FAQ](Infos/faq.md)
 
 ## UX
 
@@ -17,5 +21,3 @@
 ## Projet
 * [Sujet 2020](Projet/sujetMahjong.md)
 * [Méthodologie et Evaluation](Projet/eval.md)
-
-[FAQ](Projet/faq.md)

@@ -25,20 +25,3 @@ L'UV CDAW nécessite pour être suivie de connaître :
 
 Si ce n'est pas votre cas, veuillez vous mettre à niveau avant le commencement de cette UV en utilisant par exemple les ressources de l'UV IDAW https://mylearningspace.imt-lille-douai.fr/course/view.php?id=143.
 
-## Outils
-
-Cette UV nécessite des outils spécifiques pour chacuns des cours.
-
-### BackEnd
-
-Utilisez les outils et l'OS que vous voulez.
-Par contre, il n'y aura pas (ou très peu) de support pour les utlisateurs de Windows.
-
-- Serveur Web + PHP :
-    * Linux : Apache / nginx
-    * Windows : uWamp
-    * Mac : Mamp
-- Navigateur Web : Firefox ou Chrome (IE et Edge sont INTERDITs)
-- Editeur de code : VSCode
-- Client git : CLI, SourceTree, ...
-- Client sftp : Filezilla
