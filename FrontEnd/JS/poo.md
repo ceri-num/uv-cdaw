@@ -148,7 +148,7 @@ The return statement of the Module contains our public functions. The private fu
 
 ```js
 var Module = (function() {
-    function _privateMethod() {
+    function privateMethod() {
         // do something
     }
 
@@ -165,10 +165,11 @@ var Module = (function() {
     };
 })();
 Module.publicMethod(); // works
+Module.publicGetterMethod(); // works
 Module.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
 ```
 
-> ❓ A convention is to use the `_` (underscore) symbol as a prefix for private method, and returning an anonymous object containing the public functions.
+> ❓ A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
 
 
 
