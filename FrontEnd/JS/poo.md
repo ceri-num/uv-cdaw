@@ -366,7 +366,7 @@ qck.makeAwait().then(console.log); //cli : Hi! I'm resolved ; after 3 sec.
 console.log("Don't forget!"); // <-- This code prints after the above log!
 ```
 
-## Meta-programmation (ES6)
+## Meta-programming (ES6)
 This is a brief introduction to meta-programming via `Proxy` and `Reflect` new features introduced in JavaScript by ES6. Meta programming is about code that have a direct effect on the code we use to write the application (or core).
 
 ### Proxy
