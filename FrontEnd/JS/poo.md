@@ -160,12 +160,45 @@ When a function is executed with the `new` operator, it does the following steps
 
 There much more to learn on constructor function and new. But we want to emphasize on OOP, thus we will lean toward a more appropriate syntax
 
-### Class
+### Module Pattern: Emulating private and public keyword
+With a little imagination and knowledge about the language, it is totally possible to force function's visibility for function constructor. Use the [`()` operator, IIFE concept and the concept of closure](advanced.md).
+
+The return statement of the Quickdraw contains our public functions. The private functions are just those that are not returned. Not returning functions makes them inaccessible outside of the Quickdraw namespace. But our public functions can access our private functions thanks to closure.
+
+```js
+var Quickdraw = (function() {
+    function privateMethod() {
+        // do something
+    }
+
+    function publicGetterMethod()
+    {
+        // do smth
+    }
+
+    return {
+        publicGetterMethod: publicGetterMethod,
+        publicMethod: function() {
+            // can call privateMethod();
+        },
+    };
+})();
+Quickdraw.publicMethod(); // works
+Quickdraw.publicGetterMethod(); // works
+Quickdraw.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
+```
+
+> ❓ A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
+
+> ❓ Take some time to fully understand this code.
+
+
+## Class
 > In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods). (Wikipedia)
 
 A `class` is the fondamental element of the object-oriented programming paradigm, and we want that to be convenient to use and powerful. While constructor function and `new` operator help us to create many similar objects, a `class` construct give us much more features.
 
-#### Basics
+### Basics
 The syntax of a class is:
 ```js
 class MyClass {
@@ -208,7 +241,7 @@ Even if `alert(typeof Quickdraw)` says that a class is a function, **it is not**
 
 > ❓ Class fields are defined for each instance of the class, not the class itself. For example `Quickdraw.prototype.weight` is undefined, whereas `myQckd.weight` is set.
 
-#### Getter and Setter
+### Getter and Setter
 JavaScript introduced getters and setters concept both for literal function and class. Easily enough, the syntax is:
 
 ```js
@@ -237,7 +270,8 @@ class Quickdraw{
 
 > ⚠️ Getters and setters are specific functions. When declaring a get/set over a property of your object, JavaScript actually replace this property with a specific function. That is why you need to change the name of the property and -- by convention -- we used the `_` to do that. Otherwise, you will have an infinite recursive loop. Thus, when we do myQckd.weight = 15, it is actually the setter that is called, not a value affection for the property! More information about getters and setters [here](https://medium.com/javascript-in-plain-english/javascript-classes-an-in-depth-look-part-2-88b666ed3546).
 
-#### Bounding your method with event
+### Bounding your method with event
+Your class can represents objects aiming to be interact with in the view of your application. Consequently, maybe some of its methods need to be called when specific events are dispatched.
 The inconvenient with JavaScript is that `this` is dynamic. Therefore, we cannot "simply" give a method as a callback to a function.
 
 ```js
@@ -259,37 +293,35 @@ class Quickdraw{
 let qck = new Quickdraw(150);
 setTimeout(qck.myClick, 1000); // 150
 ```
+### Static
+> ⚠️ This is a recent implementation and could not work with all the browsers.
 
+It is possible to associate a method to a class itself, not to its `prototype` with the keyword `static`. Usually, static methods are used to implement functions that belong to the class itself, but not to any particular instance (object) of it. Simply prefix the method of the keyword to obtain such a behavior.
 
-## Module Pattern: Emulating private and public keyword @towrite
-Use the `()` operator and IIFE concept
+This goes the same for static property.
 
-The return statement of the Module contains our public functions. The private functions are just those that are not returned. Not returning functions makes them inaccessible outside of the Module namespace. But our public functions can access our private functions
+> ⚠️ Again, mind `this`! It refers to the class itself, not a particular instance. Therefore, if we had a static method in our `Quickdraw` class, and inside the method, `alert(this === Quickdraw)//true`.
 
+### Visibility of fields
+OOP imply visibility for fields class. In JavaScript, because it is a prototype based language, all the fields are `public` by default. That means all properties and functions of an object are visible and modifiable anywhere if there is a reference to this object.
+
+Protected fields are not implemented in JavaScript on the language level, but in practice they are very convenient, so they are emulated. In our Quickdraw example, `weight` and `brand`, as well as `method1` are public.
 ```js
-var Module = (function() {
-    function privateMethod() {
-        // do something
-    }
+class Quickdraw{
+    weight;
+    brand;
 
-    function publicGetterMethod()
-    {
-        // do smth
-    }
-
-    return {
-        publicGetterMethod: publicGetterMethod,
-        publicMethod: function() {
-            // can call privateMethod();
-        },
-    };
-})();
-Module.publicMethod(); // works
-Module.publicGetterMethod(); // works
-Module.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
+    method1(){};
+}
 ```
+The **convention** (since it is not implemented on the language level) is to prefix the protected element with an `_` (underscore). So, if our protected should be protected, they will become `_weight` and `_brand`.
 
-> ❓ A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
+> ⚠️ Do not be fooled! They are still publicly accessible. But since you will be probably looking for weight instead of _weight, you will not find them. You will also avoid all properties starting with `_` in iterations instruction like `for...in`.
+
+The same goes for methods. Prefix the class methods with `_` to indicate they are protected. However, tend to favor **get** and **set** when possible!
+
+
+In the recent additions of the language, the private keyword as been introduced at the language-level this time.
 
 
 

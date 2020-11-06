@@ -1,5 +1,8 @@
 # Inheritance and prototype chain
 
+### static inheritance
+https://javascript.info/static-properties-methods#inheritance-of-static-properties-and-methods
+
 ## Method and function borrowing
 bind, call, apply()
 https://www.codingame.com/playgrounds/9799/learn-solve-call-apply-and-bind-methods-in-javascript
