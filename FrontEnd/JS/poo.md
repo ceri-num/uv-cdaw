@@ -305,6 +305,7 @@ This goes the same for static property.
 ### Visibility of fields
 OOP imply visibility for fields class. In JavaScript, because it is a prototype based language, all the fields are `public` by default. That means all properties and functions of an object are visible and modifiable anywhere if there is a reference to this object.
 
+#### Protected
 Protected fields are not implemented in JavaScript on the language level, but in practice they are very convenient, so they are emulated. In our Quickdraw example, `weight` and `brand`, as well as `method1` are public.
 ```js
 class Quickdraw{
@@ -320,14 +321,42 @@ The **convention** (since it is not implemented on the language level) is to pre
 
 The same goes for methods. Prefix the class methods with `_` to indicate they are protected. However, tend to favor **get** and **set** when possible!
 
+#### Private
+In the recent additions of the language, a private symbol as been introduced at the language-level. Any element prefixed by `#` is meant to be private, and therefore is only accessible from inside the class whether it is a method or a property.
 
-In the recent additions of the language, the private keyword as been introduced at the language-level this time.
+Relying on `#` while defining a class element also has an impact on its syntactic declaration: two elements (*e.g.* properties) can share a same name if one is either public or protected, and the other private. You can also combine this with getter and setter to have a powerful encapsulation.
 
+```js
+class Quickdraw{
+    #weight; //private class field
+
+    set weight(value){ // setter, defined on weight
+        if(value > 0)
+            this.#weight = value; //ok to access private elmt from inside
+        else
+            throw new Error("Check Manage error section ;)");
+    }
+}
+
+let qck = new Quickdraw();
+qck.weight = 150; // OK! Call the setter, and set the value of the private weight
+```
+
+### Check belongings
+The `instanceof` operator allows to check whether an object belongs to a certain class. It also takes [inheritance](protoh.md) into account. In case of *polymorphic* objects, for example, this operator is handful. It is applicable to class, but works also with constructor functions.
+
+The syntax is simple.
+```js
+myObj instanceof ClassName
+```
+It returns `true` if `myObj` belongs to the class `ClassName` or a **class inheriting from it**.
+
+## Asynchronicity in object
 
 
 https://rapides6.herokuapp.com/
 
-## Asynchronicity in object
+
 
 ## Reflect & Proxy API (ES6)
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect

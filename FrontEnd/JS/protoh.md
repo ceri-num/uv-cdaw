@@ -1,7 +1,12 @@
 # Inheritance and prototype chain
 
+### Protected and private inheritance: reminder
+
 ### static inheritance
 https://javascript.info/static-properties-methods#inheritance-of-static-properties-and-methods
+
+### Mixins: or multi-inheritance 
+
 
 ## Method and function borrowing
 bind, call, apply()
