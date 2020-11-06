@@ -45,6 +45,7 @@ Un exemple d'affichage de mahjong:
 * Définir un chronomètre pour le tour de chaque joueur -- configurable dans les options du salon de jeu
 * Liste tracking des Yakus effectués/restant à faire (en jeu et dans le profil)
 * Animation
+* Système de grade (Kyū - Dan)
 
 ## Déroulement d’une partie
 cf. règles officielles ici : https://www.ffmahjong.fr/FFMJ-site/documents/riichi-fr.pdf
