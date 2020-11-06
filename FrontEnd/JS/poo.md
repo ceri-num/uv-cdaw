@@ -352,11 +352,76 @@ myObj instanceof ClassName
 It returns `true` if `myObj` belongs to the class `ClassName` or a **class inheriting from it**.
 
 ## Asynchronicity in object
+Another way to bing method of an object with any event is by relying on `async` and Promise. `async` can be added in front of class/object methods to make them return promises, and `await` promises inside them.
 
+```js
+class Quickdraw{
+    async makeAwait() {
+        return await (new Promise( (resolve, reject) => setTimeout(() => resolve("Hi! I'm resolved"),3000)));
+    }
+};
 
-https://rapides6.herokuapp.com/
+let qck = new Quickdraw();
+qck.makeAwait().then(console.log); //cli : Hi! I'm resolved ; after 3 sec.
+console.log("Don't forget!"); // <-- This code prints after the above log!
+```
 
+## Meta-programmation (ES6)
+This is a brief introduction to meta-programming via `Proxy` and `Reflect` new features introduced in JavaScript by ES6. Meta programming is about code that have a direct effect on the code we use to write the application (or core).
 
+### Proxy
+The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object (cf. [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)). In other word, it allows us to create some kind of a layer between an object and its consuming entities. We can then control the behavior of the object, like deciding what should be done when accessing a property in a object or the `set` is used.
 
-## Reflect & Proxy API (ES6)
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
+The syntax is:
+```js
+var p = new Proxy(target, handler);
+```
+Where the `target` is the object for which you want to create the proxy, and the `handler` is the object defining the custom behavior. The `handler` traps some predefined functions, such as:
+* apply()
+* construct()
+* get()
+* has()
+* set()
+
+```js
+const target = {
+  notProxied: "original value",
+  proxied: "original value"
+};
+
+const handler = { //defining a handler for get
+  get: function(target, prop, receiver) {
+    if (prop === "proxied") {
+      return "replaced value";
+    }
+    return Reflect.get(...arguments);
+  }
+};
+
+const proxy = new Proxy(target, handler); //creating the proxy
+
+console.log(proxy.notProxied); // cli : original value
+console.log(proxy.proxied);    // cli : replaced value.
+```
+With the above example, we saw that each time we access an object property, we call the `get` `handler` and perform the instruction within, instead of directly accessing target attributes.
+
+This example is somewhat identical to the use of `get` from a `class` as we saw before.
+
+> ❓ Proxy can be used to make some quite elegant solution for protecting property access. You need the traps on `get`, `set` `ownKeys` and `deleteProperty` to check if the property start with `_`. If this is the case, then throw an error.
+
+### Reflect
+`Reflect` is a built-in object that provides static functions for interceptable JavaScript operations. Some of these functions are the same as corresponding method on object (yet [subtle differences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) can apply). Put in other words, it simplifies creation of `Proxy` since it is a minimal wrapper around the interal methods trappable.
+
+Some examples
+```js
+const dog = {
+    race: "tamaskan",
+    color: "grey",
+    bark: function(){console.log("woof");},
+}
+Reflect.ownKeys(dog); // list all the properties ["race", "color", "bark"]
+Reflect.set(dog, "color", "purple"); // set the dog's color to purple
+Reflect.has(dog, "corol"); // false
+```
+
+> If you want to test your knowledge about Reflect API and Proxy API, you can go [here](https://rapides6.herokuapp.com/templates/get-by-proxy.html). There is also lot of other cool stuff on the net! Go check out!
