@@ -363,7 +363,7 @@ class Quickdraw{
 
 let qck = new Quickdraw();
 qck.makeAwait().then(console.log); //cli : Hi! I'm resolved ; after 3 sec.
-console.log("Don't forget!"); // <-- This code prints after the above log!
+console.log("Don't forget!"); // <-- This code prints before the above log!
 ```
 
 ## Meta-programming (ES6)
