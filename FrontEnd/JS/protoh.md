@@ -110,7 +110,7 @@ This property `prototype` of a constructor function (cf. [OOP section](poo.md)) 
 let martialArt = {
   grade: "3rd Dan",
   fight(){
-    console.log("Tōōōō~~~"); // this method will not longer be used by kendo
+    console.log("Tōōōō~~~");
   },
 }
 
