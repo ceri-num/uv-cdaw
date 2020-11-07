@@ -6,27 +6,29 @@
 * [Outils](Infos/outils.md)
 * [FAQ](Infos/faq.md)
 
-## UX
-* [Planning](UX/README.md)
+<!-- ## UX
+* [Planning](UX/README.md) -->
 
-## AGL
-* [Planning](AGL/README.md)
+<!-- ## AGL
+* [Planning](AGL/README.md) -->
 
 ## Back-end
-* [Planning](BackEnd/README.md)
+- [PHP OO](tuto-PHP.md)
+- [PDO](tuto-PDO.md)
+- [TP PHP PDO](TP-PHP_PDO.md)
 
-## Front-end
-* [Planning](FrontEnd/README.md)
+<!-- ## Front-end
+* [Planning](FrontEnd/README.md) -->
 
-## Laravel
-* [Planning](Laravel/README.md)
+<!-- ## Laravel
+* [Planning](Laravel/README.md) -->
 
-## Seaside
-* [Planning](Seaside/README.md)
+<!-- ## Seaside
+* [Planning](Seaside/README.md) -->
 
 ## Projet
 * [Sujet 2020](Projet/sujetMahjong.md)
 * [Méthodologie et Evaluation](Projet/eval.md)
 
-## Fun
-* [Web Fun](Infos/fun.md)
+<!-- ## Fun -->
+[Web Fun](Infos/fun.md)
