@@ -14,9 +14,9 @@
 * [Planning](AGL/README.md) -->
 
 ## Back-end
-- [PHP OO](tuto-PHP.md)
-- [PDO](tuto-PDO.md)
-- [TP PHP PDO](TP-PHP_PDO.md)
+- [PHP OO](BackEnd/tuto-PHP.md)
+- [PDO](BackEnd/tuto-PDO.md)
+- [TP PHP PDO](BackEnd/TP-PHP_PDO.md)
 
 <!-- ## Front-end
 * [Planning](FrontEnd/README.md) -->
@@ -30,6 +30,3 @@
 ## Projet
 * [Sujet 2020](Projet/sujetMahjong.md)
 * [Méthodologie et Evaluation](Projet/eval.md)
-
-<!-- ## Fun -->
-
