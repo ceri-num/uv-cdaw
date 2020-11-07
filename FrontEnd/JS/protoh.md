@@ -44,7 +44,9 @@ Since `this` is dynamic in JavaScript, an iterrogation may arise: what is the va
 
 The answer is **always** the initial object calling the property/methods, not the objects from the prototype chain: `this` is not affected by the prototype chain at all.
 
+{% hint style="success" %}
 > ❓ Use the following rule to help you find the value of `this`: no matter where the method is found, `this` is always the object before the `.` (dot)!
+{% endhint %}
 
 ```js
 let martialArt = {
@@ -73,7 +75,9 @@ alert(martialArt); // Undefined variable this.versus in the prototype
 
 What happens here is that the variable `versus` has been attached to the calling object `kendo`, despite the fact the function that creates it is in its prototype (`martialArt`). `martialArt` does not have a `versus` variable after that.
 
+{% hint style="warning" %}
 > ⚠️ There is no *hoisting* (cf. [Advanced reminder](advanced.md)) concept involved here!
+{% endhint %}
 
 ### Override in writting
 The prorotype is only used for **reading** properties and methods, not for writting them. Write operation (as for delete though) works directly with the object itself. Thus, you can rewritte an actual function existing in the prototype by the object's own definition of the method.
@@ -97,12 +101,16 @@ kendo.fight = function(){
 alert(kendo.fight); // Geikō time! BANZAI!
 ```
 
+{% hint style="info" %}
 > ❓ This works as an override because now, JavaScript directly find the method you are calling: thus is does not have the need to go back up the prototype chain.
+{% endhint %}
 
 ### Manually extending object: F.prototype
 By now, it should be clear how prototype can be used for object inheritance. As stated above, this is called **prototypal inheritance**. Here we will see how we can extend an object using constructor function and `new` operator by using a property named `prototype`.
 
+{% hint style="danger" %}
 > ⚠️ Here we speak of a *special* property called `prototype`, not the `[[Prototype]]` seen above. It is only used once: while construction an object *via* a function thanks to `new`.
+{% endhint %}
 
 This property `prototype` of a constructor function (cf. [OOP section](poo.md)) means the following: "When a `new` object is created (by using the `new` operator), assigns its `[[Prototype]]` to the given object". By this mean, all the objects from a constructor function created with `new` will all have the object as prototype.
 
@@ -124,9 +132,9 @@ let kendo = new Kendoka(true);
 alert(kendo.grade) // 3rd Dan
 ```
 
+## Class inheritance
+https://javascript.info/class-inheritance
 
-
-## another sec
 ### Protected and private inheritance: reminder
 
 ### static inheritance

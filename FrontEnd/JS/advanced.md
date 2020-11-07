@@ -51,7 +51,9 @@ list.forEach((item, index) => {
 })
 //index is option: list.forEach(item => console.log(item))
 ```
+{% hint style="danger" %}
 > ⚠️ The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
+{% endhint %}
 
 
 The `for...in` statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements. A `for...in` statement looks as follows:
@@ -73,9 +75,13 @@ for (const i of myarray) {
 }
 ```
 
+{% hint style="warning" %}
 > ❓ A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
+{% endhint %}
 
+{% hint style="info" %}
 > ❓ A hook is a special invokation function mecanism. More information below.
+{% endhint %}
 
 ### Iterator and generator
 #### Iterator
@@ -138,7 +144,9 @@ while( !result.done ) // while there is still something
     result = iterator.next();
 }
 ```
+{% hint style="info" %}
 > ❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
+{% endhint %}
 
 #### Generator & Iterable
 One issue with custome iterators is that their creation requires careful programming since their internal state has to be explicitly maintained.
@@ -247,7 +255,9 @@ function()
 }
 ```
 
+{% hint style="danger" %}
 > ⚠️ An anonymous function will do **nothing** on its own (except enclosed in a grouping operator -- see beelow). It need to be "manually" invoked.
+{% endhint %}
 
 These kind of functions are commonly used along event handler or callback function.
 
@@ -268,6 +278,7 @@ var maVar = function()
 maVar();
 ```
 
+{% hint style="info" %}
 > ❓ Stored anonymous function can be a good way to separate your functions -- which actually do things -- from your event handlers -- which triggers things. Example:
 > ```js
 > // Do stuff on scroll
@@ -278,6 +289,7 @@ maVar();
 > // Listen for scroll events
 > window.addEventListener('scroll', onScrollHandler, false);
 > ```
+{% endhint %}
 
 #### IIFE (Immediately Invoked Function Expression)
 A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
@@ -312,7 +324,9 @@ var maVar = 10;
 
 Check [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for more in depth information about arrow functions.
 
+{% hint style="warning" %}
 > ❓ Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`. It can be a good candidate for promises.
+{% endhint %}
 
 ### Scope and context
 #### Scope
@@ -345,15 +359,22 @@ function foo(){
 logName(); // CLI: 'Kazuma'
 ```
 
+{% hint style="danger" %}
 > ⚠️ Conditionnal statements (e.g. `if`, `switch`) and loops, unlike functions, don't create a new scope. Variables defined inside of them remains in the scope they were already in while declared.
+{% endhint %}
+
+{% hint style="danger" %}
 > ⚠️ **HOWEVER!** `let` and `const` statement for variable declaration support the declaration of local scope in conditionnal and loop statements. This means that at the end of the statement, **all** the variables declared with either `let` or `const` is destroyed.
+{% endhint %}
 
 Global scope lives as long as your application lives. Local Scope lives as long as your functions are called and executed.
 
 #### Context
 Context refers to the value of `this` (the introspection operator) in some particular part of the scope of your code. In the global scope context is always the Window object (`this === Window`).
 
+{% hint style="warning" %}
 > ⚠️ Programer tend to often confuse scope for context, and *vice et versa*. But they are not the same concept! Scope refers to the visibility of variables in a specific code location ; context, their values in a specific scope.
+{% endhint %}
 
 When declaring a new object -- or using the `new` operator, the context changed. 
 
@@ -450,7 +471,9 @@ undeclaredVar = 7; //unpreviously declated variable. Totally fine and usable
 var underclaredVar; //ok.
 ```
 
+{% hint style="danger" %}
 > ⚠️ There is no function hoisting! Function must be declared before they can be used.
+{% endhint %}
 
 Be careful however, since hoisting can lead to leaking variable. For example
 ```js

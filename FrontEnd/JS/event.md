@@ -38,7 +38,9 @@ To handle the `click` event, we first need to retrieve our HTML element (here th
 var elem = document.getElementById("elem");
 elem.addEventListener('click', (e) => alert(e), false);
 ```
+{% hint style="info" %}
 > ❓ Multiple call to `addEventListener` for a same HTML element will **add** the handlers. This means that you can stack several functions for one event!
+{% endhint %}
 
 ### Event object
 When an event is dispatched, it is often in a specific context which is important to us in order to understand what was going on. For example, in the case of a mouse click, where was the coordinate of the mouse? 
@@ -89,7 +91,9 @@ class Menu {
 ## Creating event
 JavaScript allows you to create and manually manage your own events, which prevent you to fully reimplement an event handler. They are called **synthetic events**, as opposed to the events fired by the browser itself.
 
+{% hint style="warning" %}
 > ❓ These events are **DOM events**: they rely on the DOM API of your browser, and are considered as event targets (cf. [`EventTarget()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)). They are not supposed to be events produced by your objects.
+{% endhint %}
 
 To create a new event, the `Event` constructor can be call
 
@@ -160,7 +164,9 @@ All these previous notion, and mostly *bubbling*, allow us to implement powerful
 ### Event Delegation pattern
 The idea behind the event delegation pattern, is that, when several elements on an HTML page are supposed to be handled in a similar fashion, we define a single handler on their common ancestor in charge of all these elements.
 
+{% hint style="info" %}
 > ❓ One can say that web component approach emphasize this pattern by making a specific type of component self-aware of its events. Check the [single page application topic](../SPA/intro.md) for more information.
+{% endhint %}
 
 This is made possible because we have the event object with the `target` property, alowing us to see where the event actually took place in the page.
 
@@ -219,7 +225,9 @@ JS
   let menu = document.getElementById("menu");
   new Menu(menu);
 ```
+{% hint style="warning" %}
 > ❓ Please note that `this.onClick` is bound to `this` in (1). That’s important, because otherwise `this` inside `onClick` would reference the DOM element (elem), not the Menu object, and `this[action]` would not be what we need (cf. [Scope and Context](advanced.md)).
+{% endhint %}
 
 ### Behavior pattern
 The behavior pattern rely both the delegation pattern and the `data` attribute of HTML. The idea behind this pattern is to assigne specific action to specific data-attribute, by using a top level delegation. In other words, we attach to the `document` itself a handler and verify the very existence of the attribute.
@@ -243,5 +251,6 @@ One more counter: <input type="button" value="2" data-counter>
   });
 </script>
 ```
-
+{% hint style="info" %}
 > ❓ You can use this approach for toggling visibility and elements on the page.
+{% endhint %}

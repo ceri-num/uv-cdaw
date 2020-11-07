@@ -17,9 +17,13 @@ let quickdraw = {
     brand: "ClimbingGoat", // key= brand, value = "ClimbingGoat"
 };
 ```
+{% hint style="info" %}
 > ❓ It is possible to also put a coma `,` at the end of the last line. This is known as *trailing*: since all the lines are alike, it makes it easier to add/move/remove properties.
+{% endhint %}
 
+{% hint style="info" %}
 > ❓ The `value` part can also be a variable!
+{% endhint %}
 
 ### Access an object property
 Property values can be accessed using the dot notation:
@@ -28,7 +32,9 @@ console.log(quickdraw.weight); // cli: 15
 
 quickdraw.weight = 20; // setting a new value to the property weight of the object quickdraw
 ```
+{% hint style="warning" %}
 > ❓ Remember that variable does not have a type! Thus, we could have done `quickdraw.weight="HEAVY!"` with no error at all.
+{% endhint %}
 
 A property can also be accessed by using the square brackets notation `[]`. It is more powerful that dot notation, but also more cumbersome to write. To access a property using square brackets notation:
 
@@ -71,7 +77,9 @@ const qckDraw2 = {
     brand: "OMG It's a!",
 }
 ```
+{% hint style="danger" %}
 > ⚠️ A `const` object's properties can **still be** changed! For example, suppose our `const quickdraw={weight: 15}` object. We can change its weight with no error. But we cannot change the value of the variable `quickdraw` itself (*e.g.* replacing it by another object).
+{% endhint %}
 
 ### Introspection for object property
 JavaScript strength is its introspection almost limitless possibilities. Consequently, it is possible to access any property of an object, and plus, there will be no error if the property doesn’t exist. Indeed, a non existing property will just return an `undefined` value. There is also the `in` operator (much more elegant than the `===` operator) to test the existence of such properties.
@@ -82,7 +90,9 @@ alert( "weight" in quickdraw ) // TRUE
 alert( wgt in quickdraw ) // TRUE, still checking for the property weight
 alert( "rope" in quickdraw ) // FALSE
 ```
+{% hint style="success" %}
 > ❓ Remember the `for...in` loop iterating over the properties of an object? No? Go review the [Advanced Section](section.md).
+{% endhint  %}
 
 ### Complex properties
 Property can be more than just a primitive value. In fact, they can store other objects, or even functions.
@@ -129,8 +139,9 @@ for (let key in quickdraw) {
   clone[key] = user[key];
 }
 ```
-
+{% hint style="danger" %}
 > ⚠️ This copy only the primitive level of the object. If you have another level in your object (*e.g.* another object), and you want to deep copy them, you will need to go this level. There is already some function here and there to do that, you could check the [Lodash lib](https://lodash.com/docs#cloneDeep) for example.
+{% endhint %}
 
 ## Towards object-oriented programming
 
@@ -187,11 +198,13 @@ Quickdraw.publicMethod(); // works
 Quickdraw.publicGetterMethod(); // works
 Quickdraw.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
 ```
-
+{% hint style="warning" %}
 > ❓ A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
+{% endhint %}
 
+{% hint style="info" %}
 > ❓ Take some time to fully understand this code.
-
+{% endhint %}
 
 ## Class
 > In object-oriented programming, a class is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods). (Wikipedia)
@@ -237,9 +250,13 @@ myQckd.printMe(); // cli : Hey! it's me, Mario
 
 Even if `alert(typeof Quickdraw)` says that a class is a function, **it is not** just a syntactic sugar. One of the important thing is that in the prototype of the object, the `enumerable` flag is set to `false` for all methods of the class. That means iterations instructions, like `for...in`, will only iterate over the properties of the object, not its methods.
 
+{% hint style="danger" %}
 > ⚠️ Classes always use strict mode, even if you are in sloppy mode (the default)! All code inside the class construct is automatically in strict mode. This mean that the behavior of somes JavaScript feature can change! Be aware of that, such as `this` value and the execution scope. More information [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+{% endhint %}
 
+{% hint style="warning" %}
 > ❓ Class fields are defined for each instance of the class, not the class itself. For example `Quickdraw.prototype.weight` is undefined, whereas `myQckd.weight` is set.
+{% endhint %}
 
 ### Getter and Setter
 JavaScript introduced getters and setters concept both for literal function and class. Easily enough, the syntax is:
@@ -267,8 +284,9 @@ class Quickdraw{
     }
 }
 ```
-
+{% hint style="danger" %}
 > ⚠️ Getters and setters are specific functions. When declaring a get/set over a property of your object, JavaScript actually replace this property with a specific function. That is why you need to change the name of the property and -- by convention -- we used the `_` to do that. Otherwise, you will have an infinite recursive loop. Thus, when we do myQckd.weight = 15, it is actually the setter that is called, not a value affection for the property! More information about getters and setters [here](https://medium.com/javascript-in-plain-english/javascript-classes-an-in-depth-look-part-2-88b666ed3546).
+{% endhint %}
 
 ### Bounding your method with event
 Your class can represents objects aiming to be interact with in the view of your application. Consequently, maybe some of its methods need to be called when specific events are dispatched.
@@ -294,13 +312,17 @@ let qck = new Quickdraw(150);
 setTimeout(qck.myClick, 1000); // 150
 ```
 ### Static
+{% hint style="danger" %}
 > ⚠️ This is a recent implementation and could not work with all the browsers.
+{% endhint" %}
 
 It is possible to associate a method to a class itself, not to its `prototype` with the keyword `static`. Usually, static methods are used to implement functions that belong to the class itself, but not to any particular instance (object) of it. Simply prefix the method of the keyword to obtain such a behavior.
 
 This goes the same for static property.
 
+{% hint style="warning" %}
 > ⚠️ Again, mind `this`! It refers to the class itself, not a particular instance. Therefore, if we had a static method in our `Quickdraw` class, and inside the method, `alert(this === Quickdraw)//true`.
+{% endhint %}
 
 ### Visibility of fields
 OOP imply visibility for fields class. In JavaScript, because it is a prototype based language, all the fields are `public` by default. That means all properties and functions of an object are visible and modifiable anywhere if there is a reference to this object.
@@ -317,7 +339,9 @@ class Quickdraw{
 ```
 The **convention** (since it is not implemented on the language level) is to prefix the protected element with an `_` (underscore). So, if our protected should be protected, they will become `_weight` and `_brand`.
 
+{% hint style="warning" %}
 > ⚠️ Do not be fooled! They are still publicly accessible. But since you will be probably looking for weight instead of _weight, you will not find them. You will also avoid all properties starting with `_` in iterations instruction like `for...in`.
+{% endhint %}
 
 The same goes for methods. Prefix the class methods with `_` to indicate they are protected. However, tend to favor **get** and **set** when possible!
 
@@ -407,7 +431,9 @@ With the above example, we saw that each time we access an object property, we c
 
 This example is somewhat identical to the use of `get` from a `class` as we saw before.
 
+{% hint style="info" %}
 > ❓ Proxy can be used to make some quite elegant solution for protecting property access. You need the traps on `get`, `set` `ownKeys` and `deleteProperty` to check if the property start with `_`. If this is the case, then throw an error.
+{% endhint %}
 
 ### Reflect
 `Reflect` is a built-in object that provides static functions for interceptable JavaScript operations. Some of these functions are the same as corresponding method on object (yet [subtle differences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods) can apply). Put in other words, it simplifies creation of `Proxy` since it is a minimal wrapper around the interal methods trappable.
@@ -424,4 +450,6 @@ Reflect.set(dog, "color", "purple"); // set the dog's color to purple
 Reflect.has(dog, "corol"); // false
 ```
 
-> If you want to test your knowledge about Reflect API and Proxy API, you can go [here](https://rapides6.herokuapp.com/templates/get-by-proxy.html). There is also lot of other cool stuff on the net! Go check out!
+{% hint style="info" %}
+If you want to test your knowledge about Reflect API and Proxy API, you can go [here](https://rapides6.herokuapp.com/templates/get-by-proxy.html). There is also lot of other cool stuff on the net! Go check out!
+{% endhint %}
