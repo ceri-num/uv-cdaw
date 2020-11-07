@@ -25,6 +25,7 @@ Le livrable de l'UV CDAW est de réaliser un site Web, ou plutôt une applicatio
 ## L'eXpérience Utilisateur ?
 Utilisé pour la première fois dans les années 1990, le terme "expérience utilisateur" (UX) a été défini par [Alben en 1996](https://dl.acm.org/doi/pdf/10.1145/235008.235010?casa_token=r4PsECmEGS8AAAAA:zZuL0kxKesVwqE-beAa7oKDI7RCWPhlvSbKg8C5aSfmU7bn65QlmVj7a8aKMqBkVxK42QiwlvVrbFg) par 
 > tout les aspects liés à la manière dont les gens utilisent un produit intéractif : la sensation du produit dans leurs mains, la compréhension de son fonctionnement, le ressenti durant l'usage, l'accomplissement de leurs buts mais également son adéquation avec le contexte global dans lequel ils l'utilisent. (traduction du livre de [Lallemend et Gronier](bibliographie.md))
+
 Par la suite, ce concept a été réutilisé à toutes les sauces et surtout compris de différentes manières. En fait, il n'y a pas consensus (ce qui est souvent le cas avec des définitions en langages vernaculaire). En général, on admet tout de même que l'UX est le résultat de l'interaction entre :
 * l'utilisateur humain (ses attentes, ses besoins, sa motivation, etc.)
 * le système (avec ses caractéristiques comme son but, ses fonctionnalités, son utilisabilité, etc.)
