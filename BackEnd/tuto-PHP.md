@@ -1,5 +1,5 @@
 
-![PHP](ressources/slidesPHP/coverPHP.jpg)
+![PHP](ressources/tutoPHP/coverPHP.jpg)
 
 # Programmation orientée Objet en PHP
 
@@ -65,6 +65,6 @@ class Personne
 L'opérateur `::` permet d'accéder aux champs (attributs ou méthodes) statiques d'une classe.
 
 
-![PHP](ressources/slidesPHP/LucDamas-PHP_OO.jpg)
+![PHP](ressources/tutoPHP/LucDamas-PHP_OO.jpg)
 
-![PHP](ressources/slidesPHP/LucDamas-PHP_sale.jpg)
+![PHP](ressources/tutoPHP/LucDamas-PHP_sale.jpg)
