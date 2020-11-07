@@ -1,21 +1,21 @@
 
 # Objectifs du TP
 
-- Réaliser un programme PHP et déployer en local et sur `eden`
-- Versionner avec git sur `gvipers`
-- Persister des données avec PDO
+- Réaliser un programme PHP et déployer en local et sur le serveur *eden*
+- Versionner avec git sur le serveur *gvipers*
+- Persister des données avec MySql et PDO
 
 ## Versionner
 
 Le projet final doit être versionné sur git (cf. [Modalités projet](../Projet/eval.md)). Donc, autant mettre cela en place dès le début.
 
-1. Créer votre dépôt git sur gvipers
-    https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
-2. Installer git sur votre machine locale et cloner ce dépôt
-    ```shell
-    git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.git
-    ```
-3. Ajouter et commiter un fichier README.md à la racine de votre dépôt
+1. Créer votre dépôt git nommé *projet-cdaw* sur *https://gvipers.imt-lille-douai.fr*
+L'URL de votre dépôt aura la forme : https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+2. Installer git sur votre machine locale (cf. [Git for Windows](https://gitforwindows.org/)) et cloner votre dépôt. Exemple en ligne de commande sous Linux :
+```shell
+git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.git
+```
+3. Ajouter et commiter un fichier README.md à la racine de votre dépôt pour vérifier votre installation
 
 Dans la suite de ce sujet, `$PROJET_CDAW` désigne l'emplacement sur disque de la racine de votre dépôt git.
 
@@ -34,7 +34,7 @@ Pour travailler efficacement vous *devez* être capable de développer et tester
     Cette page vous donne beaucoup d'informations importantes sur le serveur (variable globales, extensions installées, ...). C'est une source d'information importante en cas d'erreur.
 
 {% hint style="alert" %}
-Pour gagner en efficacité, vous pouvez directement faire en sorte que `$DOCUMENT_ROOT` et `$PROJET_CDAW` soit les mêmes chemins
+Si vous placez le clone de votre dépôt git (`$PROJET_CDAW`) dans `$DOCUMENT_ROOT`, vous n'aurez pas à copier/coller vos fichiers PHP à chaque modification pour voir les changements dans votre navigateur.
 {% endhint %}
 
 ## Environnement de production (serveur eden)
@@ -45,21 +45,22 @@ En utilisant un client SFTP comme le logiciel FileZilla, déployez le fichier PH
 
 ## PDO (version simplifiée)
 
-[PHP Data Objects](tuto-PDO.md) fourni une couche d'abstraction permettant de ce connecter à une base de données.
-Nous allons tester cela en local et sur `eden`.
+[PHP Data Objects](tuto-PDO.md) fournit une couche d'abstraction permettant de ce connecter à une base de données.
+Nous allons tester cela en local et sur *eden*.
 
-### Création d'une table users dans base locale avec PhpMyAdmin
+### Créer une table users dans base locale avec PhpMyAdmin
 
+Si vous avez installé uWamp correctement, vous avez le SGBD MySql installé ainsi que PhpMyAdmin qui permet de paramétrer vos bases de données.
 
-Si vous avec installé uWamp correctement, vous avez le SGBD MySql installé ainsi que PhpMyAdmin qui permet de paramétrer vos bases de données.
-
-1. Accéder à votre base de donnée locale via l'URL : http://localhost/phpmyadmin
+1. Accéder à MySQL via l'URL : http://localhost/phpmyadmin
 2. Utiliser les identifiants par défaut : root/root ou root/<vide> ou cf. doc
 3. Créer une base de données nommée `dbtest` avec l'encodage *utf8_general_ci*
 4. Créer une table nommée `users` avec 3 champs : id, name et email. id est la clé primaire en auto incrément. name et email sont des VARCHAR.
 5. Ajouter quelques données fictives dans cette table
 
-### Affichage du contenu de la table `users` avec PDO
+![Table uses dans PhpMyAdmin](ressources/tutoPDO/users_phpmyadmin.png)
+
+### Afficher le contenu de la table `users` avec PDO
 
 En utilisant PHP et PDO, afficher le contenu de la table `users` sous la forme d'une tableau HTML.
 
@@ -90,7 +91,7 @@ catch (PDOException $erreur) {
 }
 ```
 
-Créer et compléter le fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO.php`:
+Créer et **compléter** le fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO.php`:
 ```php
 <?php
     // initialise une variable $pdo connecté à la base locale
@@ -107,9 +108,14 @@ Créer et compléter le fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO.php`:
 
 L'objectif est de voir dans une page Web un tableau HTML qui affiche les utilisateurs stockés dans la table `users`.
 
-![Table uses dans PhpMyAdmin](ressources/tutoPDO/users_phpmyadmin.png)
+![Table HTML affichant les utilisateurs stockés en base](ressources/tutoPDO/pdo_users.png)
 
-Si vous ajoutez ou supprimez un utilisateur dans la table via PhpMyAdmin, cette table HTML doit automatiquement se mettre à jour si vous raffraichissez la page du navigateur.
+Si vous ajoutez ou supprimez un utilisateur dans la table `users` via PhpMyAdmin, il suffit de raffraichir la page du navigateur pour que la table HTML se mette à jour.
+
+## Ajout d'utilisateurs dans la base
+
+Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-post.php` qui reprend le même exercice que précédemment mais ajout un formulaire Web sous le tableau HTML qui permet d'ajouter un nouvel utlisateur dans la table `users`. Remarqez que le champ id ne doit pas être saisi par l'utilisateur car c'est un champ en auto-incrément dans la base.
+
+![Formulaire POST d'ajout d'un utilisateur](ressources/tutoPDO/pdo_users_post.png)
 
 ## PDO (version avancé)
-
