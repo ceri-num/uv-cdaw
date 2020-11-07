@@ -3,6 +3,8 @@
 *Excellent bouquin réédité en 2018, très complet. Je m'en suis largement inspiré pour faire ce cours.*
 * Rachid G., Hoang L.N. (2020). Turing à la plage, L'intelligence artificielle dans un transat. Collection : A la plage, Dunod.
 *Un bouquin de vulgarisation sans se prendre la tête qui montre l'importance d'Alan Turing... tout court.*
+* Pastoureau, M., & Simonnet, D. (2007). Le petit livre des couleurs (Vol. 377). Points.
+*Pour en savoir plus sur les couleurs par un historien de qualité.*
 
 # Articles de recherche
 * Alben, L. (1996). Quality of experience: defining the criteria for effective interaction design. interactions, 3(3), 11-15.

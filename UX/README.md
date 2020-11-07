@@ -30,6 +30,7 @@ Par la suite, ce concept a été réutilisé à toutes les sauces et surtout com
 * l'utilisateur humain (ses attentes, ses besoins, sa motivation, etc.)
 * le système (avec ses caractéristiques comme son but, ses fonctionnalités, son utilisabilité, etc.)
 * le contexte (un fourre-tout mais qui donne les informations sur l'environnement dans lequel l'intéraction se fait,)
+
 Ce qui pose problème, c'est que l'humain est complexe, le contexte peut l'être aussi. Et de fait on ne peut pas évaluer l'interaction entre l'humain et le systéme comme dans une chambre blanche...
 
 Il existe pas mal de modèle de l'UX, on ne rentre pas dans les détails, mais c'est assez passionnant. Si vous voulez en savoir plus, la [bibliographie](bibliographie.md) est là pour ça !
@@ -57,26 +58,26 @@ J'adhère volontiers au cycle (processus) suivant en 5 sous-processus (eux-même
 
 De mon point de vue, l'UX Design fait le lien entre les sciences de l'informatique et les sciences humaines et sociales. Il faut comprendre l'humain pour permettre l'interaction avec la machine. Je vous conseille d'ailleurs de lire les articles de Turing ou à défaut le bouquin [Turing à la plage](https://www.dunod.com/sciences-techniques/turing-plage-intelligence-artificielle-dans-un-transat) (ou pourquoi on s'est amusé à créer des langages informatiques entre autres).
 
-# [Planification](planification.md) 
+## [Planification](planification.md) 
 On va planifier ! Et préparer le projet pour que tou se déroule bien.
 
-# [Exploration](exploration.md)
+## [Exploration](exploration.md)
 Si on avait le temps, on regarderait ce qui se fait du coté des SHS. En gros on va écouter les utilisateurs, même quand ils ne parlent pas.
 
-# [Idéation](ideation.md)
+## [Idéation](ideation.md)
 Ça va être dur, mais il faudra être créatif. Et pour ça, on a des techniques. Tempête de cerveaux, par exemple.
 
-# [Génération](generation.md)
+## [Génération](generation.md)
 Mettre en musique vos idées mais pas en dur, pas tout de suite. Maquette, icônes, storyboard et tutti quanti.
 
-# [Évaluation](evaluation.md)
+## [Évaluation](evaluation.md)
 Évaluer, histoire de voir si vous n'êtes pas un créateur incompris, ou plutôt qui n'a pas compris.
 
-## [Charte graphique](graphique.md)
+# [Charte graphique](graphique.md)
 Un trait ou une couleur, ça n'est pas neutre. Ici, on regarde quelques principes de bases.
 
-## [Ergonomie (light)](ergonomie.md)
+# [Ergonomie (light)](ergonomie.md)
 L'ergonomie, c'est vaste. Prenons quelques minutes pour survoler cette discipline.
 
-## [Bibliographie](bibliographie.md)
+# [Bibliographie](bibliographie.md)
 Lisez, vous mourrez moins bête. Mais vous mourrez quand même (merci [professeur moustache](http://tumourrasmoinsbete.blogspot.com/), oui vraiment [merci](https://www.arte.tv/fr/videos/RC-014384/tu-mourras-moins-bete/) !).
