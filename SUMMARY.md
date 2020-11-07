@@ -4,6 +4,7 @@
 
 * [Pré-requis](Infos/preRequis.md)
 * [Outils](Infos/outils.md)
+* [Bibliography](Infos/bib.md)
 * [FAQ](Infos/faq.md)
 
 <!-- ## UX
@@ -31,4 +32,4 @@
 * [Méthodologie et Evaluation](Projet/eval.md)
 
 <!-- ## Fun -->
-[Web Fun](Infos/fun.md)
+
