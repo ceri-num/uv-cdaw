@@ -13,13 +13,11 @@ L'UV CDAW nécessite pour être suivie de connaître :
     * notions de base en PHP
     * notions de base en JS
 
-Si ce n'est pas votre cas, veuillez vous mettre à niveau avant le commencement de cette UV en utilisant par exemple les ressources de l'UV IDAW https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244.
+cf. [UV IDAW](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244) si besoin.
 
 ## Pré-requis en développement
 
 L'UV CDAW nécessite pour être suivie de connaître :
-    * git
-    * l'approche objet (Pharo est plus pour le cours Seaside)
-
-Si ce n'est pas votre cas, veuillez vous mettre à niveau avant le commencement de cette UV en utilisant par exemple les ressources de l'UV IDAW https://mylearningspace.imt-lille-douai.fr/course/view.php?id=143.
+    * git [tuto git](https://githowto.com) [tuto2 git](https://learngitbranching.js.org/) [cours git](https://ceri-num.gitbook.io/fa-projinfo/s3-collaborative-project/git)
+    * l'approche objet (Pharo est plus pour le cours Seaside    cf. [UV MLOD](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=143)
 
