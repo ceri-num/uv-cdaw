@@ -91,6 +91,7 @@ Il s'agit de définir un certain nombre de paramètres avant de créer un logo.
 
 ## La communication par le design graphique
 Certaines marques ont largement montré l'intérêt du graphisme dans la communication tel Apple (en particulier avec l'épisode de l'iPod) ou Coca-Cola.
-![Site Coca-Cola Zéro en 2010](cocaZero.png)
 
-![Site Coca-Cola Light en 2010](cocaLight.png)
+![Site Coca-Cola Zéro en 2010](resources/cocaZero.png)
+
+![Site Coca-Cola Light en 2010](resources/cocaLight.png)
