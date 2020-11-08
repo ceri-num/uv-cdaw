@@ -1,4 +1,4 @@
-# Errors handling
+# Errors handling
 
 ## Faillure case scenarios
 As you have noticed from now, JavaScript is a very flexible language, allowing you to perform things that is usually not possible in more conventional language like Java or C (*e.g.* non-typed variable and polymorphism). However, the drawback of this flexibility lays often in code instability and weird behaviors (`this` has an important part to do here).
