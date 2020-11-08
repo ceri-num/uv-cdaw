@@ -5,6 +5,8 @@
 *Un bouquin de vulgarisation sans se prendre la tête qui montre l'importance d'Alan Turing... tout court.*
 * Pastoureau, M., & Simonnet, D. (2007). Le petit livre des couleurs (Vol. 377). Points.
 *Pour en savoir plus sur les couleurs par un historien de qualité.*
+* Joule, R. V., Beauvois, J. L., & Deschamps, J. C. (1987). Petit traité de manipulation à l'usage des honnêtes gens. Grenoble: Presses universitaires de Grenoble.
+*Toujours utile de ne pas être le dindon de la farce. Ce livre est aussi très utile pour apprendre à engager les utilisateurs dans votre projet*
 
 # Articles de recherche
 * Alben, L. (1996). Quality of experience: defining the criteria for effective interaction design. interactions, 3(3), 11-15.
