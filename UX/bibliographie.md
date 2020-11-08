@@ -14,5 +14,7 @@
 # Articles de recherche
 * Alben, L. (1996). Quality of experience: defining the criteria for effective interaction design. interactions, 3(3), 11-15.
 * Norman, D. A., & Draper, S. W. (1986). User centered system design; new perspectives on human-computer interaction. L. Erlbaum Associates Inc..
+* Lucero, A., & Arrasvuori, J. (2010, September). PLEX Cards: a source of inspiration when designing for playfulness. In Proceedings of the 3rd International Conference on Fun and Games (pp. 28-37).
+
 
 

@@ -13,7 +13,7 @@ Cette introduction s'intègre dans l'**UV CDAW** et participe au projet global p
 # Évaluation du cours
 Ce cours sera donc évaluer au travers du projet que vous réaliserez lors de l'UV CDAW. Je prendrai en compte les arguments de la présentation que vous ferez lors de la dernière séance pour ajuster la notation. Globalement, on s'intéresse ici aux aspects méthodologiques, graphiques, ergonomiques et imaginatifs. En gros, je vais observer vos compétences : 
 * **organisationelles** (au niveau projet et travail collaboratif), 
-* **artistiques** (pas votre niveau en dessin ou en musique, on est d'accord, * mais votre capacité à créer du beau), 
+* **artistiques** (pas votre niveau en dessin ou en musique, on est d'accord, mais votre capacité à créer du beau), 
 * **d'analyse** (sur voter travail et celui de vos collègues),
 * **d'ingénieur-designer responsable** (tout ça en même temps : j'ai un problème, je cherche une solution SMART, belle et durable)
 
