@@ -43,7 +43,7 @@ L'IMT Lille Douai vous fournit un hébergement Web sur le serveur `eden`.
 Les informations de connexion à ce serveur sont [ici](https://gvipers.imt-lille-douai.fr/luc.fabresse/Guide).
 En utilisant un client SFTP comme le logiciel FileZilla, déployez le fichier PHP `infos.php` précédent dans votre compte `eden`. Tester que tout fonctionne via l'URL : http://eden.imt-lille-douai.fr/~prenom.nom
 
-## PDO (version simplifiée)
+## PDO (version simplifiée avec `FETCH_OBJ`)
 
 [PHP Data Objects](tuto-PDO.md) fournit une couche d'abstraction permettant de ce connecter à une base de données.
 Nous allons tester cela en local et sur *eden*.
@@ -118,4 +118,35 @@ Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-post.php` qui reprend le m�
 
 ![Formulaire POST d'ajout d'un utilisateur](ressources/tutoPDO/pdo_users_post.png)
 
-## PDO (version avancé)
+## PDO avec `FETCH_CLASS`
+
+Reprendre l'exercice précédant en utilisant une approche plus objet via l'utilisation d'une classe `User` et  `FETCH_CLASS` de PDO.
+Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-class.php` reprenant le code précédent en ajoutant une classe `User`. Cette classe doit contenir tout votre code et notamment les méthodes suivantes :
+
+- `getAllUsers` méthode statique pour récupérer tous les utilisateurs dans la tabe `users` sous forme d'objets instances de la classe `User`
+- `showAllUsersAsTable` méthode statique pour afficher tous les utilisateurs sous forme de tableau HTML
+- `toHtml` méthode retournant une chaîne caractères contenant les infos de l'objet user qui reçoit le message (`$user->toHtml()`)
+
+Découpez votre code et ajouter plus de méthodes si nécessaire. Dans votre code HTML, affichez un tableau avec l'ensemble des utilisateurs dans la base ainsi:
+
+```php
+<h1>Users</h1>
+<?php
+	User::showAllUsersAsTable();
+?>
+```
+
+## PDO avec `FETCH_CLASS` et `PDO::FETCH_PROPS_LATE`
+
+Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-propslate.php` reprenant le code précédent et ajoutant l'utilisation de `PDO::FETCH_PROPS_LATE`.
+Modifier le code de la class `User` en conséquence. Notamment, essayer de comprendre quelles sont les variables d'instance d'un objet user par rapport à la version précédente.
+
+## CRUD avec PDO
+
+Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-CRUD.php` qui reprend la version précédente et affiche un tableau avec tous les utilisateurs.
+CRUD signifie Create, Read, Update et Delete qui sont les opérations courantes sur des données.
+
+1. Ajouter un bouton permettant de créer un nouvel utilisateur (formulaire POST)
+2. Pour chaque utilisateur dans le tableau, ajoutez des boutons permettant de :
+- modifier cet utilisateur
+- supprimer cet utilisateur

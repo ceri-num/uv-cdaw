@@ -31,7 +31,10 @@ Les slides originaux sont ici : https://partage.imt.fr/index.php/s/XqStmtBMSswB3
 {% endhint %}
 
 
-## Les classes
+
+
+
+<!-- ## Les classes
 
 ```php
 class Persone
@@ -67,4 +70,4 @@ L'opérateur `::` permet d'accéder aux champs (attributs ou méthodes) statique
 
 ![PHP](ressources/tutoPHP/LucDamas-PHP_OO.jpg)
 
-![PHP](ressources/tutoPHP/LucDamas-PHP_sale.jpg)
+![PHP](ressources/tutoPHP/LucDamas-PHP_sale.jpg) -->
