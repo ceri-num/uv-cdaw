@@ -1,3 +1,6 @@
+# Sites Web
+* Des outils de maquettage Web ? Comment choisir ? [Des alternatives à Balsamiq](https://www.slant.co/options/76/alternatives/~balsamiq-alternatives)
+
 # Livres
 * Lallemand, C., & Gronier, G. (2015). Méthodes de design UX: 30 méthodes fondamentales pour concevoir et évaluer les systèmes interactifs. Editions Eyrolles.
 *Excellent bouquin réédité en 2018, très complet. Je m'en suis largement inspiré pour faire ce cours.*
@@ -6,7 +9,7 @@
 * Pastoureau, M., & Simonnet, D. (2007). Le petit livre des couleurs (Vol. 377). Points.
 *Pour en savoir plus sur les couleurs par un historien de qualité.*
 * Joule, R. V., Beauvois, J. L., & Deschamps, J. C. (1987). Petit traité de manipulation à l'usage des honnêtes gens. Grenoble: Presses universitaires de Grenoble.
-*Toujours utile de ne pas être le dindon de la farce. Ce livre est aussi très utile pour apprendre à engager les utilisateurs dans votre projet*
+*Toujours utile de ne pas être le dindon de la farce. Ce livre est aussi très utile pour apprendre à engager les utilisateurs dans votre projet (multiple rééditions).*
 
 # Articles de recherche
 * Alben, L. (1996). Quality of experience: defining the criteria for effective interaction design. interactions, 3(3), 11-15.
