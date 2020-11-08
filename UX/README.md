@@ -56,10 +56,12 @@ J'adhère volontiers au cycle (processus) suivant en 5 sous-processus (eux-même
 
 ![Cycle de conception itératif des systèmes intéractifs](resources/cycle_UX_lallemand_gronier_2018.png)
 
-De mon point de vue, l'UX Design fait le lien entre les sciences de l'informatique et les sciences humaines et sociales. Il faut comprendre l'humain pour permettre l'interaction avec la machine. Je vous conseille d'ailleurs de lire les articles de Turing ou à défaut le bouquin [Turing à la plage](https://www.dunod.com/sciences-techniques/turing-plage-intelligence-artificielle-dans-un-transat) (ou pourquoi on s'est amusé à créer des langages informatiques entre autres).
+De mon point de vue, l'UX Design fait le lien entre les sciences de l'informatique et les sciences humaines et sociales. Il faut comprendre l'humain pour permettre l'interaction avec la machine. Je vous conseille d'ailleurs de lire les articles de Turing ou à défaut le bouquin [Turing à la plage](https://www.dunod.com/sciences-techniques/turing-plage-intelligence-artificielle-dans-un-transat) (ou pourquoi on s'est amusé à créer des langages informatiques entre autres). N'éanmoins et d'une façon générale, les principes de l'UX Design peuvent se généraliser à toute production (en lien avec l'informatique ou non) impliquant des utilisateurs humains, rejoingant alors les principes du Design (au sens premier du terme).
+
+Pour chaque sous-processus, nous allons évoquer (malheureusement avec peu de détails étant donnée la durée du cours) des outils, des méthodes et des conseils qui permettent de mener à bien un processus global avec l'UX Design. Ce dernier étant assez récent, il apparait chaque année de nouveaux outils et de nouvelles méthodes. Il vous faudra au court de votre carrière réaliser une veille permanente pour pouvoir choisir ceux et celles qui conviendront.
 
 ## [Planification](planification.md) 
-On va planifier ! Et préparer le projet pour que tou se déroule bien.
+On va planifier ! Et préparer le projet pour que tout se déroule bien.
 
 ## [Exploration](exploration.md)
 Si on avait le temps, on regarderait ce qui se fait du coté des SHS. En gros on va écouter les utilisateurs, même quand ils ne parlent pas.

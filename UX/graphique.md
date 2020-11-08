@@ -39,13 +39,58 @@ En général il est utile de se poser quelques questions avant de réfléchir à
 
 # Concepts
 ## Lignes
+La **verticale** évoque la force, la dignité, la vérité. Elle s'apparente aussi à la rigidité, à l'immobilisme.
+L'**horizontale** est synonyme de calme, de repos, de tranquillité, d'horizons largement ouverts. Mais aussi, tel un gisant, de mort.
+L'**oblique** symbolise le mouvement, le dynamisme. Mal utilisée, elle se transforme en chute.
+La **droite** est la figure la plus simple, la plus directe. Rigueur, décision, mais aussi ennui.
+La **courbe** s'apparente à la plénitude, à la féminité. Mais elle évoque également la mollesse.
+La **ligne brisée** est souvent signe d'agitation, de confusion.
+Les **lignes convergentes, divergentes** sont ambiguës. Elles signifient à la fois: choc, violence mais aussi expansion, éloignement.
+
+![Symbolique des lignes](resources/lignes.gif)
 
 ## Formes
+Le **cercle** est synonyme de perfection, d'absolu, d'infini.
+Le **triangle** représente l'harmonie, la proportion, la sécurité.
+Le **carré** est solide, stable. Il symbolise l'absence rassurante de tension. C'est le support idéal pour une information neutre et objective.
+Le **rectangle** s'apparente au carré. Présenté à la française, c'est-à-dire à la verticale, il est plus dynamique. A l'italienne, c'est-à-dire à l'horizontale, il produit un effet panoramique.
+
+![Symbolique des formes](resources/formes.gif)
 
 ## Couleurs
+### Symbolique
+
+
+![Symbolique des couleurs](resources/couleurs2.gif)
+
+### Mélange des couleurs
+Vous devez tenir compte aussi bien des valeurs (nuances de gris) que des couleurs. Le choix des couleurs se base sur des critères le plus souvent esthétiques (vos goûts en quelque sorte), mais ce choix doit plaire à vos "lecteurs". Vous devez tenir compte de l'emplacement de vos couleurs.
+
+En général, le test est le meilleur révélateur de mélanges ratés : fond bleu + écriture rouge, fond foncé + écriture foncé, etc.
+
+Nous verrons par la suite que l'ergonomie pose certaines contraintes (pas plus de cinq couleurs sur une page par exemple).
+
+### Association de couleurs
+Il va de soit que certaines couleurs se marient mal entre elles et il peut y avoir de grandes différences entres les associations de couleurs sur un écran (Web) et celles "sur le papier".
+
+Pour choisir vos couleurs, il existe des [sites permettant d'associer des couleurs](http://paletton.com/) et de générer une maquette Web afin de valider vos choix (et même de les faires valider par des utilisateurs). 
 
 # Quelques exemples
 ## Les logos
-Texte
+Le logo va être le représentant visuel d'une une entreprise, une marque mais aussi un projet ou une équipe au sein d'une entreprise. Avant même de lire la marque (ou le nom du produit, le titre du site...), l'oeil reçoit déjà une information visuelle par l'intermédiaire du logo.
+
+Il véhicule :
+* des valeurs,
+* une image, un message.
+
+Il s'agit de définir un certain nombre de paramètres avant de créer un logo.
+* Choix des couleurs
+* Ajout d'un dessin (type « mascotte », produit, valeur symbolisée...) ou non
+* Choix de la typo
+* Forme générale
+
 ## La communication par le design graphique
-Texte
+Certaines marques ont largement montré l'intérêt du graphisme dans la communication tel Apple (en particulier avec l'épisode de l'iPod) ou Coca-Cola.
+![Site Coca-Cola Zéro en 2010](cocaZero.png)
+
+![Site Coca-Cola Light en 2010](cocaLight.png)
