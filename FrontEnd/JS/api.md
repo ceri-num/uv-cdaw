@@ -120,7 +120,7 @@ That is why to avoid conflict dataset has been introduced for the `data-*` attri
 All attributes starting with “data-” are reserved for programmers’ use. They are available in the dataset property.
 {% endhint %}
 
-For example, if your element has an data attribute name `data-family`, you can access it:
+For example, if your element has an data attribute named `data-family`, you can access it:
 
 ```js
 let elm = document.querySelector("#idTest");
@@ -148,13 +148,132 @@ It is also possible to manipulate the styles of your DOM elements! More informat
 {% endhint %}
 
 ### Shadow DOM notions
-In a web component paradigm (we will see that with Vue.js), an important aspect is the encapsulation of markup structure, styles and behaviors: they should ne be leaking between components. However, due to how the DOM and the DOM API are made, this is not possible in a standard DOM.
+In a web component paradigm (we will see that with Vue.js), an important aspect is the encapsulation of markup structure, styles and behaviors: they should nenot be leaking between components. However, due to how the DOM and the DOM API are made, this is not possible by simply using the standard DOM specification.
 
 That is why the concept of Shadow DOM has been introduced. Shadow DOMs are hidden DOMs, not parsed by the DOM API, and only sensible to what happen inside them. We will cover this aspect in more detail in the Single Page Application section.
 
 More information about [shadow dom here](https://developer.mozilla.org/en-US/docs/Glossary/Shadow_tree).
 
-### Forms
+## Forms
+Form and control elements are one of the principal source of interaction between your user and the server. That is why they have special properties and events attached to make their use more convenient in JavaScript.
+
+```html
+<form id="myId" name="myForm">
+  <input type="radio" name="one" value="radioInput">
+  <input type="password" name="two" value="mypwd">
+  <input type="text" name="two" value="name">
+</form>
+```
+
+Despite forms can be retrieved as any HTML elements using selector (*e.g.* `querySelector`), they are also member of a special named (and ordered) property collection of the `document`, called `forms`. And, each form of this `document.forms` collection has a named (and ordered) collection `elements`, listing all the elements contained in the form. Therefore, you can then easily access any form and form's elements in a page simply by name.
+
+```js
+let form = document.forms.myForm; //get the above form object!
+let radio = form.elements.radio; //get the radio input object
+let collec = form.elements.two; //get a collection containing the password input object and the text input object
+```
+
+{% hint style="info" %}
+No matter how a form element is deep in the form, it is listed in the `elements` property of the form object.
+{% endhint %}
+
+If you organise your form with `<fieldset>` element, you gain even more control on how your form is structured. Each `fieldset` element also has an `elements` property listing all its child form elements. And since a `fieldset` is a form element, it is also retrievable by its name.
+
+```js
+let myFS = form.elements.myFieldsetName; //retrieving the myFieldsetName FS
+let anElm = myFS.elements.name; // retrieving the input element name from the FS
+```
+{% hint style="info" %}
+In case of Fieldset, that means your fieldset's elements exists both in the `form.elements` and in the `fieldset.elements`!
+{% endhint %}
+
+{% hint style="info" %}
+There is a **backreferencing** for each element of a form. That means you can get the form where the element belongs. Simply use the `form` property of the form element.
+```js
+let circularForm = document.forms.myForm.radio.form; // get the myForm form!
+```
+{% endhint %}
+
+### Form control
+Form control is related to accessing, setting and checking form's elements value. To access their value, we can use the `value` property. Note that its content depends obviously of the type of input checked.
+
+```js
+let rdio = document.forms.myForm.radio.value; // the content of the radio value
+let pwd =  document.forms.myForm.two[0].value; // the pwd
+```
+
+You can also set the element value.
+
+
+{% hint style="danger" %}
+Generally speaking, the information of interest in an element form is stored in the `value` property, not in the `innerHTML`.
+{% endhint %}
+
+### Form events
+So far, we have seen how to access forms' elements. However, this is not really useful if we did not know when to check for their value! Luckily, JavaScript trigger a lot of events when elements are used.
+
+#### Input
+Every time an element's value is modified by the user, this event is triggered.
+
+The input event does not only trigger with keyboard events, but also with other device, such as mouse (*e.g.* pasting a text from the clipboard) or with text recognition device. However, non altering action, such as pressing `^` alone (or directional arrow) does not trigger this event.
+
+```js
+let radio = document.forms.myForm.myRadio;
+radio.addEventListener("input", function(data){
+    alert("onInput!");
+})
+```
+This event is good if you need a fine management on the element.
+
+#### Change
+However, we often don't need such a fine management over an element. We prefer to check the element once it has lost focused. The event is `change` and can be used as follow.
+
+```js
+let radio = document.forms.myForm.myRadio;
+radio.addEventListener("change", function(data){
+    alert("onChange!");
+})
+```
+
+{% hint style="succes" %}
+If you want to check if a name is free or already taken in your form for example, you will want to wait until the user leaves the field ; otherwise if you use the input event, for each input, you will interrogate your server which is a total waste of resources!
+{% endhint %}
+
+#### Submit
+The `submit` event triggers when a form is submitted. This means that either an input of `type="submit"` as been clicked or enter has been pressed in a field. This is usually used to validate the form before sending it to the server or to abort the submission and process it in JavaScript.
+
+{% hint style="danger" %}
+**Never ever trust** the user side of your application. It is possible to get rid of your data control. User side verification should be design with reducing the server side load in mind, not replacing it!
+{% endhint %}
+
+However, the `submit` event is not attached to the submit input, but to the form!
+
+```js
+let form = document.forms.myForm;
+form.addEventListener("submit", function(data){
+    alert("youhou! Soshin!");
+    // perform form verif here !
+})
+```
+
+The method `submit()` of a form allows to initiate form sending, from a JavaScript standpoint. This is useful to manually send our own forms to our server.
+
+```js
+let form = document.createElement('form');
+form.action = 'https://google.com/search';
+form.method = 'GET';
+form.innerHTML = '<input name="form" value="test">';
+
+// the form must be in the document to submit it
+document.body.append(form);
+
+form.submit();
+```
+
+{% hint style="info" %}
+When using the `submit()` method, no submit event is triggered! Keep that in mind.
+{% endhint %}
+
 
 ## Communicating with the server
 
