@@ -4,7 +4,7 @@
 * [Reminders](rappel.md)
 * [Advanced Reminders](advanced.md)
 * [Events](event.md)
-* [API Web côté clients](api.md)
+* [Client Side API](api.md)
 * [Asynchronicity](asynchronous.md)
 * [Object-oriented Programming](poo.md)
 * [Inheritance and prototype chain](protoh.md)
