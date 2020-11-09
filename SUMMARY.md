@@ -17,8 +17,6 @@
 * [Charte graphique](UX/graphisme.md)
 * [Ergonomie](UX/ergonomie.md) 
 * [Bibliographie](UX/bibliographie.md)
-
-## Séances UX
 * [Séance 2](UX/consignes_s2.md) 
 * [Séance 3](UX/consignes_s3.md) 
 * [Séance 4](UX/consignes_s4.md) 
