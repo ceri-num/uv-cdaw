@@ -7,8 +7,12 @@
 * [Bibliography](Infos/bib.md)
 * [FAQ](Infos/faq.md)
 
-<!-- ## UX
-* [Planning](UX/README.md) -->
+## UX
+* [Introduction](UX/README.md)
+* [Planification](UX/planification.md)
+* [Exploration, Idéation](UX/exploration.md) 
+* [Génération](UX/generation.md)
+* [Évaluation](UX/evaluation.md)
 
 <!-- ## AGL
 * [Planning](AGL/README.md) -->
