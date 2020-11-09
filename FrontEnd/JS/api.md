@@ -275,13 +275,109 @@ When using the `submit()` method, no submit event is triggered! Keep that in min
 {% endhint %}
 
 
-## Communicating with the server
+## Asynchronous communication with servers
+The need of dynamically refreshing some part of a web page, and not the whole page, is an important feature in the web now. Indeed, from a server standpoint, sending just some chunck of data is often a more lightweight operation, and from a UX design point of view, the flow stay consistent: only the elements that are supposed to change are actually updated on the page, creating dynamic web page.
 
+{% hint style="info" %}
+Nowadays, you use JSON instead of XML.
+{% endhint %}
+
+
+In a conventional web application, for retrieving specific elements, a new whole HTML page has to be received. This is not the case whith an asynchrone communication. The most known approach is AJAX. It works as follow
 
 ![AJAX example, from [Wikipedia](https://en.wikipedia.org/wiki/Ajax_(programming))](resources/ajax-example.png)
 
+However, this is somewhat similar to all the asynchrone approaches: the DOM is updated asynchronously. In any case, the server should obviously be designed to handle such asynchrone requests.
+
 ### AJAX
+Asyncrhonous JavaScript And XML (AJAX) is a programming practice designed to build dynamic web pages relying on asynchronous communication. It uses the [`xmlHttpRequest`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) to communicate with the server.
+
+However, we **will not study** this technology, since the fetch API has been recently introduced and is planned to replace it. Nonetheless, almost all the current web site use AJAX for now, so it is important to understand what it is and how to use it.
 
 ### Fetch API
+> The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible feature set. (source: [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API))
+
+Put in other terms, the Fetch API is a wrapper, a generic definition on how systems request resources and how they respond, and therefore can be extended to much more than network communication.
+
+The basic syntax for fetching resources from a server is simply:
+```js
+let promise = fetch(url, [options]);
+```
+
+#### Getting resources
+Note that `fetch` returns a promise, and without option, your perform a GET request, downloading the content from the `url`. Getting a response is a two stages process :
+1. The promise of fetch resolves with a `Response` object **as soon as** the server responds with headers.
+2. The response as to be parsed to gets its content/body.
+
+In the first stage, we usually check the `status` code (a property) of the headers received in the `response`. The shortcut `response.ok` is useful to check if the status code is between 200-299. If not, you know that there was an error during the fetch.
+
+```js
+let response = await fetch(url);
+
+if (response.ok) { // if HTTP-status is 200-299
+  // get the response body
+  let json = await response.json();
+} else {
+  alert("HTTP in header: " + response.status);
+}
+```
+{% hint style="warning" %}
+Abnormal error (*e.g.* 300-499) do not cause an error! Therefore the following code is not equivalent:
+```js
+fetch(url)
+    .then(response=>response.json())
+    .then(json=>alert)
+    .catch(err=>alert)
+```
+Because bad HTTP code will not be caught.
+{% endhint %}
+
+
+The seconde stage is to get the response body. In the above example, we saw that we do a `response.json()` to get that body. This is possible because `Reponse` give provides multiple promise-based methods to access the body. Some other examples:
+* `response.text()`: read the response and return a string,
+* `response.blob()`: return the response as a blob object,
+* `response.arrayBuffer()`: return the response as an array buffer.
+
+{% hint style="warning" %}
+A body can only be consumed once! You cannot call consecutively `response.json()` then `response.text()`.
+{% endhint %}
+
+#### Posting with fetch
+You can also make asynchrone `POST` with fetch. To do so, you will need to specify the method, the header and the content (`body`) of your request. The body can only be one of the following type:
+* a `string` (e.g. JSON-encoded),
+* `FormData` object, to submit the data as `form/multipart`,
+* `Blob`/`BufferSource` to send binary data,
+* `URLSearchParams`, to submit the data in `x-www-form-urlencoded` encoding, rarely used.
+
+(The JSON format is used most of the time)
+
+```js
+let response = await fetch('/my/url/to/space/observatory/planet', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(venus); //we send our old venus object over POST
+}); //creating the content and sending the request
+
+let result = await response.json(); //we want to know how our request has been handled by the server
+```
+
+Like that, you can for example send an image once uploaded in a form without reloading the entire page.
+```js
+const fileInput = document.querySelector('#your-file-input') ;
+const formData = new FormData();
+
+formData.append('file', fileInput.files[0]);
+
+    const options = {
+      method: 'POST',
+      body: formData,
+      headers: {'Content-Type': 'multipart/form-data',}
+    };
+    fetch('your-upload-url', options);
+```
 
 ## 2D and Sound
+
+You can even use a gamepad in JavaScript natively! Check [here](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) if you are curious!
