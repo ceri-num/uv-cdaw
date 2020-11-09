@@ -10,9 +10,15 @@
 ## UX
 * [Introduction](UX/README.md)
 * [Planification](UX/planification.md)
-* [Exploration, Idéation](UX/exploration.md) 
+* [Exploration](UX/exploration.md)
+* [Idéation](UX/ideation.md)
 * [Génération](UX/generation.md)
 * [Évaluation](UX/evaluation.md)
+* [Charte graphique](UX/graphisme.md)
+* [Ergonomie](UX/ergonomie.md) 
+* [Bibliographie](UX/bibliographie.md)
+
+### Séances UX
 
 <!-- ## AGL
 * [Planning](AGL/README.md) -->
