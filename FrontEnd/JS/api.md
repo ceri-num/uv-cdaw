@@ -277,8 +277,11 @@ When using the `submit()` method, no submit event is triggered! Keep that in min
 
 ## Communicating with the server
 
-### The old xmlHttpRequest
 
-### Use Fetch!
+![AJAX example, from [Wikipedia](https://en.wikipedia.org/wiki/Ajax_(programming))](resources/ajax-example.png)
+
+### AJAX
+
+### Fetch API
 
 ## 2D and Sound
