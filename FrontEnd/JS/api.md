@@ -379,5 +379,6 @@ formData.append('file', fileInput.files[0]);
 ```
 
 ## 2D and Sound
-
+Draw and display 2D content! Check [here](https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
+Play audio in your web page! Check [here](https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 You can even use a gamepad in JavaScript natively! Check [here](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) if you are curious!
