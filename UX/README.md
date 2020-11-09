@@ -43,6 +43,7 @@ L'UX Design consiste à tenir compte de l'expérience utilisateur dès le démar
 * La conception porte sur l'ensemble de l'expérience utilisateur, intégrant ainsi les composants liés à la performance du système (performance, fonctionnalités), mais aussi ceux liés à l'utilisateur (habitudes, personnalités, compétences).
 
 Les activités liées à la CCU suivent un cycle itératif en quatre étapes.
+
 ![CCU_Iso9241-210.png](resources/CCU_Iso9241-210.png)
 
 En fait, l'UX Design est une généralisation de ce paradigme adapté aux Interactions Homme-Machine (IHM). Cela regroupe un ensemble de méthodes et de concepts permettant de mettre en place de manière effective la CCU pour les logiciels, les interfaces (on parle d'UI Design), le développement Web par exemple. Le mot est à la mode, mais il commence à être largement utilisé, parce que défini par les chercheurs, en particulier autour des modèles théorique de l'expérience utilisateur.
