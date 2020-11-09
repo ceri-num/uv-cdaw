@@ -1,3 +1,6 @@
+---
+description: Lisez, vous mourrez moins bête. Mais vous mourrez quand même (merci [professeur moustache](http://tumourrasmoinsbete.blogspot.com/), oui vraiment [merci](https://www.arte.tv/fr/videos/RC-014384/tu-mourras-moins-bete/) !).
+---
 # Sites Web
 * Des outils de maquettage Web ? Comment choisir ? [Des alternatives à Balsamiq](https://www.slant.co/options/76/alternatives/~balsamiq-alternatives)
 
