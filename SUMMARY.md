@@ -34,11 +34,11 @@
 * [JS/Reminders](FrontEnd/JS/rappel.md)
 * [JS/Advanced Reminders](FrontEnd/JS/advanced.md)
 * [JS/Events](FrontEnd/JS/event.md)
-* [JS/Asynchronicity](FrontEnd/JS/asynchronous.md)
-* [JS/Client Side API](FrontEnd/JS/api.md)
-* [JS/Object-Oriented Programminbg](FrontEnd/JS/poo.md)
-* [JS/Inheritance and Prototype Chain](FrontEnd/JS/protoh.md)
-* [JS/Errors Handling](FrontEnd/JS/promisemeerror.md)
+* [JS/Asynchronicity]<!--(FrontEnd/JS/asynchronous.md)-->
+* [JS/Client Side API]<!-- (FrontEnd/JS/api.md)-->
+* [JS/Object-Oriented Programminbg]<!--(FrontEnd/JS/poo.md)-->
+* [JS/Inheritance and Prototype Chain]<!-- (FrontEnd/JS/protoh.md)-->
+* [JS/Errors Handling]<!--(FrontEnd/JS/promisemeerror.md)-->
 * ...
 
 <!-- ## Laravel
