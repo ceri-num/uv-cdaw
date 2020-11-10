@@ -1,6 +1,7 @@
 # Front end project set-up & organisation
 
 For the project, you will:
+
 1. Intensively use git. Thus you need to have a GitLab gVipers account accessible.
 2. Use Vue.js as your web-application framework
 3. Use the riichi mahjong tiles assets available [here](https://github.com/FluffyStuff/riichi-mahjong-tiles). These are svg assets of all the icons, as well as back and black of a tile : you will have to assemble them yourself in your game.
