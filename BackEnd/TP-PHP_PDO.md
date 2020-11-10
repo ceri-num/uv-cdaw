@@ -143,10 +143,14 @@ Modifier le code de la class `User` en conséquence. Notamment, essayer de compr
 
 ## CRUD avec PDO
 
-Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-CRUD.php` qui reprend la version précédente et affiche un tableau avec tous les utilisateurs.
 CRUD signifie Create, Read, Update et Delete qui sont les opérations courantes sur des données.
+Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-CRUD.php` qui reprend la dernière version du TP1 et affiche un tableau avec tous les utilisateurs.
+Travail à faire :
 
 1. Ajouter un bouton permettant de créer un nouvel utilisateur (formulaire POST)
 2. Pour chaque utilisateur dans le tableau, ajoutez des boutons permettant de :
 - modifier cet utilisateur
 - supprimer cet utilisateur
+
+![Exemple de table avec opérations CRUD](ressources/CRUD_REST/CRUD_table.png)
+
