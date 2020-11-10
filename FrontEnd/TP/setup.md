@@ -107,7 +107,7 @@ cd projet-cdaw
 Now, we need to add the GitHub repo about riichi tiles as a submodule of our project. To do this:
 
 ```bash
-git submodule add https://github.com/FluffyStuff/riichi-mahjong-tiles.git ./src/assets/img/mahjong-tiles
+git submodule add https://github.com/FluffyStuff/riichi-mahjong-tiles.git ./FrontEnd/src/assets/img/mahjong-tiles
 git status
 ```
 
