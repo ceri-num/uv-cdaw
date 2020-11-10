@@ -126,10 +126,12 @@ Voici des exemples pour votre API :
 
 Commençons par implémenter un endpoint `/users` supportant la méthode `GET` sans paramètre et qui retournera la liste des utilisateurs dans la base en JSON.
 
-1. Créer un nouveau répertoire `$PROJET_CDAW/BackEnd/tp2` avec les fichiers suivants :
+Créer un nouveau répertoire `$PROJET_CDAW/BackEnd/tp2` avec les fichiers suivants :
 
 - `config.php` (cf. TP1) contient les données de connexion à la base
+
 - `bootstrap.php` :
+
 ```php
 <?php
 
@@ -142,7 +144,9 @@ spl_autoload_register(function ($class_name) {
     include $classFile;
 });
 ```
+
 - `DatabaseConnector.php` qui est un singleton stockant la connexion à la base (objet PDO)
+
 ```php
 <?php
 
@@ -172,7 +176,9 @@ class DatabaseConnector {
     }
 }
 ```
+
 - `UserModel.php` qui sera une version modifiée de votre classe `User` écrite dans le TP1
+
 ```php
 <?php
 
@@ -183,6 +189,7 @@ class DatabaseConnector {
         }
     }
 ```
+
 - `UserController.php` qui contient le code permettant de répondre aux requêtes de l'API : `GET /users` et  `POST /users`
 
 ```php
@@ -228,6 +235,7 @@ class UsersController {
 
 }
 ```
+
 - `api.php` qui contient est le root-endpoint de votre API REST
 
 ```php
