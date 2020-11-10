@@ -8,7 +8,7 @@ Objectifs de ce TP:
     - Émettre des réponses HTTP contenant du JSON
 
 Transformons maintenant le CRUD des utilisateurs que nous avons construit au TP1 sous la forme d'une API Web REST afin que le code du Front-end puisse ajouter ou supprimer des utilisateurs dans la base de données.
-Avant de créér votre propre API Web au format REST ci-dessous quelques notions permettant de mieux comprendre tous ces termes : API, REST, HTTP, JSON, ...
+Avant de créér votre propre API Web au format REST ci-dessous quelques notions permettant de mieux comprendre tous ces termes : HTTP, JSON, API, REST, ...
 
 #  HTTP
 
@@ -37,9 +37,8 @@ Les méthodes HTTP (verbs) les plus courantes :
 
 # JSON
 
-JavaScript Object Notation est un format largement utilisé pour échanger des données sur le Web
+JavaScript Object Notation est un format largement utilisé pour échanger des données sur le Web. Exemple de JSON :
 
-Exemple de JSON :
 ```
 {
 	"id": 1,
@@ -48,19 +47,19 @@ Exemple de JSON :
 	"email": "luke.skywalker@galaxy.sw"
 }
 ```
-Vous pouvez valider du JSON https://jsonlint.com
+
+Vous pouvez valider du code JSON : https://jsonlint.com.
 
 # API
 
 Application programming interface est un ensemble de règles permettant à des programmes de communiquer entre eux. Le développeur créé une API sur le serveur afin que les clients puissent communiquer avec ce dernier.
-
 
 # REST
 
 Representational State Transfer définit des règles pour structurer une API Web. Par exemple, les ressources (données) sont accessibles via une URL spécifique (endpoint).
 
 {% hint style="alert" %}
-Introduction API REST :
+Introduction aux APIs REST :
 - https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
 - https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm3.html
 {% endhint %}
@@ -90,20 +89,21 @@ permet de récupérer la liste des dépôts git de l'utilsateur raysan5 sur gith
 - body -->
 
 API RESTful :
-- On affecte à chaque ressource une URL qui l’identifie,
-- et chaque URL identifie une ressource.
-- Les manipulations se font en utilisant les verbes HTTP appropriés.
+- chaque ressource est identifiée et accessible via une URI
+- les traitements (CRUD) à appliquer sont décrits par les verbes HTTP (GET, POST, ...)
+
+![Exemple d'API RESTful pour gérer des tâches](ressources/CRUD_REST/task_api.png)
 
 # Votre API REST pour le CRUD des `users`
 
+Crééons maintenant une API REST pour la gestion des utilisateurs du TP1.
+Créer un nouveau répertoire `$PROJET_CDAW/BackEnd/tp2`.
+
 <!-- https://developer.okta.com/blog/2019/03/08/simple-rest-api-php -->
-
-![Exemple d'API REST pour la gestion de tâches](ressources/CRUD_REST/task_api.png)
-
 
 ## Documentez votre API REST
 
-En vous inspirant de documentation REST existante ajouter dans votre dépôt une page Web qui documente l'API REST que vous allez implémenter pour la gestion des utilisateurs.
+En vous inspirant de documentations REST existantes ajouter dans votre dépôt (`tp2/doc/index.html` ou `tp2/doc/README.md`) une documentation de l'API REST que vous allez implémenter pour la gestion des utilisateurs.
 
 Exemples de documentation d'API :
 - https://punkapi.com/documentation/v2
@@ -126,11 +126,11 @@ Voici des exemples pour votre API :
 
 Commençons par implémenter un endpoint `/users` supportant la méthode `GET` sans paramètre et qui retournera la liste des utilisateurs dans la base en JSON.
 
-Créer un nouveau répertoire `$PROJET_CDAW/BackEnd/tp2` avec les fichiers suivants :
+Voici les fichiers à créer et compléter :
 
 - `config.php` (cf. TP1) contient les données de connexion à la base
 
-- `bootstrap.php` :
+- `bootstrap.php` qui configure un autoloader PHP permettant de charger automatique les fichiers contenant les définitions de classes :
 
 ```php
 <?php
@@ -145,7 +145,7 @@ spl_autoload_register(function ($class_name) {
 });
 ```
 
-- `DatabaseConnector.php` qui est un singleton stockant la connexion à la base (objet PDO)
+- `DatabaseConnector.php` qui est un singleton stockant la connexion à la base (objet PDO) :
 
 ```php
 <?php
@@ -177,7 +177,7 @@ class DatabaseConnector {
 }
 ```
 
-- `UserModel.php` qui sera une version modifiée de votre classe `User` écrite dans le TP1
+- `UserModel.php` qui sera une version modifiée de votre classe `User` écrite dans le TP1 :
 
 ```php
 <?php
@@ -190,7 +190,7 @@ class DatabaseConnector {
     }
 ```
 
-- `UserController.php` qui contient le code permettant de répondre aux requêtes de l'API : `GET /users` et  `POST /users`
+- `UserController.php` qui contient le code permettant de répondre aux requêtes de l'API : `GET /users` et  `POST /users` :
 
 ```php
 <?php
@@ -236,7 +236,7 @@ class UsersController {
 }
 ```
 
-- `api.php` qui contient est le root-endpoint de votre API REST
+- `api.php` qui est le root-endpoint de votre API REST :
 
 ```php
 <?php
