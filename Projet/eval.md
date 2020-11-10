@@ -6,7 +6,7 @@ Vous *devez* utiliser un dépôt git sur le serveur gvipers pour votre projet et
 L'URL de votre dépôt devra *obligatoirement* avoir la forme suivante :  https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.
 
 {% hint style="info" %}
-Pour avoir une url de cette forme, une des deux personnes du binôme devra créer le projet git sur son espace personnel, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travailler directement dans le même projet.
+Pour avoir une url de cette forme, une des deux personnes du binôme devra créer le projet git sur son espace personnel, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travaillez directement dans le même projet.
 {% endhint %}
 
 Ce dépôt doit contenir *TOUTES* les ressources du projet. Exemple d'organisation de votre dépôt git :
