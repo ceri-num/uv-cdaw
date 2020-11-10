@@ -2,47 +2,64 @@
 
 For the project, you will:
 1. Intensively use git. Thus you need to have a GitLab gVipers account accessible.
-2. Use Angular as your web-application framework
+2. Use Vue.js as your web-application framework
 3. Use the riichi mahjong tiles assets available [here](https://github.com/FluffyStuff/riichi-mahjong-tiles). These are svg assets of all the icons, as well as back and black of a tile : you will have to assemble them yourself in your game.
 
-We will consider this majhong tiles project as a deleguate third party work : we don't handle its developpement and therefore you need to conserve a dependency of it in your project. Consequently, we will use **git submodule**.
+We will consider this majhong tiles project as a deleguate third party work: we don't handle its developpement and therefore you need to conserve a dependency of it in your project. Consequently, we will use **git submodule**.
 
-Word of caution: all the examples are shown using **Linux (Debian)**.
+{% hint style="info" %}
+A git submodule is a way to use another git project within yours. More information [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+{% endhint %}
+
+{% hint style="info" %}
+All the examples are shown using **Linux (Debian)**
+{% endhint %}
 
 ## Create a new repository in Gvipers for your front end project
 Go to [Gvipers](https://gvipers.imt-lille-douai.fr/) and login.
 
-Create your team for the project (if it does not already exists or has been created by your teachers), then create a new repository associated to your team for the front-end project.
-For the rest of this section, this repository is called `repo`.
+It is supposed that you already have created your git repository. If not, check the [Project presentation page](../../Projet/eval.md). We will store all the content of the front end project in a FrontEnd directory which will be automatically created by the Vue.js assistant.
 
-⚠️ Do not use special caracters, nor space or upper case letter in the name of your repository! Vue.js will not authorize such a project.
+For the rest of this section, this repository is called `projet-cdaw`.
+
 
 ## Initialize your Vue.js project
-⚠️ This step should be made by only one person (preferably the manager of the project), then, once push to the remote, all the other collaborators should clone it.
 
-First, clone your repository, but do not yet enter it:
-```bash
-cd your/Path
-git clone https://gvipers.imt/url/to/your/repo
-```
+### Prerequisites
+You will need to have both Node.js and Vue.js installed for this section.
 
-Then you will need to have both Node.js and Vue.js installed.
 ```bash
 sudo apt install nodejs npm
 ```
+
 Afterwards, you want to install Vue.js CLI globally (more details about the [Vue.js CLI](https://cli.vuejs.org/))
+
 ```bash
 sudo npm install -g @vue/cli
 ```
+
 This installs the command `vue` globally on your system, which is the command you use to create new workspaces, new projects or produce builds to share or distribute. `npm`will be used to serve your application during development.
 
-We will then populate your empty local repository with a new empty pre-configured Vue.js project, acting as a backbone for the front-end for now. One step above your local repository, type:
+### Workflow
+{% hint style="warning" %}
+This step should be made by only one person (preferably the manager of the project), then, once push to the remote, all the other collaborators should clone it.
+{% endhint %}
 
+First, clone your cdaw repository, and then access it:
 ```bash
-vue create your_repo/
+cd your/Path
+git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+cd projet-cdaw
 ```
 
-Answer `Merge` to the question `Target directory already exists?`, and select `Default ([Vue 2] babel, eslint)` to the question `Please, pick a preset` (we will not use the beta version of Vue.js).
+If you have already created some other directories, they should be visible by now. Here, we will create our `FrontEnd` directory, then populate it with a new empty pre-configured Vue.js project, acting as a backbone for the front-end for now. While being in your local repository `projet-cdaw`, type:
+
+```bash
+vue create FrontEnd
+```
+
+If the question `Target directory already exists?` shows, answer `Merge`.
+Then select `Default ([Vue 2] babel, eslint)` to the question `Please, pick a preset` (we will not use the beta version of Vue.js).
 
 After the installation of some additional packages, your local repository should looks like that:
 
@@ -50,15 +67,23 @@ After the installation of some additional packages, your local repository should
 
 To check if your project works correctly, stay at the root of your project, then compile and serve it:
 ```bash
-cd your_repo
+cd FrontEnd
 npm run serve
 ```
 Then connect to `http://localhost:8080`: you should see Vue.js saying that everything works fine!
 
-Last step: add all these modifications as the starting point of your project by commiting the change, then pushing them to the remote.
+Now, we will create a new directory used to store the model of your application (remember, Vue.js is mostly view/controller based in a MVC approach). Go into the src directory, then create a new `model` directory, and an readme:
+
+```bash
+projet-cdaw/FrontEnd> cd src
+projet-cdaw/FrontEnd/src> mkdir model && cd model
+projet-cdaw/FrontEnd/src/model> echo "# MODEL DIRECTORY FOR FRONT END APP" > README.md
+```
+
+Last step: add all these modifications to your project by commiting the change, then pushing them to the remote.
 ```bash
 git add -A
-git commit -m "Angual init"
+git commit -m "Vue js init"
 git push
 ```
 
@@ -66,14 +91,16 @@ git push
 
 ### Correctly initialize your project
 
-⚠️ This step should be made by only one person (preferably the manager of the project), then, once push to the remote, all the other collaborators should clone it (cf. *Correctly clone your project* section)
+{% hint style="warning" %}
+This step should be made by only one person (preferably the manager of the project), then, once push to the remote, all the other collaborators should clone it (cf. *Correctly clone your project* section)
+{% endhint %}
 
 If your front end repo is not yet on your local machine:
 
 ```bash
 cd your/Path
-git clone https://gvipers.imt/url/to/your/repo
-cd repo
+git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+cd projet-cdaw
 ```
 
 Now, we need to add the GitHub repo about riichi tiles as a submodule of our project. To do this:
@@ -103,8 +130,8 @@ From then, your project is correctly cloned, and all the dependencies are availa
 To sum up all the actions:
 ```bash
 cd your/Path
-git clone https://gvipers.imt/url/to/your/repo
-cd repo
+git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+cd projet-cdaw
 git submodule init
 git submodule update
 ```
