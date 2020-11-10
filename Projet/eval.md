@@ -46,7 +46,7 @@ Laravel/
 ```
 
 {% hint style="warning" %}
-Pour la partie Front End, référez vous à [ce document](FrontEnd/TP/setup.md) pour bien configurer votre projet ! Votre dossier Front End **doit** avoir l'organisation énnoncée dans ce document.
+Pour la partie Front End, référez vous à [ce document](../../FrontEnd/TP/setup.md) pour bien configurer votre projet ! Votre dossier Front End **doit** avoir l'organisation énnoncée dans ce document.
 {% endhint %}
 
 ## Rendre son projet
