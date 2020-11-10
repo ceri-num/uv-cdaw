@@ -15,11 +15,11 @@
 * [Génération](UX/generation.md)
 * [Évaluation](UX/evaluation.md)
 * [Charte graphique](UX/graphisme.md)
-* [Ergonomie](UX/ergonomie.md) 
+* [Ergonomie](UX/ergonomie.md)
 * [Bibliographie](UX/bibliographie.md)
-* [Séance 2](UX/consignes_s2.md) 
-* [Séance 3](UX/consignes_s3.md) 
-* [Séance 4](UX/consignes_s4.md) 
+* [Séance 2](UX/consignes_s2.md)
+* [Séance 3](UX/consignes_s3.md)
+* [Séance 4](UX/consignes_s4.md)
 
 <!-- ## AGL
 * [Planning](AGL/README.md) -->
@@ -28,6 +28,7 @@
 - [PHP OO](BackEnd/tuto-PHP.md)
 - [PDO](BackEnd/tuto-PDO.md)
 - [TP PHP PDO](BackEnd/TP-PHP_PDO.md)
+- [TP CRUD REST](BackEnd/TP-CRUD_REST.md)
 
 ## Front-end
 * [JS/Introduction](FrontEnd/JS/intro.md)
