@@ -28,7 +28,7 @@ That is why you want to rely on `get` and `set` for your class! You can handle t
 However, no matter how hard you try, your code will fail one time or another (because of you, the user, the hardware, etc.). Despite `return` is a good approach in several cases, sometimes you need more powerful error managment. Indeed, when your script fails, it usually "dies" -- stops immediatly. However, maybe you want to recover from this error and do some specific actions instead of stopping your script (*e.g.* reinitializing your interface).
 
 {% hint style="success" %}
-My advice is to **break hard and break soon!**. Even if your code growth in size and take you more time, this is always a good practice, and it will help you when your code will become important.
+My advice is to **break hard and break soon!** Even if your code growth in size and take you more time by doing so, this is always a good practice, and it will help you when your code will become important.
 {% endhint %}
 
 {% hint style="info" %}
