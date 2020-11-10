@@ -5,6 +5,10 @@
 Vous *devez* utiliser un dépôt git sur le serveur gvipers pour votre projet et travailler en équipe sur ce dépôt.
 L'URL de votre dépôt devra *obligatoirement* avoir la forme suivante :  https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.
 
+{% hint style="info" %}
+Pour avoir une url de cette forme, une des deux personnes du binôme devra créer le projet git sur son espace personnel, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travailler directement dans le même projet.
+{% endhint %}
+
 Ce dépôt doit contenir *TOUTES* les ressources du projet. Exemple d'organisation de votre dépôt git :
 
 ```
@@ -36,10 +40,14 @@ BackEnd/
          templates_json/   # contient les templates JSON pour la construction des réponses HTTP
       index.php
 FrontEnd/
-   src/  # contient le code source de la partie FrontEnd du projet
+   # Le contenu sera créer automatiquement et manuellement. Cf le lien ci-dessous
 Laravel/
    ...
 ```
+
+{% hint style="warning" %}
+Pour la partie Front End, référez vous à [ce document](FrontEnd/TP/setup.md) pour bien configurer votre projet ! Votre dossier Front End **doit** avoir l'organisation énnoncée dans ce document.
+{% endhint %}
 
 ## Rendre son projet
 
