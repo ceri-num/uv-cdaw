@@ -40,6 +40,7 @@
 * [JS/Inheritance and Prototype Chain]<!-- (FrontEnd/JS/protoh.md)-->
 * [JS/Errors Handling]<!--(FrontEnd/JS/promisemeerror.md)-->
 * ...
+* [Projet/Setup](FrontEnd/TP/setup.md)
 
 <!-- ## Laravel
 * [Planning](Laravel/README.md) -->
