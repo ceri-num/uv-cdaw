@@ -2,7 +2,7 @@
 Cette phase est cruciale pour bien démarrer un projet en UX Design. Il faut impliquer toutes les parties prenantes du projet, comprendre son ecosystème et les enjeux de celui-ci. En gros, comme dans tout problème, il faut appréhender toutes les données initiales disponibles. 
 
 ## Définition du projet
-Vous disposez d'un très court cahier des charges. Il vous faut le compléter en ralisant diverses actions avec différents outils et méthodes.
+Vous disposez d'un très court cahier des charges. Il vous faut le compléter en réalisant diverses actions avec différents outils et méthodes.
 
 ### Impliquer les parties prenantes
 Ici tout est affaire de communication :
