@@ -14,7 +14,7 @@
 * [Idéation](UX/ideation.md)
 * [Génération](UX/generation.md)
 * [Évaluation](UX/evaluation.md)
-* [Charte graphique](UX/graphisme.md)
+* [Charte graphique](UX/graphique.md)
 * [Ergonomie](UX/ergonomie.md)
 * [Bibliographie](UX/bibliographie.md)
 * [Séance 2](UX/consignes_s2.md)
