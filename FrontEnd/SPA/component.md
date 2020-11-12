@@ -59,6 +59,10 @@ This is just an illustrative example. The syntax in Vue.js will be a little diff
 
 As you can see, we somewhat "paste" the content of the web component's template -- instanciated -- inside the custom HTML. Thus, during the rendering, the HTML is adapted to the state of the component (like PHP in some way, except this is dynamic).
 
+{% hint style="info" %}
+If you are wondering, the logic of your web component is directly associated to your view/template. The way the association is made depends of the framework used. In any case, you can privately use the data and method you declare in your component, and handle any events.
+{% endhint %}
+
 ## Binding and Reactivity
 Binding is the concept of passing existing data to a web component, and storing the passed data into the component (to use it). In the example above, we bind the object `user1` and `user2` to respectively the first and the second `<my-logInfo-component>` components. Binding data to components is useful to instanciate them correctly. Like that, you can pass a data from a parent to a child component, again to a child component that needs specifically this data to correctly instatiate.
 
