@@ -57,9 +57,15 @@ If you have already created some other directories, they should be visible by no
 ```bash
 vue create FrontEnd
 ```
-
-If the question `Target directory already exists?` shows, answer `Merge`.
-Then select `Default ([Vue 2] babel, eslint)` to the question `Please, pick a preset` (we will not use the beta version of Vue.js).
+Then, answer the prompt like the following:
+* `Please pick a preset` answer with `Manually select features`
+* In the radio list, pick: `Choose Vue version`, `Babel`, `Router`, `Linter/Formatter`
+* Version of Vue.js: `2.x` (we will not use the beta version of Vue.js)
+* `Use history mode for router` answer with `n`
+* `Pick a linter` answer`ESLint with error prevention only`
+* `Pick additionnal Lint features` answer `Lint on save`
+* `Where do you prefer placing config for Babel` answer `DTC`.. oops answer `In dedicated config files`
+* `Save this as a preset` -> answer this question as you want
 
 After the installation of some additional packages, your local repository should looks like that:
 
@@ -72,7 +78,7 @@ npm run serve
 ```
 Then connect to `http://localhost:8080`: you should see Vue.js saying that everything works fine!
 
-Now, we will create a new directory used to store the model of your application (remember, Vue.js is mostly view/controller based in a MVC approach). Go into the src directory, then create a new `model` directory, and an readme:
+Now, we will create a new directory used to store the model of your application (remember, Vue.js is mostly view/controller based in a MVC/MMV approach). Go into the src directory, then create a new `model` directory, and an readme:
 
 ```bash
 projet-cdaw/FrontEnd> cd src
