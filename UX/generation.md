@@ -27,7 +27,9 @@ La conception des icônes suit le processus suivant :
 * passation (ravailler avec les utilisateurs sur leurs représentations mentales, faire dessiner des icônes);
 * analyse des résultats. 
 
-On finit par une phase d'exploration des résultats où l'icône, une fois correctement interprétée par les utilisateurs (80% d'entre eux), va être affinée pour atteindre une qualité suffisante. 
+On finit par une phase d'exploration des résultats où l'icône, une fois correctement interprétée par les utilisateurs (80% d'entre eux), va être affinée pour atteindre une qualité suffisante.
+
+Et si vous avez la flemme, il existe des [sites très bien](https://fontawesome.com/), pourvu que vous fassiez une évaluation comme il faut de vos choix :-)
 
 ## Storyboarding
 Un storyboard est la représentation sous forme de bande dessinée simplifiée de votre système. Avec ces courts récits illustrés, vous allez représenter les intéractions entre les utilisateurs et votre système. Cette méthode narrative a pour objectif de raconter les scénarios utilisateurs que vous avez imaginé en amont. Inutile d'être un dessinateur professionnel, le storyboard doit permettre de valider vos choix et c'est surtout sa structure narrative qui compte. Ces concepts sont largement repris dns le *Storytelling*, un paradigme très à la mode dans la conception depuis quelques années. De plus, cette approche narrative se retrouve dans le *Design Thinking* et le *sketching*, des méthodes qui font appel à la pensée visuelle.
@@ -50,7 +52,7 @@ Leur avantage est de proposer une visualisation quasi-fonctionnelle de votre sys
 
 On choisit aussi un modèle de maquette en fonction de sa diffusion future, de son niveau d'audience possible. **N'oubliez pas que le but de la maquette est l'évaluation de vos idées !**
 
-Pour plus d'information sur les outils de maquettage, la [biblio](bibliographie.md) est là.
+Pour plus d'information sur les outils de maquettage, la [biblio](bibliographie.md) est là. Et le site qui sert : [Prototypr.io](https://prototypr.io/)
 
 ## Les autres
 Design persuasif, Tri de cartes, Gamification, etc.
