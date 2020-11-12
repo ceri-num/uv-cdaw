@@ -5,7 +5,7 @@ A SPA is a web application accessed with a unique web page instead of loading en
 
 SPA rely on dynamic communication with the server, either by using [AJAX/Fetch API](../JS/api.md) or websocket to modify elements on the page. Below a comparative illustration.
 
-![Classic approach vs Single page approach](resources/classic-vs-spa.svg)
+![Classic approach vs Single page approach](resources/classic-vs-spa.png)
 
 | Classic Web App | Single Page App |
 | :------------- | :----------: |
