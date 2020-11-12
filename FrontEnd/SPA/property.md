@@ -1,0 +1,1 @@
+https://www.w3jar.com/vuejs-directives-and-data-binding-with-two-way-data-binding/
