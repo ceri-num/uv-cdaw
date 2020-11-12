@@ -11,7 +11,7 @@ Elle est indispensable pour :
 
 **Attention** :	La charte graphique doit être originale et esthétique. Et ça, c'est pas gagné !
 
-Break : un exemple comme ça en passant
+Break : un exemple comme ça en passant, [Charte graphique de l'Université de Cergy](resources/charteGraphiqueUnivCergy.pdf)
 
 # Règle de conception (et de lecture)
 Il s'agit de créer un document regroupant les différents aspects graphiques des réalisations à venir. Pour cela il faut convenir de la forme et de l'aspect d'un certain nombre d'éléments. Il faut évaluer le ressenti de votre charte (ce que les designers appellent le "*Watch and feel*").
