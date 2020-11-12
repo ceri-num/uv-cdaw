@@ -18,7 +18,7 @@ Les icônes sont composées de différents éléments :
 * les indices (pour guider l'interprétation du signifiant e.g. une flèche, un trait, etc.)
 * les symboles (pour donner un sens particulier au signifiant e.g. rouge pour un interdit, dont il ne faut pas abuser parce qu'ils peuvent brouiller le message).
 
-![Composition d'une icône](resources/composition_icones.png)
+![Composition d'une icône](resources/composition_icone.png)
 
 ## Créer une icône
 La conception des icônes suit le processus suivant : 
