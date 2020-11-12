@@ -41,6 +41,9 @@ Using the important method is good for small project and tests. But it will quic
 
 Instead of rewritting the procedure, it's demo time for creating a new project! 
 
+🕑***Time passes***🕑
+
+Your `src/` folder contains all the Vue app and components you create. `src/App.vue` is your main vue (top-level) component, which globally load the framework. The folder `src/components/` should contains all your web components. `src/assets/` is used to store static assets like CSS and images. `src/routers` contains your route configuration for a SPA, and `src/views/` contains all the vue (the "pages" or sections) of your SPA.
 
 [Vue.js official documentation is accessible here.](https://vuejs.org/v2/guide/installation.html).
 
