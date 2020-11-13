@@ -238,6 +238,7 @@ class Response {
 Le dispatcher courant doit permettre d’aiguiller la requête courante sur le bon contrôleur en fonction des paramètres de la requête.
 Pour cela, il instancie la classe correspondant au contrôleur courant et passe des paramètres à son contructeur.
 
+Compléter le code :
 ```php
 <?php
 
@@ -252,12 +253,7 @@ class Dispatcher {
 	}
 
 	public static function dispatchToController($controllerName, $request) {
-		$controllerClassName = ucfirst($controllerName) . 'Controller';
-
-		if(!class_exists($controllerClassName))
-			throw new Exception("$controllerName does not exists");
-
-		return new $controllerClassName($controllerName,$request);
+		// TODO
 	}
 }
 ```
@@ -370,8 +366,9 @@ class UsersController extends Controller {
 }
 ```
 
-Compléter le code de la méthode `getAllUsers` afin qu'une requête `GET /api.php/users` retourne tous les utilisateurs de la base en JSON.
-Pour cela, vous devrez créer les classes modèles : `Model`, `User` ainsi que la classe `DatabasePDO` (cf. TP2 et ci-dessous).
+Pour compléter le code de la méthode `getAllUsers` afin qu'une requête `GET /api.php/users` retourne tous les utilisateurs de la base en JSON, vous devez d'abord :
+- créer les classes modèles : `Model`, `User`
+- créeer la classe `DatabasePDO`
 
 ## `DatabasePDO`
 
@@ -494,4 +491,11 @@ User::addSqlQuery('USER_CONNECT',
 
 Compléter le MVC en veillant à implémenter les fonctionnalités dans les bonnes couches (modèle ou controller).
 Veiller aussi à généraliser au mieux votre code dans les super-classes `Model` et `Controller` pour éviter les duplications.
+
+A faire :
+
+- `GET /api.php/users` retourne tous les utilisateurs de la base en JSON
+- `GET /api.php/user/1` retourne tous les informations de l'utilisateur 1 en JSON
+- `PUT /api.php/user/1` avec du JSON en paramètre permet de mettre à jour les informations de l'utilisateur 1 dans la base
+...
 
