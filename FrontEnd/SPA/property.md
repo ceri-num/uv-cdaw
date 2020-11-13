@@ -50,11 +50,14 @@ components: { // we register here the components used in this Home component
 }
 ```
 
-We can use a component only if it has been `export`ed. That means you used the `export` keyword in the file where the component is described.
+We can use a component only if it has been `export`ed. To do so, you need to use the `export` keyword in the file where the component is described.
 ```js
 export default { //we "export" this object, making it available to import elsewhere
   name: 'Home',...
 ```
+{% hint style="danger" %}
+Exported modules are in strict mode whether you declare them as such or not. The export statement cannot be used in embedded scripts.
+{% endhint %}
 
 And to add a component to the array of `components`, this component needs to be `import`ed! When you use the `import Obj from 'my/path/to/Obj.vue`, you create an instance of this object.
 
