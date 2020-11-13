@@ -41,6 +41,8 @@ The most important one is the `v-bind` directive. This directive allows to bind 
 
 There also exists dynamic binding, which allows you to use varibale to determine which HTML property you want to bind your data with. Check the documentation if your are interested.
 
+Two way data binding allows a child component to update its direct parent. It is mostly used for forms. Check [here](https://vuejs.org/v2/guide/forms.html) for more information.
+
 ## Template syntax
 We will see in this section some handful syntaxex to define how your component should render according to its state (its data).
 
