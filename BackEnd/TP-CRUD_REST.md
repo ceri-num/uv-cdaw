@@ -48,7 +48,11 @@ JavaScript Object Notation est un format largement utilisé pour échanger des d
 }
 ```
 
-Vous pouvez valider du code JSON : https://jsonlint.com.
+{% hint style="alert" %}
+Aller plus loin sur JSON :
+- https://restfulapi.net/introduction-to-json/
+- Valider du code JSON : https://jsonlint.com.
+{% endhint %}
 
 # API
 
@@ -60,8 +64,9 @@ Representational State Transfer définit des règles pour structurer une API Web
 
 {% hint style="alert" %}
 Introduction aux APIs REST :
+- https://restfulapi.net/
 - https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
-- https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm3.html
+<!-- - https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm3.html -->
 {% endhint %}
 
 
@@ -190,7 +195,7 @@ class DatabaseConnector {
     }
 ```
 
-- `UserController.php` qui contient le code permettant de répondre aux requêtes de l'API : `GET /users` et  `POST /users` :
+- `UsersController.php` qui contient le code permettant de répondre aux requêtes de l'API : `GET /users` et  `POST /users` :
 
 ```php
 <?php
@@ -310,3 +315,15 @@ Tester votre API Web avec :
 - Supprimer un utilisateur : `DELETE /user/{id}`
 - Lire les données d'un utilisaeur : `GET /user/{id}`
 - Modifier un utilisaeur : `PUT /user/{id}`
+
+
+<!-- Explique comment récuper du contenu JSON passé le contenu d'une requête
+```php
+$data = json_decode(file_get_contents("php://input"));
+
+// set product property values
+$user->firstname = $data->firstname;
+$user->lastname = $data->lastname;
+$user->email = $data->email;
+$user->password = $data->password;
+``` -->

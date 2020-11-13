@@ -1,6 +1,6 @@
 
 Tous les supports de cours + TP sont disponibles ici :
-https://partage.imt.fr/apps/files/?dir=/Teaching/CDAW&fileid=14260094
+https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx
 
 {% hint style="info" %}
 Une lente migration des supports de cours vers ce site est en cours.
