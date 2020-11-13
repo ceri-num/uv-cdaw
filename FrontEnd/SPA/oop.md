@@ -62,7 +62,7 @@ export default {
   props: {
     msg: String
   },
-  data(){
+  data(){ //remember, in a component, data must be a function! 
     return{
       npc: null, //our npc object
     }
@@ -85,4 +85,4 @@ export default {
 </script>
 ```
 
-With that, you have all you need to adopt an OOP approach in your Front End app! Have fun!
+With all that, you have what you need to adopt an OOP approach in your Front End app! Have fun!
