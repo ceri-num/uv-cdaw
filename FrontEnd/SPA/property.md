@@ -95,7 +95,7 @@ means that user **is** an object, and should not be otherwise. You have differen
 Tend to prefer this notation for the `props`! It is always a good idea to introduce some verifications in your code!
 {% endhint %}
 
-At least, if you want two ways data binding, you can use the `v-model` directive. Check [here for the doc](https://vuejs.org/v2/guide/forms.html) and here for an [example in SO](https://stackoverflow.com/questions/48979636/vue-two-way-prop-binding)
+At least, if you want two ways data binding, you can use the `v-model` directive. Check [here for the doc](https://vuejs.org/v2/guide/forms.html) and here for an [example in SO](https://stackoverflow.com/questions/48979636/vue-two-way-prop-binding). However, it is recommended to use `.sync` instead alonside event. Check the [event section](event.md) for more information.
 
 ## Reactivity with your props
 One thing to be noted though: your `props` **are not** registered into the reactivity system of the framework. Here is apparently some rules (from [vue.js forum](https://forum.vuejs.org/t/props-reactivity-in-the-documentation/9095)):
