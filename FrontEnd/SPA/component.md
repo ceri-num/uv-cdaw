@@ -63,16 +63,16 @@ As you can see, we somewhat "paste" the content of the web component's template 
 If you are wondering, the logic of your web component is directly associated to your view/template. The way the association is made depends of the framework used. In any case, you can privately use the data and method you declare in your component, and handle any events.
 {% endhint %}
 
-## Binding and Reactivity
-Binding is the concept of passing existing data to a web component, and storing the passed data into the component (to use it). In the example above, we bind the object `user1` and `user2` to respectively the first and the second `<my-logInfo-component>` components. Binding data to components is useful to instanciate them correctly. Like that, you can pass a data from a parent to a child component, again to a child component that needs specifically this data to correctly instatiate.
+## Registering attributes and Reactivity
+Registering attributes is the concept of passing existing data to a web component, and storing the passed data into the component (to use it). In the example above, we bind the object `user1` and `user2` to respectively the first and the second `<my-logInfo-component>` components. Registering data to components is useful to instanciate them correctly. Like that, you can pass a data from a parent to a child component, again to a child component that needs specifically this data to correctly instatiate.
 
-Moreover, binding data allows a powerful mechanism to take place: **reactivity**. The reactivity consists of two things. Firstly, it kept the binded data synchronized. Secondly, and this is powerful, it listens to any change made in the parent data, and re-render the components which depends on it. This makes the page dynamic and keeps all the element synchronized. 
+Moreover, registering data allows a powerful mechanism to take place: **reactivity** (even accross components). The reactivity consists of two things. Firstly, it kept the registered data synchronized. Secondly, and this is powerful, it listens to any change made in the parent data, and re-render the components which depends on it. This makes the page dynamic and keeps all the element synchronized. 
 
-There is also the two-ways binding, which simply consists of listen to any modification for the parent data, or the child data. Thus, once the data change, from either component level, the modification is taken into account, and the component re-rendered. Thanks to that, it is also possible to share data accross component not only in depth, but also in wide.
+There is also the two-ways binding/registering, which simply consists of listen to any modification for the parent data, or the child data. Thus, once the data change, from either component level, the modification is taken into account, and the component re-rendered. Thanks to that, it is also possible to share data accross component not only in depth, but also in wide.
 
-Check the illustration below. We have a main page where three components, where two are different instances of the same component, are attached to the main page. On the first blue component, we also attach a third component. Big arrows represent simple or double binding, thin arrows represents cross binding.
+Check the illustration below. We have a main page where three components, where two are different instances of the same component, are attached to the main page. On the first blue component, we also attach a third component. Big arrows represent registering, thin arrows represents cross registering.
 
-![Illustration of web component and some bindings](resources/webcomp_example.svg)
+![Illustration of web component and some registering](resources/webcomp_example.svg)
 
 ## Vue.js Component Overview
 Vue.js adopts a much more simple approach than some heavy framework like Angular: everything a component needs is write into a single file. Let's see the structure of a Vue.js component.
@@ -106,5 +106,5 @@ li {
 }
 </style>
 ```
-Has you can see, there is three parts in a Vue.js component. The `<template>` section, that we discuss about, the `<script>` section handling you component logic, as well as all data binding and some specifics mecanisms and the `<style>` section, used to design your component.
+Has you can see, there is three parts in a Vue.js component. The `<template>` section, that we discuss about, the `<script>` section handling you component logic, as well as all data reactivity and some specifics mecanisms and the `<style>` section, used to design your component.
 
