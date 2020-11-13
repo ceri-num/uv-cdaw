@@ -417,6 +417,20 @@ Implémentation **partielle** de classe Modèle :
 
 class Model {
 
+   protected $props;
+
+	public function __construct($props = array()) {
+		$this->props = $props;
+	}
+
+	public function __get($prop) {
+		return $this->props[$prop];
+	}
+
+	public function __set($prop, $val) {
+		$this->props[$prop] = $val;
+	}
+
 	protected static function db(){
 		return DatabasePDO::singleton();
 	}
