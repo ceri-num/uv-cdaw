@@ -60,7 +60,6 @@ Le **rectangle** s'apparente au carré. Présenté à la française, c'est-à-di
 ## Couleurs
 ### Symbolique
 
-
 ![Symbolique des couleurs](resources/couleurs2.gif)
 
 ### Mélange des couleurs

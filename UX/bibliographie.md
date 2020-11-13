@@ -3,6 +3,7 @@ description: Lisez, vous mourrez moins bête. Mais vous mourrez quand même (mer
 ---
 # Sites Web
 * Des outils de maquettage Web ? Comment choisir ? [Des alternatives à Balsamiq](https://www.slant.co/options/76/alternatives/~balsamiq-alternatives)
+* Un site ultra bien foutu avec plein d'outils dans tous les sens [Prototypr.io](https://prototypr.io/)
 
 # Livres
 * Lallemand, C., & Gronier, G. (2015). Méthodes de design UX: 30 méthodes fondamentales pour concevoir et évaluer les systèmes interactifs. Editions Eyrolles.

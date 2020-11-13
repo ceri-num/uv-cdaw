@@ -1,5 +1,5 @@
 # Idéation
-Ce sous-processus vise à l'émergence d'idées sur la base des données recueillies avec les utilisateurs. Il existent beaucup de méthodes pour favoriser l'émergence d'idées. Mais mon expérience m'a montré que seules quelques unes d'entre elles fonctionnent avec une majorité de personnes. Mais surtout le fondement théorique de certaines méthodes sont parfois difficile à appréhender. Dans cette partie, je n'en présenterai que deux (enfin un et petit bout de l'autre), libre à vous de creuser la question :-)
+Ce sous-processus vise à l'émergence d'idées sur la base des données recueillies avec les utilisateurs. Il existent beaucoup de méthodes pour favoriser l'émergence d'idées. Mais mon expérience m'a montré que seules quelques unes d'entre elles fonctionnent avec une majorité de personnes. Mais surtout le fondement théorique de certaines méthodes sont parfois difficile à appréhender. Dans cette partie, je n'en présenterai que deux (enfin un et petit bout de l'autre), libre à vous de creuser la question :-)
 
 ## Brainstorming
 La "tempête de cerveaux" est la plus connues et la plus commune des techniques de génération d'idées. Elle est apparut ddans les années 1930 et rencontre toujours le succès.
