@@ -73,3 +73,38 @@ There is also the two-ways binding, which simply consists of listen to any modif
 Check the illustration below. We have a main page where three components, where two are different instances of the same component, are attached to the main page. On the first blue component, we also attach a third component. Big arrows represent simple or double binding, thin arrows represents cross binding.
 
 ![Illustration of web component and some bindings](resources/webcomp_example.svg)
+
+## Vue.js Component Overview
+Vue.js adopts a much more simple approach than some heavy framework like Angular: everything a component needs is write into a single file. Let's see the structure of a Vue.js component.
+
+```html
+<template>
+  <h1>My Vue App</h1>
+  {{ msg }}
+</template>
+
+<script>
+export default {
+  name: 'MyComponent',
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<style>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+</style>
+```
+Has you can see, there is three parts in a Vue.js component. The `<template>` section, that we discuss about, the `<script>` section handling you component logic, as well as all data binding and some specifics mecanisms and the `<style>` section, used to design your component.
+
