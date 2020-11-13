@@ -137,4 +137,5 @@ mounted: function(){
 ```
 
 Below a diagram of the lifecycle of a component and the associated hooks.
-![Lifecycle of a component and associated hooks, from the [Vue.js documentation](https://vuejs.org/v2/guide/instance.html)](lifecycle.png)
+
+![Lifecycle of a component and associated hooks, from the [Vue.js documentation](https://vuejs.org/v2/guide/instance.html)](resources/lifecycle.png)
