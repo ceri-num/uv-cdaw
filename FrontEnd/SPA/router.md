@@ -71,7 +71,7 @@ const router = new VueRouter({ // or simply router if you import it!
   ]
 })
 ```
-You can have multiple dynamic segments in your url. Say that we want to retrieve a specific game (the 315th) of the user `Baiken`, the dynamic path could be:
+You can have multiple dynamic segments in your url. Say that we want to retrieve a specific game information (the 315th) of the user `Baiken`, the dynamic path could be:
 ```js
 { path: '/user/:username/game/:id_game', component: Game }
 ```
@@ -101,7 +101,7 @@ Thus, your componant can now be used everywhere in your app: its interface is cl
 You can even set a function which returns props. Check [the doc](https://router.vuejs.org/guide/essentials/passing-props.html#function-mode)!
 
 ## Nested routes and views
-In complex application, the page is often composed of several components nested at various levels. For example, we could imagine that accessing the game for a specific user is still made in the user component, as well as accesing its profile.
+In complex application, the page is often composed of several components nested at various levels. For example, we could imagine that accessing the games information for a specific user is still made in the user component, as well as accessing its profile.
 
 ![Illustration of nested routes](resources/nested_route.svg)
 
