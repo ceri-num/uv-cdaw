@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Web Component Principle
 
 ## Overview

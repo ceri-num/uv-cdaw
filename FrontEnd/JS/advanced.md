@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 ## Advanced Reminders
 ### Specific iteration control keywords
 There is two specific keywords used to control how the iteration goes:

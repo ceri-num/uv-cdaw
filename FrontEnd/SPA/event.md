@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Event handling in Vue.js
 
 This is just an overview of event handling in Vue.js. For more information, check the [event documentation](https://vuejs.org/v2/guide/events.html) and the [custom event documentation](https://vuejs.org/v2/guide/components-custom-events.html).

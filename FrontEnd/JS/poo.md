@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Object-oriented Programming
 
 Anything that is not a primitive type (`undefined`, `null`, `number`, `string`, `boolean`, `bigInt`, `symbol`) is an object (or an instance) in JavaScript. An object is used to store keyed collections of various data and more complex entities. Object instances can contain more instances which can be functions. These specific functions belongig to an object are called `method`. That also means functions are objects.

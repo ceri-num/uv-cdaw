@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Vue.js Component Properties
 {% hint style="warning" %}
 Though you can use camelCase naming convention in the declaration of your component, or even the component's variables, you need to reference to them using a kebab-case (hyphenation) convention in the template of your component!

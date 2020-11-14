@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Asynchronous programming
 
 What is the big deal with events? It is that they illustrate how your code can run asynchronously! And this is a very important aspect for a client side application. Indeed, without this asynchronous aspect, waiting a button to be clicked will block the entire page, thus making it unbrowsable.

@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Component Rendering
 There is three things to figure out for rendering a component :
 * Where this component will be placed on the page and its objectif

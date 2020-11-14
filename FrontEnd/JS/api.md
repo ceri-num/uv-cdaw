@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Client side Web API
 
 In this section, we will see the principal Web API client-side which are built-in the browsers. As a reminder, API (Application Programming Interfaces) are a way to simplify the construction of complex functionnalities by using abstract, high-level, functionnalities. The principal API we will use are the **DOM API**, used to manipulate the DOM for your page.

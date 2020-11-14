@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Routing
 Dynamic routing is the heart of any SPA application. Instead of changing and loading a new web page when the website URL changed, the idea is to update the page by adding and removing new component on the page. To do so, The HTTP request is caught by a dedicated `router` component, and if the desired URL match the routing rules of the router, then components are invoked and destroyed in order to update the page.
 

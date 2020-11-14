@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Events handling
 
 JavaScript has been made to handle client side application, and therefore has been designed with this objective in mind. One of the principal particularity of client side is the presence of a user, needing a highly interactive interface for browsing. Consequently, JavaScript event managment has quickly become one of its strength.

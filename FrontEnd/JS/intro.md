@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Javascript 
 
 ## Introduction

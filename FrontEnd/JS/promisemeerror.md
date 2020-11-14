@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Errors handling
 
 ## Faillure case scenarios

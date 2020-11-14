@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Inheritance and prototype
 
 ## Prototype

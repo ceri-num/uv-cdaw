@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Single Page Application
 In this section, we will learn the concept of *Single Page Application* (SPA), how to make a SPA and how to dedicated client side framework.
 
