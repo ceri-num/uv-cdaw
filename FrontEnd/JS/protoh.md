@@ -158,6 +158,7 @@ let sat = new Satelite("Hinode", 500);
 ```
 
 This is how graphically the above example can be represented:
+
 ![Illustration of prototype assignation for a class](resources/inheritence_1.svg)
 
 Now, if we want to create a new class, lets say `Planet`, that is based on `Satelite` (*i.e.* that share similar concepts), we can use the `extends` keyword to indicate so. The global syntax is `class Child extends Parents`. In our example, this will result in:
