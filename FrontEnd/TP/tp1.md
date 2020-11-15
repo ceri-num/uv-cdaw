@@ -121,7 +121,7 @@ Using mixins, we will perform a multipe inheritance for the `RichiiTile` class. 
 let Flippable = {
   faceUp: false,
 
-  toggleVisibility()
+  flip()
   {
     this.faceUp != this.faceUp;
   },
