@@ -1,3 +1,7 @@
+---
+author: Alexis Lebis
+---
+
 # TP JavaScript
 
 ## TP Objective
