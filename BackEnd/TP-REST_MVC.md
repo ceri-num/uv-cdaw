@@ -116,7 +116,7 @@ class Request {
 	protected $uriParameters;
 
     public static function getCurrentRequest(){
-        // T
+       // TODO
     }
 
    public function __construct() {
@@ -128,7 +128,7 @@ class Request {
    // e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/api.php => __BASE_URI = /~luc.fabresse
    // e.g. http://localhost/CDAW/api.php => __BASE_URI = /CDAW
    protected function initBaseURI() {
-      $this->baseURI = // TODO
+      // $this->baseURI = TODO
    }
 
    // intialise controllerName et uriParameters
@@ -140,10 +140,17 @@ class Request {
    // e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/api.php/user/1
    //    => controllerName == 'user'
    //       uriParameters == [ 1 ]
+   //
+   // Aide :
+   // En utlisant la fonction PHP phpinfo et en faisant des tests
+   // http://localhost/info.php/test/test
+   // on peut voir que
+   // $_SERVER['SCRIPT_NAME'] donne le préfixe
+   // et que parse_url($_SERVER['REQUEST_URI']
    protected function initControllerAndParametersFromURI(){
 
-      $this->controllerName = // TODO
-      $this->uriParameters = // TODO
+      // $this->controllerName = TODO
+      // $this->uriParameters = TODO
   }
 
    // ==============
@@ -167,7 +174,7 @@ class Request {
 ## `Response`
 
 La classe `Response` sert à faciliter l'envoie de réponse HTTP avec différents codes et contenus.
-Elle intègre également un mécanisme pour intercepter tous les echos et éventuellement les envoyer plus tard dans la réponse (cf. doc PHP `ob_start` et  `ob_get_clean`).
+Elle intègre également un mécanisme pour intercepter tous les echos et éventuellement les envoyer plus tard dans la réponse (cf. doc PHP `ob_start`, `ob_get_contents` et  `ob_get_clean`).
 
 ```php
 <?php
@@ -209,7 +216,7 @@ class Response {
    }
 
    public static function getEchos() {
-      return ob_get_clean();
+      return ob_get_contents();
    }
 
    public function send() {
@@ -227,6 +234,7 @@ class Response {
       header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
       http_response_code($this->code);
+      ob_get_clean();
       echo $this->body;
       exit; // do we keep that?
    }
@@ -253,7 +261,9 @@ class Dispatcher {
 	}
 
 	public static function dispatchToController($controllerName, $request) {
-		// TODO
+      // TODO
+      // une requête GET /users doit retourner new UsersController($controllerName, $request)
+      // une requête GET /user/1 doit retourner new UserController($controllerName, $request)
 	}
 }
 ```
@@ -312,11 +322,6 @@ class DefaultController extends Controller {
       parent::__construct($name, $request);
    }
 
-
-   // ==============
-   // Actions
-   // ==============
-
 	public function processRequest() {
       return Response::errorResponse('{ "message" : "Unsupported endpoint"}' );
 	}
@@ -342,10 +347,6 @@ class UsersController extends Controller {
 	public function __construct($name, $request) {
 		parent::__construct($name, $request);
 	}
-
-	// ==============
-	// Actions
-	// ==============
 
 	public function processRequest()
     {
@@ -470,9 +471,6 @@ Implémentation partielle de la classe `User` :
 
 class User extends Model {
 
-   // ===========
-   // = Statics =
-   // ===========
    protected static $table_name = 'USER';
 
    // load all users from Db
