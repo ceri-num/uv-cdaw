@@ -1,5 +1,8 @@
-## Advanced Reminders
-### Specific iteration control keywords
+---
+author: Alexis Lebis
+---
+# Advanced Reminders
+## Specific iteration control keywords
 There is two specific keywords used to control how the iteration goes:
 
 * `break`
@@ -32,7 +35,7 @@ while (i < 5) {
 //cli: 1,3,7,12
 ```
 
-### Special loops
+## Special loops
 
 In addition to these three loops, there also exists three more loops mostly used to iterate over element of a collection:
 
@@ -52,7 +55,7 @@ list.forEach((item, index) => {
 //index is option: list.forEach(item => console.log(item))
 ```
 {% hint style="danger" %}
-> ⚠️ The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
+The `=>` element indicates an arrow function. We will talk about that below, and in the [Errors & Promises](promisemeerror.md) part.
 {% endhint %}
 
 
@@ -64,7 +67,9 @@ for (let item in player) {
 }
 // résultats : Clive \n 25 \n Warrior
 ```
-> ⚠️ Use the `for...in` statement wisely! For example, it is not advise to use it for `Arrays` instead of `for`. The principal reason is that it will iterate also on the user-specified variable, not only on the numerical index.
+{% hint style="warning" %}
+Use the `for...in` statement wisely! For example, it is not advise to use it for `Arrays` instead of `for`. The principal reason is that it will iterate also on the user-specified variable, not only on the numerical index.
+{% endhint %}
 
 The `for...of` statement creates a loop iterating over iterable objects (including `Array`, `Map`, arguments object and so on), invoking a custom iteration hook with statements to be executed for **the value** of each distinct property. A `for...of` statement looks as follows:
 ```js
@@ -76,15 +81,15 @@ for (const i of myarray) {
 ```
 
 {% hint style="warning" %}
-> ❓ A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
+A `for...in` loop would have displayed `0,1,2,"someText"` instead of the value of the array.
 {% endhint %}
 
 {% hint style="info" %}
-> ❓ A hook is a special invokation function mecanism. More information below.
+A hook is a special invokation function mecanism. More information below.
 {% endhint %}
 
-### Iterator and generator
-#### Iterator
+## Iterator and generator
+### Iterator
 The notion of iterator comes from the fact that processing each item of a collection is a very common operation in computing. The important notions *behind* an iterator are that at a specific moment it points toward a specific item of the collection and that there is a well defined sequence in the collection (implied by the *specific moment*). Thus, an iterator must answer the following questions:
 
 ![Iterator example](resources/it.png)
@@ -145,10 +150,10 @@ while( !result.done ) // while there is still something
 }
 ```
 {% hint style="info" %}
-> ❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
+❓ A well though iterator can be very efficient and versatile. For example, for your Mahjong project, you could define an iterator iterating over a familly, and making it also generate this very familly (somewhat like `Sequence`).
 {% endhint %}
 
-#### Generator & Iterable
+### Generator & Iterable
 One issue with custome iterators is that their creation requires careful programming since their internal state has to be explicitly maintained.
 To circumvent this issue, generator functions allow the definition of a single function whose execution **is not continuous**.
 
@@ -243,8 +248,8 @@ for (const itItem of it) { //this loop is executed again, CLI : 2 1
 console.log(it[Symbol.iterator]() === it) // false;
 ```
 
-### Functions
-#### Anonymous functions
+## Functions
+### Anonymous functions
 There is a difference between a function delcaration and a function expression. A function The later can have its name omitted, defining an anonymous function.
 The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions. 
 
@@ -256,7 +261,7 @@ function()
 ```
 
 {% hint style="danger" %}
-> ⚠️ An anonymous function will do **nothing** on its own (except enclosed in a grouping operator -- see beelow). It need to be "manually" invoked.
+An anonymous function will do **nothing** on its own (except enclosed in a grouping operator -- see beelow). It need to be "manually" invoked.
 {% endhint %}
 
 These kind of functions are commonly used along event handler or callback function.
@@ -279,19 +284,18 @@ maVar();
 ```
 
 {% hint style="info" %}
-> ❓ Stored anonymous function can be a good way to separate your functions -- which actually do things -- from your event handlers -- which triggers things. Example:
-> ```js
-> // Do stuff on scroll
-> var onScrollHandler = function (event) {
->	 // Do something on scroll...
-> };
->
-> // Listen for scroll events
-> window.addEventListener('scroll', onScrollHandler, false);
-> ```
+Stored anonymous function can be a good way to separate your functions -- which actually do things -- from your event handlers -- which triggers things. Example:
+```js
+// Do stuff on scroll
+var onScrollHandler = function (event) {
+// Do something on scroll...
+};
+// Listen for scroll events
+window.addEventListener('scroll', onScrollHandler, false);
+```
 {% endhint %}
 
-#### IIFE (Immediately Invoked Function Expression)
+### IIFE (Immediately Invoked Function Expression)
 A function expression can be used as an IIFE (Immediately Invoked Function Expression) which runs as soon as it is defined.
 In addition of being directly interpreted, an IIFE has its lexical scope enclosed within the `Grouping Operator ()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
 
@@ -309,7 +313,7 @@ result; // Contains "IIFE2"
 console.log(name); // throws "Uncaught ReferenceError: name is not defined"
 ```
 
-#### Arrow function
+### Arrow function
 An arrow function expression is a compact alternative to a traditional function expression, but is limited and cannot be used in all situations. One of the major reason arrow functions were introduced was to alleviate scope and context complexities ( `this` ) thus making functions execution much more intuitive. There is several way of declaring an arrow function. The two most commons are:
 ```js
 var maVar = 10;
@@ -325,11 +329,11 @@ var maVar = 10;
 Check [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for more in depth information about arrow functions.
 
 {% hint style="warning" %}
-> ❓ Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`. It can be a good candidate for promises.
+Arrow function are best suited for non-method functions, mostly due by the scope (non-)modification implied. By using it as an object method, since an object does not create a new scope the `this` context does not change, and the arrow-function does not have its own `this`. It can be a good candidate for promises.
 {% endhint %}
 
-### Scope and context
-#### Scope
+## Scope and context
+### Scope
 
 In JavaScript, there is two type of scopes:
 * **Local**: Variables declared inside a function is in the local scope of this very function. Therefore, each function creates a new scope when defined.
@@ -360,20 +364,20 @@ logName(); // CLI: 'Kazuma'
 ```
 
 {% hint style="danger" %}
-> ⚠️ Conditionnal statements (e.g. `if`, `switch`) and loops, unlike functions, don't create a new scope. Variables defined inside of them remains in the scope they were already in while declared.
+Conditionnal statements (e.g. `if`, `switch`) and loops, unlike functions, don't create a new scope. Variables defined inside of them remains in the scope they were already in while declared.
 {% endhint %}
 
 {% hint style="danger" %}
-> ⚠️ **HOWEVER!** `let` and `const` statement for variable declaration support the declaration of local scope in conditionnal and loop statements. This means that at the end of the statement, **all** the variables declared with either `let` or `const` is destroyed.
+**HOWEVER!** `let` and `const` statement for variable declaration support the declaration of local scope in conditionnal and loop statements. This means that at the end of the statement, **all** the variables declared with either `let` or `const` is destroyed.
 {% endhint %}
 
 Global scope lives as long as your application lives. Local Scope lives as long as your functions are called and executed.
 
-#### Context
+### Context
 Context refers to the value of `this` (the introspection operator) in some particular part of the scope of your code. In the global scope context is always the Window object (`this === Window`).
 
 {% hint style="warning" %}
-> ⚠️ Programer tend to often confuse scope for context, and *vice et versa*. But they are not the same concept! Scope refers to the visibility of variables in a specific code location ; context, their values in a specific scope.
+Programer tend to often confuse scope for context, and *vice et versa*. But they are not the same concept! Scope refers to the visibility of variables in a specific code location ; context, their values in a specific scope.
 {% endhint %}
 
 When declaring a new object -- or using the `new` operator, the context changed. 
@@ -420,7 +424,7 @@ function Person() {
 var p = new Person();
 ```
 
-#### Lexical Scope and Closure
+### Lexical Scope and Closure
 Lexical Scope means that in a nested group of functions, the inner functions have access to the variables and other resources of their parent scope. This means that the child functions are lexically bound to the execution context of their parents. Lexical scope is sometimes also referred to as Static Scope.
 
 However, the lexical scope only works forward. That means that a parent scope can not have access to a children's scope.
@@ -462,7 +466,7 @@ speakVar(); // logs 'Hello Zagreus'. See how the anon. function accesses the nam
 
 This is an interesting behaviour. More examples [here](http://www.javascriptkit.com/javatutors/closures2.shtml).
 
-#### Hoisting
+### Hoisting
 Variable hoisting is a mecanism in JavaScript implied by how the code is processed before its interpretation. This has for effect to allow post-variable declaration in the code, even if the variable is used beforehand.
 
 ```js
@@ -472,7 +476,7 @@ var underclaredVar; //ok.
 ```
 
 {% hint style="danger" %}
-> ⚠️ There is no function hoisting! Function must be declared before they can be used.
+There is no function hoisting! Function must be declared before they can be used.
 {% endhint %}
 
 Be careful however, since hoisting can lead to leaking variable. For example

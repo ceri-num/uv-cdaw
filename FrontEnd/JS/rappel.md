@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Reminders
 
 JavaScript is a weakly typed language, mostly used to manipulate the DOM of a web page.

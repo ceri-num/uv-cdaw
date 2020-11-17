@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Object-oriented Programming
 
 Anything that is not a primitive type (`undefined`, `null`, `number`, `string`, `boolean`, `bigInt`, `symbol`) is an object (or an instance) in JavaScript. An object is used to store keyed collections of various data and more complex entities. Object instances can contain more instances which can be functions. These specific functions belongig to an object are called `method`. That also means functions are objects.
@@ -18,11 +21,11 @@ let quickdraw = {
 };
 ```
 {% hint style="info" %}
-> ❓ It is possible to also put a coma `,` at the end of the last line. This is known as *trailing*: since all the lines are alike, it makes it easier to add/move/remove properties.
+It is possible to also put a coma `,` at the end of the last line. This is known as *trailing*: since all the lines are alike, it makes it easier to add/move/remove properties.
 {% endhint %}
 
 {% hint style="info" %}
-> ❓ The `value` part can also be a variable!
+The `value` part can also be a variable!
 {% endhint %}
 
 ### Access an object property
@@ -33,7 +36,7 @@ console.log(quickdraw.weight); // cli: 15
 quickdraw.weight = 20; // setting a new value to the property weight of the object quickdraw
 ```
 {% hint style="warning" %}
-> ❓ Remember that variable does not have a type! Thus, we could have done `quickdraw.weight="HEAVY!"` with no error at all.
+Remember that variable does not have a type! Thus, we could have done `quickdraw.weight="HEAVY!"` with no error at all.
 {% endhint %}
 
 A property can also be accessed by using the square brackets notation `[]`. It is more powerful that dot notation, but also more cumbersome to write. To access a property using square brackets notation:
@@ -78,7 +81,7 @@ const qckDraw2 = {
 }
 ```
 {% hint style="danger" %}
-> ⚠️ A `const` object's properties can **still be** changed! For example, suppose our `const quickdraw={weight: 15}` object. We can change its weight with no error. But we cannot change the value of the variable `quickdraw` itself (*e.g.* replacing it by another object).
+A `const` object's properties can **still be** changed! For example, suppose our `const quickdraw={weight: 15}` object. We can change its weight with no error. But we cannot change the value of the variable `quickdraw` itself (*e.g.* replacing it by another object).
 {% endhint %}
 
 ### Introspection for object property
@@ -91,7 +94,7 @@ alert( wgt in quickdraw ) // TRUE, still checking for the property weight
 alert( "rope" in quickdraw ) // FALSE
 ```
 {% hint style="success" %}
-> ❓ Remember the `for...in` loop iterating over the properties of an object? No? Go review the [Advanced Section](section.md).
+Remember the `for...in` loop iterating over the properties of an object? No? Go review the [Advanced Section](section.md).
 {% endhint  %}
 
 ### Complex properties
@@ -140,7 +143,7 @@ for (let key in quickdraw) {
 }
 ```
 {% hint style="danger" %}
-> ⚠️ This copy only the primitive level of the object. If you have another level in your object (*e.g.* another object), and you want to deep copy them, you will need to go this level. There is already some function here and there to do that, you could check the [Lodash lib](https://lodash.com/docs#cloneDeep) for example.
+This copy only the primitive level of the object. If you have another level in your object (*e.g.* another object), and you want to deep copy them, you will need to go this level. There is already some function here and there to do that, you could check the [Lodash lib](https://lodash.com/docs#cloneDeep) for example.
 {% endhint %}
 
 ## Towards object-oriented programming
@@ -199,11 +202,11 @@ Quickdraw.publicGetterMethod(); // works
 Quickdraw.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined
 ```
 {% hint style="warning" %}
-> ❓ A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
+A convention is to use the `_` (underscore) symbol as a prefix for protected method, and returning an anonymous object containing the public functions.
 {% endhint %}
 
 {% hint style="info" %}
-> ❓ Take some time to fully understand this code.
+Take some time to fully understand this code.
 {% endhint %}
 
 ## Class
@@ -251,11 +254,11 @@ myQckd.printMe(); // cli : Hey! it's me, Mario
 Even if `alert(typeof Quickdraw)` says that a class is a function, **it is not** just a syntactic sugar. One of the important thing is that in the prototype of the object, the `enumerable` flag is set to `false` for all methods of the class. That means iterations instructions, like `for...in`, will only iterate over the properties of the object, not its methods.
 
 {% hint style="danger" %}
-> ⚠️ Classes always use strict mode, even if you are in sloppy mode (the default)! All code inside the class construct is automatically in strict mode. This mean that the behavior of somes JavaScript feature can change! Be aware of that, such as `this` value and the execution scope. More information [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
+Classes always use strict mode, even if you are in sloppy mode (the default)! All code inside the class construct is automatically in strict mode. This mean that the behavior of somes JavaScript feature can change! Be aware of that, such as `this` value and the execution scope. More information [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 {% endhint %}
 
 {% hint style="warning" %}
-> ❓ Class fields are defined for each instance of the class, not the class itself. For example `Quickdraw.prototype.weight` is undefined, whereas `myQckd.weight` is set.
+Class fields are defined for each instance of the class, not the class itself. For example `Quickdraw.prototype.weight` is undefined, whereas `myQckd.weight` is set.
 {% endhint %}
 
 ### Getter and Setter
@@ -285,7 +288,7 @@ class Quickdraw{
 }
 ```
 {% hint style="danger" %}
-> ⚠️ Getters and setters are specific functions. When declaring a get/set over a property of your object, JavaScript actually replace this property with a specific function. That is why you need to change the name of the property and -- by convention -- we used the `_` to do that. Otherwise, you will have an infinite recursive loop. Thus, when we do myQckd.weight = 15, it is actually the setter that is called, not a value affection for the property! More information about getters and setters [here](https://medium.com/javascript-in-plain-english/javascript-classes-an-in-depth-look-part-2-88b666ed3546).
+Getters and setters are specific functions. When declaring a get/set over a property of your object, JavaScript actually replace this property with a specific function. That is why you need to change the name of the property and -- by convention -- we used the `_` to do that. Otherwise, you will have an infinite recursive loop. Thus, when we do myQckd.weight = 15, it is actually the setter that is called, not a value affection for the property! More information about getters and setters [here](https://medium.com/javascript-in-plain-english/javascript-classes-an-in-depth-look-part-2-88b666ed3546).
 {% endhint %}
 
 ### Bounding your method with event
@@ -313,7 +316,7 @@ setTimeout(qck.myClick, 1000); // 150
 ```
 ### Static
 {% hint style="danger" %}
-> ⚠️ This is a recent implementation and could not work with all the browsers.
+This is a recent implementation and could not work with all the browsers.
 {% endhint" %}
 
 It is possible to associate a method to a class itself, not to its `prototype` with the keyword `static`. Usually, static methods are used to implement functions that belong to the class itself, but not to any particular instance (object) of it. Simply prefix the method of the keyword to obtain such a behavior.
@@ -321,7 +324,7 @@ It is possible to associate a method to a class itself, not to its `prototype` w
 This goes the same for static property.
 
 {% hint style="warning" %}
-> ⚠️ Again, mind `this`! It refers to the class itself, not a particular instance. Therefore, if we had a static method in our `Quickdraw` class, and inside the method, `alert(this === Quickdraw)//true`.
+Again, mind `this`! It refers to the class itself, not a particular instance. Therefore, if we had a static method in our `Quickdraw` class, and inside the method, `alert(this === Quickdraw)//true`.
 {% endhint %}
 
 ### Visibility of fields
@@ -340,7 +343,7 @@ class Quickdraw{
 The **convention** (since it is not implemented on the language level) is to prefix the protected element with an `_` (underscore). So, if our protected should be protected, they will become `_weight` and `_brand`.
 
 {% hint style="warning" %}
-> ⚠️ Do not be fooled! They are still publicly accessible. But since you will be probably looking for weight instead of _weight, you will not find them. You will also avoid all properties starting with `_` in iterations instruction like `for...in`.
+Do not be fooled! They are still publicly accessible. But since you will be probably looking for weight instead of _weight, you will not find them. You will also avoid all properties starting with `_` in iterations instruction like `for...in`.
 {% endhint %}
 
 The same goes for methods. Prefix the class methods with `_` to indicate they are protected. However, tend to favor **get** and **set** when possible!
@@ -432,7 +435,7 @@ With the above example, we saw that each time we access an object property, we c
 This example is somewhat identical to the use of `get` from a `class` as we saw before.
 
 {% hint style="info" %}
-> ❓ Proxy can be used to make some quite elegant solution for protecting property access. You need the traps on `get`, `set` `ownKeys` and `deleteProperty` to check if the property start with `_`. If this is the case, then throw an error.
+Proxy can be used to make some quite elegant solution for protecting property access. You need the traps on `get`, `set` `ownKeys` and `deleteProperty` to check if the property start with `_`. If this is the case, then throw an error.
 {% endhint %}
 
 ### Reflect

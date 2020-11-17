@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Inheritance and prototype
 
 ## Prototype
@@ -45,7 +48,7 @@ Since `this` is dynamic in JavaScript, an iterrogation may arise: what is the va
 The answer is **always** the initial object calling the property/methods, not the objects from the prototype chain: `this` is not affected by the prototype chain at all.
 
 {% hint style="success" %}
-> ❓ Use the following rule to help you find the value of `this`: no matter where the method is found, `this` is always the object before the `.` (dot)!
+Use the following rule to help you find the value of `this`: no matter where the method is found, `this` is always the object before the `.` (dot)!
 {% endhint %}
 
 ```js
@@ -76,7 +79,7 @@ alert(martialArt); // Undefined variable this.versus in the prototype
 What happens here is that the variable `versus` has been attached to the calling object `kendo`, despite the fact the function that creates it is in its prototype (`martialArt`). `martialArt` does not have a `versus` variable after that.
 
 {% hint style="warning" %}
-> ⚠️ There is no *hoisting* (cf. [Advanced reminder](advanced.md)) concept involved here!
+There is no *hoisting* (cf. [Advanced reminder](advanced.md)) concept involved here!
 {% endhint %}
 
 ### Override in writting
@@ -102,14 +105,14 @@ alert(kendo.fight); // Geikō time! BANZAI!
 ```
 
 {% hint style="info" %}
-> ❓ This works as an override because now, JavaScript directly find the method you are calling: thus is does not have the need to go back up the prototype chain.
+This works as an override because now, JavaScript directly find the method you are calling: thus is does not have the need to go back up the prototype chain.
 {% endhint %}
 
 ### Manually extending object: F.prototype
 By now, it should be clear how prototype can be used for object inheritance. As stated above, this is called **prototypal inheritance**. Here we will see how we can extend an object using constructor function and `new` operator by using a property named `prototype`.
 
 {% hint style="danger" %}
-> ⚠️ Here we speak of a *special* property called `prototype`, not the `[[Prototype]]` seen above. It is only used once: while construction an object *via* a function thanks to `new`.
+Here we speak of a *special* property called `prototype`, not the `[[Prototype]]` seen above. It is only used once: while construction an object *via* a function thanks to `new`.
 {% endhint %}
 
 This property `prototype` of a constructor function (cf. [OOP section](poo.md)) means the following: "When a `new` object is created (by using the `new` operator), assigns its `[[Prototype]]` to the given object". By this mean, all the objects from a constructor function created with `new` will all have the object as prototype.
@@ -158,6 +161,7 @@ let sat = new Satelite("Hinode", 500);
 ```
 
 This is how graphically the above example can be represented:
+
 ![Illustration of prototype assignation for a class](resources/inheritence_1.svg)
 
 Now, if we want to create a new class, lets say `Planet`, that is based on `Satelite` (*i.e.* that share similar concepts), we can use the `extends` keyword to indicate so. The global syntax is `class Child extends Parents`. In our example, this will result in:
@@ -181,7 +185,7 @@ venus.beAttracted(300); // I'm attracted... by u!
 Internally, `extends` keyword works using prototype mechanism. It sets `Planet.prototype.[[Prototype]]` to `Satelite.prototype`. So, if a method is not found in `Planet.prototype`, JavaScript takes it from `Satelite.prototype`, as we have seen before.
 
 {% hint style="info" %}
-> ❓ While `extends` is often used with class, you can put any expression after. That means a class can extends a function for example.
+While `extends` is often used with class, you can put any expression after. That means a class can extends a function for example.
 {% endhint %}
 
 ### Overriding

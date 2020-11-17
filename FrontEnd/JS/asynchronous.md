@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Asynchronous programming
 
 What is the big deal with events? It is that they illustrate how your code can run asynchronously! And this is a very important aspect for a client side application. Indeed, without this asynchronous aspect, waiting a button to be clicked will block the entire page, thus making it unbrowsable.
@@ -6,21 +9,21 @@ More generally, code runs straight along, making instruction after instruction ;
 This behavior is called **blocking** : an intensive chunk of code runs without returning control to the browser, and therefore the browser appears to be frozen. The reason is that JavaScript is **single threaded**.
 
 {% hint style="info" %}
-> ⚠️ Even if JS is single threaded, this does not mean that it can't be asynchronous!
+Even if JS is single threaded, this does not mean that it can't be asynchronous!
 {% endhint %}
 
 Asynchronicity allows us to initiate actions at a specific time, and finish them later without worrying to call them again.
 
 {% hint style="danger" %}
-> ⚠️ Working with an asyncrhonous requires to change the way of how your think about your code and how it is supposed to run. Otherwise, catastrophes are on the way. Thus you need to be fully aware of the code execution order. The example below will console the first and the last log ; the second being block until someone click on a button:
-> ```js
-> console.log("registering click handler");
-> 
-> button.addEventListener('click', () => {
->   console.log("get click");
-> });
-> console.log("all done");
-> ```
+Working with an asyncrhonous requires to change the way of how your think about your code and how it is supposed to run. Otherwise, catastrophes are on the way. Thus you need to be fully aware of the code execution order. The example below will console the first and the last log ; the second being block until someone click on a button:
+```js
+console.log("registering click handler");
+
+button.addEventListener('click', () => {
+  console.log("get click");
+});
+console.log("all done");
+```
 {% endhint %}
 
 ## Callbacks
@@ -28,7 +31,7 @@ Asynchronicity allows us to initiate actions at a specific time, and finish them
 A callback function is a function (generally anonymous) passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. This is extremelly usefull to make versatile function by attaching it a specific behavior when it has finished to run.
 
 {% hint style="success" %}
-> ❓ We have already seen callbacks a lot in the [Events](event.md) section!
+We have already seen callbacks a lot in the [Events](event.md) section!
 {% endhint %}
 
 Callback are not always associated with events though. They can also be used with simple function (native or custom). For example with `Timeout`
@@ -57,7 +60,7 @@ console.log(calculate(4, 25, calcSum)); // cli : 29
 It is also possible to use callback functions inside other callback functions and make a whole chain of actions triggering automaticaly (e.g. on click of the button, perform an action then draw).
 
 {% hint style="danger" %}
-> ⚠️ Be carefull of the nesting of callbacks, since it can quickly become out of control if the depth is too important. A way to alievate this problem is to create small standalone function and do not rely on anonymous function.
+Be carefull of the nesting of callbacks, since it can quickly become out of control if the depth is too important. A way to alievate this problem is to create small standalone function and do not rely on anonymous function.
 {% endhint %}
 
 ## Promises
@@ -76,7 +79,7 @@ let promise = new Promise(function(resolve, reject) { /*the EXECUTOR code here*/
 ```
 
 {% hint style="info" %}
-> ❓ When `new Promise` is created, the executor runs automatically! For now, this is not so powerful ; below you will see why this is very important.
+When `new Promise` is created, the executor runs automatically! For now, this is not so powerful ; below you will see why this is very important.
 {% endhint %}
 
 A promise involve always two "entities" in your code, and bind them together. The concept is the following, there is the concept of
@@ -105,15 +108,15 @@ let promise = new Promise(function(resolve, reject) { // reminds that the execut
 });
 ```
 {% hint style="info" %}
-> ❓ A promise which is either `resolve`d or `reject`ed is called *settled*.
+A promise which is either `resolve`d or `reject`ed is called *settled*.
 {% endhint %}
 
 {% hint style="danger" %}
-> ⚠️ There can be only a single result or an error. The executor should call only one resolve or one reject. Subsequent call to `resolve` or `reject` are simply ignored : any **state change is final**. HOWEVER, instructions after the call to `resolve` or `reject` are still performed.
+There can be only a single result or an error. The executor should call only one resolve or one reject. Subsequent call to `resolve` or `reject` are simply ignored : any **state change is final**. HOWEVER, instructions after the call to `resolve` or `reject` are still performed.
 {% endhint %}
 
 {% hint style="warning" %}
-> ⚠️ `resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
+`resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
 {% endhint %}
 
 ### Consumming promise
@@ -141,7 +144,7 @@ promise.then(
 );
 ``` 
 {% hint style="info" %}
-> ❓ In case you don't ever handle error in your promise, you can ommit the second parameter like and simplify the writting like : `promise.then(alert);` because alert only take one argument.
+In case you don't ever handle error in your promise, you can ommit the second parameter like and simplify the writting like : `promise.then(alert);` because alert only take one argument.
 {% endhint %}
 
 #### catch
@@ -157,11 +160,11 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 The call to `.finally` will always run the consuming function associated with when the promise is **settled** (*i.e.* has been `resolve`d or `reject`ed). It is a good handler for performing cleanup (*e.g.* stopping our loading animations, etc.).
 
 {% hint style="warning" %}
-> ⚠️ `.finally` has no arguments: we do not know whether the promise is successful or not. This should not bother you because the kind of operations here are supposed to be "global", like stoping loading animation, etc.
+`.finally` has no arguments: we do not know whether the promise is successful or not. This should not bother you because the kind of operations here are supposed to be "global", like stoping loading animation, etc.
 {% endhint %}
 
 {% hint style="info" %}
-> ❓ `.finally` does not process any promise: it passes through `results` and `errors` to the next handler.
+`.finally` does not process any promise: it passes through `results` and `errors` to the next handler.
 {% endhint %}
 
 ```js
@@ -250,7 +253,7 @@ fetch('https://api.github.com/repos/ceri-num/uv-cdaw/commits')
   });
 ```
 {% hint style="info" %}
-> ❓ Do not forget that you can split your code into reusable function! For example, one for retrieving the GitHub username.
+Do not forget that you can split your code into reusable function! For example, one for retrieving the GitHub username.
 {% endhint %}
 
 Remember, anyway, that : **Promise handling is always asynchronous!** Even if a `.then` wait the previous `.then` to finish, all the rest of your code is still running!
@@ -299,7 +302,7 @@ f();
 ```
 
 {% hint style="info" %}
-> ❓ `await` doesn’t cost any CPU resources (unless the executor consumes CPU, ofc), because the JavaScript engine can do other jobs in the meantime: execute other scripts, handle events, etc.
+`await` doesn’t cost any CPU resources (unless the executor consumes CPU, ofc), because the JavaScript engine can do other jobs in the meantime: execute other scripts, handle events, etc.
 {% endhint %}
 
 Roughly speaking, it can be seen as a more elegant way to deal with `.then` handlers. 
@@ -336,5 +339,5 @@ function f() { //non async function, we can't use await here!
 f();
 ```
 {% hint style="warning" %}
-> ❓ Handling error for `async`/`await` function is relying on `try...catch` syntax, instead of the `.catch` handler.
+Handling error for `async`/`await` function is relying on `try...catch` syntax, instead of the `.catch` handler.
 {% endhint  %}

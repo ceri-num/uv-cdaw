@@ -1,3 +1,6 @@
+---
+author: Alexis Lebis
+---
 # Events handling
 
 JavaScript has been made to handle client side application, and therefore has been designed with this objective in mind. One of the principal particularity of client side is the presence of a user, needing a highly interactive interface for browsing. Consequently, JavaScript event managment has quickly become one of its strength.
@@ -39,7 +42,7 @@ var elem = document.getElementById("elem");
 elem.addEventListener('click', (e) => alert(e), false);
 ```
 {% hint style="info" %}
-> ❓ Multiple call to `addEventListener` for a same HTML element will **add** the handlers. This means that you can stack several functions for one event!
+Multiple call to `addEventListener` for a same HTML element will **add** the handlers. This means that you can stack several functions for one event!
 {% endhint %}
 
 ### Event object
@@ -92,7 +95,7 @@ class Menu {
 JavaScript allows you to create and manually manage your own events, which prevent you to fully reimplement an event handler. They are called **synthetic events**, as opposed to the events fired by the browser itself.
 
 {% hint style="warning" %}
-> ❓ These events are **DOM events**: they rely on the DOM API of your browser, and are considered as event targets (cf. [`EventTarget()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)). They are not supposed to be events produced by your objects.
+These events are **DOM events**: they rely on the DOM API of your browser, and are considered as event targets (cf. [`EventTarget()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)). They are not supposed to be events produced by your objects.
 {% endhint %}
 
 To create a new event, the `Event` constructor can be call
@@ -130,7 +133,9 @@ However, you will mostly rely on already existing events, such as `'click'`, `'d
 ## Bubbling events
 The principle of bubbling events is the following:
 
-> When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+{% hint style="info" %}
+When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+{% endhint %}
 
 ```html
 <form onclick="alert('form')">FORM
@@ -165,7 +170,7 @@ All these previous notion, and mostly *bubbling*, allow us to implement powerful
 The idea behind the event delegation pattern, is that, when several elements on an HTML page are supposed to be handled in a similar fashion, we define a single handler on their common ancestor in charge of all these elements.
 
 {% hint style="info" %}
-> ❓ One can say that web component approach emphasize this pattern by making a specific type of component self-aware of its events. Check the [single page application topic](../SPA/intro.md) for more information.
+One can say that web component approach emphasize this pattern by making a specific type of component self-aware of its events. Check the [single page application topic](../SPA/intro.md) for more information.
 {% endhint %}
 
 This is made possible because we have the event object with the `target` property, alowing us to see where the event actually took place in the page.
@@ -226,7 +231,7 @@ JS
   new Menu(menu);
 ```
 {% hint style="warning" %}
-> ❓ Please note that `this.onClick` is bound to `this` in (1). That’s important, because otherwise `this` inside `onClick` would reference the DOM element (elem), not the Menu object, and `this[action]` would not be what we need (cf. [Scope and Context](advanced.md)).
+Please note that `this.onClick` is bound to `this` in (1). That’s important, because otherwise `this` inside `onClick` would reference the DOM element (elem), not the Menu object, and `this[action]` would not be what we need (cf. [Scope and Context](advanced.md)).
 {% endhint %}
 
 ### Behavior pattern
@@ -252,5 +257,5 @@ One more counter: <input type="button" value="2" data-counter>
 </script>
 ```
 {% hint style="info" %}
-> ❓ You can use this approach for toggling visibility and elements on the page.
+You can use this approach for toggling visibility and elements on the page.
 {% endhint %}
