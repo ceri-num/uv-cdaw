@@ -30,6 +30,7 @@
 - [TP PHP PDO](BackEnd/TP-PHP_PDO.md)
 - [TP CRUD REST](BackEnd/TP-CRUD_REST.md)
 - [TP MVC](BackEnd/TP-REST_MVC.md)
+- [TP Authentication](BackEnd/TP-REST_MVC_Auth.md)
 
 ## Front-end
 * [JS/Introduction](FrontEnd/JS/intro.md)
