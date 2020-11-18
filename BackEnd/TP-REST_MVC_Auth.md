@@ -241,7 +241,7 @@ class ValidatetokenController extends Controller {
 	public function processRequest() {
       try {
          $jwt_token = $this->request->getJwtToken();
-         // echo "jwt = $jwt_token";
+
          $decodedJWT = JWT::decode($jwt_token, JWT_BACKEND_KEY, array('HS256'));
          $jsonResult = json_encode(array(
              "message" => "Access granted.",
@@ -263,6 +263,7 @@ class ValidatetokenController extends Controller {
 }
 ```
 
+La méthode `JWT::decode` décode le contenu du token mais teste également si le token n'a pas expiré.
 En envoyant une requête correcte avec un token JWT dans le header `Authorization` vous devez obtenir les informations stockée dans le token JWT ainsi :
 
 ```json
