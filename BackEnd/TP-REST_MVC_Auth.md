@@ -37,7 +37,7 @@ Commençons par ajouter un champs `USER_PASSWORD` dans la table `USER` de la bas
 
 1. Ajouter le champs `USER_PASSWORD` dans la table `users` de la base de donnée
 2. Vous devez maintenir à jour le fichier `sql/createDB.sql` par rapport à votre code PHP. Ce fichier contient le code SQL de création de la base :
-```sql
+```
 SET foreign_key_checks = 0;
 drop table if exists USER;
 
@@ -60,6 +60,7 @@ Un algorithme de hachage est asymétrique c'est-à-dire que l'on peut calculer l
 Dans ce projet, le `hash` d'un mot de passe sera calculé en utilisant la méthode `BCRYPT`. Vous pouvez calculer le hash d'une chaîne de caractères :
 - en utilisant un site tel que : https://bcrypt-generator.com/
 - ou directement avec du code PHP :
+
 ```php
 $password_hash = password_hash($password, PASSWORD_BCRYPT);
 ```
