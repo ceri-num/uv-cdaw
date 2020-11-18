@@ -59,8 +59,8 @@ Attention, il ne faut **jamais** stocker des mots de passe en clair dans une bas
 Le champs `USER_PASSWORD` contiendra donc le __hash__ du mot de passe de l'utilisateur.
 Un algorithme de hachage est asymétrique c'est-à-dire que l'on peut calculer le `hash` d'une chaîne de caractères mais on ne peut pas (ou difficilement) retrouver la chaîne initiale à partir d'un `hash`.
 Dans ce projet, le `hash` d'un mot de passe sera calculé en utilisant la méthode `BCRYPT`. Vous pouvez calculer le hash d'une chaîne de caractères :
-- en utilisant un site tel que : https://bcrypt-generator.com/
-- ou directement avec du code PHP :
+   - en utilisant un site tel que : https://bcrypt-generator.com/
+   - ou directement avec du code PHP :
 
 ```php
 $password_hash = password_hash($password, PASSWORD_BCRYPT);
