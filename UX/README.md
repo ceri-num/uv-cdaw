@@ -8,7 +8,7 @@ Cette introduction s'intègre dans l'**UV CDAW** et participe au projet global p
 1. **Lundi 9 novembre (2 heures)** Planification : du blabla, des définitions, un peu d'ergonomie et de principes sur le graphisme (ou l'inverse).
 2. **Vendredi 13 novembre (4 heures)** Exploration, Idéation : il faut définir des scénarios utilisateurs. Génération : vous allez faire une maquette avec un outil de... maquettage, puis on va évaluer tout ça par des utilisateurs. [S2](consignes_s2.md)
 3. **Lundi 16 novembre (4 heures)** Génération : Vous savez faire du CSS et du HTML ? Ça tombe bien ! Mise en pratique pour votre projet, passer d'une maquette à une autre maquette. [S3](consignes_s3.md)
-4. **Jeudi 19 novembre (2 heures)** Évaluation : Nouvelle évaluation, chacun va présenter son travail en 5 minutes avec des arguments (pourquoi du rouge ? Et pourquoi mes tuiles sont en pixelart ?) et fin. [S4](consignes_s4.md)
+4. **Vendredi 20 novembre (2 heures)** Évaluation : Nouvelle évaluation, chacun va présenter son travail en 5 minutes avec des arguments (pourquoi du rouge ? Et pourquoi mes tuiles sont en pixelart ?) et fin. [S4](consignes_s4.md)
 
 # Évaluation du cours
 Ce cours sera donc évaluer au travers du projet que vous réaliserez lors de l'UV CDAW. Je prendrai en compte les arguments de la présentation que vous ferez lors de la dernière séance pour ajuster la notation. Globalement, on s'intéresse ici aux aspects méthodologiques, graphiques, ergonomiques et imaginatifs. En gros, je vais observer vos compétences : 

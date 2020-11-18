@@ -1,7 +1,7 @@
 # 3ème séance
 Dans le cahier des charges, sous la partie UX, vous devez (en principe) réaliser :
 * Dégager les *User Stories* (ou scénario utilisateurs) à partir du cahier des charges (et de vos observations sur les "utilisateurs")
-* Maqueter votre site Web (c'est ce que vous avez fait lors de la séance 2 et que nus continuons sur cette séance)
+* Maqueter votre site Web (c'est ce que vous avez fait lors de la séance 2 et que nous continuons sur cette séance)
 * Générer les templates HTML/CSS/JS pour la partie Front-end (enfin surtout la partie HTML/CSS laissons la partie JS au cours de JS)
 
 ## Génération
