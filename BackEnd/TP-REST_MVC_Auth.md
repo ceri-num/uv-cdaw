@@ -37,10 +37,10 @@ Commençons par ajouter un champs `USER_PASSWORD` dans la table `USER` de la bas
 
 1. Ajouter le champs `USER_PASSWORD` dans la table `users` de la base de donnée
 2. Vous devez maintenir à jour le fichier `sql/createDB.sql` par rapport à votre code PHP. Ce fichier contient le code SQL de création de la base :
+
 ```
 SET foreign_key_checks = 0;
 drop table if exists USER;
-
 create table USER
 (
    USER_ID       smallint not null AUTO_INCREMENT,
@@ -53,6 +53,7 @@ create table USER
    primary key (USER_ID)
 ) DEFAULT CHARSET=utf8;
 ```
+
 3. Ajouter des utilisateurs dans la base.
 Attention, il ne faut **jamais** stocker des mots de passe en clair dans une base de données.
 Le champs `USER_PASSWORD` contiendra donc le __hash__ du mot de passe de l'utilisateur.
@@ -97,7 +98,7 @@ Nous allons ajouter un nouvel endpoint `POST /login` dans l'API Web :
 POST /login
 {
     "login" : "<login>",
-    "passwod" : "<hashed_password>"
+    "password" : "<hashed_password>"
 }
 ```
 
