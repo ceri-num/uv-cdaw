@@ -11,20 +11,10 @@ L'UV CDAW s'articule autour des matières suivantes :
 
 # Ressources du cours
 
+- MLS https://mylearningspace.imt-lille-douai.fr/course/view.php?id=434
 - Gitbook https://ceri-num.gitbook.io/uv-cdaw/
-- MLS
 - Discord
 - BBB
-
-# Pré-requis
-
-L'UV CDAW nécessite pour être suivie de connaître :
-- HTML
-- CSS
-- notions de base en PHP
-- notions de base en JS
-
-Si ce n'est pas votre cas, veuillez vous mettre à niveau avant le commencement de cette UV en utilisant les ressources de l'UV IDAW par exemple.
 
 ## AUTHORS
 * Luc Fabresse

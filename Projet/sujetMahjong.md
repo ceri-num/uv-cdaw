@@ -45,6 +45,7 @@ Un exemple d'affichage de mahjong:
 * Définir un chronomètre pour le tour de chaque joueur -- configurable dans les options du salon de jeu
 * Liste tracking des Yakus effectués/restant à faire (en jeu et dans le profil)
 * Animation
+* Système de grade (Kyū - Dan)
 
 ## Déroulement d’une partie
 cf. règles officielles ici : https://www.ffmahjong.fr/FFMJ-site/documents/riichi-fr.pdf
@@ -59,17 +60,25 @@ Le joueur vent d’EST jouera le premier. Pendant son tour, un joueur peut effec
 ## Interface Web / UX attendue
 Les 4 joueurs jouent chacun sur leur propre navigateur Web. Lorsqu’un joueur jette une tuile, cela déclenche la fin de son tour. Vous pouvez envisager de jouer en synchrone via une bibliothèque JS telle que [socket-io](https://socket.io) mais ce n’est pas obligatoire.
 
-## Attentes des parties
+## Travail à faire pour le projet dans chacune des matières de l'UV CDAW
 
 ### UX
+* Dégager les User stories à partir du cahier des charges
+* Maqueter votre site Web
+* Générer les templates HTML/CSS/JS pour la partie Front-end
+
 ### Couche Données
+* Faire un modèle de données
+* Faire un schéma de la base de données (BD)
+* Créer la BD sur eden
+* Importer des données dans la BD
+* Ecrire les requêtes en lien avec le projet
 
 ### Back-end
-Exemple pour Backend:
-* utiliser la base de données construite et les requêtes SQL pour développer la couche Modèle
-* développer une API Web REST/JSON avec une architecture MVC (PHP, Laravel ou Seaside ;-))
-* documenter cette API qui sera ensuite utilisée par le Front-end
+* Concevoir une API Web REST qui retourne uniquement du JSON qui sera utilisé par le Front-end
 Exemple d'API : https://punkapi.com/documentation/v2
+* Implémenter cette API avec une architecture MVC+REST en PHP, Laravel ou Seaside
+* La persistence des données utilisera la base de données et les requêtes SQL créées dans le cours AGL
 
 ### Front-end
 * Conserver et exploiter la couche modèle applicatif du serveur
