@@ -349,10 +349,10 @@ In a complex web app, where interactions between users exist, you will probably 
 On a client-server architecture, the server is the final authority regarding logic and decisions.
 {% endhint %}
 
-Accordingly, you will need three steps to achieve such a synchronization, relying on asynchronous communication : 
+Accordingly, you will need three steps to achieve such a synchronization, relying on asynchronous communication: 
 
 1. Send a `POST` request to the server, indicating that the state of the app (*e.g.* the game) has changed
-2. Updating in the server the state of the app with the newly received state from the client (remember to perform security tests!)
+2. Update, in the server, the state of the app with the newly received state from the client (remember to perform security tests!)
 3. All clients should ask regularly the server if there is any change in the app's state. If so, retrieve the change and reflect it accordingly
 
 `setTimeOut` is very usefull to achieve this behavior. However, keep in mind that `setTimeOut`, as well as all time related function, are not reliable. Even if you set a specific amount of time `t`, the wait will be `t+Δt`. Thus, you will potentially face desynchronization issues with such a method. This kind of problem has been talked a lot on the internet. [Here](https://medium.com/javascript-multiplayer-gamedev/chronicles-of-the-development-of-a-multiplayer-game-part-2-loops-and-leaks-10b453e843e0#.gok2ouw57) is an interesting post and reflexion about this topic in JavaScript, wrote by Gary Weiss.
