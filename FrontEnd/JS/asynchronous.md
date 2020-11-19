@@ -342,7 +342,7 @@ f();
 Handling error for `async`/`await` function is relying on `try...catch` syntax, instead of the `.catch` handler.
 {% endhint  %}
 
-## Syncrhonisation and asynchronicity
+## Synchronizing clients: an introduction
 In a complex web app, where interactions between users exist, you will probably need to synchronize several users together. This occurs mostly when a user performed an action, which change the state of the app, and this change needs to be refleted on other users. In a standard web architecture, the sever cannot take any kind of initiative per se, it waits for client to request information. Therefore, the synchronization of users must be thought of in the client side.
 
 {% hint style="success" %}
