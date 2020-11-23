@@ -27,7 +27,7 @@ If you did not think about that yet, we will improve our login/registering form 
 Thus, using the `hash()` function of `bcrypt`, hash the password -- entered in clear in the password field -- before sending it to the server endpoint. Take some times to understand how the function works.
 
 {% hint style="info" %}
-Denpending on how you perform your authentication, maybe you will need the `compate()` function too.
+Depending on how you perform your authentication, maybe you will need the `compare()` function too.
 {% endhint %}
 
 ### Exercice 1.2
@@ -92,9 +92,13 @@ To improve performance, instead of querying your endpoint if the user profile ac
 Now, do the same and define a game component, used for a majhong game. Think carefully about the props of such a component, as well as its dynamic segment. For example, making a dynamic segment on the `id` of the game will allow you to handle futur spectating mode, but will require that you have permission implemented. Indeed, any user can type `game/12345` and land in a game.
 
 ## Exercice 5
-In this section I will suggest you some way of handling administration. Since this is a dangerous role (a missclick can happen), I suggest you to make the administration role toggable in the client side as well. This means that the administration options and additionnal administration components will only appear once the administration role has been toggled on (and this is possible ***iif*** the user is indeed an admin).
+In this section I will suggest you some way of handling **administration**. 
 
-A good way to do that firstly to make a toggleable component (like a bubble button on the top left corner) always visible to the admin. If the user is not the admin, it does not see it. When clicking on it, administration options and components appears. To do so, you have to manage a boolean variable (*e.g.* `hasAdminRight`) and give it to all your components that requires administrator privileges, unlocking additional features. 
+Since this is a dangerous role (missclicks happen), I suggest you to make the administration role activable in the client side as well. This means that the administration options and additionnal administration components will only appear once the administration role has been toggled on by the user (and this is possible ***iif*** the user is indeed an admin).
+
+A good way to do that could be firstly to make a toggle-able component (like a bubble button on the top left corner) always visible to the admin. If the user is not the admin, it does not display. When clicking on it, administration options and components appears. To do so, you have to manage a boolean variable (*e.g.* `hasAdminRight`) and give it to all your components that requires administrator privileges, unlocking additional features.
+
+That also implies that all your components having additionnal administration features must have an "administration section" and logic, too, conditionned by the boolean (*e.g.* the user component and a **BAN** button).
 
 ## Exercice 6
 This isa more advanced exercice. Don't forget! Since your web app is a SPA, that means you want a smooth navigation and the user can expect that switching from a current game to its profile and coming back to the game will not affect the game at all (no desynchronisation, no reload of the game, no forfeit...). To do so, you need to configure your component to run behind the scene, and when reloaded, not refreshing it. A good entry point to this problem is [here](https://vuejs.org/v2/guide/components-dynamic-async.html).
