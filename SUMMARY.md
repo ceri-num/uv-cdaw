@@ -51,6 +51,7 @@
 * [SPA/Towards OOP in Vue.js](FrontEnd/SPA/oop.md)
 * [WS/Intro]
 * [TP/JS](FrontEnd/TP/tp1.md)
+* [TP/JS_SPA](FrontEnd/TP/tp2.md)
 * [Projet/Setup](FrontEnd/TP/setup.md)
 
 <!-- ## Laravel
