@@ -101,4 +101,7 @@ A good way to do that could be firstly to make a toggle-able component (like a b
 That also implies that all your components having additionnal administration features must have an "administration section" and logic, too, conditionned by the boolean (*e.g.* the user component and a **BAN** button).
 
 ## Exercice 6
-This isa more advanced exercice. Don't forget! Since your web app is a SPA, that means you want a smooth navigation and the user can expect that switching from a current game to its profile and coming back to the game will not affect the game at all (no desynchronisation, no reload of the game, no forfeit...). To do so, you need to configure your component to run behind the scene, and when reloaded, not refreshing it. A good entry point to this problem is [here](https://vuejs.org/v2/guide/components-dynamic-async.html).
+More than an exercice, do not forget to use your classes within your components' definition. For example, a `<component-tile>` component could user a `Tile` object! More information in [the course](../SPA/oop.md).
+
+## Exercice 7
+This is a more advanced exercice. Don't forget! Since your web app is a SPA, that means you want a smooth navigation and the user can expect that switching from a current game to its profile and coming back to the game will not affect the game at all (no desynchronisation, no reload of the game, no forfeit...). To do so, you need to configure your component to run behind the scene, and when reloaded, not refreshing it. A good entry point to this problem is [here](https://vuejs.org/v2/guide/components-dynamic-async.html).
