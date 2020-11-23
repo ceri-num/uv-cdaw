@@ -86,7 +86,7 @@ First, you need to know how your users will be accessed in your application, to 
 Then, define a new component used to display user information (no need for it to be exhaustive, you will be able to enrich it later). Make an query to your user endpoint to retrieve the corresponding user and customise your page accordingly.
 
 {% hint style="info" %}
-To improve performance, instead of querying your endpoint if the user profile accessed is the one of the logged user, you could user the `params` property. More info [here](https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes) and [here](https://stackoverflow.com/questions/62755202/how-to-pass-object-in-another-component-and-redirect-in-vuejs).
+To improve performance, instead of querying your endpoint if the profile accessed is the one of the user logged, you could use the `params` property. More info [here](https://router.vuejs.org/guide/essentials/dynamic-matching.html#reacting-to-params-changes) and [here](https://stackoverflow.com/questions/62755202/how-to-pass-object-in-another-component-and-redirect-in-vuejs).
 {% endhint %}
 
 Now, do the same and define a game component, used for a majhong game. Think carefully about the props of such a component, as well as its dynamic segment. For example, making a dynamic segment on the `id` of the game will allow you to handle futur spectating mode, but will require that you have permission implemented. Indeed, any user can type `game/12345` and land in a game.
