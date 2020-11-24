@@ -19,7 +19,7 @@ All the examples are shown using **Linux (Debian)**
 ## Create a new repository in Gvipers for your front end project
 Go to [Gvipers](https://gvipers.imt-lille-douai.fr/) and login.
 
-It is supposed that you already have created your git repository. If not, check the [Project presentation page](../../Projet/eval.md). We will store all the content of the front end project in a FrontEnd directory which will be automatically created by the Vue.js assistant.
+It is supposed that you already have created your git repository. If not, check the [Project presentation page](../../Projet/eval.md). We will store all the content of the front end project in a `frontend` directory which will be automatically created by the Vue.js assistant.
 
 For the rest of this section, this repository is called `projet-cdaw`.
 
@@ -53,10 +53,10 @@ git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
 cd projet-cdaw
 ```
 
-If you have already created some other directories, they should be visible by now. Here, we will create our `FrontEnd` directory, then populate it with a new empty pre-configured Vue.js project, acting as a backbone for the front-end for now. While being in your local repository `projet-cdaw`, type:
+If you have already created some other directories, they should be visible by now. Here, we will create our `frontend` directory, then populate it with a new empty pre-configured Vue.js project, acting as a backbone for the front-end for now. While being in your local repository `projet-cdaw`, type:
 
 ```bash
-vue create FrontEnd
+vue create frontend
 ```
 Then, answer the prompt like the following:
 * `Please pick a preset` answer with `Manually select features`
@@ -74,7 +74,7 @@ After the installation of some additional packages, your local repository should
 
 To check if your project works correctly, stay at the root of your project, then compile and serve it:
 ```bash
-cd FrontEnd
+cd frontend
 npm run serve
 ```
 Then connect to `http://localhost:8080`: you should see Vue.js saying that everything works fine!
@@ -82,9 +82,9 @@ Then connect to `http://localhost:8080`: you should see Vue.js saying that every
 Now, we will create a new directory used to store the model of your application (remember, Vue.js is mostly view/controller based in a MVC/MMV approach). Go into the src directory, then create a new `model` directory, and an readme:
 
 ```bash
-projet-cdaw/FrontEnd> cd src
-projet-cdaw/FrontEnd/src> mkdir model && cd model
-projet-cdaw/FrontEnd/src/model> echo "# MODEL DIRECTORY FOR FRONT END APP" > README.md
+projet-cdaw/frontend> cd src
+projet-cdaw/frontend/src> mkdir model && cd model
+projet-cdaw/frontend/src/model> echo "# MODEL DIRECTORY FOR FRONT END APP" > README.md
 ```
 
 Last step: add all these modifications to your project by commiting the change, then pushing them to the remote.
@@ -92,6 +92,20 @@ Last step: add all these modifications to your project by commiting the change, 
 git add -A
 git commit -m "Vue js init"
 git push
+```
+
+### Correctly clone your project whith Vue.js
+When you commit changes to your projet created with the Vue scafolder, all dependencies are ignored (due to the `.gitignore.git` file). Therefore, your project on your remote does not have the required dependencies required to be run. This means that, when you clone your remote on your local, you will not be able to run your app out of the box. First, you will need to retrieve the dependencies of your projet. To do so, use npm:
+
+```bash
+git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+cd projet-cdaw/frontend
+npm update
+```
+
+After a few moments of installation, your projet should now be runnable:
+```bash
+npm run serve
 ```
 
 ## Set up your dependencies
@@ -113,7 +127,7 @@ cd projet-cdaw
 Now, we need to add the GitHub repo about riichi tiles as a submodule of our project. To do this:
 
 ```bash
-git submodule add https://github.com/FluffyStuff/riichi-mahjong-tiles.git ./FrontEnd/src/assets/img/mahjong-tiles
+git submodule add https://github.com/FluffyStuff/riichi-mahjong-tiles.git ./frontend/src/assets/img/mahjong-tiles
 git status
 ```
 
