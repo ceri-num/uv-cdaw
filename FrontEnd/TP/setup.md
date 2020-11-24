@@ -136,7 +136,7 @@ After cloning the submodule in your local repository, printing the status of you
 ![Git Status after a Submodule Add](resources/submodule.png)
 
 Indicating that you have correctly added the repository (and now located in assests/img/majhong-tiles).
-You are all good to start working with Angular now for your front end!
+You are all good to start working with Vue.js now for your front end!
 
 Don't forget to **add/commit** your changes! Then push them to the remote.
 
