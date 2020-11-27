@@ -2,12 +2,9 @@
 
 ## Versionning avec git sur gvipers
 
-Vous *devez* utiliser un dépôt git sur le serveur gvipers pour votre projet et travailler en équipe sur ce dépôt.
-L'URL de votre dépôt devra *obligatoirement* avoir la forme suivante :  https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw.
-
-{% hint style="info" %}
-Pour avoir une url de cette forme, une des deux personnes du binôme devra créer le projet git sur son espace personnel, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travaillez directement dans le même projet.
-{% endhint %}
+Vous *devez* utiliser un dépôt git pour votre projet et travailler en équipe sur ce dépôt.
+L'un des membres du groupe doit créer le projet git sur gvippers ou gitub, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travaillez directement dans le même projet.
+Vous devez communiquer l'URL du dépôt git de votre projet aux enseignants.
 
 Ce dépôt doit contenir *TOUTES* les ressources du projet. Exemple d'organisation de votre dépôt git :
 
@@ -51,8 +48,9 @@ Pour la partie Front End, référez vous à [ce document](../FrontEnd/TP/setup.m
 
 ## Rendre son projet
 
-La date limite de rendu de votre projet est le XXXX.
-A cette date, votre projet doit être déployé sur le serveur `eden` et commitée dans votre dépot git sur le serveur `gvipers`.
+La date limite de rendu de votre projet est le **vendredi 4 à 23h**.
+A cette date, votre projet doit être commité sur votre dépôt git (gvippers ou github).
+Eventuellement déployé sur le serveur `eden`.
 Chaque *groupe* doit envoyer une email à Luc Fabresse en respectant le template suivant :
 
 ```
