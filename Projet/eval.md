@@ -1,6 +1,6 @@
 # Modalités pratiques pour le Projet
 
-## Versionning avec git sur gvipers
+## Versionning avec git
 
 Vous *devez* utiliser un dépôt git pour votre projet et travailler en équipe sur ce dépôt.
 L'un des membres du groupe doit créer le projet git sur gvippers ou gitub, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travaillez directement dans le même projet.
