@@ -208,8 +208,8 @@ Pour tester nous allons implémenter un endpoint **temporaire** `GET /validateto
 ```php
 // returns JWT token in Authorization header or throw an exception
 public function getJwtToken() {
-    $headers = getallheaders();
-    $autorization = $headers['Authorization'];
+    $headers = array_change_key_case(getallheaders());
+    $autorization = $headers['authorization'];
     $arr = explode(" ", $autorization);
 
     if(count($arr)<2)
