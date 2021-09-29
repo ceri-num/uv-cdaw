@@ -15,14 +15,13 @@
 [JS] -->
 
 ## Jalon 1
-
-[Maquette statique](jalon1/jalon1.md)
+* [Maquette statique](jalon1/jalon1.md)
 
 ## Jalon 2
-[Site connecté](jalon2/jalon2.md)
+* [Site connecté](jalon2/jalon2.md)
 
 ## Jalon 3
-[CRUD](jalon3/jalon3.md)
+* [CRUD](jalon3/jalon3.md)
 
 ## Jalon 4 : Projet complet
 * [Sujet Projet 2021](Projet/sujetMahjong.md)
