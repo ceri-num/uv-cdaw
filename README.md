@@ -1,13 +1,11 @@
 # Conception et Développement d'Applications Web (CDAW)
 
 L'UV CDAW s'articule autour des matières suivantes :
-- UX (User Experience) et maquettage de site web (Mathieu Vermeulen)
-- AGL / modèle de données / SQL (création base / requêtes) (Rémy Pinot)
-- Développement côté serveur en PHP (Luc Fabresse)
-- Développement côté client (Alexis Lebis)
-- Découverte de Seaside (Luc Fabresse)
-- Découverte de Laravel (Isabelle Fabresse)
-- Projet Web en binôme
+- UX (User Experience) et maquettage de site web
+- AGL / modèle de données / SQL (création base / requêtes)
+- Backend en Laravel / PHP
+- Frontend en Vue.js
+- Projet en binôme
 
 # Ressources du cours
 
@@ -22,3 +20,4 @@ L'UV CDAW s'articule autour des matières suivantes :
 * Alexis Lebis
 * Rémy Pinot
 * Mathieu Vermeulen
+* Quentin Vezilier
