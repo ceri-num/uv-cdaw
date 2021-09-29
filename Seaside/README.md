@@ -1,2 +1,0 @@
-# Seaside
-Lecture about Seaside

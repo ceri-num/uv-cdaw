@@ -1,2 +1,0 @@
-# LARAVEL
-Lecture about Laravel

@@ -1,80 +1,45 @@
-# Modalités pratiques pour le Projet
+# Modalités pratiques
 
-## Versionning avec git
+Cette UV peut être réalisée seul on en binôme maximum.
+Tout au long de cette UV, vous devez livrer les jalons qui sont décrits.
 
-Vous *devez* utiliser un dépôt git pour votre projet et travailler en équipe sur ce dépôt.
-L'un des membres du groupe doit créer le projet git sur gvippers ou gitub, puis devra donner les droits d'accès et de modification à son binôme. Rien n'empêche le binôme de forker le projet, mais nous pensons qu'il sera plus simple si vous travaillez directement dans le même projet.
-Vous devez communiquer l'URL du dépôt git de votre projet aux enseignants.
+## Template Projet CDAW
 
-Ce dépôt doit contenir *TOUTES* les ressources du projet. Exemple d'organisation de votre dépôt git :
+Tous vos jalons à rendre doivent se conformer au template de projet Web CDAW suivant :
+https://github.com/ceri-num/uv-cdaw-template
 
-```
-Readme.md         # décrit l'organisation de votre dépôt, où trouver les docs, les auteurs, ...
-doc/
-   sujet.md       # votre sujet de projet
-   REST_API/      # contient la doc de votre API WEB
-   Deploiement.md # décrit comment déployer et configurer votre Projet
+Il suffit de "forker" ce dépôt i.e. bouton vert "Use this template".
 
-UX/
-   Maquettes/     # contient les maquettes de votre site
-   static/        # contient une maquette statique HTML/CSS de votre site
-   ...
-AGL/
-   Conception/
-      mcd
-      ...
-   BD/
-      createDatabase.sql   # fichier de création de votre BD (create table, ...)
-      insertSampleData.sql # fichier insérant des données de tests dans la base
-      ...
-BackEnd/
-   tpX/  # contient vos code pour les TPs
-   src/  # contient le code de la partie BackEnd du projet
-      config/        # contient la configuration du BackEnd (config BD, ...)
-      model/         # contient les modèles
-      controller/   # contient les contrôleurs
-      view/
-         templates_json/   # contient les templates JSON pour la construction des réponses HTTP
-      index.php
-FrontEnd/
-   # Le contenu sera créer automatiquement et manuellement. Cf le lien ci-dessous
-Laravel/
-   ...
-```
+## Livraison d'un jalon
 
-{% hint style="warning" %}
-Pour la partie Front End, référez vous à [ce document](../FrontEnd/TP/setup.md) pour bien configurer votre projet ! Votre dossier Front End **doit** avoir l'organisation énnoncée dans ce document.
-{% endhint %}
-
-## Rendre son projet
-
-La date limite de rendu de votre projet est le **vendredi 4 à 23h**.
-A cette date, votre projet doit être commité sur votre dépôt git (gvippers ou github).
-Eventuellement déployé sur le serveur `eden`.
-Chaque *groupe* doit envoyer une email à Luc Fabresse en respectant le template suivant :
+Lorsque vous souhaitez rendre un jalon il faut envoyer un email aux enseignants de l'UV en respectant le template de mail suivant :
 
 ```
-Objet : [projet CDAW]
+Objet : [CDAW] jalon1
 Contenu :
    membres du groupe : <NOM prenom>, <NOM prenom>
-   dépôt git : https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw (<url_depot_git>)
-   vidéo de démonstration : https://youtubexxxx (<url_vidéo>)
-   site déployé : https://eden.imt-lille-douai.fr/prenom.nom/ (<url_site>)
+   commande de clone du dépôt git :
+      git clone -b jalon1 https://github.com/<pseudo_github>/xxx (<url_depot_git>)
+   url readme : https://github.com/<pseudo_github>/xxx/blob/<branch>/README.md (<url_readme>)
    Identifiants : admin/w;efh039 (identifiants admin sur le site déployé si besoin)
-
+   Autres infos
+   si dernier jalon:
+   vidéo de démonstration : https://youtubexxxx (<url_vidéo>)
 ```
+
+Bien évidemment, voud devez changer les infos fictives de ce template par les vraies infos qui concernent votre projet.
 
 ## Démarche d'un évaluateur
 
+1. clone du dépôt
 ```
-git clone <url_depot_git>
+git clone -b jalon1 https://github.com/<pseudo_github>/xxx (<url_depot_git>)
 ```
-
-* Lire Readme.md
-* Regarder <url_vidéo>
-* Tester le site via <url_site>
-* Évaluer les éléments dans le dépôt git : maquettes, code source, documentations (API REST, déploiement, ...)
-* Analyse historique des versions
+2. Lecture du Readme.md via <url_readme>
+3. Regarder <url_vidéo> (si denier jalon)
+4. Tester le site en local via VSCode
+5. Évaluer les éléments dans le dépôt git : maquettes, code source, documentations (API REST, déploiement, ...)
+6. Analyse historique des versions
    - travail régulier ?
    - travail équitablement réparti entre les membres du groupe ?
 

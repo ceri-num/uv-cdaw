@@ -3,11 +3,34 @@
 ## Infos
 
 * [Pré-requis](Infos/preRequis.md)
-* [Outils](Infos/outils.md)
+* [Méthodologie et Evaluation](Projet/eval.md)
 * [Bibliography](Infos/bib.md)
-* [FAQ](Infos/faq.md)
 
-## UX
+
+<!-- ## Rappels
+[HTTP]
+[HTML]
+[CSS]
+[PHP]
+[JS] -->
+
+## Jalon 1
+
+[Maquette statique](jalon1/jalon1.md)
+
+## Jalon 2
+[Site connecté](jalon2/jalon2.md)
+
+## Jalon 3
+[CRUD](jalon3/jalon3.md)
+
+## Jalon 4 : Projet complet
+* [Sujet Projet 2021](Projet/sujetMahjong.md)
+
+
+<!--
+# UX
+
 * [Introduction](UX/README.md)
 * [Planification](UX/planification.md)
 * [Exploration](UX/exploration.md)
@@ -20,9 +43,6 @@
 * [Séance 2](UX/consignes_s2.md)
 * [Séance 3](UX/consignes_s3.md)
 * [Séance 4](UX/consignes_s4.md)
-
-<!-- ## AGL
-* [Planning](AGL/README.md) -->
 
 ## Back-end
 - [PHP OO](BackEnd/tuto-PHP.md)
@@ -52,14 +72,8 @@
 * [WS/Intro]
 * [TP/JS](FrontEnd/TP/tp1.md)
 * [TP/JS_SPA](FrontEnd/TP/tp2.md)
-* [Projet/Setup](FrontEnd/TP/setup.md)
+* [Projet/Setup](FrontEnd/TP/setup.md) -->
 
-<!-- ## Laravel
-* [Planning](Laravel/README.md) -->
 
-<!-- ## Seaside
-* [Planning](Seaside/README.md) -->
-
-## Projet
-* [Sujet 2020](Projet/sujetMahjong.md)
-* [Méthodologie et Evaluation](Projet/eval.md)
+## FAQ
+* [FAQ](infos/faq.md)

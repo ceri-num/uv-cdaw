@@ -1,29 +1,22 @@
 
-Cette UV nécessite des outils spécifiques pour chacuns des cours.
+## Pré-requis matériel et logiciel
 
-## BackEnd
+- un pc
+- une connexion internet "rapide"
+- discord - https://discord.com/
+- un casque micro ! interdiction d'utiliser le micro ambiant de votre pc portable
+- git - https://git-scm.com/downloads
+- créer un compte github - https://github.com
+- Docker - https://docs.docker.com/get-docker/
+- VSCode - https://code.visualstudio.com
+- navigateur Web : Firefox, Google Chrome (IE et Edge sont INTERDITs)
 
-Utilisez les outils et l'OS que vous voulez.
-Par contre, il n'y aura pas (ou très peu) de support pour les utlisateurs de Windows.
+## Logiciels et Frameworks
 
-- Serveur Web + PHP :
-    * Linux : Apache / nginx
-    * Windows : uWamp
-    * Mac : MAMP
-- Navigateur Web : Firefox ou Chrome (IE et Edge sont INTERDITs)
-- Editeur de code : VSCode
-- Client git : CLI, SourceTree, ...
-- Client sftp : Filezilla
+Pour réaliser les jalons du projet, vous devez :
 
-## Front End
-IDEM, vous êtes libre d'utiliser les outils et l'OS de votre choix.
-Notez cependant que le cours a été pensé autour de Linux, et il n'y aura pas (ou très peu) de support pour les utilisateurs de Windows.
-
-- Navigateur Web : Firefox ou Chrome (**IE**, **Edge** sont interdits, **Safari** est non recommandé)
-- Editeur de code : [VS Code](https://code.visualstudio.com/)
-- Client git : CLI, GitDesktop...
-- Framework JS: Vue.js
-
-{% hint style="info"%}
-Bien que fortement déconseillé, vous pouvez utiliser un autre framework js. Éviter les frameworks trop lourd comme Polymer ou Angular qui complexifiront votre projet.
-{% endhint %}
+1. forker le dépôt https://github.com/ceri-num/uv-cdaw-template sur votre compte github
+2. ouvrir ce projet avec VSCode. Cela va automatiquement installer et exécuter les logiciels nécessaires à l'UV via l'extension "remote container" de VSCode :
+- BD : Mysql + PhpMyAdmin ou Dbeaver
+- Backend :  PHP / Laravel + API Web  + tests avec postman
+- Front-end : Vue.js
