@@ -42,6 +42,6 @@ Pour réaliser les jalons du projet, vous devez :
 
 1. forker le dépôt https://github.com/ceri-num/uv-cdaw-template sur votre compte github
 2. ouvrir ce projet avec VSCode. Cela va automatiquement installer et exécuter les logiciels nécessaires à l'UV via l'extension "remote container" de VSCode :
-- BD : Mysql + PhpMyAdmin ou Dbeaver
-- Backend :  PHP / Laravel + API Web  + tests avec postman
-- Front-end : Vue.js
+- BD : Mysql + PhpMyAdmin
+- Backend :  PHP / Laravel
+- Front-end : Blade / Vue.js?

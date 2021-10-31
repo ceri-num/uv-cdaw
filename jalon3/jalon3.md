@@ -7,6 +7,6 @@
 
 ## Architecture logicielle
 
-- Complexification des donneées (BD, Modèles)
+- Complexification des données (BD, Modèles)
 - Extension de l'API REST
 - Tests avec Postman
