@@ -24,7 +24,7 @@ Bonjour,
    Autres infos
    si dernier jalon:
    vidéo de démonstration : https://youtubexxxx (<url_vidéo>)
-   
+
    Bisous
 ```
 
@@ -38,7 +38,7 @@ Bien évidemment, voud devez changer les infos fictives de ce template par les v
    git clone -b jalon1 https://github.com/<pseudo_github>/xxx (<url_depot_git>)
    ```
 
-2. Lecture du Readme.md via 
+2. Lecture du Readme.md via
 3. Regarder  \(si denier jalon\)
 4. Tester le site en local via VSCode
 5. Évaluer les éléments dans le dépôt git : maquettes, code source, documentations \(API REST, déploiement, ...\)
@@ -46,3 +46,9 @@ Bien évidemment, voud devez changer les infos fictives de ce template par les v
    * travail régulier ?
    * travail équitablement réparti entre les membres du groupe ?
 
+## Dates des jalons
+
+- jalon 1 : 15 novembre 9h
+- jalon 2 : 22 novembre 9h
+- jalon 3 : 29 novemebre 9h
+- jalon 4 : 6 décembre 9h

@@ -8,6 +8,10 @@
 * [Méthodologie et Evaluation](infos/eval.md)
 * [Bibliography](infos/bib.md)
 
+## Installation
+
+* [Installation](install/install.md)
+
 ## Jalon 1
 
 * [Maquette statique](jalon-1/jalon1.md)
