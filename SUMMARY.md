@@ -22,7 +22,7 @@
 
 ## Jalon 4 : Projet complet
 
-* [Sujet Projet 2021](jalon-4-projet-complet/sujetmahjong.md)
+* [Sujet Projet 2021](Projet/npp.md)
 
 ## FAQ
 
