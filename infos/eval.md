@@ -1,31 +1,45 @@
-# Méthodologie et Evaluation
+# Modalités pratiques
 
-Cette UV peut être réalisée seul on en binôme maximum. Tout au long de cette UV, vous devez livrer les jalons qui sont décrits.
+Cette UV peut être réalisée seul on en binôme maximum.
+Tout au long de cette UV, vous devez livrer les jalons qui sont décrits.
 
 ## Template Projet CDAW
 
-Tous vos jalons à rendre doivent se conformer au template de projet Web CDAW suivant : [https://github.com/ceri-num/uv-cdaw-template](https://github.com/ceri-num/uv-cdaw-template)
+Tous vos jalons à rendre doivent se conformer au template de projet Web CDAW suivant :
+https://github.com/ceri-num/uv-cdaw-template
 
 Il suffit de "forker" ce dépôt i.e. bouton vert "Use this template".
 
 ## Livraison d'un jalon
 
-Lorsque vous souhaitez rendre un jalon il faut envoyer un email aux enseignants de l'UV en respectant le template de mail / discord ? suivant :
+Pour livrer un jalon, il suffit de commiter et envoyer son code sur le dépôt github du projet et de compléter le fichier `Readme.md` à la racine du dépôt.
+Ce fichier doit contenir les infos suivantes:
 
-```text
-Objet : [CDAW] jalon1
-Contenu :
-Bonjour,
-   membres du groupe : <NOM prenom>, <NOM prenom>
-   commande de clone du dépôt git :
-      git clone -b jalon1 https://github.com/<pseudo_github>/xxx (<url_depot_git>)
-   url readme : https://github.com/<pseudo_github>/xxx/blob/<branch>/README.md (<url_readme>)
-   Identifiants : admin/w;efh039 (identifiants admin sur le site déployé si besoin)
-   Autres infos
-   si dernier jalon:
-   vidéo de démonstration : https://youtubexxxx (<url_vidéo>)
+```
+# Groupe
+- <NOM prenom>
+- <NOM prenom>
 
-   Bisous
+# Jalon 1
+
+   commit : 738aef8add19c35008207b8ae3a787d744ccf78f
+   Identifiants admin sur le site :
+      - utilisateur 1 : bob / leponge
+      - utilisateur 1 : riri / loulou
+      - admin/w;efh039
+
+   Fonctionnalités implémentées :
+   - création de compte
+   - ...
+
+# Jalon 2
+
+...
+
+# Rendu final
+
+   vidéo de démonstration : https://youtubexxxx
+
 ```
 
 Bien évidemment, voud devez changer les infos fictives de ce template par les vraies infos qui concernent votre projet.
@@ -33,22 +47,13 @@ Bien évidemment, voud devez changer les infos fictives de ce template par les v
 ## Démarche d'un évaluateur
 
 1. clone du dépôt
-
-   ```text
-   git clone -b jalon1 https://github.com/<pseudo_github>/xxx (<url_depot_git>)
-   ```
-
-2. Lecture du Readme.md via
-3. Regarder  \(si denier jalon\)
-4. Tester le site en local via VSCode
-5. Évaluer les éléments dans le dépôt git : maquettes, code source, documentations \(API REST, déploiement, ...\)
-6. Analyse historique des versions
-   * travail régulier ?
-   * travail équitablement réparti entre les membres du groupe ?
-
-## Dates des jalons
-
-- jalon 1 : 15 novembre 9h
-- jalon 2 : 22 novembre 9h
-- jalon 3 : 29 novemebre 9h
-- jalon 4 : 6 décembre 9h
+```
+git clone https://github.com/<pseudo_github>/xxx (<url_depot_git>)
+```
+1. Lecture du Readme.md
+2. Regarder <url_vidéo> (si denier jalon)
+3. Tester le site en local via VSCode
+4. Évaluer les éléments dans le dépôt git : maquettes, code source, documentations (API REST, déploment, ...)
+5. Analyse historique des versions
+   - travail régulier ?
+   - travail équitablement réparti entre les membres du groupe ?
