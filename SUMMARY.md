@@ -5,12 +5,11 @@
 ## Infos
 
 * [Pré-requis](infos/prerequis.md)
-* [Méthodologie et Evaluation](infos/eval.md)
-* [Bibliography](infos/bib.md)
 
-## Installation
+## Démarrage
 
 * [Installation](install/install.md)
+* [Méthodologie et Evaluation](infos/eval.md)
 
 ## Jalon 1
 
@@ -30,5 +29,6 @@
 
 ## FAQ
 
+* [Bibliography](infos/bib.md)
 * [FAQ](faq/faq.md)
 
