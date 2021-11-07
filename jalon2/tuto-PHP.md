@@ -21,8 +21,6 @@ Auto-formation
 
 ## A propos
 
-Ce cours a été mis à jour pour PHP 7 qui a apporté un meilleur respect de l'approche objet par rapport à PHP 5.
-
 La documentation officielle est : https://www.php.net/manual/en/language.oop5.php. Testez les exemples en même temps que lisez en utilisant : https://repl.it par exemple.
 
 {% hint style="alert" %}

@@ -36,7 +36,7 @@ Prenez du temps pour :
 
 Vous devez remplir vos pages avec des données fictives.
 Vous devez simplifier au maximum vos pages (i.e. supprimez le code que vous ne comprenez pas).
-Aidez-vous des cours HTML/CSS et de la documentation de Bootstrap CSS (cf. [Bib](infos/prerequis.md)).
+Aidez-vous des cours HTML/CSS et de la documentation de Bootstrap CSS (cf. [Bib](../infos/prerequis.md)).
 
 ## Travail en équipe
 
@@ -46,7 +46,6 @@ Chacun doit commiter son travail sur le même dépôt git (celui du groupe) dans
 Cela vous entraînera à travailler en équipe et éventuellement résoudre des conflits de versions.
 L'historique des versions du jalon1 doit __impérativement__ avoir des commits des deux membres du groupe.
 
-
 ## Livraison
 
-Suivez les [instructions](infos/eval.md) pour rendre ce premier jalon.
+Suivez les [instructions](../infos/eval.md) pour rendre ce premier jalon.
