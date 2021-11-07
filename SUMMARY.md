@@ -19,10 +19,12 @@
 ## Jalon 2
 
 * [Site connecté](jalon2/jalon2.md)
+<!-- * [Site connecté](infos/todo.md) -->
 
 ## Jalon 3
 
 * [CRUD](jalon3/jalon3.md)
+<!-- * [CRUD](infos/todo.md) -->
 
 ## Jalon 4 : Projet complet
 

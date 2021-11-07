@@ -30,7 +30,7 @@ Pour livrer un jalon, il faut:
 Fonctionnalités implémentées :
 - création de compte
 - connexion au site
-   par manque de temps, nous n'avons pas terminié la connexion
+   par manque de temps, nous n'avons pas terminé la connexion
    il manque : xxx et yyy
 - ...
 

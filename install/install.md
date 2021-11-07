@@ -32,7 +32,7 @@ Tutoriels de découverte de git:
 Pour réaliser les TPs et jalons du projet, vous devez :
 
 1. Forker le dépôt [https://github.com/ceri-num/uv-cdaw-template](https://github.com/ceri-num/uv-cdaw-template) sur votre compte github en *public*
-2. Renseigner l'URL de son dépôt public ici : [https://partage.imt.fr/index.php/s/rXaTrsx59LPrSaJ](partage)
+2. Renseigner l'URL de son dépôt public ici : [partage](https://partage.imt.fr/index.php/s/rXaTrsx59LPrSaJ)
 3. Ouvrir ce projet avec VSCode. Cela va automatiquement installer et exécuter les logiciels nécessaires à l'UV via l'extension "remote container" de VSCode.
 * Testez votre BD Mysql via PhpMyAdmin [http://localhost:8081](http://localhost:8081). 2 comptes sont configurés: root/root and mysql/mysql
 * Testez votre serveur Web + PHP [http://localhost:8080/infos.php](http://localhost:8080/infos.php)

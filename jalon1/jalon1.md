@@ -45,3 +45,8 @@ Par exemple, vous travaillez sur deux pages distinctes.
 Chacun doit commiter son travail sur le même dépôt git (celui du groupe) dans `public/jalon1`.
 Cela vous entraînera à travailler en équipe et éventuellement résoudre des conflits de versions.
 L'historique des versions du jalon1 doit __impérativement__ avoir des commits des deux membres du groupe.
+
+
+## Livraison
+
+Suivez les [instructions](infos/eval.md) pour rendre ce premier jalon.

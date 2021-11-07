@@ -8,5 +8,3 @@
 ## Architecture logicielle
 
 - Complexification des données (BD, Modèles)
-- Extension de l'API REST
-- Tests avec Postman
