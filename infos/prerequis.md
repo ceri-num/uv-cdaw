@@ -15,5 +15,7 @@ L'UV CDAW nécessite d'avoir suivi l'UV IDAW. A défaut, il faut connaître :
 * notions de base en PHP
 * notions de base en JS
 
-cf. [UV IDAW](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244) si besoin.
-
+- [Cours HTML / CSS](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
+- [Cours JS](https://www.pierre-giraud.com/javascript-apprendre-coder-cours/)
+- [Cours PHP](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
+- [UV IDAW](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244) si besoin.
