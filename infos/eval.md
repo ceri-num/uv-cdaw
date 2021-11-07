@@ -1,59 +1,56 @@
 # Modalités pratiques
 
-Cette UV peut être réalisée seul on en binôme maximum.
-Tout au long de cette UV, vous devez livrer les jalons qui sont décrits.
+Tout au long de cette UV, vous devez réaliser les exercices et les jalons qui sont décrits.
 
-## Template Projet CDAW
+Les exercices sont à réaliser seul et à livrer sur son git personnel.
+Les jalons correspondent à une partie du projet final et ils peuvent être réalisés seul ou en binôme maximum.
+Les jalons sont à livrer sur le dépôt git d'un des membres du groupe.
 
-Tous vos jalons à rendre doivent se conformer au template de projet Web CDAW suivant :
-https://github.com/ceri-num/uv-cdaw-template
+## Livraison d'un exercice ou d'un jalon dans un dépôt git
 
-Il suffit de "forker" ce dépôt i.e. bouton vert "Use this template".
+Tous vos jalons (ou exercices) doivent être livrés dans le dépôt git du groupe (ou personnel) qui a été créé lors de l'installation en forkant le dépôt le dépôt [Template git CDAW](https://github.com/ceri-num/uv-mlod-vscode-template).
 
-## Livraison d'un jalon
+Pour livrer un jalon, il faut:
 
-Pour livrer un jalon, il suffit de commiter et envoyer son code sur le dépôt github du projet et de compléter le fichier `Readme.md` à la racine du dépôt.
-Ce fichier doit contenir les infos suivantes:
+1. créer un sous-répertoire `RACINEPROJET/public/jalonX`
+2. créer et compléter le fichier `RACINEPROJET/public/jalonX/Readme.md` avec les infos suivantes :
+   Ce fichier doit contenir les infos suivantes:
 
 ```
-# Groupe
+# Auteur(s)
 - <NOM prenom>
 - <NOM prenom>
 
-# Jalon 1
+# Jalon X
 
-   commit : 738aef8add19c35008207b8ae3a787d744ccf78f
-   Identifiants admin sur le site :
-      - utilisateur 1 : bob / leponge
-      - utilisateur 1 : riri / loulou
-      - admin/w;efh039
+<description>
 
-   Fonctionnalités implémentées :
-   - création de compte
-   - ...
+Fonctionnalités implémentées :
+- création de compte
+- connexion au site
+   par manque de temps, nous n'avons pas terminié la connexion
+   il manque : xxx et yyy
+- ...
 
-# Jalon 2
+Identifiants admin sur le site :
+   - utilisateur 1 : bob / leponge
+   - utilisateur 1 : riri / loulou
+   - admin/w;efh039
 
-...
-
-# Rendu final
-
-   vidéo de démonstration : https://youtubexxxx
-
+Vidéo de démonstration : https://youtubexxxx
 ```
 
-Bien évidemment, voud devez changer les infos fictives de ce template par les vraies infos qui concernent votre projet.
+Bien évidemment, voud devez changer les infos fictives de ce template par les vraies infos qui concernent votre exercice/jalon.
 
 ## Démarche d'un évaluateur
 
-1. clone du dépôt
+1. clone de votre dépôt
 ```
 git clone https://github.com/<pseudo_github>/xxx (<url_depot_git>)
 ```
-1. Lecture du Readme.md
-2. Regarder <url_vidéo> (si denier jalon)
-3. Tester le site en local via VSCode
-4. Évaluer les éléments dans le dépôt git : maquettes, code source, documentations (API REST, déploment, ...)
-5. Analyse historique des versions
+1. Lecture du Readme.md d'un exercice ou d'un jalon
+2. Tester le site en local via VSCode
+3. Évaluer les éléments supplémetaires dans le dépôt git : maquettes, code source, documentations (API REST, ...)
+4. Analyse de l'historique des versions
    - travail régulier ?
    - travail équitablement réparti entre les membres du groupe ?
