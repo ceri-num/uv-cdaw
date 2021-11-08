@@ -50,7 +50,7 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 ```
 
 - Vérifier dans le navigateur : 
-	http://localhost/catalogue/public
+	http://localhost/CDAWProject/public/catalogue
 
 ## Principaux dossiers et fichiers
 - app : cœur de l’application (controller, model, helper, …) 

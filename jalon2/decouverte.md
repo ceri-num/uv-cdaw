@@ -9,7 +9,7 @@
 
 ## Les routes
 
-![Routes](/ressources/tutoLaravel/MVC-routes.jpg)
+![Routes](/ressources/tutoLaravel/MVC-routes.JPG)
 
 NOTES 
 - Fichier routes/web.php (pour les routes appelées depuis un navigateur, api.php pour les routes de l'API)
@@ -41,7 +41,7 @@ Est-ce une bonne façon de faire ? Pourquoi ?
 
 ## Les vues
 
-![Vue](/ressources/tutoLaravel/MVC-vues.jpg)
+![Vue](/ressources/tutoLaravel/MVC-vues.JPG)
 
 NOTES
 
@@ -66,7 +66,7 @@ TODO
 NOTES
 Les controlleurs appellent le code "intelligent" pour l'envoyer à la vue. Le retour de la vue est renvoyé au navigateur.
 
-![Vues](/ressources/tutoLaravel/MVC-controllers-vues.jpg)
+![Vues](/ressources/tutoLaravel/MVC-controllers-vues.JPG)
 
 TODO
 - Créer un contrôleur : 
