@@ -18,10 +18,11 @@
 * [Maquette statique](jalon1/jalon1.md)
 
 ## Jalon 2
-* [HTTP](Notions/tuto-HTTP.md)
-* [REST](Notions/tuto-REST.md)
-* [PHP](Notions/tuto-PHP.md)
-* [MVC](Notions/tuto-MVC.md)
+
+* [HTTP](jalon2/tuto-HTTP.md)
+* [REST](jalon2/tuto-REST.md)
+* [PHP](jalon2/tuto-PHP.md)
+* [MVC](jalon2/tuto-MVC.md)
 * [Présentation Laravel](jalon2/presentation.md)
 * [Découverte de Laravel](jalon2/decouverte.md)
 * [CRUD](jalon2/crud.md)
