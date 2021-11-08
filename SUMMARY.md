@@ -14,7 +14,7 @@
 
 ## Jalon 1
 
-* [Notions d'UX Design](UX/README.md)
+* [Notions d'UX Design](https://ceri-num.gitbook.io/uv-ux-design)
 * [Maquette statique](jalon1/jalon1.md)
 
 ## Jalon 2
