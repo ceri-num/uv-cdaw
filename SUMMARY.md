@@ -19,15 +19,16 @@
 
 ## Jalon 2
 
-* [Site connecté](jalon2/jalon2.md)
-<!-- * [Site connecté](infos/todo.md) -->
 * [Présentation Laravel](jalon2/presentation.md)
-
+* [Découverte de Laravel](jalon2/decouverte.md)
+* [CRUD](jalon2/crud.md)
+* [Attentes](jalon2/jalon2.md)
 
 ## Jalon 3
 
-* [CRUD](jalon3/jalon3.md)
-<!-- * [CRUD](infos/todo.md) -->
+* [Authentification](jalon3/authentification.md)
+* [Tests](jalon3/tests.md)
+* [Attentes](jalon3/jalon3.md)
 
 ## Jalon 4 : Projet complet
 

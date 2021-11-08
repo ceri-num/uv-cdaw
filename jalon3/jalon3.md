@@ -1,10 +1,8 @@
-# Jalon 3 : CRUD
+# Jalon 3 : site connecté
 
 ## Fonctionnalités attendues
 
-- CRUD des utilisateurs
-- ...
-
-## Architecture logicielle
-
-- Complexification des données (BD, Modèles)
+- Création de compte
+- Connexion via un login / mot de passe
+- Voir/modifier profil
+- Déconnexion

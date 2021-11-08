@@ -16,7 +16,7 @@
 - Système d’authentification et de gestion de sessions pour les connexions
 - MVC
 
-![ Texte alternatif](/ressources/tutoLaravel/MVC.png "MVC")
+![MVC](/ressources/tutoLaravel/MVC.png)
 https://www.awesomeinc.org/tutorials/rails-blog/
 
 
@@ -26,7 +26,7 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 
 
 ## Composer
--Gestionnaire de dépendances
+- Gestionnaire de dépendances
 - Configuration par un fichier JSON
 - Déjà installé dans le docker fourni
 
@@ -35,15 +35,19 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 
 - Se placer dans le terminal de Visual Studio Code
 
-- Création du projet "catalogue de médias" avec la dernière version stable de Laravel : 
+- Création du projet "catalogue de médias" avec la dernière version stable de Laravel :
+```
 	composer create-project --prefer-dist laravel/laravel catalogue
+```
 
 - Donner les droits à votre projet pour apache:
+```
 	chown -R root.www-data laravel/
 	find laravel -type d -exec chmod 750 {} \;
 	find laravel -type f -exec chmod 640 {} \;
 	find laravel/storage -type d -exec chmod 770 {} \;
 	find laravel/storage -type f -exec chmod 660 {} \;
+```
 
 - Vérifier dans le navigateur : 
 	http://localhost/catalogue/public
@@ -59,4 +63,4 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 - .env : environnement de l’application
 - composer.json : dépendances de l’application
 
-![ Texte alternatif](/ressources/tutoLaravel/constitution.png "Constitution")
+![Constitution](/ressources/tutoLaravel/constitution.png)

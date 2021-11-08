@@ -1,12 +1,9 @@
-# Jalon 2 : site connecté
+# Jalon 2 : CRUD
 
 ## Fonctionnalités attendues
 
-- création de compte
-- connexion via un login / mot de passe
-- voir/modifier profil
-- déconnexion
-
-## Architecture logicielle
-
-Site MVC en PHP/Laravel avec au moins un modèle : User (login, password, email)
+- CRUD des films et des catégories
+  - CREATE : création de films et de catégories grâce à un formulaire.
+  - READ : affichage des films avec leur catégorie dans une datatable.
+  - UPDATE : mise à jour des noms des catégories et des infos des films (par le même formulaire que la création).
+  - DELETE : suppression de film.
