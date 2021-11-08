@@ -54,3 +54,4 @@ Bien évidemment, voud devez changer les infos fictives de ce template par les v
 5. Analyse de l'historique des versions
    - travail régulier ?
    - travail équitablement réparti entre les membres du groupe ?
+
