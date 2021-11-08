@@ -13,15 +13,17 @@ Ce cours suppose que vous connaissez :
 - traitement des formulaires Web (forms)
 
 {% hint style="danger" %}
-Auto-formation
+Auto-formation :
 - cf. cours PHP de l'UV IDAW
-- cf. doc PHP https://www.php.net/manual/en/
-- cf. https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/
+- cf. [https://www.php.net/manual/en/](doc PHP)
+- cf. [https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/]
 {% endhint %}
+
+Exercice : [https://www.learn-php.org]
 
 ## A propos
 
-La documentation officielle est : https://www.php.net/manual/en/language.oop5.php. Testez les exemples en même temps que lisez en utilisant : https://repl.it par exemple.
+La documentation officielle est : [https://www.php.net/manual/en/language.oop5.php]. Testez les exemples en même temps que lisez en utilisant : [https://repl.it] par exemple.
 
 {% hint style="alert" %}
 Cette page est en cours de migration.

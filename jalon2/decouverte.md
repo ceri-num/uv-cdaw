@@ -11,7 +11,7 @@
 
 ![Routes](/ressources/tutoLaravel/MVC-routes.JPG)
 
-NOTES 
+NOTES
 - Fichier routes/web.php (pour les routes appelées depuis un navigateur, api.php pour les routes de l'API)
 - Attention, l'ordre dans ce fichier est important ! Les routes sont analysées dans l'ordre et la 1ere trouvée est la 1ere exécutée
 
@@ -53,12 +53,12 @@ NOTES
   - Définir une section du template que pourront utiliser les vues enfants : `@yield('nomDuContenu')`
   - Définir le contenu d'une section du template : `@section('nomDuContenu')`
 
-TODO 
+TODO
 
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
-- Tester le tout : comment tester ? Comment appeler une vue ? (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 1</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 1</a>)
+- Tester le tout : comment tester ? Comment appeler une vue ? ([Indice 1](indices.md), [reponses.md](réponse 1))
 
 
 ## Les controlleurs
@@ -69,7 +69,7 @@ Les controlleurs appellent le code "intelligent" pour l'envoyer à la vue. Le re
 ![Vues](/ressources/tutoLaravel/MVC-controllers-vues.JPG)
 
 TODO
-- Créer un contrôleur : 
+- Créer un contrôleur :
 ```
 php artisan make:controller listeMediasController.php
 ```
@@ -85,7 +85,7 @@ NOTES
 - Les modèles contiennent les algorithmes, l'intelligence du site. Ils peuvent être branchés à des tables de base de données et faciliter leur utilisation.
 - Les migrations permettent de créer et mettre à jour la structure des tables.
 - Les seeders permettent de remplir les tables (ajout de données).
-- Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables 
+- Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables
 
 TODO
 - Dans phpMyAdmin, créer la base de données `medias` de type `utf8_general_ci`
@@ -121,7 +121,8 @@ Savez-vous ce qu'est l'auto-incrément des clefs primaires ? (<a href="https://c
 A vous
 - Créer la migration et le seeder pour Film.
 Un film est identifié par son `ID`, il a une `category`, un `nom` et un `director`. Attention aux types et taille de chaque champs.(<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 9</a>)
-```
+
+```shell
 php artisan make:migration films_table
 ou
 php artisan make:migration films_table --create=films
