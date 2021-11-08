@@ -1,6 +1,6 @@
 # HTTP
 
-Cours : [https://www.pierre-giraud.com/http-reseau-securite-cours/requete-reponse-session/]
+Cours : [https://www.pierre-giraud.com/http-reseau-securite-cours/requete-reponse-session/](https://www.pierre-giraud.com/http-reseau-securite-cours/requete-reponse-session/)
 
 Les méthodes HTTP (verbs) les plus courantes :
 
