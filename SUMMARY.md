@@ -20,6 +20,7 @@
 
 * [Site connecté](jalon2/jalon2.md)
 <!-- * [Site connecté](infos/todo.md) -->
+* [Présentation Laravel](jalon2/presentation.md)
 
 ## Jalon 3
 

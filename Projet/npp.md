@@ -21,8 +21,7 @@ Un média :
     * acteurs
     * ...
 
-Construire un jeu de données en utilisant par exemple :
-- https://www.imdb.com/
+Construire un jeu de données en utilisant par exemple : <a href="https://www.imdb.com/" target="_blank">https://www.imdb.com/ </a>
 
 
 ## Fonctionnalités à réaliser
@@ -42,7 +41,7 @@ Construire un jeu de données en utilisant par exemple :
 ## Playlists
 
 * Un utilisateur connecté peut :
-  * créeer une playlist
+  * créer une playlist
      * manuelle et y ajouter des médias
      * automatique
        * Exemple : tous les média Marvel
