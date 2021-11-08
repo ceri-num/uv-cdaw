@@ -19,8 +19,6 @@ Auto-formation :
 - cf. [https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/]
 {% endhint %}
 
-Exercice : [https://www.learn-php.org]
-
 ## A propos
 
 La documentation officielle est : [https://www.php.net/manual/en/language.oop5.php]. Testez les exemples en même temps que lisez en utilisant : [https://repl.it] par exemple.
@@ -31,7 +29,9 @@ Les slides originaux sont ici : https://partage.imt.fr/index.php/s/XqStmtBMSswB3
 {% endhint %}
 
 
-
+Exercices :
+- Faire tout le tutoriel [https://www.learn-php.org]
+- Faire qq exercices [https://exercism.org/tracks/php/exercises]
 
 
 <!-- ## Les classes
@@ -68,6 +68,7 @@ class Personne
 L'opérateur `::` permet d'accéder aux champs (attributs ou méthodes) statiques d'une classe.
 
 
-![PHP](ressources/tutoPHP/LucDamas-PHP_OO.jpg)
+![PHP OO](../ressources/tutoPHP/LucDamas-PHP_OO.jpg)
 
-![PHP](ressources/tutoPHP/LucDamas-PHP_sale.jpg) -->
+![PHP](../ressources/tutoPHP/LucDamas-PHP_sale.jpg)
+ -->

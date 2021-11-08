@@ -74,3 +74,21 @@ Exemples de documentation d'API : https://punkapi.com/documentation/v2
 Documenter et tester une API est important et il existe des outils pour cela comme https://swagger.io.
 Mais nous n'aborderons pas cela dans ce cours.
 {% endhint %}
+
+## Exercice
+
+Choisir une API Web publique (par exemple dans la liste : [https://github.com/public-apis/public-apis]). Exemples intéressants :
+
+- [https://punkapi.com/]
+- [https://ladataverte.fr/]
+
+Explorez l'API choisie en utilisant l'un des logiciels suivant :
+
+- votre navigateur Web (requêtes `GET`)
+- un plugin pour votre navigateur (exemple : [https://addons.mozilla.org/en-US/firefox/addon/restclient/])
+- [https://reqbin.com/]
+- le logiciel [https://www.postman.com/downloads/](Postman)
+
+Dans le cas de [https://ladataverte.fr/], essayez de répondre aux questions suivantes :
+- La crise sanitaire a t-elle réduit les émissions de CO2. Comparez 2019 et 2020 pour différents pays, régions du monde ou le monde entier.
+- ...

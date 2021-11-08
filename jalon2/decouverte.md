@@ -58,8 +58,7 @@ TODO
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
-- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](indices.md) [réponse 1](reponses.md)
-
+- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](./indices.md) [réponse 1](./reponses.md)
 
 ## Les controlleurs
 
