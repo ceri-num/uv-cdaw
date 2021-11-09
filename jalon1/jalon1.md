@@ -38,6 +38,10 @@ Vous devez remplir vos pages avec des données fictives.
 Vous devez simplifier au maximum vos pages (i.e. supprimez le code que vous ne comprenez pas).
 Aidez-vous des cours HTML/CSS et de la documentation de Bootstrap CSS (cf. [Bib](../infos/prerequis.md)).
 
+- Cours HTML/CSS [https://www.pierre-giraud.com/html-css-apprendre-coder-cours/](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
+- Cours Bootstrap [https://www.pierre-giraud.com/bootstrap-apprendre-cours/menu-navigation/](https://www.pierre-giraud.com/bootstrap-apprendre-cours/menu-navigation/)
+- Doc Bootstrap CSS [https://getbootstrap.com/docs/](https://getbootstrap.com/docs/)
+
 ## Travail en équipe
 
 Après avoir réaliser une ou plusieurs pages à deux, répartissez-vous le travail.
