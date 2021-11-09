@@ -19,8 +19,8 @@ JavaScript Object Notation est un format largement utilisé pour échanger des d
 
 {% hint style="alert" %}
 Aller plus loin sur JSON :
-- https://restfulapi.net/introduction-to-json/
-- Valider du code JSON : https://jsonlint.com.
+- [https://restfulapi.net/introduction-to-json/](https://restfulapi.net/introduction-to-json/)
+- Valider du code JSON : [https://jsonlint.com](https://jsonlint.com).
 {% endhint %}
 
 ## API
@@ -33,8 +33,8 @@ Representational State Transfer définit des règles pour structurer une API Web
 
 {% hint style="alert" %}
 Introduction aux APIs REST :
-- https://restfulapi.net/
-- https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+- [https://restfulapi.net/](https://restfulapi.net/)
+- [https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
 <!-- - https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm3.html -->
 {% endhint %}
 
@@ -68,10 +68,10 @@ API RESTful :
 
 ![Exemple d'API RESTful pour gérer des tâches](../ressources/CRUD_REST/task_api.png)
 
-Exemples de documentation d'API : [https://punkapi.com/documentation/v2]
+Exemples de documentation d'API : [https://punkapi.com/documentation/v2](https://punkapi.com/documentation/v2)
 
 {% hint style="info" %}
-Documenter et tester une API est important et il existe des outils pour cela comme [https://swagger.io].
+Documenter et tester une API est important et il existe des outils pour cela comme [https://swagger.io](https://swagger.io).
 Mais nous n'aborderons pas cela dans ce cours.
 {% endhint %}
 
