@@ -25,14 +25,14 @@ La documentation officielle est : [https://www.php.net/manual/en/language.oop5.p
 
 {% hint style="alert" %}
 Cette page est en cours de migration.
-Les slides originaux sont ici : https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx
+Les slides originaux sont ici : [https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx](partage)
 {% endhint %}
 
 
 Exercices :
-- Faire tout le tutoriel [https://www.learn-php.org]
-- Faire qq exercices [https://exercism.org/tracks/php/exercises]
-- Faire qq exercices de la rubrique Web Server de [https://www.root-me.org]
+- Faire tout le tutoriel [https://www.learn-php.org](https://www.learn-php.org)
+- Faire qq exercices [https://exercism.org/tracks/php/exercises](https://exercism.org/tracks/php/exercises)
+- Faire qq exercices de la rubrique Web Server de [https://www.root-me.org](https://www.root-me.org)
 
 <!-- ## Les classes
 
