@@ -32,7 +32,7 @@ Les slides originaux sont ici : https://partage.imt.fr/index.php/s/XqStmtBMSswB3
 Exercices :
 - Faire tout le tutoriel [https://www.learn-php.org]
 - Faire qq exercices [https://exercism.org/tracks/php/exercises]
-
+- Faire qq exercices de la rubrique Web Server de [https://www.root-me.org]
 
 <!-- ## Les classes
 
