@@ -66,12 +66,12 @@ API RESTful :
 - chaque ressource est identifiée et accessible via une URI
 - les traitements (CRUD) à appliquer sont décrits par les verbes HTTP (GET, POST, ...)
 
-![Exemple d'API RESTful pour gérer des tâches](ressources/CRUD_REST/task_api.png)
+![Exemple d'API RESTful pour gérer des tâches](../ressources/CRUD_REST/task_api.png)
 
-Exemples de documentation d'API : https://punkapi.com/documentation/v2
+Exemples de documentation d'API : [https://punkapi.com/documentation/v2]
 
 {% hint style="info" %}
-Documenter et tester une API est important et il existe des outils pour cela comme https://swagger.io.
+Documenter et tester une API est important et il existe des outils pour cela comme [https://swagger.io].
 Mais nous n'aborderons pas cela dans ce cours.
 {% endhint %}
 
