@@ -1,5 +1,5 @@
 
-![PHP](ressources/tutoPHP/coverPHP.jpg)
+![PHP](../ressources/tutoPHP/coverPHP.jpg)
 
 # Programmation orientée Objet en PHP
 
