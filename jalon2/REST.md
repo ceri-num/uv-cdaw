@@ -77,18 +77,18 @@ Mais nous n'aborderons pas cela dans ce cours.
 
 ## Exercice
 
-Choisir une API Web publique (par exemple dans la liste : [https://github.com/public-apis/public-apis]). Exemples intéressants :
+Choisir une API Web publique (par exemple dans la liste : [https://github.com/public-apis/public-apis](public Web API)). Exemples intéressants :
 
-- [https://punkapi.com/]
-- [https://ladataverte.fr/]
+- [https://punkapi.com/](https://punkapi.com/)
+- [https://ladataverte.fr/](https://ladataverte.fr/)
 
 Explorez l'API choisie en utilisant l'un des logiciels suivant :
 
 - votre navigateur Web (requêtes `GET`)
-- un plugin pour votre navigateur (exemple : [https://addons.mozilla.org/en-US/firefox/addon/restclient/])
-- [https://reqbin.com/]
+- un plugin pour votre navigateur ([https://addons.mozilla.org/en-US/firefox/addon/restclient/](exemple))
+- [https://reqbin.com/](https://reqbin.com/)
 - le logiciel [https://www.postman.com/downloads/](Postman)
 
-Dans le cas de [https://ladataverte.fr/], essayez de répondre aux questions suivantes :
+Dans le cas de [https://ladataverte.fr/](https://ladataverte.fr/), essayez de répondre aux questions suivantes :
 - La crise sanitaire a t-elle réduit les émissions de CO2. Comparez 2019 et 2020 pour différents pays, régions du monde ou le monde entier.
 - ...
