@@ -79,6 +79,7 @@ Mais nous n'aborderons pas cela dans ce cours.
 
 Choisir une API Web publique (par exemple dans la liste : [https://github.com/public-apis/public-apis](public Web API)). Exemples intéressants :
 
+- [https://imdb-api.com/](https://imdb-api.com/) cette API Web permet d'accéder aux données d'IMDB (bases de données sur les films et séries). Il suffit de se créer un compte et on peut par exemple récupérer en JSON, les 250 meilleurs films (selon IMDB), ...
 - [https://punkapi.com/](https://punkapi.com/)
 - [https://ladataverte.fr/](https://ladataverte.fr/)
 
@@ -89,6 +90,7 @@ Explorez l'API choisie en utilisant l'un des logiciels suivant :
 - [https://reqbin.com/](https://reqbin.com/)
 - le logiciel [https://www.postman.com/downloads/](Postman)
 
-Dans le cas de [https://ladataverte.fr/](https://ladataverte.fr/), essayez de répondre aux questions suivantes :
+<!-- Dans le cas de [https://ladataverte.fr/](https://ladataverte.fr/), essayez de répondre aux questions suivantes :
 - La crise sanitaire a t-elle réduit les émissions de CO2. Comparez 2019 et 2020 pour différents pays, régions du monde ou le monde entier.
-- ...
+- ... -->
+
