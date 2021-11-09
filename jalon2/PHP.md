@@ -15,7 +15,8 @@ Ce cours suppose que vous connaissez :
 {% hint style="danger" %}
 Auto-formation :
 - cf. cours PHP de l'UV IDAW
-- cf. [https://www.php.net/manual/en/](doc PHP)
+-
+- cf. [https://www.php.net/manual/en/](https://www.php.net/manual/en/)
 - cf. [https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
 {% endhint %}
 
@@ -25,7 +26,7 @@ La documentation officielle est : [https://www.php.net/manual/en/language.oop5.p
 
 {% hint style="alert" %}
 Cette page est en cours de migration.
-Les slides originaux sont ici : [https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx](partage)
+Les slides originaux sont ici : [https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx](https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx)
 {% endhint %}
 
 
