@@ -17,7 +17,8 @@ NOTES
 
 TODO
 - Trouver l'appel à la vue par défaut de Laravel, le commenter et remplacer par l'affichage d'un « Hello world » de 2 façons
-- Options des routes
+- Options des routes (
+	http://localhost:8080/catalogue/public/index.php/)
   - Créer une route GET qui prend 2 paramètres (prénom et nom) et qui les affiche
   - Ajouter des contraintes avec des expressions régulières : créer une route GET qui prend 1 paramètre "title" constitué uniquement de lettres et qui l'affiche
   - Créer une route GET qui affiche le texte "Liste des films" et la nommer "listeFilms"
