@@ -58,7 +58,7 @@ TODO
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
-- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](./indices.md) [réponse 1](./reponses.md)
+- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](./indices.md) - [Réponse 1](./reponses.md)
 
 ## Les controlleurs
 
@@ -72,7 +72,7 @@ TODO
 ```
 php artisan make:controller listeMediasController.php
 ```
-- Appeler la vue depuis le contrôleur (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 2</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 2</a>)
+- Appeler la vue depuis le contrôleur. [Indice 2](./indices.md) - [Réponse 2](./reponses.md)
 - Relier une route à un contrôleur (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 3</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 3</a>)
 - Récupérer des paramètres depuis la route et les passer à la vue (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 4</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 4</a>)
 - Afficher ces paramètres (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 5</a>)
