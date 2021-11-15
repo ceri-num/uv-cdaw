@@ -91,7 +91,7 @@ TODO
 - Configurer la connexion à la base de données (.env et /config/database.php)  (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 6</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 6</a>)
 
 Partie 1 : la migration
-- Télécharger le fichier `2021_10_27_073728_create_categories_table` et le déposer dans le répertoire database/migrations
+- Télécharger le fichier [2021_10_27_073728_create_categories_table](./bd/migrations/2021_10_27_073728_create_categories_table.php)`2021_10_27_073728_create_categories_table` et le déposer dans le répertoire database/migrations
 - Analyser les méthodes up (création) et down (suppression)
 - Dans le Terminal, exécuter cette ligne pour créer la table `categories`
 ```
@@ -106,6 +106,10 @@ Partie 2 : l'alimentation
 ```
 php artisan db:seed
 ```
+- L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2. Vider la table et exécuter le seeder.
+
+
+
 Partie 3 : le modèle
 - Créer le modèle `Categorie` (il est aussi possible de générer le modèle et le controller associé).
 ```
