@@ -1,10 +1,10 @@
 # Découverte : Laravel - Premiers pas
 
 ## Fonctionnalités attendues
-- compréhension des appels dans le router web.php
-- créer une 1ere vue et l'appeler
-- créer un controller et l'utiliser
-- créer un modèle et l'utiliser
+- Compréhension des appels dans le router web.php
+- Créer une 1ere vue et l'appeler
+- Créer un controller et l'utiliser
+- Créer un modèle et l'utiliser
 
 
 ## Les routes
