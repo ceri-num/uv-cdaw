@@ -52,7 +52,7 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 ```
 
 - Vérifier dans le navigateur : 
-	http://localhos:8080/catalogue/public
+	http://localhost:8080/catalogue/public
 
 ## Principaux dossiers et fichiers
 - app : cœur de l’application (controller, model, helper, …) 
