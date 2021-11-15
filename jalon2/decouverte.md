@@ -58,10 +58,7 @@ TODO
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
-- Tester le tout : comment tester ? Comment appeler une vue ? [Indice1](indices.md) - [Réponse 1](reponses.md)
-[test1](../infos/eval.md)[test2](./reponses.md)
-
-[instructions](../infos/eval.md)
+- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](../ressources/tutoLaravel/indices.md) - [Réponse 1](../ressources/tutoLaravel/reponses.md)
 
 ## Les controlleurs
 
@@ -75,11 +72,10 @@ TODO
 ```
 php artisan make:controller listeMediasController.php
 ```
-- Appeler la vue depuis le contrôleur. [Indice 2](indices.md) - [Réponse 2](reponses.md)
-- Relier une route à un contrôleur (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 3</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 3</a>)
-- Récupérer des paramètres depuis la route et les passer à la vue (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 4</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 4</a>)
-- Afficher ces paramètres (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 5</a>)
-
+- Appeler la vue depuis le contrôleur. [Indice 2](../ressources/tutoLaravel/indices.md) - [Réponse 2](../ressources/tutoLaravel/reponses.md)
+- Relier une route à un contrôleur. [Indice 3](../ressources/tutoLaravel/indices.md) - [Réponse 3](../ressources/tutoLaravel/reponses.md)
+- Récupérer des paramètres depuis la route et les passer à la vue [Indice 4](../ressources/tutoLaravel/indices.md) - [Réponse 4](../ressources/tutoLaravel/reponses.md)
+- Afficher ces paramètres. [Indice 5](../ressources/tutoLaravel/indices.md) 
 
 ## Les modèles
 
@@ -91,10 +87,10 @@ NOTES
 
 TODO
 - Dans phpMyAdmin, créer la base de données `medias` de type `utf8_general_ci`
-- Configurer la connexion à la base de données (.env et /config/database.php)  (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 6</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 6</a>)
+- Configurer la connexion à la base de données (.env et /config/database.php)  [Indice 6](../ressources/tutoLaravel/indices.md) - [Réponse 6](../ressources/tutoLaravel/reponses.md)
 
 Partie 1 : la migration
-- Télécharger le fichier [2021_10_27_073728_create_categories_table](bd/migrations/2021_10_27_073728_create_categories_table.php) et le déposer dans le répertoire database/migrations
+- Télécharger le fichier [2021_10_27_073728_create_categories_table](../ressources/tutoLaravel/bd/migrations/2021_10_27_073728_create_categories_table.php) et le déposer dans le répertoire database/migrations
 - Analyser les méthodes up (création) et down (suppression)
 - Dans le Terminal, exécuter cette ligne pour créer la table `categories`
 ```
@@ -104,7 +100,7 @@ Attention, l'ordre d'exécution des migrations est importante (au niveau des cle
 
 Partie 2 : l'alimentation
 - Télécharger le fichier `CategorySeeder.php` et le déposer dans le répertoire database/seeders
-- Analyser la méthode run (ajout de films). Question : combien de film le seeder va t'il créer ? (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 7</a>)
+- Analyser la méthode run (ajout de films). Question : combien de film le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
 - Dans le Terminal, exécuter cette ligne pour alimenter la table `Categories`
 ```
 php artisan db:seed
@@ -119,15 +115,14 @@ Partie 3 : le modèle
 php artisan make:model category
 ```
 - Préciser la connexion à utiliser, la table reliée à ce modèle, la clef primaire ainsi que les autres paramètres
-- Afficher toutes les catégories de la table (<a href="https://laravel.com/docs/8.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://www.oulub.com/fr-FR/Laravel/eloquent" target="_blank">aide FR Eloquent</a>)
+- Afficher toutes les catégories de la table. (<a href="https://laravel.com/docs/8.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://www.oulub.com/fr-FR/Laravel/eloquent" target="_blank">aide FR Eloquent</a>)
 
 Question
-Savez-vous ce qu'est l'auto-incrément des clefs primaires ? (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">Réponse 8</a>)
+Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
 
 A vous
 - Créer la migration et le seeder pour Film.
-Un film est identifié par son `ID`, il a une `category`, un `nom` et un `director`. Attention aux types et taille de chaque champs.(<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 9</a>)
-
+Un film est identifié par son `ID`, il a une `category`, un `nom` et un `director`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
 php artisan make:migration films_table
 ou
