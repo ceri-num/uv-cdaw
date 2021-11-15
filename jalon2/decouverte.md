@@ -100,14 +100,14 @@ php artisan migrate
 Attention, l'ordre d'exécution des migrations est importante (au niveau des clefs étrangères et des contraintes d'intégration). <a href="https://meet.google.com/qgz-rbsb-nce" target="_blank">Aide</a>
 
 Partie 2 : l'alimentation
-- Télécharger le fichier `CategorySeeder.php` et le déposer dans le répertoire database/seeders
+- Télécharger le fichier [CategorySeeder.php](../ressources/tutoLaravel/bd/seeders/CategorySeeder.php) et le déposer dans le répertoire database/seeders
 - Analyser la méthode run (ajout de films). Question : combien de film le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
 - Dans le Terminal, exécuter cette ligne pour alimenter la table `Categories`
 ```
 php artisan db:seed
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
-- Télécharger le fichier `CategoryFactory.php` et le déposer dans le répertoire database/seeders
+- Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factory/CategoryFactory.php) et le déposer dans le répertoire database/seeders
 - Vider la table `Categories`et exécuter le seeder.
 
 Partie 3 : le modèle
