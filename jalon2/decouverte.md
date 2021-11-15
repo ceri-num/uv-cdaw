@@ -58,7 +58,8 @@ TODO
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
-- Tester le tout : comment tester ? Comment appeler une vue ? [Indice 1](./indices.md) - [Réponse 1](./reponses.md)
+- Tester le tout : comment tester ? Comment appeler une vue ? [Indice1](indices.md) - [Réponse 1](reponses.md)
+[test1](../infos/eval.md)[test2](./reponses.md)
 
 ## Les controlleurs
 
@@ -72,7 +73,7 @@ TODO
 ```
 php artisan make:controller listeMediasController.php
 ```
-- Appeler la vue depuis le contrôleur. [Indice 2](./indices.md) - [Réponse 2](./reponses.md)
+- Appeler la vue depuis le contrôleur. [Indice 2](indices.md) - [Réponse 2](reponses.md)
 - Relier une route à un contrôleur (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 3</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 3</a>)
 - Récupérer des paramètres depuis la route et les passer à la vue (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 4</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 4</a>)
 - Afficher ces paramètres (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 5</a>)
@@ -91,7 +92,7 @@ TODO
 - Configurer la connexion à la base de données (.env et /config/database.php)  (<a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/indices.md" target="_blank">Indice 6</a> - <a href="https://ceri-num.gitbook.io/uv-cdaw/jalon-2/reponses.md" target="_blank">réponse 6</a>)
 
 Partie 1 : la migration
-- Télécharger le fichier [2021_10_27_073728_create_categories_table](./bd/migrations/2021_10_27_073728_create_categories_table.php)`2021_10_27_073728_create_categories_table` et le déposer dans le répertoire database/migrations
+- Télécharger le fichier [2021_10_27_073728_create_categories_table](bd/migrations/2021_10_27_073728_create_categories_table.php) et le déposer dans le répertoire database/migrations
 - Analyser les méthodes up (création) et down (suppression)
 - Dans le Terminal, exécuter cette ligne pour créer la table `categories`
 ```
