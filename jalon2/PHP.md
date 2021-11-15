@@ -1,5 +1,5 @@
 
-![PHP](ressources/tutoPHP/coverPHP.jpg)
+![PHP](../ressources/tutoPHP/coverPHP.jpg)
 
 # Programmation orientée Objet en PHP
 
@@ -13,24 +13,27 @@ Ce cours suppose que vous connaissez :
 - traitement des formulaires Web (forms)
 
 {% hint style="danger" %}
-Auto-formation
+Auto-formation :
 - cf. cours PHP de l'UV IDAW
-- cf. doc PHP https://www.php.net/manual/en/
-- cf. https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/
+-
+- cf. [https://www.php.net/manual/en/](https://www.php.net/manual/en/)
+- cf. [https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
 {% endhint %}
 
 ## A propos
 
-La documentation officielle est : https://www.php.net/manual/en/language.oop5.php. Testez les exemples en même temps que lisez en utilisant : https://repl.it par exemple.
+La documentation officielle est : [https://www.php.net/manual/en/language.oop5.php](Doc PHP OO). Testez les exemples en même temps que lisez en utilisant : [https://repl.it](https://repl.it) par exemple.
 
 {% hint style="alert" %}
 Cette page est en cours de migration.
-Les slides originaux sont ici : https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx
+Les slides originaux sont ici : [https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx](https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx)
 {% endhint %}
 
 
-
-
+Exercices :
+- Faire tout le tutoriel [https://www.learn-php.org](https://www.learn-php.org)
+- Faire qq exercices [https://exercism.org/tracks/php/exercises](https://exercism.org/tracks/php/exercises)
+- Faire qq exercices de la rubrique Web Server de [https://www.root-me.org](https://www.root-me.org)
 
 <!-- ## Les classes
 
@@ -66,6 +69,7 @@ class Personne
 L'opérateur `::` permet d'accéder aux champs (attributs ou méthodes) statiques d'une classe.
 
 
-![PHP](ressources/tutoPHP/LucDamas-PHP_OO.jpg)
+![PHP OO](../ressources/tutoPHP/LucDamas-PHP_OO.jpg)
 
-![PHP](ressources/tutoPHP/LucDamas-PHP_sale.jpg) -->
+![PHP](../ressources/tutoPHP/LucDamas-PHP_sale.jpg)
+ -->

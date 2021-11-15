@@ -19,6 +19,10 @@
 
 ## Jalon 2
 
+* [HTTP](jalon2/HTTP.md)
+* [REST](jalon2/REST.md)
+* [PHP](jalon2/PHP.md)
+<!-- * [MVC](jalon2/MVC.md) -->
 * [Présentation Laravel](jalon2/presentation.md)
 * [Découverte de Laravel](jalon2/decouverte.md)
 * [CRUD](jalon2/crud.md)

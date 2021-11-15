@@ -19,8 +19,8 @@ JavaScript Object Notation est un format largement utilisé pour échanger des d
 
 {% hint style="alert" %}
 Aller plus loin sur JSON :
-- https://restfulapi.net/introduction-to-json/
-- Valider du code JSON : https://jsonlint.com.
+- [https://restfulapi.net/introduction-to-json/](https://restfulapi.net/introduction-to-json/)
+- Valider du code JSON : [https://jsonlint.com](https://jsonlint.com).
 {% endhint %}
 
 ## API
@@ -33,8 +33,8 @@ Representational State Transfer définit des règles pour structurer une API Web
 
 {% hint style="alert" %}
 Introduction aux APIs REST :
-- https://restfulapi.net/
-- https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+- [https://restfulapi.net/](https://restfulapi.net/)
+- [https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/](https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/)
 <!-- - https://perso.liris.cnrs.fr/pierre-antoine.champin/2017/progweb-python/cours/cm3.html -->
 {% endhint %}
 
@@ -66,11 +66,31 @@ API RESTful :
 - chaque ressource est identifiée et accessible via une URI
 - les traitements (CRUD) à appliquer sont décrits par les verbes HTTP (GET, POST, ...)
 
-![Exemple d'API RESTful pour gérer des tâches](ressources/CRUD_REST/task_api.png)
+![Exemple d'API RESTful pour gérer des tâches](../ressources/CRUD_REST/task_api.png)
 
-Exemples de documentation d'API : https://punkapi.com/documentation/v2
+Exemples de documentation d'API : [https://punkapi.com/documentation/v2](https://punkapi.com/documentation/v2)
 
 {% hint style="info" %}
-Documenter et tester une API est important et il existe des outils pour cela comme https://swagger.io.
+Documenter et tester une API est important et il existe des outils pour cela comme [https://swagger.io](https://swagger.io).
 Mais nous n'aborderons pas cela dans ce cours.
 {% endhint %}
+
+## Exercice
+
+Choisir une API Web publique (par exemple dans la liste : [public Web API](https://github.com/public-apis/public-apis)). Exemples intéressants :
+
+- [https://imdb-api.com/](https://imdb-api.com/) cette API Web permet d'accéder aux données d'IMDB (bases de données sur les films et séries). Il suffit de se créer un compte et on peut par exemple récupérer en JSON, les 250 meilleurs films (selon IMDB), ...
+- [https://punkapi.com/](https://punkapi.com/)
+- [https://ladataverte.fr/](https://ladataverte.fr/)
+
+Explorez l'API choisie en utilisant l'un des logiciels suivant :
+
+- votre navigateur Web (requêtes `GET`)
+- un plugin pour votre navigateur ([exemple](https://addons.mozilla.org/en-US/firefox/addon/restclient/))
+- [https://reqbin.com/](https://reqbin.com/)
+- le logiciel [Postman](https://www.postman.com/downloads/)
+
+<!-- Dans le cas de [https://ladataverte.fr/](https://ladataverte.fr/), essayez de répondre aux questions suivantes :
+- La crise sanitaire a t-elle réduit les émissions de CO2. Comparez 2019 et 2020 pour différents pays, régions du monde ou le monde entier.
+- ... -->
+
