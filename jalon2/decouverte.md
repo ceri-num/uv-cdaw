@@ -106,9 +106,9 @@ Partie 2 : l'alimentation
 ```
 php artisan db:seed
 ```
-- L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2. Vider la table et exécuter le seeder.
-
-
+- L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
+- Télécharger le fichier `CategoryFactory.php` et le déposer dans le répertoire database/seeders
+- Vider la table `Categories`et exécuter le seeder.
 
 Partie 3 : le modèle
 - Créer le modèle `Categorie` (il est aussi possible de générer le modèle et le controller associé).
