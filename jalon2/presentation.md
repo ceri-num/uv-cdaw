@@ -7,6 +7,8 @@
 - Frameword PHP : Laravel, Symphony, ...
 - Ne remplace pas la connaissance d’un langage
 
+![Utilisation framework](/ressources/tutoLaravel/PHP-Framework.png)
+
 
 ## Laravel
 
