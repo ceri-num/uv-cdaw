@@ -4,7 +4,7 @@
 
 - Ensemble d’outils et de librairies
 - Existe pour toute sorte de langage (PHP, javascript, …)
-- Frameword PHP : Laravel, Symphony, ...
+- Framework PHP : Laravel, Symphony, ...
 - Ne remplace pas la connaissance d’un langage
 
 ![Utilisation framework](/ressources/tutoLaravel/PHP-Framework.png)
@@ -52,7 +52,7 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 ```
 
 - Vérifier dans le navigateur : 
-	http://localhost/CDAWProject/public/catalogue
+	http://localhost/CDAWProject/public/catalogue/public
 
 ## Principaux dossiers et fichiers
 - app : cœur de l’application (controller, model, helper, …) 
