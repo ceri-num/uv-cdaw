@@ -41,6 +41,7 @@ public function getListeMedias($type, $annee) {
 Dans le .env :
 ```
 DB_CONNECTION=mysql
+DB_HOST=mysql
 DB_DATABASE=medias
 DB_USERNAME=root
 ```

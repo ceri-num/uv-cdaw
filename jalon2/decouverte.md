@@ -16,7 +16,7 @@ NOTES
 - Attention, l'ordre dans ce fichier est important ! Les routes sont analysées dans l'ordre et la 1ere trouvée est la 1ere exécutée
 
 TODO
-- Trouver l'appel à la vue par défaut de Laravel, le commenter et remplacer par l'affichage d'un « Hello world » de 2 façons
+- Trouver l'appel à la vue par défaut de Laravel, le commenter et remplacer par l'affichage d'un « Hello world » de 2 façons différentes
 - Options des routes (
 	http://localhost:8080/catalogue/public/index.php/)
   - Créer une route GET qui prend 2 paramètres (prénom et nom) et qui les affiche
@@ -50,13 +50,13 @@ NOTES
 - Syntaxe simplifiée :
   - `<?php echo $numero ?>` est remplacé par `{{ $numero }}`
   - Les structures de contrôle permettent de ne pas repasser en php: @if, @elseif, @endif, … (<a href="https://walkerspider.com/cours/laravel/blade" target="_blank">https://walkerspider.com/cours/laravel/blade</a>)
-  - Extension d’une vue par une autre : `@extend('template.blade.php')`
+  - Extension d’une vue par une autre : `@extends('template.blade.php')`
   - Définir une section du template que pourront utiliser les vues enfants : `@yield('nomDuContenu')`
   - Définir le contenu d'une section du template : `@section('nomDuContenu')`
 
 TODO
 
-- Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire public.
+- Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire `ressources`.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
 - Créer la vue `listeMedias.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
 - Tester le tout : comment tester ? Comment appeler une vue ? [indice1](../ressources/tutoLaravel/indices.md) [Réponse1](../ressources/tutoLaravel/reponses.md)
@@ -88,7 +88,7 @@ NOTES
 - Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables
 
 TODO
-- Dans phpMyAdmin, créer la base de données `medias` de type `utf8_general_ci`
+- Dans phpMyAdmin (connexion en root/root), créer la base de données `medias` de type `utf8_general_ci`
 - Configurer la connexion à la base de données (.env et /config/database.php)  [Indice 6](../ressources/tutoLaravel/indices.md) - [Réponse 6](../ressources/tutoLaravel/reponses.md)
 
 Partie 1 : la migration
@@ -124,7 +124,7 @@ Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../res
 
 A vous
 - Créer la migration et le seeder pour Film.
-Un film est identifié par son `ID`, il a une `category`, un `nom` et un `director`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
+Un film est identifié par son `ID`, il a une `category`, un `nom` et un `chemin vers la miniature du film`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
 php artisan make:migration films_table
 ou
@@ -136,4 +136,4 @@ php artisan make:seeder FilmSeeder
 Avez-vous remarqué la différence entre le nom de la table `films` et le modèle associé `Film` ? Pourquoi ?
 
 ## Le tout
-- Afficher tous les films avec leur catégorie grâce à une <a href="https://datatables.net/examples/styling/bootstrap5.html" target="_blank">datatable bootstrap</a>. Bien découper Route/Controller/Modèle/Vue.
+- Afficher tous les films grâce à une <a href="https://datatables.net/examples/styling/bootstrap5.html" target="_blank">datatable bootstrap</a>. Bien découper Route/Controller/Modèle/Vue.
