@@ -33,6 +33,11 @@
 * [Authentification](jalon3/authentification.md)
 * [Tests](jalon3/tests.md)
 * [Attentes](jalon3/jalon3.md)
+* [JS (1/5) — Introduction](js-intro.md)
+* [JS (2/5) — Manipulation du DOM](js-dom.md)
+* [JS (3/5) — Évènements](js-events.md)
+* [JS (4/5) — Formulaire](js-form.md)
+* [JS (5/5) — Asynchronicité](js-async.md)
 
 ## Jalon 4 : Projet complet
 
