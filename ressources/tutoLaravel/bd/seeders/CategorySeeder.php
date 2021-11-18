@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //Etape 1
-        DB::table('users')->insert([
+        DB::table('categories')->insert([
              'description' => Str::random(10)
             ]);
 
