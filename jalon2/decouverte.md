@@ -72,7 +72,7 @@ Les controlleurs appellent le code "intelligent" pour l'envoyer à la vue. Le re
 TODO
 - Créer un contrôleur :
 ```
-php artisan make:controller listeMediasController.php
+php artisan make:controller listeMediasController
 ```
 - Appeler la vue depuis le contrôleur. [Indice 2](../ressources/tutoLaravel/indices.md) - [Réponse 2](../ressources/tutoLaravel/reponses.md)
 - Relier une route à un contrôleur. [Indice 3](../ressources/tutoLaravel/indices.md) - [Réponse 3](../ressources/tutoLaravel/reponses.md)
