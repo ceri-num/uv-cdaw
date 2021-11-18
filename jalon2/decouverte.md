@@ -102,14 +102,18 @@ Attention, l'ordre d'exécution des migrations est importante (au niveau des cle
 
 Partie 2 : l'alimentation
 - Télécharger le fichier [CategorySeeder.php](../ressources/tutoLaravel/bd/seeders/CategorySeeder.php) et le déposer dans le répertoire database/seeders
-- Analyser la méthode run (ajout de films). Question : combien de film le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
+- Analyser la méthode run (ajout de categories). Question : combien de categories le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
 - Dans le Terminal, exécuter cette ligne pour alimenter la table `Categories`
 ```
-php artisan db:seed
+php artisan db:seed --class=CategorySeeder
+```
+Vous avez aussi la possibilité d'ajouter l'appel au CategorySeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
+```
+php artisan db:seed --class=CategorySeeder
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
 - Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factories/CategoryFactory.php) et le déposer dans le répertoire database/seeders
-- Vider la table `Categories`et exécuter le seeder.
+- Vider la table `Categories` et exécuter le seeder.
 
 Partie 3 : le modèle
 - Créer le modèle `Categorie` (il est aussi possible de générer le modèle et le controller associé).
