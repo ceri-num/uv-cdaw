@@ -1,4 +1,4 @@
-# Jalon 2 : CRUD
+# Jalon 2 : Attentes
 
 ## Fonctionnalités attendues
 
@@ -7,3 +7,5 @@
   - READ : affichage des films avec leur catégorie dans un tableau.
   - UPDATE : mise à jour des infos des films (par le même formulaire que la création, champs pré-remplis avec les valeurs de la base de données).
   - DELETE : suppression d'un film.
+
+- MCD MLD au format pdf
