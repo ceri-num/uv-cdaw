@@ -28,7 +28,6 @@
 
 ## Jalon 3
 
-* [Attentes](jalon3/jalon3.md)
 * [Authentification](jalon3/authentification.md)
 * [Tests](jalon3/tests.md)
 * [CRUD](jalon2/crud.md)
@@ -37,6 +36,7 @@
 * [JS (3/5) — Formulaire](jalon3/js-form.md)
 * [JS (4/5) — Évènements](jalon3/js-events.md)
 * [JS (5/5) — Asynchronicité](jalon3/js-async.md)
+* [Attentes](jalon3/jalon3.md)
 
 ## Jalon 4 : Projet complet
 

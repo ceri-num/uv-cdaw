@@ -128,14 +128,14 @@ Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../res
 
 A vous
 - Créer la migration pour Film.
-Un film est identifié par son `ID`, il a une `category`, un `nom` et un `chemin vers la miniature du film`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
+Un film est identifié par son `ID`, il a une `category`, un `name`, un `director`  et un `path` (chemin vers la miniature du film). Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
 php artisan make:migration films_table
 ou
 php artisan make:migration films_table --create=films
 		(Avec l’option create qui crée la table films)
 ```
-- Remplir la table `films`
+- Remplir la table `films` (une cinquantaine)
 
 Avez-vous remarqué la différence entre le nom de la table `films` et le modèle associé `Film` ? Pourquoi ?
 
