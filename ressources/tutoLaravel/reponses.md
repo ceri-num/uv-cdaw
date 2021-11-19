@@ -44,6 +44,7 @@ DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_DATABASE=medias
 DB_USERNAME=root
+DB_PASSWORD=root
 ```
 
 # Réponse 7

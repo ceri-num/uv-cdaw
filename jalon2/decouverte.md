@@ -140,4 +140,4 @@ php artisan make:seeder FilmSeeder
 Avez-vous remarqué la différence entre le nom de la table `films` et le modèle associé `Film` ? Pourquoi ?
 
 ## Le tout
-- Afficher tous les films grâce à une <a href="https://datatables.net/examples/styling/bootstrap5.html" target="_blank">datatable bootstrap</a>. Bien découper Route/Controller/Modèle/Vue.
+- Afficher tous les films grâce à un tableau. Bien découper Route/Controller/Modèle/Vue.
