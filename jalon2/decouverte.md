@@ -112,7 +112,7 @@ Vous avez aussi la possibilité d'ajouter l'appel au CategorySeeder dans la mét
 php artisan db:seed --class=CategorySeeder
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
-- Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factories/CategoryFactory.php) et le déposer dans le répertoire database/seeders
+- Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factories/CategoryFactory.php) et le déposer dans le répertoire database/factories
 - Vider la table `Categories` et exécuter le seeder.
 
 Partie 3 : le modèle
