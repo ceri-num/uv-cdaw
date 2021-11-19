@@ -127,16 +127,16 @@ Question
 Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
 
 A vous
-- Créer la migration et le seeder pour Film.
+- Créer la migration pour Film.
 Un film est identifié par son `ID`, il a une `category`, un `nom` et un `chemin vers la miniature du film`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
 php artisan make:migration films_table
 ou
 php artisan make:migration films_table --create=films
 		(Avec l’option create qui crée la table films)
-
-php artisan make:seeder FilmSeeder
 ```
+- Remplir la table `films`
+
 Avez-vous remarqué la différence entre le nom de la table `films` et le modèle associé `Film` ? Pourquoi ?
 
 ## Le tout
