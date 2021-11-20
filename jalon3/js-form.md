@@ -59,7 +59,7 @@ function myVerif(e)
 {
     let valToCheck = e.currentTarget.elements[0].value; //récupère la valeur du texte dans le premier input
 
-    if(valToCheck != "myREGEXP") //si on a une regexp pour valider la valeur, et que ça ne match pas, on ne veut pas envoyer ça au serveur !
+    if(valToCheck != "expectedValOrRegexp") //si on a une regexp pour valider la valeur, et que ça ne match pas, on ne veut pas envoyer ça au serveur !
         e.preventDefault();
 }
 
