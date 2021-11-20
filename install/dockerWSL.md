@@ -1,7 +1,7 @@
 # Docker on Windows & WSL
 
 Docker sur Windows est très lent à cause de l'accès aux fichiers partagés à travers des `bind mount`.
-Ci-dessous une procédure d'installation qui ~~devrait~~ règler le problème.
+Ci-dessous une procédure d'installation qui ~~devrait régler~~ régle le problème.
 
 ## Configurer Docker pour utiliser Ubuntu WSL2
 
