@@ -4,8 +4,10 @@
 
 - Ensemble d’outils et de librairies
 - Existe pour toute sorte de langage (PHP, javascript, …)
-- Frameword PHP : Laravel, Symphony, ...
+- Framework PHP : Laravel, Symphony, ...
 - Ne remplace pas la connaissance d’un langage
+
+![Utilisation framework](/ressources/tutoLaravel/PHP-Framework.png)
 
 
 ## Laravel
@@ -42,15 +44,15 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 
 - Donner les droits à votre projet pour apache:
 ```
-	chown -R root.www-data laravel/
-	find laravel -type d -exec chmod 750 {} \;
-	find laravel -type f -exec chmod 640 {} \;
-	find laravel/storage -type d -exec chmod 770 {} \;
-	find laravel/storage -type f -exec chmod 660 {} \;
+	chown -R root.www-data catalogue/
+	find catalogue -type d -exec chmod 750 {} \;
+	find catalogue -type f -exec chmod 640 {} \;
+	find catalogue/storage -type d -exec chmod 770 {} \;
+	find catalogue/storage -type f -exec chmod 660 {} \;
 ```
 
 - Vérifier dans le navigateur : 
-	http://localhost/CDAWProject/public/catalogue
+	http://localhost:8080/catalogue/public
 
 ## Principaux dossiers et fichiers
 - app : cœur de l’application (controller, model, helper, …) 

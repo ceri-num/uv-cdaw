@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Film;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class FilmSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,8 +15,12 @@ class FilmSeeder extends Seeder
      */
     public function run()
     {
-        Film::factory()
-            ->count(10)
-            ->create();
+        //Etape 1
+        DB::table('categories')->insert([
+             'name' => Str::random(10)
+            ]);
+
+        //Etape 2
+        //\App\Models\Category::factory(10)->create();
     }
 }

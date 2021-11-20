@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class FilmFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,8 +15,7 @@ class FilmFactory extends Factory
     {
         return [
             'category_id' => rand(1, 5),
-            'name' => implode(" ", $this->faker->words(2)),
-            'director' => $this->faker->name(),
+            'name' => $this->faker->unique()->word // A single unique word
         ];
     }
 }
