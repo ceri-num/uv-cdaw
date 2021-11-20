@@ -15,7 +15,12 @@ Ci-dessous une procédure d'installation qui ~~devrait~~ règler le problème.
     Ubuntu-20.04    Stopped         1
     ```
 
-    Si la version de votre Ubuntu est 1 au lieu de 2, vous devez la migrer en 2 avec la commande: `wsl --set-version Ubuntu-20.04 2`
+    Si la version de votre Ubuntu est 1 au lieu de 2, vous devez la migrer en 2 avec la commande:
+
+    ```
+    wsl --set-version Ubuntu-20.04 2
+    ```
+
     Bien contrôler que la version WSL de ubuntu est 2.
 
 3. Dans les préférences de l'application Docker :
