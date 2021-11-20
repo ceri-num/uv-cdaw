@@ -41,6 +41,9 @@ Ci-dessous une procédure d'installation qui ~~devrait~~ règler le problème.
     # NE PAS LANCER "reopen in container"
     ```
 
+    Vous pouvez utiliser votre dépôt git.
+    Sinon, j'ai mis à jour le dépôt : `https://github.com/ceri-num/uv-cdaw-template` en corrigant un maximum de problème rencontrés sur vos machines ce qui vous évite de faire l'étape suivante. Par contre, j'ai fait plusieurs modifications comme changer les numéros de ports pour minimiser les conflits donc ce n'est plus `http://localhost:8080` mais  `http://localhost:5080` par exemple (cf [Readme](https://github.com/ceri-num/uv-cdaw-template/blob/master/README.md)).
+
 5. Editer le fichier `.devcontainer/docker-compose.yml`
    Enlever le `/` à la fin de la ligne 11:
 
@@ -52,7 +55,7 @@ Ci-dessous une procédure d'installation qui ~~devrait~~ règler le problème.
 
 6. Dans vscode, F1 `>rebuild container`
 
-7. Tester `http://localhost:8080`
+7. Tester `http://localhost:8080` (ou `http://localhost:5080` pour ceux qui sont re-partis de mon template)
 
 ## Installer Laravel
 
