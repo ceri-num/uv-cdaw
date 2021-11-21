@@ -16,3 +16,5 @@ php artisan key:generate
 - Installer npm (voir sur google pour votre système d'exploitation)
 
 - l'url sera désormais : http://localhost/catalogue/public/films
+
+- Attention, dans `guest.blade.php` et `app.blade.php`, remplacez `mix('css/app.css')` par `asset(mix('css/app.css'))` et `mix('js/app.js')` par `asset(mix('js/app.js'))`
