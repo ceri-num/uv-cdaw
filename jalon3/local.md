@@ -14,3 +14,5 @@ composer update
 php artisan key:generate
 ```
 - Installer npm (voir sur google pour votre système d'exploitation)
+
+- l'url sera désormais : http://localhost/catalogue/public/films
