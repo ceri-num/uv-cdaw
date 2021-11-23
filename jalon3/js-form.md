@@ -50,7 +50,7 @@ Exemple :
 <form id="form1">
             <input type="text" value="text"><br>
             <input type="submit" value="Submit">
-        </form>
+</form>
 ```
 ```js
 "use strict";
