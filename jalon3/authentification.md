@@ -16,3 +16,5 @@ Pour ne pas avoir à relancer la génération des js et css à chaque fois, il e
 ```
 npm run watch
 ```
+
+- Attention, dans `guest.blade.php` et `app.blade.php`, remplacez `mix('css/app.css')` par `asset(mix('css/app.css'))` et `mix('js/app.js')` par `asset(mix('js/app.js'))`

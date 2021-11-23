@@ -14,7 +14,17 @@ composer update
 php artisan key:generate
 ```
 - Installer npm (voir sur google pour votre système d'exploitation)
-
+Pour info, commande pour mettre à jour npm
+```
+npm install -g npm@8.1.4
+```
+Pour installer NPM dans docker, ajouter dans .devcontainer/php/Dockerfile
+```
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    npm
+RUN npm install npm@latest -g && \
+    npm install n -g && \
+    n latest
+```
 - l'url sera désormais : http://localhost/catalogue/public/films
-
-- Attention, dans `guest.blade.php` et `app.blade.php`, remplacez `mix('css/app.css')` par `asset(mix('css/app.css'))` et `mix('js/app.js')` par `asset(mix('js/app.js'))`
