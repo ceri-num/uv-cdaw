@@ -6,12 +6,75 @@
 * Définir vos fonctions de callbacks
 * Supprimer du contenu en réaction à une action utilisateur (click, frappe de touche, etc...)
 
-Stopper le bubbling : fonction de event : stopPropagation()
+## Cours
+### Généralité
+Un évènement est **le signal** que quelque chose s'est produit, généralement sur votre page HTML. En JavaScript, il s'agit d'une abstraction du pattern observeur/observable. Par exemple :
+
+**Mouse events**
+* `click` – quand la souris clique sur un élément (sur les dispositif tactile, cela survient au tap).
+* `contextmenu` – quand un clique droit survient.
+* `mouseover` / `mouseout` – quand le cursor de la souris survole / sort d'un élement.
+
+**Form element events**
+* `submit` – quand un visiteur soumet un `<form>`.
+* `focus` – quand un visiteur focus un élément d'un form, e.g. `<input>`.
+
+**Document events**
+* `DOMContentLoaded` – quand le HTML est totalement interprété, et donc que le DOM est totalement construit.
+
+**CSS events**
+* `transitionend` - quand une animation CSS se termine.
+
+Pour réagir à ces évènements, on utilise des **handler** (gestionnaires). Ce sont des fonctions qui s'exécutent dans le cas où un évènement précis survient. Pour cela, on écoute avec un **listener** ledit évènement.
+
+```javascript
+function myhandler(e){ mycodehere; }
+
+var monbutton = document.getElementById("mb");
+mb.addEventListener("click", myhandler(e)); 
+// peut aussi être une fonction anonyme : ("click", function(e){ mycodehere; });
+// ou une arrow function : ("click", (e) => mycode);
+```
+
+{% hint style="success" %}
+Vous pouvez aussi utiliser des objets comme handler. L'un des avantages est de permettre une approche de *délégation par objet*. Un petit exemple dans mon [cours ici](https://ceri-num.gitbook.io/uv-frontend/javascript/event#handler-with-an-object).
+{% endhint %}
+
+Quand un évènement survient, un **objet event** généralement est généré, et contient un nombre d'information imporante pour traiter correctement l'action réalisée. La propriété `target` de l'évènement contient le noeud qui subit l'action (le type de noeud est déréférencable via la propriété `tagName` de target).
+
+### Bubbling
+Le principe du *bubbling* est le suivant : quand un évènement survient sur un élément de votre page, le handler associé à cet élément est appelé, **puis l'évènement est passé à l'élément parent** qui appelle son handler (s'il en a un) pour cet évènement, et ainsi de suite jusqu'au *root* de la page.
+
+![Exemple de "bubbling" d'évènements](../ressources/js/event-order-bubbling.svg)
+
+Ce principe est très utile pour attacher des comportements génériques ou rendre des noeuds imbriqués réactif à un même évènement. Par exemple :
+
+```html
+<div onclick="alert('mon handler est appelé')">
+  <p>Même si vous cliquez <code>ICI</code>.
+</div>
+```
+
+Quid de la propriété `target` de l'évènement alors ? C'est simple :
+* `event.target` correspond toujours au noeud le plus profond qui a reçu l'évènement (*i.e.* le premier élément de la page qui a reçu l'évènement) ;
+* `this` ou `event.currentTarget` (en fonction de si vous utilisez des fonctions anonymes ou des arrows) dans un handler permet de savoir quel élément est en train de traiter l'évènement.
+
+En reprenant l'exemple précédent, en cliquant sur l'élément `code` :
+* `event.target.tagName` = `code`
+* `this.tagName` = `div`
+
+Alors qu'en cliquant sur la `div` :
+En reprenant l'exemple précédent, en cliquant sur l'élément `code` :
+* `event.target.tagName` = `div`
+* `this.tagName` = `div`
+
+Dans certains cas, on a besoin de stopper le bubbling -- par exemple lorsque un élément parent écoute le même évènement que son enfant, mais n'a pas le même handler. Si on ne supprimait pas le bubbling, et en supposant qu'on clique sur le noeud enfant, on exécuterait d'abord l'handler de l'enfant **PUIS** celui du parent ! Pour arrêter le bubbling, on invoque la fonction `stopPropagation()` de l'évènement dans un handler.
+
 
 ## Exercice d'introduction
 Pour vous aider à vous approprier l'ajout et la suppression d'handlers, considérer l'exercice suivant. Soit deux boutons HTML classique sur votre page, identifiés respectivement par `b1` et `b2`, on veut alterné le bouton qui possède un listener sur l'évènement `click`. 
 
-Aussi, lorsque la page est servi à votre client, seul `b1` possède un handler sur son évènement de `click` ; `b2` n'en possède pas. Lorsque `b1` est cliqué, il associe à `b2` un listener sur l'évènement `click`, et `b1` lui perd le sien, de tel sorte qu'en cliquant deux fois de suite sur `b1`, rien ne se passe. Le comporte est identique pour `b2` : en cliquant une fois dessus lorsqu'il s'est vu attribué son listener, il le perd et le donne de nouveau à `b1` et donc, cliquer une deuxième fois de suite sur `b2` ne fait plus rien.
+Aussi, lorsque la page est servi à votre client, seul `b1` possède un handler pour son évènement de `click` ; `b2` n'en possède pas. Lorsque `b1` est cliqué, il associe à `b2` un listener sur l'évènement `click`, et `b1` lui perd le sien, de tel sorte qu'en cliquant deux fois de suite sur `b1`, rien ne se passe. Le comporte est identique pour `b2` : en cliquant une fois dessus lorsqu'il s'est vu attribué son listener, il le perd et le donne de nouveau à `b1` et donc, cliquer une deuxième fois de suite sur `b2` ne fait plus rien.
 
 ## Exercice
 Dans cette exercice, nous implémenterons un bouton "like" sur nos médias.
@@ -275,7 +338,7 @@ Très bien. Imaginez maintenant que vous êtes en train de consulter le catalogu
 </table>
 ```
 
-3. Vous allez **déléguer la gestion du clique** à votre `table` en jouant avec la propriété `target` de l'évènement `click` ; cela évitera d'avoir une quantité faramineuse de listener sur votre page et améliorera drastiquement la qualité et la maintenabilité de votre code. Du coup, aucun `td` ne doit directement avoir de handler `click`. Faîtes apparaître une alerte pour indiquer que l'élément `Mx` à bien été ajouté à la playlist.
+3. Vous allez **déléguer la gestion du clique** à votre `table` en jouant avec la propriété `target` de l'évènement `click` ; cela évitera d'avoir une quantité faramineuse de listener sur votre page et améliorera drastiquement la qualité et la maintenabilité de votre code. Du coup, aucun `td` ne doit directement avoir de handler ni de listener `click`. Faîtes apparaître une alerte pour indiquer que l'élément `Mx` à bien été ajouté à la playlist.
 
 {% hint style="warning" %}
 Attention, dans votre `table`, il n'y a pas que des `td` ! Vous devez donc vérifier si le target est bien un `td`. Vous pouvez utiliser la propriété `tagName` de votre target pour cela (comme pour l'exercice précédent avec `th` donc).
