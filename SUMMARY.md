@@ -22,29 +22,29 @@
 * [HTTP](jalon2/HTTP.md)
 * [REST](jalon2/REST.md)
 * [PHP](jalon2/PHP.md)
-<!-- * [MVC](jalon2/MVC.md) -->
 * [Présentation Laravel](jalon2/presentation.md)
 * [Découverte de Laravel](jalon2/decouverte.md)
-* [CRUD](jalon2/crud.md)
 * [Attentes](jalon2/jalon2.md)
 
 ## Jalon 3
 
+* [Local](jalon3/local.md)
 * [Authentification](jalon3/authentification.md)
 * [Tests](jalon3/tests.md)
+* [JS (1/5) — Introduction](jalon3/js-intro.md)
+* [JS (2/5) — Manipulation du DOM](jalon3/js-dom.md)
+* [JS (3/5) — Formulaire](jalon3/js-form.md)
+* [JS (4/5) — Évènements](jalon3/js-events.md)
+* [JS (5/5) — Asynchronicité](jalon3/js-async.md)
 * [Attentes](jalon3/jalon3.md)
-* [JS (1/5) — Introduction](js-intro.md)
-* [JS (2/5) — Manipulation du DOM](js-dom.md)
-* [JS (3/5) — Évènements](js-events.md)
-* [JS (4/5) — Formulaire](js-form.md)
-* [JS (5/5) — Asynchronicité](js-async.md)
 
 ## Jalon 4 : Projet complet
 
 * [Sujet Projet 2021](Projet/npp.md)
 
-## Bibliography
+## Annexes
 
 * [Bibliography](infos/bib.md)
+* [Docker on Windows](install/dockerWSL.md)
 
 

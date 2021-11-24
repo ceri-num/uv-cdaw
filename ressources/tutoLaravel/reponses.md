@@ -44,10 +44,11 @@ DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_DATABASE=medias
 DB_USERNAME=root
+DB_PASSWORD=root
 ```
 
 # Réponse 7
-10
+1
 
 # Réponse 8
 La commande AUTO_INCREMENT est utilisée dans le langage SQL afin de spécifier qu’une colonne numérique avec une clé primaire (PRIMARY KEY) sera incrémentée automatiquement à chaque ajout d’enregistrement dans celle-ci. (<a href="https://sql.sh/cours/create-table/auto_increment" target="_blank">source</a>).

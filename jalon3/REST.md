@@ -77,9 +77,10 @@ Mais nous n'aborderons pas cela dans ce cours.
 
 ## Exercice
 
-Choisir une API Web publique (par exemple dans la liste : [public Web API](https://github.com/public-apis/public-apis)). Exemples intéressants :
+Choisir une API Web publique (par exemple dans la liste : [public Web API	](https://github.com/public-apis/public-apis)). Exemples intéressants :
 
 - [https://imdb-api.com/](https://imdb-api.com/) cette API Web permet d'accéder aux données d'IMDB (bases de données sur les films et séries). Il suffit de se créer un compte et on peut par exemple récupérer en JSON, les 250 meilleurs films (selon IMDB), ...
+- [https://pokeapi.co/](https://pokeapi.co/)
 - [https://punkapi.com/](https://punkapi.com/)
 - [https://ladataverte.fr/](https://ladataverte.fr/)
 

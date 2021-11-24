@@ -102,14 +102,18 @@ Attention, l'ordre d'exécution des migrations est importante (au niveau des cle
 
 Partie 2 : l'alimentation
 - Télécharger le fichier [CategorySeeder.php](../ressources/tutoLaravel/bd/seeders/CategorySeeder.php) et le déposer dans le répertoire database/seeders
-- Analyser la méthode run (ajout de films). Question : combien de film le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
+- Analyser la méthode run (ajout de categories). Question : combien de categories le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
 - Dans le Terminal, exécuter cette ligne pour alimenter la table `Categories`
 ```
-php artisan db:seed
+php artisan db:seed --class=CategorySeeder
+```
+Vous avez aussi la possibilité d'ajouter l'appel au CategorySeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
+```
+php artisan db:seed --class=CategorySeeder
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
-- Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factories/CategoryFactory.php) et le déposer dans le répertoire database/seeders
-- Vider la table `Categories`et exécuter le seeder.
+- Télécharger le fichier [CategoryFactory.php](../ressources/tutoLaravel/bd/factories/CategoryFactory.php) et le déposer dans le répertoire database/factories
+- Vider la table `Categories` et exécuter le seeder.
 
 Partie 3 : le modèle
 - Créer le modèle `Categorie` (il est aussi possible de générer le modèle et le controller associé).
@@ -123,17 +127,17 @@ Question
 Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
 
 A vous
-- Créer la migration et le seeder pour Film.
-Un film est identifié par son `ID`, il a une `category`, un `nom` et un `chemin vers la miniature du film`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
+- Créer la migration pour Film.
+Un film est identifié par son `ID`, il a une `category`, un `name`, un `director`  et un `path` (chemin vers la miniature du film). Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
 php artisan make:migration films_table
 ou
 php artisan make:migration films_table --create=films
 		(Avec l’option create qui crée la table films)
-
-php artisan make:seeder FilmSeeder
 ```
+- Remplir la table `films` (une cinquantaine)
+
 Avez-vous remarqué la différence entre le nom de la table `films` et le modèle associé `Film` ? Pourquoi ?
 
 ## Le tout
-- Afficher tous les films grâce à une <a href="https://datatables.net/examples/styling/bootstrap5.html" target="_blank">datatable bootstrap</a>. Bien découper Route/Controller/Modèle/Vue.
+- Afficher tous les films grâce à un tableau. Bien découper Route/Controller/Modèle/Vue.
