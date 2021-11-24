@@ -179,9 +179,6 @@ Un reviver vous permet d'appliquer un comportement spécifique lorsqu'un couple 
 
 https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON
 
-## Faire bootstrap datatable
-
-
 ## Exercice JSON
 ### Linéariser l'objet suivant 1
 Supposons que vous voulez communiquer à votre serveur de manière asynchrone la création d'un nouveau média :
