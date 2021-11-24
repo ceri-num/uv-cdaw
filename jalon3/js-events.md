@@ -31,7 +31,7 @@ Pour réagir à ces évènements, on utilise des **handler** (gestionnaires). Ce
 function myhandler(e){ mycodehere; }
 
 var monbutton = document.getElementById("mb");
-mb.addEventListener("click", myhandler(e)); 
+mb.addEventListener("click", myhandler); 
 // peut aussi être une fonction anonyme : ("click", function(e){ mycodehere; });
 // ou une arrow function : ("click", (e) => mycode);
 ```
@@ -80,7 +80,7 @@ Aussi, lorsque la page est servi à votre client, seul `b1` possède un handler 
 Dans cette exercice, nous implémenterons un bouton "like" sur nos médias.
 
 Imaginons le code HTML du bouton
-```HTML
+```html
 <div>
     <h4>Mon média 1</h4>
     <div class="like-b">
@@ -91,7 +91,7 @@ Imaginons le code HTML du bouton
 ```
 
 Stylisons le un peu. Importez directement dans votre page ou *via* un fichier le CSS suivant (car je suis gentil alors que j'écris les lignes pendant mon WE ! grr)
-```CSS
+```css
 .like-b > i {
   cursor:pointer;
   padding:10px 12px 8px;
@@ -160,7 +160,7 @@ Le corps de la fonction ne fait que deux lignes.
 Dans cet exercice, vous réagirez à certaines touches clavier pour parcours votre bibliothèque de média (par exemple avec Ctrl + arrow left/right).
 
 Vous pouvez partir du code HTML suivant
-```HTML
+```html
 <div>
     <div id="focus"></div>
 
@@ -191,7 +191,7 @@ Vous aurez encore besoin de jouer avec la propriété CSS `visibility:hidden`.
 
 ## Exercice
 Imaginons maintenant qu'en tant qu'administrateur votre serveur peut vous renvoyer un tableau d'utilisateurs. Vous voulez pouvoir l'ordonner de manière ascendante. Soit le code HTML suivant :
-```HTML
+```html
 <html>
 
 <head>
@@ -293,7 +293,7 @@ function sortGrid(colNum, type) {
 ## Exercice -- délégation d'évènements
 Cet exercice va vous servir à bien comprendre le concept de capture et de "Bubbling" des évènements.
 
-1. Recopiez et jouer avec le code suivant : ```HTML
+1. Recopiez et jouer avec le code suivant : ```html
 <html>
 <head>
     <style>
@@ -315,7 +315,7 @@ Cet exercice va vous servir à bien comprendre le concept de capture et de "Bubb
 2. Que constatez vous ?
 
 Très bien. Imaginez maintenant que vous êtes en train de consulter le catalogue de média, sous forme de grille, pour les ajouter à une playlist :
-```HTML
+```html
 <table>
     <tr>
         <th colspan="3"><em>MediaType</em> : Click on the media you want to add/remove</th>
@@ -349,7 +349,7 @@ Attention, dans votre `table`, il n'y a pas que des `td` ! Vous devez donc véri
 ## Exercice -- image de profil
 Dans cette partie, nous travaillerons à uploader une image de profil pour un utilisateur donner. Considérons le code HTML suivant :
 
-```HTML
+```html
 <div id="preview"></div>
     
 <input id="upload" type="file" value="Upload your image">
@@ -358,7 +358,7 @@ Dans cette partie, nous travaillerons à uploader une image de profil pour un ut
 1. Attacher un handler à l'input qui appellera la fonction `handleFiles` et qui lui enverra la liste des fichiers.
 
 Soit la fonction `handleFiles` suivante, à compléter, qui permet de créer une balise image et d'afficher le contenu de l'image dans la div `preview` :
-```JavaScript
+```javascript
 function handleFiles(files) {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
@@ -377,7 +377,7 @@ function handleFiles(files) {
 3. On veut maintenant cacher le bouton `input` qui est moche, et ne réagir que sur le clique de l'avatar pour modifier ce dernier. Faîtes les modifications nécessaires.
 
 Nous allons maintenant gérer le drag and drop d'une image qui s'affichera toujours dans le `preview`. Modifier votre code HTML en rajoutant une zone de D&D
-```HTML
+```html
 <div id="preview"></div>
     
 <input id="upload" type="file" value="Upload your image">
