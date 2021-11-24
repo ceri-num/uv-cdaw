@@ -4,5 +4,5 @@
 
 - Création de compte
 - Connexion via un login / mot de passe
-- Voir/modifier profil
+- Voir/modifier profil (dont MàJ de l'avatar)
 - Déconnexion

@@ -49,7 +49,7 @@ Vous devez avoir remarqué depuis le temps l'utilisation des fonctions anonymes 
 
 Exemple pour l'opérateur d'introspection :
 
-```js
+```javascript
 function Personne () {
   // Le constructeur Personne() définit `this` comme lui-même.
   this.age = 0;

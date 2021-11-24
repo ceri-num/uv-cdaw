@@ -45,7 +45,7 @@ Soit la page HTML suivante :
 2. Créer un script qui changer le background des `p` qui sont de la classe `descr` uniquement.
 
 **Vous pouvez stocker un noeud dans une variable, et accéder à ses noeuds enfants !** Pour cela, vous pouvez faire par exemple:
-```js
+```javascript
 let monCaroussel = document.getElementById("caroussel");
 ```
 
@@ -92,7 +92,7 @@ Dans cet exercice, supposons que vous êtes administrateur ou modérateur, et qu
 
 Une partie de votre rôle est de pouvoir modifier et supprimer des commentaires, et pourquoi pas en rajouter de nouveaux. En partant du code script ci-dessous (la gestion des events sera fait dans les prochains chapitres), réaliser les exercices suivants :
 
-```js
+```javascript
 "use strict";
 
 function modify(e)

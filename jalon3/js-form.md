@@ -10,7 +10,7 @@
 ### Généricité
 Les formulaires et les éléments de contrôle d'une page comme `<input>` ont de nombreuses propriétés et évènements propres. Il appartiennent à une collection nommée et ordonnée, appelée `document.forms`. Vous pouvez donc y accéder de deux manières :
 
-```js
+```javascript
 "use strict";
 
 document.forms.myform; //récupère le formulaire myform
@@ -52,7 +52,7 @@ Exemple :
             <input type="submit" value="Submit">
 </form>
 ```
-```js
+```javascript
 "use strict";
 
 function myVerif(e)

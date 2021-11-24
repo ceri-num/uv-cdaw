@@ -68,7 +68,7 @@ Vous pouvez aussi récupérer des scripts directement via protocole http/s en ut
 Vos fichiers `.js` de la section précédente s'exécutent directement, sans contrôle et possibilité de les rappeler. Néanmoins, une fois inclus dans votre page, ils sont connus des autres scripts subséquents.
 
 Vous pouvez entourer vos alertes par le mot clef fonction
-```js
+```javascript
 function mafonction(){
     alert("Number One");
 }
@@ -92,7 +92,7 @@ JavaScript requiert que vous codiez **PROPREMENT** ! C'est un langage de script 
 
 Un [exemple](https://www.destroyallsoftware.com/talks/wat), ou un autre :
 
-```js
+```javascript
 var arr = [];
 arr.length → 0
 arr[3] → "undefined" // No array bounds exception
