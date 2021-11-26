@@ -145,6 +145,11 @@ Stylisons le un peu. Importez directement dans votre page ou *via* un fichier le
   100% {padding:10px 12px 8px;}
 }
 ```
+{% hint style="success" %}
+Il vous faudra accéder à Font Awesome pour récupérer le logo. Je vous invite à passer par le CDN suivant, en rajoutant cela dans le <head> de votre page HTML : `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">`
+
+{% endhint %}
+
 1. Que fait ce code CSS ?
 2. Avez-vous identifié comment le comportement du bouton ?
 
