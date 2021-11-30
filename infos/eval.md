@@ -34,10 +34,10 @@ Fonctionnalités implémentées :
    il manque : xxx et yyy
 - ...
 
-Méthode pour initialiser la base de données
-par les migrations / seeders ou par fichier sql.
+Méthode pour initialiser la base de données :
+par les migrations / seeders ou par fichier sql (préciser le chemin).
 
-Route
+Route :
 http://localhost/netflix_cdaw/public/accueil
 
 Identifiants sur le site :
