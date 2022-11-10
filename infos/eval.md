@@ -3,10 +3,10 @@
 Tout au long de cette UV, vous devez réaliser les exercices et les jalons qui sont décrits.
 
 Les exercices sont à réaliser seul et à livrer sur son git personnel.
-Les jalons correspondent à une partie du projet final et ils peuvent être réalisés seul ou en binôme maximum.
+Les jalons correspondent à une partie du projet final et ils peuvent être réalisés seul ou en binôme (pas plus de 2 personnes / groupe).
 Les jalons sont à livrer sur le dépôt git d'un des membres du groupe.
-Attention, les 2 membres du groupes doivent committer sur ce dépôt.
-Il faut donc que le propriétaire du dépôt donne les droits au 2eme membre du groupe.
+Attention, les 2 membres du groupes doivent committer sur ce dépôt car nous regarderons l'historique Git pour juger de l'implication de chacun.
+Il faut donc donc que le propriétaire du dépôt donne les droits au 2eme membre du groupe.
 
 ## Livraison d'un exercice ou d'un jalon
 
@@ -49,7 +49,7 @@ Bien évidemment, voud devez changer les infos fictives de ce template par les v
 1. clone de votre dépôt
    `git clone https://github.com/<pseudo_github>/xxx (<url_depot_git>)`
 2. Lecture du README.md d'un exercice ou d'un jalon
-3. Test en local via VSCode
+3. Test en local
 4. Évaluation des éléments supplémetaires dans le dépôt git : maquettes, code source, documentations (API REST, ...)
 5. Analyse de l'historique des versions
    - travail régulier ?

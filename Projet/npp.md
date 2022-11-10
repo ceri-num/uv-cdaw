@@ -1,6 +1,6 @@
-# Projet Web NetPrime+
+# Projet Web Pokemon
 
-Ce document décrit ce qui est attendu pour le projet Web de 2021 du point de vue fonctionnel.
+Ce document décrit ce qui est attendu pour le projet Web de 2022 du point de vue fonctionnel.
 
 ## Aperçu du site
 

@@ -44,7 +44,7 @@ Aidez-vous des cours HTML/CSS et de la documentation de Bootstrap CSS (cf. [Bib]
 
 ## Travail en équipe
 
-Après avoir réaliser une ou plusieurs pages à deux, répartissez-vous le travail.
+Après avoir réalisé une ou plusieurs pages à deux, répartissez-vous le travail.
 Par exemple, vous travaillez sur deux pages distinctes.
 Chacun doit commiter son travail sur le même dépôt git (celui du groupe) dans `public/jalon1`.
 Cela vous entraînera à travailler en équipe et éventuellement résoudre des conflits de versions.

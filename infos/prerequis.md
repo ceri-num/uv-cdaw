@@ -2,7 +2,6 @@
 
 * ordinateur
 * connexion internet
-* casque micro
 * inscrit à l'UV sur MLS [https://mylearningspace.imt-lille-douai.fr/course/view.php?id=434](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=434)
 
 ## Pré-requis en développement Web
@@ -18,4 +17,4 @@ L'UV CDAW nécessite d'avoir suivi l'UV IDAW. A défaut, il faut connaître :
 - [Cours HTML / CSS](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
 - [Cours JS](https://www.pierre-giraud.com/javascript-apprendre-coder-cours/)
 - [Cours PHP](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
-- [UV IDAW](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244) si besoin.
+- [UV IDAW](https://mylearningspace.imt-lille-douai.fr/course/view.php?id=244) (si besoin)
