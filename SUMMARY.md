@@ -5,6 +5,7 @@
 ## Infos
 
 * [Pré-requis](infos/prerequis.md)
+* [Sujet Projet 2022](2022/projet-pokemon.md)
 
 ## Démarrage
 
@@ -12,35 +13,36 @@
 * [Méthodologie et Evaluation](infos/eval.md)
 * [Exo1](install/exo1.md)
 
-## Jalon 1
+## UX, Maquette, Squelette HTML
 
 * [Notions d'UX Design](https://ceri-num.gitbook.io/uv-ux-design)
-* [Maquette statique](jalon1/jalon1.md)
+* [Jalon1](jalon1/jalon1.md)
 
-## Jalon 2
+## Backend
 
-* [HTTP](jalon2/HTTP.md)
-* [REST](jalon2/REST.md)
-* [PHP](jalon2/PHP.md)
-* [Présentation Laravel](jalon2/presentation.md)
-* [Découverte de Laravel](jalon2/decouverte.md)
-* [Attentes](jalon2/jalon2.md)
+* [HTTP](Backend/HTTP.md)
+* [PHP](Backend/PHP.md)
+* [REST](Backend/REST.md)
 
-## Jalon 3
+## FrontEnd
 
-* [Local](jalon3/local.md)
-* [Authentification](jalon3/authentification.md)
-* [Tests](jalon3/tests.md)
-* [JS (1/5) — Introduction](jalon3/js-intro.md)
-* [JS (2/5) — Manipulation du DOM](jalon3/js-dom.md)
-* [JS (3/5) — Formulaire](jalon3/js-form.md)
-* [JS (4/5) — Évènements](jalon3/js-events.md)
-* [JS (5/5) — Asynchronicité](jalon3/js-async.md)
-* [Attentes](jalon3/jalon3.md)
+* [Tests](FrontEnd/tests.md)
+* [JS (1/5) — Introduction](FrontEnd/js-intro.md)
+* [JS (2/5) — Manipulation du DOM](FrontEnd/js-dom.md)
+* [JS (3/5) — Formulaire](FrontEnd/js-form.md)
+* [JS (4/5) — Évènements](FrontEnd/js-events.md)
+* [JS (5/5) — Asynchronicité](FrontEnd/js-async.md)
 
-## Jalon 4 : Projet complet
+## Projet en Laravel
 
-* [Sujet Projet 2021](Projet/npp.md)
+* [Installer Laravel](Laravel/install.md)
+* [Présentation Laravel](Laravel/presentation.md)
+* [Découverte de Laravel](Laravel/decouverte.md)
+* [Jalon2](jalon2/jalon2.md)
+* [Authentification](Laravel/authentification.md)
+* [Tests](Laravel/tests.md)
+* [Jalon3](jalon3/jalon3.md)
+* [Jalon4](jalon4/jalon4.md)
 
 ## Annexes
 

@@ -3,6 +3,7 @@
 ## Fonctionnalités attendues
 
 ### Connexion
+
 - Faire des routes publiques / routes protégées
 - Création de compte
 - Connexion via un login / mot de passe

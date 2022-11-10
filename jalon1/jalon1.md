@@ -19,13 +19,13 @@ Prenez du temps pour :
 3. Ordonnez ces fonctionnalités selon ce qui vous parait important. On ne peut pas réaliser un site Web d'un seul coup et il est important d'avoir un résultat fonctionnel rapidement pour montrer aux clients (les enseignants). Donc choisissez dans quel ordre vous allez réaliser les fonctionnalités. Il vaut mieux un projet incomplet qui fonctionne parfaitement et propose une expérience utilisateur paufinée plus qu'un projet plus ambitieux où rien ne fonctionne vraiment.
 4. Sur __papier__, dessinez entre 5 et 10 pages de votre site, les infos qu'elles affiches, l'enchaînement des pages, ...
     - Essayer de qualifier l'expérience utilisateur : Par exemple, combien de clics pour réaliser telle action? ou encore, que voit l'utilisateur si telle erreur se produit ?
-5. Prenez des photos de vos dessins et committez-les sur git dans `public/jalon1/analyse/`
-6. Vous pouvez ajouter des notes dans `public/jalon1/analyse/README.md` pour mieux décrire ce que vous souhaitez réaliser et dans quel ordre.
+5. Prenez des photos de vos dessins et committez-les sur git dans `jalon1/analyse/`
+6. Vous pouvez ajouter des notes dans `jalon1/analyse/README.md` pour mieux décrire ce que vous souhaitez réaliser et dans quel ordre.
 
 ## Réaliser une maquette
 
 1. Choisissez un template Bootstrap CSS pour vous inspirer pour réaliser votre projet. Choisissez un thème gratuit et __simple__. Par exemple : https://startbootstrap.com/theme/freelancer
-2. Installez ce template dans `public/jalon1`
+2. Installez ce template dans `jalon1`
 3. Testez-le (http://localhost:8080/jalon1/)
 4. Modifiez ce template pour réaliser une maquette des pages que vous avez imaginé précédemment. Par exemple :
    - Accueil non connecté
@@ -46,7 +46,7 @@ Aidez-vous des cours HTML/CSS et de la documentation de Bootstrap CSS (cf. [Bib]
 
 Après avoir réalisé une ou plusieurs pages à deux, répartissez-vous le travail.
 Par exemple, vous travaillez sur deux pages distinctes.
-Chacun doit commiter son travail sur le même dépôt git (celui du groupe) dans `public/jalon1`.
+Chacun doit commiter son travail sur le même dépôt git (celui du groupe) dans `jalon1`.
 Cela vous entraînera à travailler en équipe et éventuellement résoudre des conflits de versions.
 L'historique des versions du jalon1 doit __impérativement__ avoir des commits des deux membres du groupe.
 

@@ -10,8 +10,8 @@
 
 1. Installer git - [https://git-scm.com/downloads](https://git-scm.com/downloads)
 2. Créer un compte github - [https://github.com](https://github.com)
-3. Forker le dépôt [https://github.com/ceri-num/uv-cdaw-template](https://github.com/ceri-num/uv-cdaw-template) sur votre compte github en *public*
-4. Renseigner l'URL de son dépôt public ici : [partage](https://partage.imt.fr/index.php/s/rXaTrsx59LPrSaJ)
+3. Créer un dépôt __CDAW__ sur votre compte github en *public*
+4. Renseigner l'URL de votre dépôt public ici : [partage](https://partage.imt.fr/index.php/s/WBXrb844nq9kcem)
 
 Tutoriels de découverte de git:
 * [Cours git](https://www.pierre-giraud.com/git-github-apprendre-cours/)

@@ -75,21 +75,25 @@ Documenter et tester une API est important et il existe des outils pour cela com
 Mais nous n'aborderons pas cela dans ce cours.
 {% endhint %}
 
-## Exercice
+## Exemples d'API
 
-Choisir une API Web publique (par exemple dans la liste : [public Web API	](https://github.com/public-apis/public-apis)). Exemples intéressants :
-
+- [Public Web API](https://github.com/public-apis/public-apis)
 - [https://imdb-api.com/](https://imdb-api.com/) cette API Web permet d'accéder aux données d'IMDB (bases de données sur les films et séries). Il suffit de se créer un compte et on peut par exemple récupérer en JSON, les 250 meilleurs films (selon IMDB), ...
 - [https://pokeapi.co/](https://pokeapi.co/)
 - [https://punkapi.com/](https://punkapi.com/)
 - [https://ladataverte.fr/](https://ladataverte.fr/)
 
+## Exercice
+
+Se connecter à l'API Web [https://pokeapi.co/](https://pokeapi.co/)
 Explorez l'API choisie en utilisant l'un des logiciels suivant :
 
 - votre navigateur Web (requêtes `GET`)
 - un plugin pour votre navigateur ([exemple](https://addons.mozilla.org/en-US/firefox/addon/restclient/))
 - [https://reqbin.com/](https://reqbin.com/)
 - le logiciel [Postman](https://www.postman.com/downloads/)
+
+Ecrire du code PHP qui se connecte à cette API, et affiche le résultat sous la forme d'un tableau dans une page Web.
 
 <!-- Dans le cas de [https://ladataverte.fr/](https://ladataverte.fr/), essayez de répondre aux questions suivantes :
 - La crise sanitaire a t-elle réduit les émissions de CO2. Comparez 2019 et 2020 pour différents pays, régions du monde ou le monde entier.
