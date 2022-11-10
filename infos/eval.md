@@ -34,10 +34,17 @@ Fonctionnalités implémentées :
    il manque : xxx et yyy
 - ...
 
-Identifiants admin sur le site :
+Méthode pour initialiser la base de données :
+par les migrations / seeders ou par fichier sql (préciser le chemin).
+
+Route :
+http://localhost/netflix_cdaw/public/accueil
+
+Identifiants sur le site :
    - utilisateur 1 : bob / leponge
    - utilisateur 1 : riri / loulou
    - admin/w;efh039
+
 
 Vidéo de démonstration : https://youtubexxxx
 ```

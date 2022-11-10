@@ -28,9 +28,9 @@
 
 ## Jalon 3
 
+* [Local](jalon3/local.md)
 * [Authentification](jalon3/authentification.md)
 * [Tests](jalon3/tests.md)
-* [CRUD](jalon2/crud.md)
 * [JS (1/5) — Introduction](jalon3/js-intro.md)
 * [JS (2/5) — Manipulation du DOM](jalon3/js-dom.md)
 * [JS (3/5) — Formulaire](jalon3/js-form.md)

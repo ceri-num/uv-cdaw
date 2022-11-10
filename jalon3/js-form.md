@@ -10,7 +10,7 @@
 ### Généricité
 Les formulaires et les éléments de contrôle d'une page comme `<input>` ont de nombreuses propriétés et évènements propres. Il appartiennent à une collection nommée et ordonnée, appelée `document.forms`. Vous pouvez donc y accéder de deux manières :
 
-```js
+```javascript
 "use strict";
 
 document.forms.myform; //récupère le formulaire myform
@@ -50,16 +50,16 @@ Exemple :
 <form id="form1">
             <input type="text" value="text"><br>
             <input type="submit" value="Submit">
-        </form>
+</form>
 ```
-```js
+```javascript
 "use strict";
 
 function myVerif(e)
 {
     let valToCheck = e.currentTarget.elements[0].value; //récupère la valeur du texte dans le premier input
 
-    if(valToCheck != "myREGEXP") //si on a une regexp pour valider la valeur, et que ça ne match pas, on ne veut pas envoyer ça au serveur !
+    if(valToCheck != "expectedValOrRegexp") //si on a une regexp pour valider la valeur, et que ça ne match pas, on ne veut pas envoyer ça au serveur !
         e.preventDefault();
 }
 
