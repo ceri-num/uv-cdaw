@@ -26,7 +26,6 @@
 
 ## FrontEnd
 
-* [Tests](FrontEnd/tests.md)
 * [JS (1/5) — Introduction](FrontEnd/js-intro.md)
 * [JS (2/5) — Manipulation du DOM](FrontEnd/js-dom.md)
 * [JS (3/5) — Formulaire](FrontEnd/js-form.md)
