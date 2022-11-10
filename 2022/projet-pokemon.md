@@ -35,16 +35,17 @@ Un __combat__ consiste en l'affrontement de 2 joueurs. Lors d'un combat, chaque 
 __Combat en mode aléatoire automatique.__ 3 pokemons sont tirés aléatoirement pour chacun des deux joueurs parmis l'ensemble des pokémons du bestiaire qu'il peut jouer. L'ordre dans lequel les pokemons combattent est tirés aléatoirement. Un pokémon utilisera systématiquement son attaque spéciale lors de sa première attaque et sa défense spéciale lors de sa première défense.
 
 __Combat en choix manuel + tour par tour.__ Les joueurs vont s'affronter à tour de rôle. Un tour a une durée fixe de 30s. Tours:
-Tour1. Joueur 1 (tiré aléatoirement) : choisi son 1er pokemon
-Tour2. Joueur 2 : choisi son 1er pokemon
-Tour3. Joueur 1 : choisi son 2eme pokemon
-Tour4. Joueur 2 : choisi son 2eme pokemon
-Tour5. Joueur 1 : choisi son 3eme pokemon
-Tour6. Joueur 2 : choisi son 3eme pokemon
-Tour7. Joueur 1 décide de l'action de son 1er pokemon sur le 1er pokemon du Joueur 2 parmi : attaque de base, attaque spéciale ou défense spéciale.
-Tour8. Joueur 2 décide de l'action de son 1er pokemon sur le 1er pokemon parmi : attaque de base, attaque spéciale ou défense spéciale.
-...
-Lorsque les points de vie d'un pokemon tombent à 0, il est remplacé par le pokemon suivant du joueur.
+
+- Tour1. Joueur 1 (tiré aléatoirement) : choisi son 1er pokemon
+- Tour2. Joueur 2 : choisi son 1er pokemon
+- Tour3. Joueur 1 : choisi son 2eme pokemon
+- Tour4. Joueur 2 : choisi son 2eme pokemon
+- Tour5. Joueur 1 : choisi son 3eme pokemon
+- Tour6. Joueur 2 : choisi son 3eme pokemon
+- Tour7. Joueur 1 décide de l'action de son 1er pokemon sur le 1er pokemon du Joueur 2 parmi : attaque de base, attaque spéciale ou défense spéciale.
+- Tour8. Joueur 2 décide de l'action de son 1er pokemon sur le 1er pokemon parmi : attaque de base, attaque spéciale ou défense spéciale.
+- ...
+- Lorsque les points de vie d'un pokemon tombent à 0, il est remplacé par le pokemon suivant du joueur.
 Le joueur dont tous les pokemons sont mort a perdu le combat.
 
 __Combat en choix aléatoire + tour par tour.__ Le choix des pokemons est tiré aléatoirement mais le combat est en tour par tour.
