@@ -17,7 +17,7 @@ All the examples are shown using **Linux (Debian)**
 {% endhint %}
 
 ## Create a new repository in Gvipers for your front end project
-Go to [Gvipers](https://gvipers.imt-lille-douai.fr/) and login.
+Go to [Gvipers](https://gvipers.imt-nord-europe.fr/) and login.
 
 It is supposed that you already have created your git repository. If not, check the [Project presentation page](../../Projet/eval.md). We will store all the content of the front end project in a `frontend` directory which will be automatically created by the Vue.js assistant.
 
@@ -49,7 +49,7 @@ This step should be made by only one person (preferably the manager of the proje
 First, clone your cdaw repository, and then access it:
 ```bash
 cd your/Path
-git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+git clone https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw
 cd projet-cdaw
 ```
 
@@ -98,7 +98,7 @@ git push
 When you commit changes to your projet created with the Vue scafolder, all dependencies are ignored (due to the `.gitignore.git` file). Therefore, your project on your remote does not have the required dependencies required to be run. This means that, when you clone your remote on your local, you will not be able to run your app out of the box. First, you will need to retrieve the dependencies of your projet. To do so, use npm:
 
 ```bash
-git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+git clone https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw
 cd projet-cdaw/frontend
 npm update
 ```
@@ -120,7 +120,7 @@ If your front end repo is not yet on your local machine:
 
 ```bash
 cd your/Path
-git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+git clone https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw
 cd projet-cdaw
 ```
 
@@ -151,13 +151,13 @@ From then, your project is correctly cloned, and all the dependencies are availa
 To sum up all the actions:
 ```bash
 cd your/Path
-git clone https://gvipers.imt-lille-douai.fr/prenom.nom/projet-cdaw
+git clone https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw
 cd projet-cdaw
 git submodule init
 git submodule update
 ```
 
 ### A word about submodules
-Once properly init and update within a parent repository, a submodule can be used exactly like a standalone repository. This means it can be modified, commited, etc... 
+Once properly init and update within a parent repository, a submodule can be used exactly like a standalone repository. This means it can be modified, commited, etc...
 
 More information: [Atlassian Submodule Tuto](https://www.atlassian.com/git/tutorials/git-submodule)

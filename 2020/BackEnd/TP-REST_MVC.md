@@ -47,7 +47,7 @@ Le code complet est :
 
 	// define __ROOT_DIR constant which contains the absolute path on disk
 	// of the directory that contains this file (index.php)
-	// e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/index.php => __ROOT_DIR = /home/luc.fabresse/public_html
+	// e.g. http://eden.imt-nord-europe.fr/~luc.fabresse/index.php => __ROOT_DIR = /home/luc.fabresse/public_html
 	$rootDirectoryPath = realpath(dirname(__FILE__));
 	define ('__ROOT_DIR', $rootDirectoryPath );
 
@@ -125,7 +125,7 @@ class Request {
    }
 
    // intialise baseURI
-   // e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/api.php => __BASE_URI = /~luc.fabresse
+   // e.g. http://eden.imt-nord-europe.fr/~luc.fabresse/api.php => __BASE_URI = /~luc.fabresse
    // e.g. http://localhost/CDAW/api.php => __BASE_URI = /CDAW
    protected function initBaseURI() {
       // $this->baseURI = TODO
@@ -134,10 +134,10 @@ class Request {
    // intialise controllerName et uriParameters
    // controllerName contient chaîne 'default' ou le nom du controleur s'il est présent dans l'URI (la requête)
    // uriParameters contient un tableau vide ou un tableau contenant les paramètres passés dans l'URI (la requête)
-   // e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/api.php
+   // e.g. http://eden.imt-nord-europe.fr/~luc.fabresse/api.php
    //    => controllerName == 'default'
    //       uriParameters == []
-   // e.g. http://eden.imt-lille-douai.fr/~luc.fabresse/api.php/user/1
+   // e.g. http://eden.imt-nord-europe.fr/~luc.fabresse/api.php/user/1
    //    => controllerName == 'user'
    //       uriParameters == [ 1 ]
    //

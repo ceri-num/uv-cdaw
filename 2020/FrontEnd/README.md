@@ -7,4 +7,4 @@ Lecture about Client/Front Side, mostly:
 * [REST API](rest/README.md)
 
 ## Author
-* [Alexis Lebis](https://gvipers.imt-lille-douai.fr/alexis.lebis)
+* [Alexis Lebis](https://gvipers.imt-nord-europe.fr/alexis.lebis)
