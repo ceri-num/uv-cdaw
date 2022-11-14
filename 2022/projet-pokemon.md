@@ -55,7 +55,7 @@ __Combat en choix aléatoire + tour par tour.__ Le choix des pokemons est tiré 
 
 ## Gains de victoire
 
-Lorsqu'il a gagné 1 combat, le joueur gagne une énergie tirée aléatoirement.
+Lorsqu'il a gagné 1 combat, le joueur gagne une énergie.
 Lorsqu'il a gagné 10 combats, un joueur gagne un niveau.
 
 ## Evolutions possibles
