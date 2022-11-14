@@ -1,13 +1,11 @@
-# Jalon 3 : site connecté
+# Jalon 3 : Attentes
 
 ## Fonctionnalités attendues
+- MCD MLD au format pdf ou jpg ou png
+- Les migrations et seeders pour créer votre base de données remplie
 
-### Connexion
+## Rendu
+Si ce n'est pas encore fait :scream: , poussez votre code sur GIT. Remplissez bien tout ce qui est demandé pour la livraison d'un jalon. Voilà, vous avez fini le 3ème jalon.
+[Instructions](../infos/eval.md)
 
-- Faire des routes publiques / routes protégées
-- Création de compte
-- Connexion via un login / mot de passe
-- Voir/modifier profil (dont MàJ de l'avatar)
-- Déconnexion
 
-- Mettre en place 2-3 tests de l'application
