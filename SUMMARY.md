@@ -37,11 +37,11 @@
 * [Installer Laravel](Laravel/install.md)
 * [Présentation Laravel](Laravel/presentation.md)
 * [Découverte de Laravel](Laravel/decouverte.md)
-* [Jalon2](jalon2/jalon2.md)
+* [Jalon2](Laravel/jalon2.md)
 * [Authentification](Laravel/authentification.md)
 * [Tests](Laravel/tests.md)
-* [Jalon3](jalon3/jalon3.md)
-* [Jalon4](jalon4/jalon4.md)
+* [Jalon3](Laravel/jalon3.md)
+* [Jalon4](Laravel/jalon4.md)
 
 ## Annexes
 

@@ -1,6 +1,6 @@
 # Jalon 1 : Maquette statique du projet
 
-Les objectifs de ce premier jalon sont:
+Les objectifs de ce premier jalon sont :
 - réfléchir à la maquette de votre site Web projet en analysant le sujet du projet
 - réaliser une maquette __fonctionnelle__ HTML / CSS de votre projet
 

@@ -40,7 +40,7 @@ Deux solutions sont possibles pour déployer un site web en local sur sa machine
 
 ### Tester son environnement
 
-Au final, sur votre machine locale devez oblogatoirement avoir :
+Au final, sur votre machine locale, vous devez oblogatoirement avoir :
 
 * Un serveur Mysql
 * PhpMyAdmin accessible via une URL locale comme : [http://localhost:8080](http://localhost:8080) (attention le port peut être différent pour vous)
