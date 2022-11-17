@@ -40,7 +40,7 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 
 - Création du projet "pokemons" avec la dernière version stable de Laravel :
 ```
-	composer create-project --prefer-dist laravel/laravel catalogue
+	composer create-project --prefer-dist laravel/laravel pokemon
 ```
 - Lancer un serveur web :
 ```
