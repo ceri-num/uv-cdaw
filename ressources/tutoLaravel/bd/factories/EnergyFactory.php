@@ -14,7 +14,6 @@ class EnergyFactory extends Factory
     public function definition()
     {
         return [
-            'energy_id' => rand(1, 5),
             'name' => $this->faker->unique()->word // A single unique word
         ];
     }
