@@ -4,6 +4,10 @@
 
 * Savoir créer, intégrer et appeler du code JavaScript dans sa page
 
+## Bibliographie
+
+Un [cours](https://www.pierre-giraud.com/javascript-apprendre-coder-cours/) très bien fait.
+
 ## Script JS
 
 ### Cours
@@ -88,14 +92,14 @@ Dans le cas d'une fonction, `let` créer une variable uniquement visible dans le
 
 ## Point important
 
-JavaScript requiert que vous codiez **PROPREMENT** ! C'est un langage de script qui interprète beaucoup de chose... Donc faites attention et soyez disciplinez !
+JavaScript requiert que vous codiez **PROPREMENT** ! C'est un langage de script qui interprète beaucoup de chose... Donc faites attention et soyez discipliné !
 
 Un [exemple](https://www.destroyallsoftware.com/talks/wat), ou un autre :
 
 ```javascript
 var arr = [];
 arr.length → 0
-arr[3] → "undefined" // No array bounds exception
+arr[3] → undefined // No array bounds exception
 arr[3] = "hi";
 arr.length → 4 // Only one element has been added, but at the third index, misleading the length counter
 arr["3"] → "hi" // Apparently "3" is coerced into a number
@@ -105,15 +109,8 @@ arr[3] → "undefined" // 7 lines above, length was "0"...
 ```
 
 {% hint style="danger" %}
-Vous utiliserez toujours `"use strict";` au début de tous vos script `js` ; sinon je me fache !
+Bonnes pratiques :
+- toujours utiliser `"use strict";` au début de tous vos script `js` ([strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- toujours un point virgule à la fin de vos instructions
+- toujours utiliser des fichiers js plutôt que des instructions "plain text"
 {% endhint %}
-
-{% hint style="danger" %}
-Vous mettrez toujours un point virgule à la fin de vos instructions ; sinon je me fache !
-{% endhint %}
-
-{% hint style="danger" %}
-Vous utiliserez toujours des fichiers js plutôt que des instructions "plain text" ; sinon je me fache !
-{% endhint %}
-
-## JS, Laravel et blade

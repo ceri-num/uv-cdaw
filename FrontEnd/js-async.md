@@ -19,7 +19,7 @@ Attention ! L'asynchronicité ne sous-entends pas multi-coeur, ni multi-threadin
 ### Notion de Callback
 Une fonction de callback est une fonction $$f$$ (généralement anonyme) qui est passée à une autre fonction $$g$$ qui va l'éxecuter ultérieurement. Cette technique est largement utilisée dans l'asynchronicité.
 
-Exemple de callback avec une fonction du langage JavaScript 
+Exemple de callback avec une fonction du langage JavaScript
 ```javascript
 setTimeout(function(){ alert("I'm callback!"); }, 3000);
 ```
@@ -299,4 +299,4 @@ Vous pouvez accéder aux data-attributes *via* `monElement.dataset.leNomApresDat
 2. Lorsque vous cliquez sur votre média, récupérez les informations relatives qui sont liées, et enrichissez le champ description ;
 3. Lorsque vous survolez votre média, le trailer associé doit se lancer. Vous utiliserez une balise `iframe` ;
 4. Maintenant, on ne veut plus faire d'autres requête au serveur si on a déjà demandé au serveur les informations pour un media spécifique. Par exemple, si on clique sur le media, et ensuite qu'on le survole, rien ne sera demandé au serveur dans ce deuxième évènement et le client réutilisera les informations stockées.
-5. Faîtes la même chose, mais en utilisant `XMLHttpRequest` à la place de `fetch` ! 
+5. Faîtes la même chose, mais en utilisant `XMLHttpRequest` à la place de `fetch` !

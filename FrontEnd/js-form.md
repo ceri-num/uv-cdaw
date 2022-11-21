@@ -1,6 +1,6 @@
 # Gestion des formulaires
 
-## Objectif pour le projet 
+## Objectif pour le projet
 
 * Savoir gérer des formulaires plus ou moins complexes
 * Être capable d'attacher des comportements au formulaire, notamment à une adresse mail
@@ -33,7 +33,7 @@ En fonction des éléments, les attributs disponibles varies. Par exemple, pour 
 En général, lors d'un formulaire, il est intéressant d'avoir recourt à du JS pour rajouter de l'intéractivité sur la page, ainsi que des contrôles -- ces derniers permettent de décharger le serveur.
 
 {% hint style="danger" %}
-Votre serveur **DOIT TOUJOURS, TOUJOURS** vérifier les données reçus, même si votre client les vérifie également ; JS peut être bypassé facilement et des données fausses/malicieuses peuvent être injectées facilement.
+Votre serveur **DOIT TOUJOURS, TOUJOURS** vérifier les données reçues, même si votre client les vérifie également. En effet, JS peut être contourné facilement et des données fausses/malicieuses peuvent être injectées facilement (cf. challenges de sécurité Web client sur [root-me](http://root-me.org)).
 {% endhint %}
 
 Trois évènements nous intéresses ici : le `change`, l'`input` et le `submit`.
@@ -78,7 +78,7 @@ Il est également possible de submit manuellement un formulaire en JS grâce à 
 À partir de là, vous pouvez forcer des éléments à avoir le focus, et aussi vous assurer que des champs sont correctement remplis au moment d'un `focusout`.
 
 {% hint style="info" %}
-Toutefois, je vous conseil maintenant d'utiliser l'attribut `required` et `pattern` HTML !
+Toutefois, je vous conseille maintenant d'utiliser l'attribut `required` et `pattern` HTML !
 {% endhint %}
 
 Pour ordonner l'ordre des tabulations, vous pouvez utiliser l'attribut HTML `tabindex`. Par exemple :

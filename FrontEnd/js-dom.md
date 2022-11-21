@@ -50,7 +50,7 @@ let monCaroussel = document.getElementById("caroussel");
 ```
 
 3. En récupérant le caroussel, changer le background du premier paragraphe.
-4. Une manière pour faire croire à l'utilisateur qu'on l'on a supprimer des éléments sur une page consiste simplement à les masquer grâce à du CSS: ils restent cependant présent dans le DOM et peuvent être démasqués à tout moment. 
+4. Une manière pour faire croire à l'utilisateur qu'on l'on a supprimé des éléments sur une page consiste simplement à les masquer grâce à du CSS: ils restent cependant présent dans le DOM et peuvent être démasqués à tout moment.
 5. N'hésitez pas à jouer avec cet exemple. Vous pouvez ajouter des éléments à un DOM, les modifier et aussi les supprimer. Vous verrez ça dans le prochain exercice.
 
 ## Exercice 3 -- Simulation d'une interface de modération
