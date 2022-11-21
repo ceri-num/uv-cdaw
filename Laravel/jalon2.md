@@ -3,6 +3,7 @@
 ## Fonctionnalités attendues
 
 - Affichage de Pokémons avec leur énergie dans un tableau (Bestiaire)
-- Remplissage de la base de données
 
-- MCD MLD au format pdf
+## Rendu
+Si ce n'est pas encore fait :scream: , poussez votre code sur GIT. Remplissez bien tout ce qui est demandé pour la livraison d'un jalon. Voilà, vous avez fini le 2ème jalon.
+[Instructions](../infos/eval.md)

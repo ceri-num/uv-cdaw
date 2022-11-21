@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class CategorySeeder extends Seeder
+class EnergySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,11 @@ class CategorySeeder extends Seeder
     public function run()
     {
         //Etape 1
-        DB::table('categories')->insert([
+        DB::table('energy')->insert([
              'name' => Str::random(10)
             ]);
 
         //Etape 2
-        //\App\Models\Category::factory(10)->create();
+        //\App\Models\Energy::factory(10)->create();
     }
 }

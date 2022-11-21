@@ -5,12 +5,12 @@ Tout au long de cette UV, vous devez réaliser les exercices et les jalons qui s
 Les exercices sont à réaliser seul et à livrer sur son git personnel.
 Les jalons correspondent à une partie du projet final et ils peuvent être réalisés seul ou en binôme (pas plus de 2 personnes / groupe).
 Les jalons sont à livrer sur le dépôt git d'un des membres du groupe.
-Attention, les 2 membres du groupes doivent committer (puisque les 2 codent) sur ce dépôt car nous regarderons l'historique Git pour juger de l'implication de chacun.
+Attention, les 2 membres du groupes doivent committer sur ce dépôt car nous regarderons l'historique Git pour juger de l'implication de chacun.
 Il faut donc donc que le propriétaire du dépôt donne les droits au 2eme membre du groupe.
 
 ## Livraison d'un exercice ou d'un jalon
 
-Tous vos jalons (ou exercices) doivent être livrés dans le dépôt git du groupe (ou personnel) qui a été créé lors de l'installation.
+Tous vos jalons (ou exercices) doivent être livrés dans le dépôt git du groupe (ou personnel) qui a été créé lors de l'installation en forkant le dépôt le dépôt [Template git CDAW](https://github.com/ceri-num/uv-mlod-vscode-template).
 
 Pour livrer un jalon, il faut:
 

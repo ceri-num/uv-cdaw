@@ -20,3 +20,4 @@ L'UV CDAW s'articule autour des matières suivantes :
 * Isabelle Fabresse
 * Luc Fabresse
 * Mathieu Vermeulen
+* Quentin Vezilier

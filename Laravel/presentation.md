@@ -7,16 +7,18 @@
 - Framework PHP : Laravel, Symphony, ...
 - Ne remplace pas la connaissance d'un langage
 
-![Utilisation framework](/ressources/tutoLaravel/PHP-Framework.png)
+![Utilisation framework en 2021](/ressources/tutoLaravel/PHP-Framework.png)
 
+![Utilisation framework en 2022](/ressources/tutoLaravel/Most-Popular-Backend-Frameworks.png)
 
 ## Laravel
 
+Les avantages du framework Laravel sont :
+- MVC
 - Système de routage
 - Moteur de template (Blade)
 - Object-Relational Mapping – ORM (Eloquent)
 - Système d'authentification et de gestion de sessions pour les connexions
-- MVC
 
 ![MVC](/ressources/tutoLaravel/MVC.png)
 https://www.awesomeinc.org/tutorials/rails-blog/
@@ -30,29 +32,22 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 ## Composer
 - Gestionnaire de dépendances
 - Configuration par un fichier JSON
-- Déjà installé dans le docker fourni
 
 
 ## Projet Laravel
 
 - Se placer dans le terminal de Visual Studio Code
 
-- Création du projet "catalogue de médias" avec la dernière version stable de Laravel :
+- Création du projet "pokemons" avec la dernière version stable de Laravel :
 ```
-	composer create-project --prefer-dist laravel/laravel catalogue
+	composer create-project --prefer-dist laravel/laravel pokemon
 ```
-
-- Donner les droits à votre projet pour apache:
+- Lancer un serveur web :
 ```
-	chown -R root.www-data catalogue/
-	find catalogue -type d -exec chmod 750 {} \;
-	find catalogue -type f -exec chmod 640 {} \;
-	find catalogue/storage -type d -exec chmod 770 {} \;
-	find catalogue/storage -type f -exec chmod 660 {} \;
+	 php artisan serve
 ```
-
 - Vérifier dans le navigateur :
-	http://localhost:8080/catalogue/public
+	http://localhost:8000/pokemons
 
 ## Principaux dossiers et fichiers
 - app : cœur de l'application (controller, model, helper, …)
