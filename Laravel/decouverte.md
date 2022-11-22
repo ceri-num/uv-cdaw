@@ -138,3 +138,10 @@ php artisan make:migration pokemon_table --create=pokemon
 
 ## Le tout
 - Afficher tous les pokemons grâce à un tableau. Bien découper Route/Controller/Modèle/Vue.
+
+## Debug
+Installer <a href="https://github.com/barryvdh/laravel-debugbar" target="_blank">Barryvdh - Laravel Debugbar</a>
+``` 
+composer require barryvdh/laravel-debugbar
+```
+Dans le navigateur, une barre apparaît en bas de la fenêtre.
