@@ -33,14 +33,34 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 - Gestionnaire de dépendances
 - Configuration par un fichier JSON
 
+## Installation
+
+(si vous souhaitez utiliser docker, [cliquez ici](Laravel/install.md) )
+- Si ce n'est pas encore fait, intaller les serveurs Apache / MySQL / Php avec WAMP ou autre (suivant votre système d'exploitation).
+
+- Installer composer
+https://getcomposer.org/download/
+
+- Ouvrir Visual Studio Code
+
+- Dans un terminal, faire 
+```
+php -v
+```
 
 ## Projet Laravel
 
-- Se placer dans le terminal de Visual Studio Code
-
-- Création du projet "pokemons" avec la dernière version stable de Laravel :
+- Créer le projet "pokemon" avec la dernière version stable de Laravel :
 ```
 	composer create-project --prefer-dist laravel/laravel pokemon
+```
+- Se déplacer dans le répertoire projet
+```
+	 cd pokemon
+```
+- Vérifier la version de Laravel
+```
+php artisan -V
 ```
 - Lancer un serveur web :
 ```

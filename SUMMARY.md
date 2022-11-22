@@ -34,11 +34,11 @@
 
 ## Projet en Laravel
 
-* [Installer Laravel](Laravel/install.md)
 * [Présentation Laravel](Laravel/presentation.md)
 * [Découverte de Laravel](Laravel/decouverte.md)
 * [Jalon2](Laravel/jalon2.md)
 * [Persistence des données](Laravel/bd.md)
+* [Datatable](Laravel/datatables.md)
 * [Jalon3](Laravel/jalon3.md)
 * [Authentification](Laravel/authentification.md)
 * [Tests](Laravel/tests.md)
