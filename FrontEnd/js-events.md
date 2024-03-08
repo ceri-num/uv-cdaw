@@ -31,7 +31,7 @@ Pour réagir à ces évènements, on utilise des **handler** (gestionnaires). Ce
 function myhandler(e){ mycodehere; }
 
 var monbutton = document.getElementById("mb");
-mb.addEventListener("click", myhandler); 
+mb.addEventListener("click", myhandler);
 // peut aussi être une fonction anonyme : ("click", function(e){ mycodehere; });
 // ou une arrow function : ("click", (e) => mycode);
 ```
@@ -72,7 +72,7 @@ Dans certains cas, on a besoin de stopper le bubbling -- par exemple lorsque un 
 
 
 ## Exercice d'introduction
-Pour vous aider à vous approprier l'ajout et la suppression d'handlers, considérer l'exercice suivant. Soit deux boutons HTML classique sur votre page, identifiés respectivement par `b1` et `b2`, on veut alterné le bouton qui possède un listener sur l'évènement `click`. 
+Pour vous aider à vous approprier l'ajout et la suppression d'handlers, considérer l'exercice suivant. Soit deux boutons HTML classique sur votre page, identifiés respectivement par `b1` et `b2`, on veut alterné le bouton qui possède un listener sur l'évènement `click`.
 
 Aussi, lorsque la page est servi à votre client, seul `b1` possède un handler pour son évènement de `click` ; `b2` n'en possède pas. Lorsque `b1` est cliqué, il associe à `b2` un listener sur l'évènement `click`, et `b1` lui perd le sien, de tel sorte qu'en cliquant deux fois de suite sur `b1`, rien ne se passe. Le comporte est identique pour `b2` : en cliquant une fois dessus lorsqu'il s'est vu attribué son listener, il le perd et le donne de nouveau à `b1` et donc, cliquer une deuxième fois de suite sur `b2` ne fait plus rien.
 
@@ -140,7 +140,7 @@ Stylisons le un peu. Importez directement dans votre page ou *via* un fichier le
 
 @keyframes size {
   0% {padding:10px 12px 8px;}
-  50% {padding:14px 16px 12px;  
+  50% {padding:14px 16px 12px;
     margin-top:-4px;}
   100% {padding:10px 12px 8px;}
 }
@@ -155,7 +155,7 @@ Il vous faudra accéder à Font Awesome pour récupérer le logo. Je vous invite
 
 En effet, nous utiliserons la classe `.press` pour identifier si oui ou non le bouton a été cliqué.
 
-3. Codez la logique associé à ce bouton like. Vous utiliserez la méthode `toggle` qui utilise une `DOMString` pour jouer avec les jetons classes. Vous aurez aussi envie d'utiliser la propriété `.children` d'un noeud pour ne récupérer que les noeuds HTML, sans le texte et autre. 
+3. Codez la logique associé à ce bouton like. Vous utiliserez la méthode `toggle` qui utilise une `DOMString` pour jouer avec les jetons classes. Vous aurez aussi envie d'utiliser la propriété `.children` d'un noeud pour ne récupérer que les noeuds HTML, sans le texte et autre.
 
 {% hint style="info" %}
 Le corps de la fonction ne fait que deux lignes.
@@ -343,7 +343,7 @@ Très bien. Imaginez maintenant que vous êtes en train de consulter le catalogu
 </table>
 ```
 
-3. Vous allez **déléguer la gestion du clique** à votre `table` en jouant avec la propriété `target` de l'évènement `click` ; cela évitera d'avoir une quantité faramineuse de listener sur votre page et améliorera drastiquement la qualité et la maintenabilité de votre code. Du coup, aucun `td` ne doit directement avoir de handler ni de listener `click`. Faîtes apparaître une alerte pour indiquer que l'élément `Mx` à bien été ajouté à la playlist.
+3. Vous allez **déléguer la gestion du click** à votre `table` en jouant avec la propriété `target` de l'évènement `click` ; cela évitera d'avoir une quantité faramineuse de listener sur votre page et améliorera drastiquement la qualité et la maintenabilité de votre code. Du coup, aucun `td` ne doit directement avoir de handler ni de listener `click`. Faîtes apparaître une alerte pour indiquer que l'élément `Mx` à bien été ajouté à la playlist.
 
 {% hint style="warning" %}
 Attention, dans votre `table`, il n'y a pas que des `td` ! Vous devez donc vérifier si le target est bien un `td`. Vous pouvez utiliser la propriété `tagName` de votre target pour cela (comme pour l'exercice précédent avec `th` donc).
@@ -356,7 +356,7 @@ Dans cette partie, nous travaillerons à uploader une image de profil pour un ut
 
 ```html
 <div id="preview"></div>
-    
+
 <input id="upload" type="file" value="Upload your image">
 ```
 
@@ -367,11 +367,11 @@ Soit la fonction `handleFiles` suivante, à compléter, qui permet de créer une
 function handleFiles(files) {
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-  
+
       if (!file.type.startsWith('image/')){ continue }
-  
+
       //A COMPLETER ICI
-  
+
       const reader = new FileReader();
       reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
       reader.readAsDataURL(file);
@@ -384,7 +384,7 @@ function handleFiles(files) {
 Nous allons maintenant gérer le drag and drop d'une image qui s'affichera toujours dans le `preview`. Modifier votre code HTML en rajoutant une zone de D&D
 ```html
 <div id="preview"></div>
-    
+
 <input id="upload" type="file" value="Upload your image">
 <div id="dropbox">
     This is the dropzone
@@ -396,7 +396,7 @@ Nous allons maintenant gérer le drag and drop d'une image qui s'affichera toujo
 5. Ajouter simplement les listeners associés à la zone de `dropbox`, avec une alerte -- testez le comportement.
 6. Vous remarquerez peut-être que ces 3 évènements bubbles : empêcher cela avec la bonne méthode.
 7. Maintenant, on va supprimer le comportement par défaut qui pourrait exister pour ces évènements pour implémenter le notre. Si vous ne vous souvenez plus de la méthode, il s'agit de `preventDefault` que l'on a vue dans la [section sur les formulaires](js-form.md).
-8. On veut accéder aux données lâchées au moment du "drop". Pour ce faire, l'évènement possède une propriété `dataTransfert`. 
+8. On veut accéder aux données lâchées au moment du "drop". Pour ce faire, l'évènement possède une propriété `dataTransfert`.
 9. Avant d'envoyer la liste des fichiers à notre fonction `handleFiles` il faut les récupérer dans `dataTransfert`.
 
 Et voila, une image de profil qui gère du D&D, classe !
