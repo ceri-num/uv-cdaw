@@ -5,7 +5,7 @@
 ## Infos
 
 * [Pré-requis](infos/prerequis.md)
-* [Sujet Projet 2022](2022/projet-pokemon.md)
+* [Sujet Projet 2024](2024/ttr.md)
 
 ## Démarrage
 
