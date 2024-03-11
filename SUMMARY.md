@@ -36,10 +36,8 @@
 
 * [Présentation Laravel](Laravel/presentation.md)
 * [Découverte de Laravel](Laravel/decouverte.md)
-* [Jalon2](Laravel/jalon2.md)
 * [Persistence des données](Laravel/bd.md)
 * [Datatables](Laravel/datatables.md)
-* [Jalon3](Laravel/jalon3.md)
 * [Authentification](Laravel/authentification.md)
 * [Tests](Laravel/tests.md)
 * [Jalon4](Laravel/jalon4.md)

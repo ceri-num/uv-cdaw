@@ -7,9 +7,7 @@
 - Framework PHP : Laravel, Symphony, ...
 - Ne remplace pas la connaissance d'un langage
 
-![Utilisation framework en 2021](/ressources/tutoLaravel/PHP-Framework.png)
-
-![Utilisation framework en 2022](/ressources/tutoLaravel/Most-Popular-Backend-Frameworks.png)
+![Utilisation framework en 2023](/ressources/tutoLaravel/PHP-framework-popularity.webp)
 
 ## Laravel
 
@@ -25,8 +23,8 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 
 
 ## Documentation Laravel
-- <a href="https://laravel.com/docs/8.x" target="_blank">https://laravel.com/docs/8.x</a>
-- <a href="https://laravel.sillo.org/laravel-8/" target="_blank">https://laravel.sillo.org/laravel-8/</a>
+- <a href="https://laravel.com/docs/11.x" target="_blank">https://laravel.com/docs/11.x</a>
+- <a href="https://laravel.sillo.org/laravel-10/" target="_blank">https://laravel.sillo.org/laravel-11/</a>
 
 
 ## Composer
@@ -34,8 +32,6 @@ https://www.awesomeinc.org/tutorials/rails-blog/
 - Configuration par un fichier JSON
 
 ## Installation
-
-(si vous souhaitez utiliser docker, [cliquez ici](Laravel/install.md) )
 - Si ce n'est pas encore fait, intaller les serveurs Apache / MySQL / Php avec WAMP ou autre (suivant votre système d'exploitation).
 
 - Installer composer
@@ -47,16 +43,18 @@ https://getcomposer.org/download/
 ```
 php -v
 ```
+Si la version d'affiche, vous pouvez continuer.
+
 
 ## Projet Laravel
 
-- Créer le projet "pokemon" avec la dernière version stable de Laravel :
+- Créer le projet "ticketToRide" avec la dernière version stable de Laravel :
 ```
-	composer create-project --prefer-dist laravel/laravel pokemon
+	composer create-project --prefer-dist laravel/laravel ticketToRide
 ```
 - Se déplacer dans le répertoire projet
 ```
-	 cd pokemon
+	 cd ticketToRide
 ```
 - Vérifier la version de Laravel
 ```
@@ -67,7 +65,7 @@ php artisan -V
 	 php artisan serve
 ```
 - Vérifier dans le navigateur :
-	http://localhost:8000/pokemons
+	http://localhost:8000/ticketToRide
 
 ## Principaux dossiers et fichiers
 - app : cœur de l'application (controller, model, helper, …)

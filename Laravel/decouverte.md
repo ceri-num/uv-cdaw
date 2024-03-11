@@ -14,14 +14,14 @@
 NOTES
 - Fichier routes/web.php (pour les routes appelées depuis un navigateur, api.php pour les routes de l'API)
 - Attention, l'ordre dans ce fichier est important ! Les routes sont analysées dans l'ordre et la 1ere trouvée est la 1ere exécutée
-- Appel d'une route : http://localhost:8000/pokemon/leNomDeMaRoute ou http://localhost:8000/pokemon/ pour accéder à la route '/'
+- Appel d'une route : http://localhost:8000/ticketToRide/leNomDeMaRoute ou http://localhost:8000/ticketToRide/ pour accéder à la route '/'
 
 TODO
 - Trouver l'appel à la vue par défaut de Laravel, le commenter et remplacer par l'affichage d'un « Hello world » de 2 façons différentes
 - Options des routes
   - Créer une route GET qui prend 2 paramètres (prénom et nom) et qui les affiche
   - Ajouter des contraintes avec des expressions régulières : créer une route GET qui prend 1 paramètre "title" constitué uniquement de lettres et qui l'affiche
-  - Créer une route GET qui affiche le texte "Liste des pokémons" et la nommer "listePokemon"
+  - Créer une route GET qui affiche le texte "Liste des joueurs" et la nommer "listeJoueurs"
   - Créer une route qui retourne le code HTML suivant :
 
 ``` HTML
@@ -58,20 +58,20 @@ TODO
 
 - Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire `ressources`.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
-- Créer la vue `listePokemons.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
+- Créer la vue `listeParties.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
 - Tester le tout : comment tester ? Comment appeler une vue ? [indice1](../ressources/tutoLaravel/indices.md) [Réponse1](../ressources/tutoLaravel/reponses.md)
 
 ## Les controlleurs
 
 NOTES
-Les controlleurs appellent le code "intelligent" pour l'envoyer à la vue. Le retour de la vue est renvoyé au navigateur.
+Les controlleurs appellent le code "intelligent" des modèles pour ensuite l'envoyer à la vue. Le retour de la vue est renvoyé au navigateur.
 
 ![Vues](/ressources/tutoLaravel/MVC-controllers-vues.JPG)
 
 TODO
 - Créer un contrôleur :
 ```
-php artisan make:controller listePokemonsController
+php artisan make:controller listePartiesController
 ```
 - Appeler la vue depuis le contrôleur. [Indice 2](../ressources/tutoLaravel/indices.md) - [Réponse 2](../ressources/tutoLaravel/reponses.md)
 - Relier une route à un contrôleur. [Indice 3](../ressources/tutoLaravel/indices.md) - [Réponse 3](../ressources/tutoLaravel/reponses.md)
@@ -87,57 +87,57 @@ NOTES
 - Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables
 
 TODO
-- Dans phpMyAdmin (connexion en root/root), créer la base de données `pokemons` de type `utf8_general_ci`
+- Dans phpMyAdmin (connexion en root/root), créer la base de données `ticket_to_ride` de type `utf8_general_ci`
 - Configurer la connexion à la base de données (.env et /config/database.php)  [Indice 6](../ressources/tutoLaravel/indices.md) - [Réponse 6](../ressources/tutoLaravel/reponses.md)
 
 Partie 1 : la migration
-- Télécharger le fichier [2021_10_27_073728_create_energy_table](../ressources/tutoLaravel/bd/migrations/2021_10_27_073728_create_energy_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
+- Télécharger le fichier [2021_10_27_073728_create_partie_table](../ressources/tutoLaravel/bd/migrations/2024_03_11_073728_create_partie_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
 - Analyser les méthodes up (création) et down (suppression)
-- Dans le Terminal, exécuter cette ligne pour créer la table `energy`
+- Dans le Terminal, exécuter cette ligne pour créer la table `partie`
 ```
 php artisan migrate
 ```
-Attention, l'ordre d'exécution des migrations est importante (au niveau des clefs étrangères et des contraintes d'intégration). <a href="https://meet.google.com/qgz-rbsb-nce" target="_blank">Aide</a>
+Attention, l'ordre d'exécution des migrations est importante (au niveau des clefs étrangères et des contraintes d'intégration).
 
 Partie 2 : l'alimentation
-- Télécharger le fichier [EnergySeeder.php](../ressources/tutoLaravel/bd/seeders/EnergySeeder.php) et le déposer dans le répertoire database/seeders
-- Analyser la méthode run (ajout d'energie). Question : combien d'energie le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
-- Dans le Terminal, exécuter cette ligne pour alimenter la table `Energy`
+- Télécharger le fichier [PartieSeeder.php](../ressources/tutoLaravel/bd/seeders/PartieSeeder.php) et le déposer dans le répertoire database/seeders
+- Analyser la méthode run. Question : combien de partie le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
+- Dans le Terminal, exécuter cette ligne pour alimenter la table `partie`
 ```
-php artisan db:seed --class=EnergySeeder
+php artisan db:seed --class=PartieSeeder
 ```
-Vous avez aussi la possibilité d'ajouter l'appel au EnergySeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
+Vous avez aussi la possibilité d'ajouter l'appel au PartieSeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
 ```
 php artisan db:seed
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
-- Télécharger le fichier [EnergyFactory.php](../ressources/tutoLaravel/bd/factories/EnergyFactory.php) et le déposer dans le répertoire database/factories
-- Vider la table `Energy` et exécuter le seeder.
+- Télécharger le fichier [PartieFactory.php](../ressources/tutoLaravel/bd/factories/PartieFactory.php) et le déposer dans le répertoire database/factories
+- Vider la table `partie` et exécuter le seeder.
 
 Partie 3 : le modèle
-- Créer le modèle `Energy` (il est aussi possible de générer le modèle et le controller associé).
+- Créer le modèle `partie` (il est aussi possible de générer le modèle et le controller associé).
 ```
-php artisan make:model Energy
+php artisan make:model partie
 ```
 - Préciser la connexion à utiliser, la table reliée à ce modèle, la clef primaire ainsi que les autres paramètres
-- Afficher toutes les énergies de la table. (<a href="https://laravel.com/docs/8.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://www.oulub.com/fr-FR/Laravel/eloquent" target="_blank">aide FR Eloquent</a>)
+- Afficher toutes les parties de la table. (<a href="https://laravel.com/docs/10.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-jouer-avec-eloquent/" target="_blank">aide FR Eloquent</a>, <a href="https://grafikart.fr/tutoriels/orm-eloquent-laravel-2115" target="_blank"> tuto vidéo</a>)
 
 Question
 Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
 
 A vous
-- Créer la migration pour Pokemon.
-Un Pokemon est identifié par son `ID`, il a une `energy`, un `name`, un `pv_max`, un `level` et un `path` (chemin vers l'image du pokémon). Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
+- Créer la migration pour joueur.
+Un joueur est identifié par son `ID`, il a un `pseudo`, un `email`, un `mot de passe` et un `path` (chemin vers l'avatar du joueur). Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
-php artisan make:migration pokemon_table
+php artisan make:migration joueur_table
 ou
-php artisan make:migration pokemon_table --create=pokemon
-		(Avec l’option create qui crée la table pokemon)
+php artisan make:migration joueur_table --create=joueur
+		(Avec l’option create qui crée la table joueur)
 ```
-- Remplir la table `pokemon` (une cinquantaine) grâce à un seeder (vous pouvez utiliser un appel API poure récupérer une liste de pokémons)
+- Remplir la table `joueur` (une cinquantaine) grâce à un seeder ou une factory
 
 ## Le tout
-- Afficher tous les pokemons grâce à un tableau. Bien découper Route/Controller/Modèle/Vue.
+- Afficher tous les joueurs grâce à un tableau (on verra les datatables plus tard). Bien découper Route/Controller/Modèle/Vue.
 
 ## Debug
 Installer <a href="https://github.com/barryvdh/laravel-debugbar" target="_blank">Barryvdh - Laravel Debugbar</a>

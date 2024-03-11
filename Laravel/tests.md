@@ -2,6 +2,7 @@
 
 ## Tests unitaires
 - PHP Unit
+
 Vérifier  qu'il est installé
 ```
 php vendor\phpunit\phpunit\phpunit --version
@@ -27,3 +28,4 @@ php artisan test --filter ExampleTest
 
 - Créer quelques tests pour tester votre application
 
+Vous pouvez maintenant passer à la réalisation de votre projet.
