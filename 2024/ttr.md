@@ -16,7 +16,7 @@ Sur le site, un visiteur (utilisateur non connecté) peut :
 * Se connecter
 
 Un administrateur peut:
-  * bloquer un compte utilisateur. L'utilisateur ne pourra plus se connecter mais toutes ses playlists seront conservées.
+  * bloquer un compte utilisateur. L'utilisateur ne pourra plus se connecter mais toutes ses parties seront conservées.
 
 
 Un joueur (utilisateur connecté) :
