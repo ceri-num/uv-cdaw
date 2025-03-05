@@ -31,7 +31,7 @@
 - [TP REST AUTH](Backend/TP-REST_Auth.md)
 
 ## Architecture MVC
-- [MVC](Backend/MVC.md)
+<!-- - [MVC](Backend/MVC.md) -->
 - [TP MVC](Backend/TP-REST_MVC.md)
 
 ## FrontEnd - Basics

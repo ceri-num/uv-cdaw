@@ -4,7 +4,7 @@
 Objectifs de ce TP : Refactoriser votre implémentation REST d'un CRUD en utilisant le patron architectural MVC.
 
 {% hint style="alert" %}
-Lire, comprendre et poser des questions sur le cours MVC : https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx
+Lire, comprendre et poser des questions sur le cours MVC (cf. partage)
 {% endhint %}
 
 # Arborescences des fichiers
