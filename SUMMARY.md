@@ -18,25 +18,23 @@
 * [Notions d'UX Design](https://ceri-num.gitbook.io/uv-ux-design)
 * [Jalon1](jalon1/jalon1.md)
 
-## Backend
-
-### Séance 1
+## Backend - Basics
 
 - [HTTP](Backend/HTTP.md)
 - [PHP OO](Backend/PHP.md)
 - [PDO](Backend/PDO.md)
 - [TP PHP PDO](Backend/TP-PHP_PDO.md)
 
-### Séance 2
+## Architecture REST
 - [REST](Backend/REST.md)
 - [TP CRUD REST](Backend/TP-CRUD_REST.md)
 - [TP REST AUTH](Backend/TP-REST_Auth.md)
 
-### Séances 3 & 4
+## Architecture MVC
 - [MVC](Backend/MVC.md)
 - [TP MVC](Backend/TP-REST_MVC.md)
 
-## FrontEnd
+## FrontEnd - Basics
 
 * [JS (1/5) — Introduction](FrontEnd/js-intro.md)
 * [JS (2/5) — Manipulation du DOM](FrontEnd/js-dom.md)
