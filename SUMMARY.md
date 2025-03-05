@@ -5,7 +5,7 @@
 ## Infos
 
 * [Pré-requis](infos/prerequis.md)
-* [Sujet Projet 2024](2024/ttr.md)
+* [Sujet Projet 2025](2025/sujetprojet.md)
 
 ## Démarrage
 
@@ -20,9 +20,21 @@
 
 ## Backend
 
-* [HTTP](Backend/HTTP.md)
-* [PHP](Backend/PHP.md)
-* [REST](Backend/REST.md)
+### Séance 1
+
+- [HTTP](Backend/HTTP.md)
+- [PHP OO](Backend/PHP.md)
+- [PDO](Backend/PDO.md)
+- [TP PHP PDO](Backend/TP-PHP_PDO.md)
+
+### Séance 2
+- [REST](Backend/REST.md)
+- [TP CRUD REST](Backend/TP-CRUD_REST.md)
+- [TP REST AUTH](Backend/TP-REST_Auth.md)
+
+### Séances 3 & 4
+- [MVC](Backend/MVC.md)
+- [TP MVC](Backend/TP-REST_MVC.md)
 
 ## FrontEnd
 

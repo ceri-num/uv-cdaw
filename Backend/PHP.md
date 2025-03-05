@@ -15,7 +15,6 @@ Ce cours suppose que vous connaissez :
 {% hint style="danger" %}
 Auto-formation :
 - cf. cours PHP de l'UV IDAW
--
 - cf. [https://www.php.net/manual/en/](https://www.php.net/manual/en/)
 - cf. [https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
 {% endhint %}
