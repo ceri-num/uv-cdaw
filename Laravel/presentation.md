@@ -48,13 +48,13 @@ Si la version d'affiche, vous pouvez continuer.
 
 ## Projet Laravel
 
-- Créer le projet "ticketToRide" avec la dernière version stable de Laravel :
+- Créer le projet "adolices" avec la dernière version stable de Laravel :
 ```
-	composer create-project --prefer-dist laravel/laravel ticketToRide
+	composer create-project --prefer-dist laravel/laravel adolices
 ```
 - Se déplacer dans le répertoire projet
 ```
-	 cd ticketToRide
+	 cd adolices
 ```
 - Vérifier la version de Laravel
 ```
@@ -65,7 +65,7 @@ php artisan -V
 	 php artisan serve
 ```
 - Vérifier dans le navigateur :
-	http://localhost:8000/ticketToRide
+	http://localhost:8000/
 
 ## Principaux dossiers et fichiers
 - app : cœur de l'application (controller, model, helper, …)

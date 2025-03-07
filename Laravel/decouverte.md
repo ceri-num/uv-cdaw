@@ -14,7 +14,7 @@
 NOTES
 - Fichier routes/web.php (pour les routes appelées depuis un navigateur, api.php pour les routes de l'API)
 - Attention, l'ordre dans ce fichier est important ! Les routes sont analysées dans l'ordre et la 1ere trouvée est la 1ere exécutée
-- Appel d'une route : http://localhost:8000/ticketToRide/leNomDeMaRoute ou http://localhost:8000/ticketToRide/ pour accéder à la route '/'
+- Appel d'une route : http://localhost:8000/leNomDeMaRoute ou http://localhost:8000/ pour accéder à la route '/'
 
 TODO
 - Trouver l'appel à la vue par défaut de Laravel, le commenter et remplacer par l'affichage d'un « Hello world » de 2 façons différentes
