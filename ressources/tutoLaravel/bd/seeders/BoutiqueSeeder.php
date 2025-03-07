@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class PartieSeeder extends Seeder
+class BoutiqueSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,11 +16,11 @@ class PartieSeeder extends Seeder
     public function run()
     {
         //Etape 1
-        DB::table('partie')->insert([
+        DB::table('boutique')->insert([
              'nom' => Str::random(10)
             ]);
 
         //Etape 2
-        //\App\Models\Partie::factory(10)->create();
+        //\App\Models\Boutique::factory(10)->create();
     }
 }

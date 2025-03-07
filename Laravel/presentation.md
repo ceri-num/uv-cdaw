@@ -64,8 +64,7 @@ php artisan -V
 ```
 	 php artisan serve
 ```
-- Vérifier dans le navigateur :
-	http://localhost:8000/
+- Vérifier dans le navigateur : http://localhost:8000/
 
 ## Principaux dossiers et fichiers
 - app : cœur de l'application (controller, model, helper, …)

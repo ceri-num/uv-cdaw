@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePartieTable extends Migration
+class CreateBoutiqueTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePartieTable extends Migration
      */
     public function up()
     {
-        Schema::create('partie', function (Blueprint $table) {
+        Schema::create('boutique', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('nom', 30);
+            $table->string('description', 300);
+            $table->string('description_courte', 100);
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreatePartieTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('partie');
+        Schema::dropIfExists('boutique');
     }
 }

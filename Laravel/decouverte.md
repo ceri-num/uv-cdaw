@@ -56,9 +56,8 @@ NOTES
 
 TODO
 
-- Intégrer le thème boostrap créé lors des premiers TP (les répertoires assets, css et js) dans le répertoire `ressources`.
 - Créer le template de base de vos vues `template.blade.php`. Ce template intègrera votre thème (en-tête et pied de page) et une section `content`.
-- Créer la vue `listeParties.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
+- Créer la vue `accueil.blade.php` qui étend le template et qui ajoute le texte de votre choix dans la section `content`.
 - Tester le tout : comment tester ? Comment appeler une vue ? [indice1](../ressources/tutoLaravel/indices.md) [Réponse1](../ressources/tutoLaravel/reponses.md)
 
 ## Les controlleurs
@@ -71,7 +70,7 @@ Les controlleurs appellent le code "intelligent" des modèles pour ensuite l'env
 TODO
 - Créer un contrôleur :
 ```
-php artisan make:controller listePartiesController
+php artisan make:controller accueilController
 ```
 - Appeler la vue depuis le contrôleur. [Indice 2](../ressources/tutoLaravel/indices.md) - [Réponse 2](../ressources/tutoLaravel/reponses.md)
 - Relier une route à un contrôleur. [Indice 3](../ressources/tutoLaravel/indices.md) - [Réponse 3](../ressources/tutoLaravel/reponses.md)
@@ -87,40 +86,40 @@ NOTES
 - Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables
 
 TODO
-- Dans phpMyAdmin (connexion en root/root), créer la base de données `ticket_to_ride` de type `utf8_general_ci`
+- Dans phpMyAdmin (connexion en root/root), créer la base de données `adolices` de type `utf8_general_ci`r
 - Configurer la connexion à la base de données (.env et /config/database.php)  [Indice 6](../ressources/tutoLaravel/indices.md) - [Réponse 6](../ressources/tutoLaravel/reponses.md)
 
 Partie 1 : la migration
-- Télécharger le fichier [2021_10_27_073728_create_partie_table](../ressources/tutoLaravel/bd/migrations/2024_03_11_073728_create_partie_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
+- Télécharger le fichier [2021_10_27_073728_create_boutique_table](../ressources/tutoLaravel/bd/migrations/2024_03_11_073728_create_boutique_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
 - Analyser les méthodes up (création) et down (suppression)
-- Dans le Terminal, exécuter cette ligne pour créer la table `partie`
+- Dans le Terminal, exécuter cette ligne pour créer la table `boutique`
 ```
 php artisan migrate
 ```
 Attention, l'ordre d'exécution des migrations est importante (au niveau des clefs étrangères et des contraintes d'intégration).
 
 Partie 2 : l'alimentation
-- Télécharger le fichier [PartieSeeder.php](../ressources/tutoLaravel/bd/seeders/PartieSeeder.php) et le déposer dans le répertoire database/seeders
-- Analyser la méthode run. Question : combien de partie le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
-- Dans le Terminal, exécuter cette ligne pour alimenter la table `partie`
+- Télécharger le fichier [BoutiqueSeeder.php](../ressources/tutoLaravel/bd/seeders/BoutiqueSeeder.php) et le déposer dans le répertoire database/seeders
+- Analyser la méthode run. Question : combien de boutique le seeder va t'il créer ? [Réponse 7](../ressources/tutoLaravel/reponses.md)
+- Dans le Terminal, exécuter cette ligne pour alimenter la table `boutique`
 ```
-php artisan db:seed --class=PartieSeeder
+php artisan db:seed --class=BoutiqueSeeder
 ```
-Vous avez aussi la possibilité d'ajouter l'appel au PartieSeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
+Vous avez aussi la possibilité d'ajouter l'appel au BoutiqueSeeder dans la méthode run() de DatabaseSeeder.php et d'exécuter tous les seeders par la commande :
 ```
 php artisan db:seed
 ```
 - L'alimentation en quantité : dans le seeder, remplacer l'étape 1 par l'étape 2.
-- Télécharger le fichier [PartieFactory.php](../ressources/tutoLaravel/bd/factories/PartieFactory.php) et le déposer dans le répertoire database/factories
-- Vider la table `partie` et exécuter le seeder.
+- Télécharger le fichier [BoutiqueFactory.php](../ressources/tutoLaravel/bd/factories/BoutiqueFactory.php) et le déposer dans le répertoire database/factories
+- Vider la table `boutique` et exécuter le seeder.
 
 Partie 3 : le modèle
-- Créer le modèle `partie` (il est aussi possible de générer le modèle et le controller associé).
+- Créer le modèle `boutique` (il est aussi possible de générer le modèle et le controller associé).
 ```
-php artisan make:model partie
+php artisan make:model boutique
 ```
 - Préciser la connexion à utiliser, la table reliée à ce modèle, la clef primaire ainsi que les autres paramètres
-- Afficher toutes les parties de la table. (<a href="https://laravel.com/docs/10.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-jouer-avec-eloquent/" target="_blank">aide FR Eloquent</a>, <a href="https://grafikart.fr/tutoriels/orm-eloquent-laravel-2115" target="_blank"> tuto vidéo</a>)
+- Afficher toutes les boutiques de la table. (<a href="https://laravel.com/docs/10.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-jouer-avec-eloquent/" target="_blank">aide FR Eloquent</a>, <a href="https://grafikart.fr/tutoriels/orm-eloquent-laravel-2115" target="_blank"> tuto vidéo</a>)
 
 Question
 Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
