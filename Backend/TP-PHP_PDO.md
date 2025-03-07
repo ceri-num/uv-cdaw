@@ -7,15 +7,8 @@
 
 ## Versionner
 
-Le projet final doit être versionné sur git (cf. [Modalités projet](../Projet/eval.md)). Donc, autant mettre cela en place dès le début.
-
-1. Créer votre dépôt git nommé *projet-cdaw* sur *https://gvipers.imt-nord-europe.fr*
-L'URL de votre dépôt aura la forme : https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw
-2. Installer git sur votre machine locale (cf. [Git for Windows](https://gitforwindows.org/)) et cloner votre dépôt. Exemple en ligne de commande sous Linux :
-```shell
-git clone https://gvipers.imt-nord-europe.fr/prenom.nom/projet-cdaw.git
-```
-3. Ajouter et commiter un fichier README.md à la racine de votre dépôt pour vérifier votre installation
+1. Créer votre dépôt git sur github
+2. Installer git sur votre machine locale (cf. [Git for Windows](https://gitforwindows.org/)) et cloner votre dépôt
 
 Dans la suite de ce sujet, `$PROJET_CDAW` désigne l'emplacement sur disque de la racine de votre dépôt git.
 
@@ -36,12 +29,6 @@ Pour travailler efficacement vous *devez* être capable de développer et tester
 {% hint style="alert" %}
 Si vous placez le clone de votre dépôt git (`$PROJET_CDAW`) dans `$DOCUMENT_ROOT`, vous n'aurez pas à copier/coller vos fichiers PHP à chaque modification pour voir les changements dans votre navigateur.
 {% endhint %}
-
-## Environnement de production (serveur eden)
-
-L'IMT Lille Douai vous fournit un hébergement Web sur le serveur `eden`.
-Les informations de connexion à ce serveur sont [ici](https://gvipers.imt-nord-europe.fr/luc.fabresse/Guide).
-En utilisant un client SFTP comme le logiciel FileZilla, déployez le fichier PHP `infos.php` précédent dans votre compte `eden`. Tester que tout fonctionne via l'URL : http://eden.imt-nord-europe.fr/~prenom.nom
 
 ## PDO (version simplifiée avec `FETCH_OBJ`)
 

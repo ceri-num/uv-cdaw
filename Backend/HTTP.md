@@ -5,7 +5,7 @@ Cours : [https://www.pierre-giraud.com/http-reseau-securite-cours/requete-repons
 Les méthodes HTTP (verbs) les plus courantes :
 
 * GET
-    - n'attend pas contenu
+    - n'attend pas de contenu
     - réclame une représentation de la ressource
     - est sans effet de bord (i.e. ne modifie pas l'état de la ressource)
     - rend possible l'utilisation des caches

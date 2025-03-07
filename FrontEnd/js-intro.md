@@ -53,7 +53,7 @@ Pour intégrer un script dans une page via un fichier `.js`
 
 {% hint style="warning" %}
 Le sens dans lequel vous chargez vos fichiers compte, et peut avoir une incidence très forte sur le temps de chargement de votre page. Plus d'info [ici](https://ceri-num.gitbook.io/uv-frontend/javascript/intro#think-of-your-scripts-loading-strategies).
-{% endhint %}
+`{% endhint %}`
 
 {% hint style="info" %}
 Vous pouvez aussi récupérer des scripts directement via protocole http/s en utilisant un réseau de distribution de contenu (a.k.a. CDN). Par exemple : `<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>`

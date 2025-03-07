@@ -69,7 +69,7 @@ $password_hash = password_hash($password, PASSWORD_BCRYPT);
 ## Installation d'une bibliothèque PHP JWT
 
 Il existe de nombreuses implémentations de JWT. Attention, toutes ne sont pas équivalentes en terme de fonctionnalités, de respect du standard ou encore de bugs.
-Dans ce projet vous utiliserez (ce n'est pas une assurance que bibliothèque soit la meilleure) : https://github.com/firebase/php-jwt
+Dans ce projet vous utiliserez (ce n'est pas une assurance que cette bibliothèque soit la meilleure) : https://github.com/firebase/php-jwt
 
 Téléchager le zip du dépôt et décompressez l'archive dans un nouveau répertoire nommé `libs`.
 Renommez les répertoires afin d'obtenir la hiérarchie suivante :

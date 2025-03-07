@@ -5,7 +5,7 @@
 ## Infos
 
 * [Pré-requis](infos/prerequis.md)
-* [Sujet Projet 2024](2024/ttr.md)
+* [Sujet Projet 2025](2025/sujetprojet.md)
 
 ## Démarrage
 
@@ -18,13 +18,23 @@
 * [Notions d'UX Design](https://ceri-num.gitbook.io/uv-ux-design)
 * [Jalon1](jalon1/jalon1.md)
 
-## Backend
+## Backend - Basics
 
-* [HTTP](Backend/HTTP.md)
-* [PHP](Backend/PHP.md)
-* [REST](Backend/REST.md)
+- [HTTP](Backend/HTTP.md)
+- [PHP OO](Backend/PHP.md)
+- [PDO](Backend/PDO.md)
+- [TP PHP PDO](Backend/TP-PHP_PDO.md)
 
-## FrontEnd
+## Architecture REST
+- [REST](Backend/REST.md)
+- [TP CRUD REST](Backend/TP-CRUD_REST.md)
+- [TP REST AUTH](Backend/TP-REST_Auth.md)
+
+## Architecture MVC
+<!-- - [MVC](Backend/MVC.md) -->
+- [TP MVC](Backend/TP-REST_MVC.md)
+
+## FrontEnd - Basics
 
 * [JS (1/5) — Introduction](FrontEnd/js-intro.md)
 * [JS (2/5) — Manipulation du DOM](FrontEnd/js-dom.md)

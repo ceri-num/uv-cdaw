@@ -12,12 +12,10 @@ L'UV CDAW s'articule autour des matières suivantes :
 
 ## Ressources du cours
 
-* MLS [https://mylearningspace.imt-nord-europe.fr/course/view.php?id=434](https://mylearningspace.imt-nord-europe.fr/course/view.php?id=434)
 * Gitbook [https://ceri-num.gitbook.io/uv-cdaw/](https://ceri-num.gitbook.io/uv-cdaw/)
-
+* [Fichiers 2025](https://partage.imt.fr/index.php/s/smxpJmSwZ9nKyEQ)
 ### AUTHORS
 
 * Isabelle Fabresse
 * Luc Fabresse
-* Mathieu Vermeulen
-* Quentin Vezilier
+* Rémy Pinot
