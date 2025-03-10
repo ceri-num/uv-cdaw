@@ -23,12 +23,6 @@ Auto-formation :
 
 La documentation officielle est : [https://www.php.net/manual/en/language.oop5.php](Doc PHP OO). Testez les exemples en même temps que lisez en utilisant : [https://repl.it](https://repl.it) par exemple.
 
-{% hint style="alert" %}
-Cette page est en cours de migration.
-Les slides originaux sont ici : [https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx](https://partage.imt.fr/index.php/s/XqStmtBMSswB3Tx)
-{% endhint %}
-
-
 Exercices :
 - Faire tout le tutoriel [https://www.learn-php.org](https://www.learn-php.org)
 - Faire qq exercices [https://exercism.org/tracks/php/exercises](https://exercism.org/tracks/php/exercises)
