@@ -16,4 +16,5 @@ L'UV CDAW nécessite d'avoir suivi l'UV IDAW. A défaut, il faut connaître :
 - [Cours HTML / CSS](https://www.pierre-giraud.com/html-css-apprendre-coder-cours/)
 - [Cours JS](https://www.pierre-giraud.com/javascript-apprendre-coder-cours/)
 - [Cours PHP](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/)
-- [UV IDAW](https://mylearningspace.imt-nord-europe.fr/course/view.php?id=244) (si besoin)
+- [UV IDAW](https://partage.imt.fr/index.php/s/5eZ7jjGGrimTgAL) (si besoin)
+- [UV CDAW](https://partage.imt.fr/index.php/s/smxpJmSwZ9nKyEQ)
