@@ -506,8 +506,8 @@ Veiller aussi à généraliser au mieux votre code dans les super-classes `Model
 
 A faire :
 
-- `GET /api.php/users` retourne tous les utilisateurs de la base en JSON
-- `GET /api.php/user/1` retourne tous les informations de l'utilisateur 1 en JSON
-- `PUT /api.php/user/1` avec du JSON en paramètre permet de mettre à jour les informations de l'utilisateur 1 dans la base
+- `GET /api/users` retourne tous les utilisateurs de la base en JSON
+- `GET /api/user/1` retourne tous les informations de l'utilisateur 1 en JSON
+- `PUT /api/user/1` avec du JSON en paramètre permet de mettre à jour les informations de l'utilisateur 1 dans la base
 ...
 
