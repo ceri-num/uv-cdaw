@@ -2,7 +2,6 @@
 
 * ordinateur
 * connexion internet
-* inscrit à l'UV sur MLS [https://mylearningspace.imt-nord-europe.fr/course/view.php?id=434](https://mylearningspace.imt-nord-europe.fr/course/view.php?id=434)
 
 ## Pré-requis en développement Web
 
