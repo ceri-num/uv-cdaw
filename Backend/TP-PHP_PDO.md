@@ -45,7 +45,7 @@ Si vous avez installé uWamp correctement, vous avez le SGBD MySql installé ain
 4. Créer une table nommée `users` avec 3 champs : id, name et email. id est la clé primaire en auto incrément. name et email sont des VARCHAR.
 5. Ajouter quelques données fictives dans cette table
 
-![Table uses dans PhpMyAdmin](ressources/tutoPDO/users_phpmyadmin.png)
+![Table uses dans PhpMyAdmin](/ressources/tutoPDO/users_phpmyadmin.png)
 
 ### Afficher le contenu de la table `users` avec PDO
 
@@ -95,7 +95,7 @@ Créer et **compléter** le fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO.php`:
 
 L'objectif est de voir dans une page Web un tableau HTML qui affiche les utilisateurs stockés dans la table `users`.
 
-![Table HTML affichant les utilisateurs stockés en base](ressources/tutoPDO/pdo_users.png)
+![Table HTML affichant les utilisateurs stockés en base](/ressources/tutoPDO/pdo_users.png)
 
 Si vous ajoutez ou supprimez un utilisateur dans la table `users` via PhpMyAdmin, il suffit de raffraichir la page du navigateur pour que la table HTML se mette à jour.
 
@@ -103,7 +103,7 @@ Si vous ajoutez ou supprimez un utilisateur dans la table `users` via PhpMyAdmin
 
 Créer un fichier `$PROJET_CDAW/BackEnd/tp1/test-PDO-post.php` qui reprend le même exercice que précédemment mais ajout un formulaire Web sous le tableau HTML qui permet d'ajouter un nouvel utlisateur dans la table `users`. Remarqez que le champ id ne doit pas être saisi par l'utilisateur car c'est un champ en auto-incrément dans la base.
 
-![Formulaire POST d'ajout d'un utilisateur](ressources/tutoPDO/pdo_users_post.png)
+![Formulaire POST d'ajout d'un utilisateur](/ressources/tutoPDO/pdo_users_post.png)
 
 ## PDO avec `FETCH_CLASS`
 
@@ -139,5 +139,5 @@ Travail à faire :
 - modifier cet utilisateur
 - supprimer cet utilisateur
 
-![Exemple de table avec opérations CRUD](ressources/CRUD_REST/CRUD_table.png)
+![Exemple de table avec opérations CRUD](/ressources/CRUD_REST/CRUD_table.png)
 
