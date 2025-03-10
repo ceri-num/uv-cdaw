@@ -28,7 +28,7 @@ Par exemple, une requête de modification d'un utilisateur (`PUT /user/{id}`) ne
 Si ce n'est pas le cas, une erreur HTTP 401 est retournée par le backend.
 
 
-![Principe général de l'authentification par jeton JWT](/ressources/Auth/authenticationJWT.png)
+![Principe général de l'authentification par jeton JWT](/ressources/Jwt/authenticationJWT.png)
 
 ## Stockage des hashs des mots de passe
 
