@@ -23,7 +23,7 @@ Ce TP s'inspire du tutoriel JWT suivant :
 
 ## Principe
 
-Certaines requêtes de l'API nécessitent d'être authentifié pour que le backend exécute ce qui est attendu.
+Certaines requêtes de l'API nécessitent d'être authentifiées pour que le backend exécute ce qui est attendu.
 Par exemple, une requête de modification d'un utilisateur (`PUT /user/{id}`) ne réussira que si l'utilisateur qui envoie cette requête est bien authentifié soit en tant que l'utilisateur `id`, soit en tant qu'admin.
 Si ce n'est pas le cas, une erreur HTTP 401 est retournée par le backend.
 
