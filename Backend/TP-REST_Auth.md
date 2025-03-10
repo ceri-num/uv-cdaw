@@ -16,7 +16,7 @@ Authorization: Basic bG9sOnNlY3VyZQ==
 ```
 Attention, le codage en Base64 n'assure aucunement la sécurité. Elle assurée par l'utilisation de http**s**. -->
 
-Dans la suite de ce TP, nous allons modifier notre API REST pour utiliser le standard JWT (https://jwt.io/).
+Dans la suite de ce TP, nous allons modifier notre API REST pour utiliser le standard [JWT](https://jwt.io/introduction).
 
 Ce TP s'inspire du tutoriel JWT suivant :
 - https://www.techiediaries.com/php-jwt-authentication-tutorial/
