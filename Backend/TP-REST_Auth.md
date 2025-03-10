@@ -18,8 +18,7 @@ Attention, le codage en Base64 n'assure aucunement la sécurité. Elle assurée 
 
 Dans la suite de ce TP, nous allons modifier notre API REST pour utiliser le standard JWT (https://jwt.io/).
 
-Ce TP s'inspire des tutoriels JWT suivants :
-- https://codeofaninja.com/2018/09/rest-api-authentication-example-php-jwt-tutorial.html
+Ce TP s'inspire du tutoriel JWT suivant :
 - https://www.techiediaries.com/php-jwt-authentication-tutorial/
 
 ## Principe
