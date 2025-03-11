@@ -14,11 +14,13 @@ class CreateBoutiqueTable extends Migration
     public function up()
     {
         Schema::create('boutique', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('nom', 30);
-            $table->string('description', 300);
-            $table->string('description_courte', 100);
+            $table->string('description', 300)->nullable();
+            $table->string('description_courte', 100)->nullable();
             $table->timestamps();
+
+            // voir aussi default
         });
     }
 

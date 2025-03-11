@@ -50,7 +50,6 @@
 * [Datatables](Laravel/datatables.md)
 * [Authentification](Laravel/authentification.md)
 * [Tests](Laravel/tests.md)
-* [Jalon4](Laravel/jalon4.md)
 * [Notifiation](Laravel/notification.md)
 
 

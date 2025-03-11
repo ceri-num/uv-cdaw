@@ -78,3 +78,7 @@ php artisan -V
 - composer.json : dépendances de l'application
 
 ![Constitution](/ressources/tutoLaravel/constitution.png)
+
+## Aide
+<a href="https://laravel.com/docs/11.x/" target="_blank">Le site de Laravel</a>
+<a href="https://laravel.sillo.org/" target="_blank">laravel.sillo.org</a>

@@ -21,7 +21,7 @@ TODO
 - Options des routes
   - Créer une route GET qui prend 2 paramètres (prénom et nom) et qui les affiche
   - Ajouter des contraintes avec des expressions régulières : créer une route GET qui prend 1 paramètre "title" constitué uniquement de lettres et qui l'affiche
-  - Créer une route GET qui affiche le texte "Liste des joueurs" et la nommer "listeJoueurs"
+  - Créer une route GET qui affiche le texte "Liste des utilisateurs" et la nommer "listeUtilisateurs"
   - Créer une route qui retourne le code HTML suivant :
 
 ``` HTML
@@ -86,11 +86,12 @@ NOTES
 - Les factories permettent de créer des enregistrements en quantité et d'établir facilement diverses relations entre les tables
 
 TODO
-- Dans phpMyAdmin (connexion en root/root), créer la base de données `adolices` de type `utf8_general_ci`r
+- Dans phpMyAdmin (connexion en root/root), créer la base de données `adolices` de type `utf8_general_ci`
 - Configurer la connexion à la base de données (.env et /config/database.php)  [Indice 6](../ressources/tutoLaravel/indices.md) - [Réponse 6](../ressources/tutoLaravel/reponses.md)
 
 Partie 1 : la migration
-- Télécharger le fichier [2021_10_27_073728_create_boutique_table](../ressources/tutoLaravel/bd/migrations/2024_03_11_073728_create_boutique_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
+- <a href="https://laravel.com/docs/11.x/migrations" target="_blank">doc</a> 
+- Télécharger le fichier [2024_03_11_073728_create_boutique_table](../ressources/tutoLaravel/bd/migrations/2024_03_11_073728_create_boutique_table.php) et le déposer dans le répertoire database/migrations de votre projet Laravel
 - Analyser les méthodes up (création) et down (suppression)
 - Dans le Terminal, exécuter cette ligne pour créer la table `boutique`
 ```
@@ -119,24 +120,24 @@ Partie 3 : le modèle
 php artisan make:model boutique
 ```
 - Préciser la connexion à utiliser, la table reliée à ce modèle, la clef primaire ainsi que les autres paramètres
-- Afficher toutes les boutiques de la table. (<a href="https://laravel.com/docs/10.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://laravel.sillo.org/cours-laravel-10-les-donnees-jouer-avec-eloquent/" target="_blank">aide FR Eloquent</a>, <a href="https://grafikart.fr/tutoriels/orm-eloquent-laravel-2115" target="_blank"> tuto vidéo</a>)
+- Afficher toutes les boutiques de la table. (<a href="https://laravel.com/docs/11.x/eloquent" target="_blank">site officiel Eloquent</a>, <a href="https://laravel.sillo.org/posts/cours-laravel-12-les-donnees-migrations-et-modeles" target="_blank">aide FR Eloquent</a>, <a href="https://grafikart.fr/tutoriels/orm-eloquent-laravel-2115" target="_blank"> tuto vidéo</a>)
 
 Question
-Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
+- Savez-vous ce qu'est l'auto-incrément des clefs primaires ? [Réponse 8](../ressources/tutoLaravel/reponses.md)
 
 A vous
-- Créer la migration pour joueur.
-Un joueur est identifié par son `ID`, il a un `pseudo`, un `email`, un `mot de passe` et un `path` (chemin vers l'avatar du joueur). Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
+- Créer la migration pour utilisateur.
+Un utilisateur est identifié par son `ID`, il a un `nom`, un `prenom`, un `email`, un `mot de passe`. Attention aux types et taille de chaque champs. [Indice 9](../ressources/tutoLaravel/indices.md)
 ```shell
-php artisan make:migration joueur_table
+php artisan make:migration utilisateur_table
 ou
-php artisan make:migration joueur_table --create=joueur
-		(Avec l’option create qui crée la table joueur)
+php artisan make:migration utilisateur_table --create=utilisateur
+		(Avec l’option create qui crée la table utilisateur)
 ```
-- Remplir la table `joueur` (une cinquantaine) grâce à un seeder ou une factory
+- Remplir la table `utilisateur` (une cinquantaine) grâce à un seeder ou une factory
 
 ## Le tout
-- Afficher tous les joueurs grâce à un tableau (on verra les datatables plus tard). Bien découper Route/Controller/Modèle/Vue.
+- Afficher tous les utilisateurs grâce à un tableau (on verra les datatables plus tard). Bien découper Route/Controller/Modèle/Vue.
 
 ## Debug
 Installer <a href="https://github.com/barryvdh/laravel-debugbar" target="_blank">Barryvdh - Laravel Debugbar</a>
